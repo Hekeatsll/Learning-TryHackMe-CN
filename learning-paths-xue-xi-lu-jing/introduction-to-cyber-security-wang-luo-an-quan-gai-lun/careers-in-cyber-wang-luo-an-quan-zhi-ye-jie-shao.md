@@ -4,8 +4,6 @@
 
 本文介绍：了解网络安全领域的不同职业。
 
-![img](https://assets.tryhackme.com/room-banners/intro-to-cyber.png)
-
 ## 简介
 
 网络安全行业有许多不同的工作种类，主要分为进攻性安全（对目标进行渗透测试以及产出漏洞报告）和防御性安全（防御、调查网络攻击）。

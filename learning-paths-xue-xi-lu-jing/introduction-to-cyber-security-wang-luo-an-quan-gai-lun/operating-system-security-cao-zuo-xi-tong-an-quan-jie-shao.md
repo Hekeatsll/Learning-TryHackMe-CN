@@ -4,8 +4,6 @@
 
 本文相关内容：简单介绍操作系统安全，并演示 Linux系统 上的 SSH 身份验证实例。
 
-![img](https://assets.tryhackme.com/room-banners/intro-to-offensive-security.png)
-
 ## 操作系统安全简介
 
 每天当你使用智能手机或者笔记本电脑以及其他任何类型的计算机时，你都会直接或间接地与操作系统进行交互；常用的操作系统包括 MS Windows、macOS、iOS、Android、Chrome OS 和 Linux。
@@ -16,11 +14,7 @@
 
 计算机硬件是指所有可以用手触摸到的计算机部件和外围设备。硬件包括屏幕、键盘、打印机、U盘和主板；其中主板包含了许多组件，特别是中央处理器（CPU）和内存芯片（RAM），主板通常会连接存储设备（HDD-机械硬盘 或 SSD-固态硬盘）。
 
-![image-20230322012635473](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322012635473.png)
-
 主板是计算机的关键部分，从键盘和鼠标到屏幕和打印机的所有其他硬件都将连接到计算机主板；但是，如果你想在计算机中运行自己喜欢的程序或者应用程序，硬件组件本身是没办法直接被使用的，所以我们需要一个操作系统来控制和“驱动”这些硬件组件。
-
-![image-20230322013136875](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322013136875.png)
 
 操作系统 (OS) 是位于硬件与你正在运行的应用程序或者程序之间的层。
 
@@ -29,8 +23,6 @@
 某些操作系统专为在笔记本电脑和个人台式机上运行而设计，例如 MS Windows 11 和 macOS；还有某些操作系统专为智能手机而设计，例如 Android 和 iOS；另外还有用于服务器的操作系统，例如 [MS Windows Server 2022](https://www.microsoft.com/en-us/windows-server/)、[IBM AIX](https://www.ibm.com/products/aix) 和 [Oracle Solaris](https://www.oracle.com/solaris)；最后，还有一些在个人计算机上以及在服务器上都能被使用的操作系统，比如Linux。
 
 下图是2022 年 1 月期间收集的数据，这些数据显示了当时 用于浏览互联网的不同操作系统的流行程度。
-
-![image-20230322014002536](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322014002536.png)
 
 你的智能手机可能运行在 Android 或 iOS操作系统上，并且其中可能拥有关于你的大量私人数据，包括：
 
@@ -60,11 +52,7 @@
 
 tips：Confidentiality、Integrity、Availability——即CIA三合一模型。
 
-![image-20230322015625614](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322015625614.png)
-
 **答题**
-
-![image-20230320213504737](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230320213504737.png)
 
 ## 关于操作系统安全的常见示例
 
@@ -140,8 +128,6 @@ Rank	          Password
 
 **答题**
 
-![image-20230320213351214](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230320213351214.png)
-
 ## 关于操作系统安全的简单实例
 
 在典型的网络攻击中，攻击者可能会试图获得对远程目标系统的访问权，我们可以通过诱使目标运行恶意文件或者通过直接获取用户名、密码来完成此类攻击。
@@ -161,8 +147,6 @@ Rank	          Password
 **模拟场景**：
 
 我们受雇检查某家公司的安全性，当我们查看客户的办公室环境时，我们注意到其中一个桌子上有留有一张便条，上面有两个词：sammie 和 dragon，让我们猜测一下 dragon 是不是 Sammie用户 在目标机器 (MACHINE\_IP)上所使用的密码？在 AttackBox 的终端中，我们将尝试通过执行`ssh sammie@MACHINE_IP`命令来登录到 Sammie 的ssh帐户，远程目标系统会要求你提供 sammie 的密码——我们输入 dragon 进行尝试。
-
-![image-20230322173552863](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322173552863.png)
 
 AttackBox 终端上的登录交互如下所示：
 
@@ -247,20 +231,12 @@ ssh johnny@10.10.210.242
 #经过登录尝试发现可用密码：abc123
 ```
 
-![image-20230322181721434](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322181721434.png)
-
 > 用户 johnny 的密码是：abc123
 
 成功完成ssh登录后，输入`history`命令：发现root用户的密码。
-
-![image-20230322181911146](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322181911146.png)
 
 > root用户的密码为：happyHack!NG 。
 
 切换用户身份到root（使用我们刚才找到的密码完成身份验证），以root用户身份查找flag.txt文件 并获取其文本内容：
 
-![image-20230322182319042](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322182319042.png)
-
 > flag.txt的内容是：THM{YouGotRoot} 。
-
-![image-20230320214350583](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230320214350583.png)

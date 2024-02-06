@@ -4,8 +4,6 @@
 
 本文相关内容：了解安全运营中心(SOC)的相关职责、服务和数据来源。
 
-![img](https://assets.tryhackme.com/room-banners/intro-to-defensive-security.png)
-
 ## 安全运营简介
 
 ![An image showing a Security Operations Center: a team of IT security professionals tasked with monitoring a company's network and systems.](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/47bec18ccc60451eda390ef07b4daf54.png)
@@ -23,8 +21,6 @@
 > SOC代表：Security Operations Center（安全运营中心）
 >
 > SOC每天监控网络多少小时：24
-
-![image-20230320222314909](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230320222314909.png)
 
 ## 安全运营的要素
 
@@ -84,8 +80,6 @@ SOC 分析师可能的应对流程如下：
 
 > NSM代表：Network security monitoring（网络安全监控）
 
-![image-20230322231522117](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230322231522117.png)
-
 ## 关于SOC的实例
 
 ![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/4d68ffe73a45b4974a36d0947d4b27d8.png)
@@ -115,20 +109,10 @@ _在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完
 
 我们将模拟在防火墙级别拦截恶意IP地址所发出的数据包，这需要我们快速添加一些防火墙规则：
 
-![image-20230323230516322](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230323230516322.png)
-
 发现恶意ip及其数据包：
-
-![image-20230323230712062](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230323230712062.png)
 
 快速添加防火墙规则：
 
-![image-20230323230832936](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230323230832936.png)
-
 成功拦截并得到一个flag：
 
-![image-20230323230915180](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230323230915180.png)
-
 > 最后得到的flag内容为：THM{ATTACK\_BLOCKED} 。
-
-![image-20230320222055186](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230320222055186.png)

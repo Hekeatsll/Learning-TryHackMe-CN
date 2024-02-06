@@ -4,8 +4,6 @@
 
 本文介绍：对进攻性安全概念进行简单讲解。
 
-![img](https://assets.tryhackme.com/room-banners/intro-to-offensive-security.png)
-
 ## 攻击模拟示例
 
 在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，我们需要完成的操作是：攻击一个名为 FakeBank 的web应用程序（一个虚拟的银行web应用程序）。
@@ -30,7 +28,7 @@ gobuster -u http://fakebank.com -w wordlist.txt dir
 
 GoBuster 会使用字典中的每条记录来扫描目标网站，从而查找目标网站上可能存在的隐藏页面；最终我们在GoBuster的输出结果中 可以看到目标网站上确实存在的隐藏目录（Status: 200表示相关页面确实存在）。
 
-![image-20230318222340492](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318222340492.png)
+
 
 **步骤3）攻击目标应用程序**
 
@@ -48,23 +46,23 @@ _尝试在虚拟实验环境中对目标进行攻击，从银行账户号2276向
 gobuster -u http://fakebank.com -w wordlist.txt dir
 ```
 
-![image-20230318224310889](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318224310889.png)
+
 
 访问找到的隐藏目录：
 
-![image-20230318224411171](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230318224411171.png)
+
 
 进行转账操作：
 
-![image-20230318224527032](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230318224527032.png) ![image-20230318224604085](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230318224604085.png)
+
 
 返回初始的银行账户页面--查看最终答案：
 
-![image-20230318224830196](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230318224830196.png)
+
 
 > 最终显示的答案为：BANK-HACKED
 
-![image-20230318224849820](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318224849820.png)
+
 
 ## 什么是进攻性安全？
 

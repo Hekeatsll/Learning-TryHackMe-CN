@@ -20,7 +20,7 @@ layout:
 
 # 👾 Welcome(欢迎)
 
-<figure><img src=".gitbook/assets/Snipaste_2024-01-19_01-50-09-modified.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Snipaste_2024-02-07_17-17-56-modified.png" alt="" width="323"><figcaption></figcaption></figure>
 
 本项目GitHub链接：[https://github.com/Hekeatsll/Learning-TryHackMe-CN](https://github.com/Hekeatsll/Learning-TryHackMe-CN)
 

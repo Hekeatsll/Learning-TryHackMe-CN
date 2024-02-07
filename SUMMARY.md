@@ -7,7 +7,7 @@
 * [🥳 Introduction to Cyber Security(网络安全概论)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/README.md)
   * [☑ Intro to Offensive Security(进攻性安全介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
   * [☑ Intro to Defensive Security(防御性安全介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md)
-  * [Careers in Cyber(网络安全职业介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md)
+  * [☑ Careers in Cyber(网络安全职业介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md)
   * [Web Application Security(Web应用程序安全介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/web-application-securityweb-ying-yong-cheng-xu-an-quan-jie-shao.md)
   * [Operating System Security(操作系统安全介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/operating-system-security-cao-zuo-xi-tong-an-quan-jie-shao.md)
   * [Network Security(网络安全介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/network-security-wang-luo-an-quan-jie-shao.md)

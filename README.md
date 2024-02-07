@@ -1,14 +1,32 @@
 ---
 description: 基于TryHackMe在线学习平台内容的中文学习文档。
+cover: .gitbook/assets/default_tryhackme.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 👾 Welcome(欢迎)
 
-## 👾 Welcome(欢迎)
+<figure><img src=".gitbook/assets/Snipaste_2024-01-19_01-50-09-modified.png" alt="" width="375"><figcaption></figcaption></figure>
 
 本项目GitHub链接：[https://github.com/Hekeatsll/Learning-TryHackMe-CN](https://github.com/Hekeatsll/Learning-TryHackMe-CN)
 
-<figure><img src=".gitbook/assets/Snipaste_2024-01-19_01-50-09-modified.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/tryhackme-modified.png" alt="" width="375"><figcaption></figcaption></figure>
+
+TryHackMe官网链接：[https://tryhackme.com](https://tryhackme.com/room/defensivesecurity)
 
 "TryHackMe" 是一个在线平台，它为学习和教育网络安全提供了一种互动且实用的方法，该平台主要面向所有知识水平的个人或组织，从网络安全初学者到高级安全从业人员，THM为用户提供了一个安全的在线环境，以便他们学习各种网络安全技能和概念并进行知识点实践。
 
@@ -22,7 +40,3 @@ description: 基于TryHackMe在线学习平台内容的中文学习文档。
 6. 教育资源: 该平台还提供教育资源，包括详细的指南和教程，帮助用户理解和完成挑战。
 
 总的来说，TryHackMe 是一个非常适合任何对网络安全感兴趣的人的学习平台，无论用户的技能水平如何，他们都可以在线进行实践操作和各种挑战，TryHackMe 为用户提供了一个有趣且富有成效的网络安全在线学习环境。
-
-<figure><img src=".gitbook/assets/tryhackme-modified.png" alt="" width="375"><figcaption></figcaption></figure>
-
-TryHackMe官网链接：[https://tryhackme.com](https://tryhackme.com/room/defensivesecurity)

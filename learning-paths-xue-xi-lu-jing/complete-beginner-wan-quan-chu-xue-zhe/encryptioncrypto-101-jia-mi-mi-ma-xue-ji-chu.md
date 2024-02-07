@@ -1,6 +1,26 @@
+---
+description: 本文相关内容：介绍一些基础的用于加密密码的知识。
+cover: ../../.gitbook/assets/crypto.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Encryption-Crypto 101(加密-密码学基础)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/encryptioncrypto101
+TryHackMe实验房间链接：[https://tryhackme.com/room/encryptioncrypto101](https://tryhackme.com/room/encryptioncrypto101)
 
 ## 基础关键词
 

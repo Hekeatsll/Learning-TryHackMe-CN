@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：介绍活动目录的基本概念和功能。
+cover: ../../.gitbook/assets/2857591-20230516214618727-1819928694.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Active Directory Basics(活动目录基础·新版)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/winadbasics
+TryHackMe实验房间链接：[https://tryhackme.com/room/winadbasics](https://tryhackme.com/room/winadbasics)
 
 可参考章节：
 

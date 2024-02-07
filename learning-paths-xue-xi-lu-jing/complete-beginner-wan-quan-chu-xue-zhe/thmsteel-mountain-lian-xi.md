@@ -1,6 +1,27 @@
+---
+description: >-
+  本文相关内容：针对Windows目标机器，使用metasploit获取目标的初始访问权限，然后使用powershell枚举Windows权限提升方法，并尝试获得目标机器的Administrator访问权限。
+cover: ../../.gitbook/assets/2857591-20230613035529999-1193764249.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Steel Mountain-练习
 
-TryHackMe实验房间链接：https://tryhackme.com/room/steelmountain
+TryHackMe实验房间链接：[https://tryhackme.com/room/steelmountain](https://tryhackme.com/room/steelmountain)
 
 ## 简介
 

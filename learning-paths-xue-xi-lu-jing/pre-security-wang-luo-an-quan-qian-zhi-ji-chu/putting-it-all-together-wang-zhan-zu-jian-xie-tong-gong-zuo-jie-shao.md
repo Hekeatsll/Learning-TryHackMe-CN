@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：了解Web服务的所有单独组件如何协同工作，这种协同工作能让我们可以访问自己喜欢的网站。
+cover: ../../.gitbook/assets/184dc7fb5b1d816f4005d59f36a0e484.svg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Putting it all together(网站组件协同工作介绍)
 
-THM实验房间链接：https://tryhackme.com/room/puttingitalltogether
+TryHackMe实验房间链接：[https://tryhackme.com/room/puttingitalltogether](https://tryhackme.com/room/puttingitalltogether)
 
 
 

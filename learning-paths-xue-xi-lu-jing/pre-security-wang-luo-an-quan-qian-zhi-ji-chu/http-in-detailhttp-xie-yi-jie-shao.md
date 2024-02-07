@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：了解如何使用 HTTP 协议向 Web 服务器请求内容。
+cover: ../../.gitbook/assets/f54f3b9acec93f9cdbf2f1811dff1e70.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # HTTP in detail(HTTP协议介绍)
 
-THM实验房间链接：https://tryhackme.com/room/httpindetail
+TryHackMe实验房间链接：[https://tryhackme.com/room/httpindetail](https://tryhackme.com/room/httpindetail)
 
 
 

@@ -2,11 +2,27 @@
 description: >-
   本文相关内容：本文所涉及的内容是 Windows 基础模块的第 3 部分，了解有助于保护设备安全的内置 Microsoft 工具，例如 Windows
   更新、Windows 安全、BitLocker等...
+cover: ../../.gitbook/assets/4094ed0a54f8dc274b9b4f602c57b152.svg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Windows Fundamentals 3(Windows基础知识3)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/windowsfundamentals3xzx
+TryHackMe实验房间链接：[https://tryhackme.com/room/windowsfundamentals3xzx](https://tryhackme.com/room/windowsfundamentals3xzx)
 
 
 

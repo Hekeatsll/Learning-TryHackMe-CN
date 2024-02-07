@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：了解如何使用开膛手约翰，它是一个非常强大和具有普适性的哈希破解工具。
+cover: ../../.gitbook/assets/johntheripper.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # John The Ripper(hash破解工具)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/johntheripper0
+TryHackMe实验房间链接：[https://tryhackme.com/room/johntheripper0](https://tryhackme.com/room/johntheripper0)
 
 
 

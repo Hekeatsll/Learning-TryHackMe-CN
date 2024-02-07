@@ -1,6 +1,26 @@
+---
+description: 本文相关内容：针对Linux目标机器，通过枚举Samba来获得网络共享信息，然后利用proftpd的版本漏洞，并通过Path变量来执行权限提升操作。
+cover: ../../.gitbook/assets/2857591-20230613034651098-1864513283.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Kenobi-练习
 
-TryHackMe实验房间链接：https://tryhackme.com/room/kenobi
+TryHackMe实验房间链接：[https://tryhackme.com/room/kenobi](https://tryhackme.com/room/kenobi)
 
 ## 端口扫描
 

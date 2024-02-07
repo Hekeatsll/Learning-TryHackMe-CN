@@ -41,7 +41,7 @@
   * [OWASP Juice Shop-练习](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/thmowasp-juice-shop-lian-xi.md)
   * [Upload Vulnerabilities(文件上传漏洞)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/upload-vulnerabilities-wen-jian-shang-chuan-lou-dong.md)
   * [Pickle Rick-练习](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/thmpickle-rick-lian-xi.md)
-  * [Hashing-Crypto 101(哈希-密码学基础)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/hashingcrypto-101-ha-xi-mi-ma-xue-ji-chu.md)
+  * [Hashing-Crypto 101(哈希技术-密码学基础)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/hashingcrypto-101-ha-xi-mi-ma-xue-ji-chu.md)
   * [John The Ripper(hash破解工具)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/john-the-ripperhash-po-jie-gong-ju.md)
   * [Encryption-Crypto 101(加密-密码学基础)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/encryptioncrypto-101-jia-mi-mi-ma-xue-ji-chu.md)
   * [Active Directory Basics(活动目录基础·旧版)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md)

@@ -1,6 +1,26 @@
+---
+description: 本文相关内容：介绍Metasploit框架的主要组件。
+cover: ../../.gitbook/assets/metasploit.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Metasploit: Introduction(Metasploit简介)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/metasploitintro
+TryHackMe实验房间链接：[https://tryhackme.com/room/metasploitintro](https://tryhackme.com/room/metasploitintro)
 
 ## 介绍
 

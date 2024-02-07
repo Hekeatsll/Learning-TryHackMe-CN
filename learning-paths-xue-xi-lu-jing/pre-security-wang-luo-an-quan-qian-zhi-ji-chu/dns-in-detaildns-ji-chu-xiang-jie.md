@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：了解DNS协议是如何工作的，以及DNS如何帮助我们访问互联网服务。
+cover: ../../.gitbook/assets/f54f3b9acec93f9cdbf2f1811dff1e70.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # DNS in detail(DNS基础详解)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/dnsindetail
+TryHackMe实验房间链接：[https://tryhackme.com/room/dnsindetail](https://tryhackme.com/room/dnsindetail)
 
 
 

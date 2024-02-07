@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：基于易受攻击的 Web 应用程序 Juice Shop，学习如何识别和利用常见的 Web 应用程序漏洞。
+cover: ../../.gitbook/assets/2857591-20230614175044185-1063863239.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # OWASP Juice Shop-练习
 
-TryHackMe实验房间链接：https://tryhackme.com/room/owaspjuiceshop
+TryHackMe实验房间链接：[https://tryhackme.com/room/owaspjuiceshop](https://tryhackme.com/room/owaspjuiceshop)
 
 
 

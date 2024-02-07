@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：介绍如何使用 Burp Suite 进行 Web 应用程序渗透测试。
+cover: ../../.gitbook/assets/下载.svg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Burp Suite：The Basics(Burp Suite基础·更新版)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/burpsuitebasics
+TryHackMe实验房间链接：[https://tryhackme.com/room/burpsuitebasics](https://tryhackme.com/room/burpsuitebasics)
 
 
 

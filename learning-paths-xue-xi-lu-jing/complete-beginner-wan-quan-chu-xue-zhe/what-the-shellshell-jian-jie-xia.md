@@ -1,6 +1,12 @@
+---
+description: 本文相关内容：关于反向/绑定shell的练习示例。
+cover: ../../.gitbook/assets/introtoshells.png
+coverY: 0
+---
+
 # What the shell？(Shell简介-下)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/introtoshells
+TryHackMe实验房间链接：[https://tryhackme.com/room/introtoshells](https://tryhackme.com/room/introtoshells)
 
 ## 实践与案例
 

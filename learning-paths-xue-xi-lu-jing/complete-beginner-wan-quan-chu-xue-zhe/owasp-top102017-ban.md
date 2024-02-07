@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：了解并利用每个OWASP Top 10漏洞，它们是十大最严重的Web安全风险。
+cover: ../../.gitbook/assets/2857591-20230614182517669-642644077.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # OWASP Top10(2017版)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/owasptop10
+TryHackMe实验房间链接：[https://tryhackme.com/room/owasptop10](https://tryhackme.com/room/owasptop10)
 
 
 

@@ -1,6 +1,26 @@
+---
+description: 本文相关内容：CTF靶机练习
+cover: ../../.gitbook/assets/2857591-20230613025234763-662366994.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Pickle Rick-练习
 
-TryHackMe实验房间链接：https://tryhackme.com/room/picklerick
+TryHackMe实验房间链接：[https://tryhackme.com/room/picklerick](https://tryhackme.com/room/picklerick)
 
 ## 任务目标
 

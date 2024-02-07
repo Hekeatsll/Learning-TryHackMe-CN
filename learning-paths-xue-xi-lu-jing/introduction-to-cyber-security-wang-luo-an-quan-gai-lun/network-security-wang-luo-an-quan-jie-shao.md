@@ -74,7 +74,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](
 
 关于网络攻击步骤的另一个类比是：对目标房屋感兴趣的小偷。小偷在开始行动之前，往往会花一些时间了解目标房屋，谁住在那里，他们什么时候离开以及什么时候回家，小偷还会确定目标房屋是否有安装安全摄像头以及警报系统，一旦收集到足够的信息，小偷就会制定最佳的进入策略。关于物理盗窃的计划和执行在某种程度上也类似于旨在闯入网络并窃取数据的恶意攻击行为。
 
-<figure><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/a8e61f1f9a2ea3612d3bf84f9a11f41c.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/a8e61f1f9a2ea3612d3bf84f9a11f41c.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
@@ -226,9 +226,9 @@ root@AttackBox# cat flag.txt
 [redacted]
 ```
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/a708c20aa1243c8e2be30bb9e74bd663.png)
+<figure><img src="../../.gitbook/assets/a708c20aa1243c8e2be30bb9e74bd663.png" alt=""><figcaption></figcaption></figure>
 
-让我们总结一下我们在本小节中的工作，我们的目标是获取 IP 地址为MACHINE\_IP的目标系统的root访问权限：
+让我们总结一下我们在本小节中的工作，我们的目标是获取IP地址为MACHINE\_IP的系统的root访问权限：
 
 1. 我们使用 nmap 来了解目标机器正在运行的服务。
 2. 我们连接到目标机的 FTP 服务器以了解有关其配置的更多信息。
@@ -240,13 +240,13 @@ root@AttackBox# cat flag.txt
 
 _在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完成本小节对应的实例。_
 
-_**问题**_
+**问题**
 
 1. secret.txt文件内容中的密码是什么？
 2. /root目录中的flag.txt文件内容是什么？
 3. /home/librarian目录中的flag.txt文件内容是什么？
 
-_**操作**_
+**操作**
 
 使用nmap进行端口扫描：
 

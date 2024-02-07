@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：探索Web应用程序(即Web网站)中的一些基本的文件上传漏洞。
+cover: ../../.gitbook/assets/2857591-20230613024919306-1740250427.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Upload Vulnerabilities(文件上传漏洞)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/uploadvulns
+TryHackMe实验房间链接：[https://tryhackme.com/room/uploadvulns](https://tryhackme.com/room/uploadvulns)
 
 
 

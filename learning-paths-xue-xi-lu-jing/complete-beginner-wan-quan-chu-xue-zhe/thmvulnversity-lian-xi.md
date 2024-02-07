@@ -1,6 +1,26 @@
+---
+description: 本文相关内容：练习主动侦察(信息收集)、针对web应用程序进行攻击以及执行权限提升。
+cover: ../../.gitbook/assets/Snipaste_2024-02-07_22-12-22.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Vulnversity-练习
 
-TryHackMe实验房间链接：https://tryhackme.com/room/vulnversity
+TryHackMe实验房间链接：[https://tryhackme.com/room/vulnversity](https://tryhackme.com/room/vulnversity)
 
 ## 介绍
 

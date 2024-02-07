@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：主要涉及网络基础理论、与网络相关的基本命令行工具的使用。
+cover: ../../.gitbook/assets/2857591-20230614170101305-2145401327.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Introductory Networking(网络基础介绍)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/introtonetworking
+TryHackMe实验房间链接：[https://tryhackme.com/room/introtonetworking](https://tryhackme.com/room/introtonetworking)
 
 
 

@@ -1,6 +1,26 @@
-# Hashing-Crypto 101(哈希-密码学基础)
+---
+description: 本文相关内容：介绍用于处理密码的哈希技术。
+cover: ../../.gitbook/assets/2857591-20230613025528726-1633801797.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-TryHackMe实验房间链接：https://tryhackme.com/room/hashingcrypto101
+# Hashing-Crypto 101(哈希技术-密码学基础)
+
+TryHackMe实验房间链接：[https://tryhackme.com/room/hashingcrypto101](https://tryhackme.com/room/hashingcrypto101)
 
 ## 基础关键词
 

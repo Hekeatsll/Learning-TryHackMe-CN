@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：了解Active Directory(活动目录)的基础知识及其在现实世界中的使用方式。
+cover: ../../.gitbook/assets/2857591-20230516214618727-1819928694.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Active Directory Basics(活动目录基础·旧版)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/activedirectorybasics
+TryHackMe实验房间链接：[https://tryhackme.com/room/activedirectorybasics](https://tryhackme.com/room/activedirectorybasics)
 
 
 

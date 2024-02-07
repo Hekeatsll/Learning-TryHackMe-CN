@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：踏上学习 Linux 基础知识的旅程，学习在交互式终端上运行一些最基本的Linux命令。
+cover: ../../.gitbook/assets/184dc7fb5b1d816f4005d59f36a0e484.svg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Linux Fundamentals Part1(Linux基础知识1)
 
-THM实验房间链接：https://tryhackme.com/room/linuxfundamentalspart1
+TryHackMe实验房间链接：[https://tryhackme.com/room/linuxfundamentalspart1](https://tryhackme.com/room/linuxfundamentalspart1)
 
 
 

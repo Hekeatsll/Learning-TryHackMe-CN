@@ -1,6 +1,26 @@
+---
+description: 本文相关内容：介绍在针对目标机器进行漏洞利用攻击时所需要发送和接收的反向/绑定shell。
+cover: ../../.gitbook/assets/introtoshells.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # What the shell？(Shell简介-上)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/introtoshells
+TryHackMe实验房间链接：[https://tryhackme.com/room/introtoshells](https://tryhackme.com/room/introtoshells)
 
 ## shell介绍
 

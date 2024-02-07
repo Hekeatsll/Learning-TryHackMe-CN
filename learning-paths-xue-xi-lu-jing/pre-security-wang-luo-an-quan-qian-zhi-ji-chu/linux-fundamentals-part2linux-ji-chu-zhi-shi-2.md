@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：继续你的 Linux 学习之旅，你将学习如何使用 SSH 登录到 Linux 机器，以及了解更多Linux命令。
+cover: ../../.gitbook/assets/184dc7fb5b1d816f4005d59f36a0e484.svg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Linux Fundamentals Part2(Linux基础知识2)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/linuxfundamentalspart2
+TryHackMe实验房间链接：[https://tryhackme.com/room/linuxfundamentalspart2](https://tryhackme.com/room/linuxfundamentalspart2)
 
 
 

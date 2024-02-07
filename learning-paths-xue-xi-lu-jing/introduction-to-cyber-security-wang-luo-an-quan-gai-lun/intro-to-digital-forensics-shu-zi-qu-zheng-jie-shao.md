@@ -20,7 +20,7 @@ layout:
 
 # ☑ Intro to Digital Forensics(数字取证介绍)
 
-THM实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https://tryhackme.com/room/introdigitalforensics)
+TryHackMe实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https://tryhackme.com/room/introdigitalforensics)
 
 ## 简介
 

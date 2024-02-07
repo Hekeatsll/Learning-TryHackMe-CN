@@ -20,11 +20,11 @@ layout:
 
 # ☑ Security Operations(安全运营介绍)
 
-THM实验房间链接：[https://tryhackme.com/room/securityoperations](https://tryhackme.com/room/securityoperations)
+TryHackMe实验房间链接：[https://tryhackme.com/room/securityoperations](https://tryhackme.com/room/securityoperations)
 
 ## 安全运营简介
 
-![An image showing a Security Operations Center: a team of IT security professionals tasked with monitoring a company's network and systems.](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/47bec18ccc60451eda390ef07b4daf54.png)
+<figure><img src="../../.gitbook/assets/47bec18ccc60451eda390ef07b4daf54.png" alt=""><figcaption><p>An image showing a Security Operations Center: a team of IT security professionals tasked with monitoring a company's network and systems.</p></figcaption></figure>
 
 安全运营中心 (SOC) 是一类 IT 安全专业人员团队，负责每周 7 天、每天 24 小时监控公司的网络和系统，他们监控的目的是：
 
@@ -61,7 +61,7 @@ SOC 将通过多种数据源来监控网络环境中是否存在入侵迹象并�
 
 以上只是一些最常见的数据源，另外还有许多其他资源可用于帮助完善网络安全监控 以及 有利于 SOC 完成其他工作任务；SOC 可能还会使用 安全信息和事件管理系统 (SIEM-Security Information and Event Management) 来开展工作， SIEM 会聚合来自于不同来源的数据信息，以便于 SOC 可以有效地关联数据并响应攻击事件。
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/ff0d15f07e9889f26931fa5665a4c871.png)
+<figure><img src="../../.gitbook/assets/ff0d15f07e9889f26931fa5665a4c871.png" alt=""><figcaption></figcaption></figure>
 
 **SOC服务（SOC Services）**
 
@@ -104,7 +104,7 @@ SOC 分析师可能的应对流程如下：
 
 ## 关于SOC的实例
 
-![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/4d68ffe73a45b4974a36d0947d4b27d8.png)
+<figure><img src="../../.gitbook/assets/4d68ffe73a45b4974a36d0947d4b27d8.png" alt=""><figcaption></figcaption></figure>
 
 防火墙是一种检查进入和离开网络或系统的网络数据包的设备，我们可以使用防火墙来阻止一些正在进行的网络攻击，最基本的防火墙检查类型包括：
 

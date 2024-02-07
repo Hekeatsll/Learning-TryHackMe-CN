@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：进一步提升你的Linux使用技能，了解一些Linux系统常见的实用程序。
+cover: ../../.gitbook/assets/184dc7fb5b1d816f4005d59f36a0e484.svg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Linux Fundamentals Part3(Linux基础知识3)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/linuxfundamentalspart3
+TryHackMe实验房间链接：[https://tryhackme.com/room/linuxfundamentalspart3](https://tryhackme.com/room/linuxfundamentalspart3)
 
 
 

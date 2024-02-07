@@ -1,6 +1,26 @@
+---
+description: 本文相关内容：介绍一些常见的用于针对Linux机器进行权限提升的技术。
+cover: ../../.gitbook/assets/D3pINJ3.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Common Linux Privesc(常见的Linux提权)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/commonlinuxprivesc
+TryHackMe实验房间链接：[https://tryhackme.com/room/commonlinuxprivesc](https://tryhackme.com/room/commonlinuxprivesc)
 
 ## 了解 Privesc
 

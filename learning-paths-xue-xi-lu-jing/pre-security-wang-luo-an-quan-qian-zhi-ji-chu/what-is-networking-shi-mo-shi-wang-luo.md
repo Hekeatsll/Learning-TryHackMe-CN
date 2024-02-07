@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：学习一些关于计算机网络的基础知识。
+cover: ../../.gitbook/assets/fb870f148ec59025ce152964b8260af3.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # What is Networking？(什么是网络？)
 
-THM实验房间链接：https://tryhackme.com/room/whatisnetworking
+TryHackMe实验房间链接：[https://tryhackme.com/room/whatisnetworking](https://tryhackme.com/room/whatisnetworking)
 
 ## 简介
 

@@ -1,10 +1,26 @@
 ---
 description: 本文相关内容：枚举、利用更常见的网络服务和错误配置。
+cover: ../../.gitbook/assets/networkservices2.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Network Services 2(网络服务2)
 
-TryHackMe实验房间链接：https://tryhackme.com/room/networkservices2
+TryHackMe实验房间链接：[https://tryhackme.com/room/networkservices2](https://tryhackme.com/room/networkservices2)
 
 
 

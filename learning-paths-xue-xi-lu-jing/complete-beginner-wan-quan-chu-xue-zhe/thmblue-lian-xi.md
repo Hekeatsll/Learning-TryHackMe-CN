@@ -1,6 +1,26 @@
+---
+description: 本文的相关内容：部署并入侵一台Windows靶机，通过利用常见的Windows错误配置来完成渗透过程。
+cover: ../../.gitbook/assets/GosxHyQ.jpg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Blue-练习
 
-TryHackMe实验房间链接：https://tryhackme.com/room/blue
+TryHackMe实验房间链接：[https://tryhackme.com/room/blue](https://tryhackme.com/room/blue)
 
 ## Recon （侦察-信息收集阶段）
 

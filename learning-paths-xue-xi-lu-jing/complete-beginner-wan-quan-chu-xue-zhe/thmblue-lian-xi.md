@@ -1,6 +1,6 @@
-# THM-Blue-练习
+# Blue-练习
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/blue
+TryHackMe实验房间链接：https://tryhackme.com/room/blue
 
 ## Recon （侦察-信息收集阶段）
 

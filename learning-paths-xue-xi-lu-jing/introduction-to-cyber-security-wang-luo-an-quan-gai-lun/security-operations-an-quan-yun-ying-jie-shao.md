@@ -1,8 +1,26 @@
+---
+description: 本文相关内容：了解安全运营中心(SOC)的相关职责、服务和数据来源。
+cover: ../../.gitbook/assets/intro-to-defensive-security.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Security Operations(安全运营介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/securityoperations
-
-本文相关内容：了解安全运营中心(SOC)的相关职责、服务和数据来源。
+THM实验房间链接：[https://tryhackme.com/room/securityoperations](https://tryhackme.com/room/securityoperations)
 
 ## 安全运营简介
 

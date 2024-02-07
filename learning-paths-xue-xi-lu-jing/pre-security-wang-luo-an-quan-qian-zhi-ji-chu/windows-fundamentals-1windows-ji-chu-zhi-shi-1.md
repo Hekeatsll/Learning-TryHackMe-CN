@@ -1,10 +1,14 @@
+---
+description: >-
+  本文相关内容：本文所涉及的内容是Windows 基础模块的第 1 部分，我们将了解 Windows 桌面、NTFS
+  文件系统、UAC、控制面板等Windows基础组件。
+---
+
 # Windows Fundamentals 1(Windows基础知识1)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/windowsfundamentals1xbx
+TryHackMe实验房间链接：https://tryhackme.com/room/windowsfundamentals1xbx
 
-本文介绍：本文所涉及的内容是Windows 基础模块的第 1 部分，我们将了解 Windows 桌面、NTFS 文件系统、UAC、控制面板等Windows基础组件。
 
-![img](https://assets.tryhackme.com/room-banners/windows.png)
 
 ## 简介
 

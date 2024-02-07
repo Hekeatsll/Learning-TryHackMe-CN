@@ -1,5 +1,5 @@
 ---
-description: SOC Level 1 学习路径(此路径下的部分笔记可能放置在其他学习路径下)
+description: SOC Level 1 学习路径(此路径的部分笔记可能放置在其他学习路径下)
 cover: ../.gitbook/assets/SOCL1-square.png
 coverY: 0
 layout:

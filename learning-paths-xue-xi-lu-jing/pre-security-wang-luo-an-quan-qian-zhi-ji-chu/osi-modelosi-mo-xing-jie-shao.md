@@ -1,8 +1,12 @@
+---
+description: 本文相关内容：了解决定跨网络处理数据的各个阶段的基本网络框架。
+---
+
 # OSI Model(OSI模型介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/osimodelzi
+THM实验房间链接：https://tryhackme.com/room/osimodelzi
 
-本文相关内容：了解决定跨网络处理数据的各个阶段的基本网络框架。
+
 
 ## 什么是OSI模型？
 

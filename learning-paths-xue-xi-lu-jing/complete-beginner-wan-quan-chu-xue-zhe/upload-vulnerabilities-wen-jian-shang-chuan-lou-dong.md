@@ -1,10 +1,14 @@
+---
+description: 本文相关内容：探索Web应用程序(即Web网站)中的一些基本的文件上传漏洞。
+---
+
 # Upload Vulnerabilities(文件上传漏洞)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/uploadvulns
+TryHackMe实验房间链接：https://tryhackme.com/room/uploadvulns
 
-本文相关内容：探索Web应用程序(即Web网站)中的一些基本的文件上传漏洞。
 
-![img](https://i.imgur.com/wVEQ3Fe.png)
+
+
 
 ## 配置在线练习环境
 

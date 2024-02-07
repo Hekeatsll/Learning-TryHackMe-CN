@@ -1,8 +1,10 @@
+---
+description: 本文相关内容：学习一些关于计算机网络的基础知识。
+---
+
 # What is Networking？(什么是网络？)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/whatisnetworking
-
-本文相关内容：学习一些关于计算机网络的基础知识。
+THM实验房间链接：https://tryhackme.com/room/whatisnetworking
 
 ## 简介
 

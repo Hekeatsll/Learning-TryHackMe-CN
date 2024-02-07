@@ -1,14 +1,16 @@
+---
+description: 本文相关内容：了解并利用OWASP Top 10漏洞中的每一个，它们是十大最严重的Web安全风险。
+---
+
 # OWASP Top 10(2021版)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/owasptop102021
+TryHackMe实验房间链接：https://tryhackme.com/room/owasptop102021
 
-通过学习相关知识点：了解并利用OWASP Top 10漏洞中的每一个，它们是十大最严重的Web安全风险。
 
-![image](https://img2023.cnblogs.com/blog/2857591/202306/2857591-20230614182517669-642644077.png)
 
 ## 简介
 
-![image-20221129220611499](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221129220611499.png)
+
 
 本文将对每个 OWASP 主题进行分析，并会包含关于漏洞主要原理、漏洞如何产生以及如何利用漏洞的详细信息。
 

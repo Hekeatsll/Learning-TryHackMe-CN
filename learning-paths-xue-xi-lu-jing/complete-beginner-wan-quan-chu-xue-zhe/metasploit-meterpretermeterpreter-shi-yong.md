@@ -1,6 +1,6 @@
 # Metasploit Meterpreter(Meterpreter使用)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/meterpreter
+TryHackMe实验房间链接：https://tryhackme.com/room/meterpreter
 
 ## Meterpreter简介
 

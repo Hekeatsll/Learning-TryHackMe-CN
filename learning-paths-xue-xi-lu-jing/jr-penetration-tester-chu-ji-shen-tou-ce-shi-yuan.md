@@ -1,5 +1,5 @@
 ---
-description: Jr Penetration Tester 学习路径(此路径下的部分笔记可能放置在其他学习路径下)
+description: Jr Penetration Tester 学习路径(此路径的部分笔记可能放置在其他学习路径下)
 cover: ../.gitbook/assets/jrpenetrationtester-square.svg
 coverY: 0
 layout:

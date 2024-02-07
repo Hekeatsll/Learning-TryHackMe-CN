@@ -1,6 +1,6 @@
 # Common Linux Privesc(常见的Linux提权)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/commonlinuxprivesc
+TryHackMe实验房间链接：https://tryhackme.com/room/commonlinuxprivesc
 
 ## 了解 Privesc
 

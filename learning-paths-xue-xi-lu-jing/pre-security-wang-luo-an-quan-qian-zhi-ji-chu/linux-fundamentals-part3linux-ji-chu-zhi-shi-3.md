@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：进一步提升你的Linux使用技能，了解一些Linux系统常见的实用程序。
+---
+
 # Linux Fundamentals Part3(Linux基础知识3)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/linuxfundamentalspart3
+TryHackMe实验房间链接：https://tryhackme.com/room/linuxfundamentalspart3
 
-本文相关内容：进一步提升你的Linux使用技能，了解一些Linux系统常见的实用程序。
 
-![img](https://assets.tryhackme.com/room-banners/linuxfund.png)
 
 ## 简介
 

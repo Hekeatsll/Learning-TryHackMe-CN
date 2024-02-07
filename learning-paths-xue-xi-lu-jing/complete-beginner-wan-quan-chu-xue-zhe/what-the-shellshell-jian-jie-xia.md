@@ -1,6 +1,6 @@
 # What the shell？(Shell简介-下)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/introtoshells
+TryHackMe实验房间链接：https://tryhackme.com/room/introtoshells
 
 ## 实践与案例
 

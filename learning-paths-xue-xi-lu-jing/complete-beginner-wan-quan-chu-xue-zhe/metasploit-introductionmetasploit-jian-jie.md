@@ -1,6 +1,6 @@
 # Metasploit: Introduction(Metasploit简介)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/metasploitintro
+TryHackMe实验房间链接：https://tryhackme.com/room/metasploitintro
 
 ## 介绍
 

@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：踏上学习 Linux 基础知识的旅程，学习在交互式终端上运行一些最基本的Linux命令。
+---
+
 # Linux Fundamentals Part1(Linux基础知识1)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/linuxfundamentalspart1
+THM实验房间链接：https://tryhackme.com/room/linuxfundamentalspart1
 
-本文相关内容：踏上学习 Linux 基础知识的旅程，学习在交互式终端上运行一些最基本的Linux命令。
 
-![img](https://assets.tryhackme.com/room-banners/linuxfund.png)
 
 ## 简介
 

@@ -1,6 +1,6 @@
 # Encryption-Crypto 101(加密-密码学基础)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/encryptioncrypto101
+TryHackMe实验房间链接：https://tryhackme.com/room/encryptioncrypto101
 
 ## 基础关键词
 

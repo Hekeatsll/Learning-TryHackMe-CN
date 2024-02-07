@@ -1,8 +1,26 @@
+---
+description: 本文相关内容：简单介绍操作系统安全，并演示 Linux系统 上的 SSH 身份验证实例。
+cover: ../../.gitbook/assets/intro-to-offensive-security.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Operating System Security(操作系统安全介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/operatingsystemsecurity
-
-本文相关内容：简单介绍操作系统安全，并演示 Linux系统 上的 SSH 身份验证实例。
+TryHackMe实验房间链接：[https://tryhackme.com/room/operatingsystemsecurity](https://tryhackme.com/room/operatingsystemsecurity)
 
 ## 操作系统安全简介
 

@@ -1,8 +1,12 @@
+---
+description: 本文相关内容：了解数据如何被分成更小的部分并通过网络传输到另一台设备。
+---
+
 # Packets & Frames(了解数据包和帧)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/packetsframes
+THM实验房间链接：https://tryhackme.com/room/packetsframes
 
-本文相关内容：了解数据如何被分成更小的部分并通过网络传输到另一台设备。
+
 
 ## 什么是数据包和帧？
 

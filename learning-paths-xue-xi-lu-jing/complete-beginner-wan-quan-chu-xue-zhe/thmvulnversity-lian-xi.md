@@ -1,6 +1,6 @@
-# THM-Vulnversity-练习
+# Vulnversity-练习
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/vulnversity
+TryHackMe实验房间链接：https://tryhackme.com/room/vulnversity
 
 ## 介绍
 

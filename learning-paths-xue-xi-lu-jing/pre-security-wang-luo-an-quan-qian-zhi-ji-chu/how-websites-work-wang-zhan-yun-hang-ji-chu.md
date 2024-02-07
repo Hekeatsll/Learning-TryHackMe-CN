@@ -1,8 +1,12 @@
+---
+description: 本文相关内容：要对网站进行漏洞利用，你首先需要知道网站是如何被创建的，本文将涉及HTML&JS以及一些Web安全基础问题。
+---
+
 # How websites work(网站运行基础)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/howwebsiteswork
+THM实验房间链接：https://tryhackme.com/room/howwebsiteswork
 
-本文相关内容：要对网站进行漏洞利用，你首先需要知道网站是如何被创建的，本文将涉及HTML\&JS以及一些Web安全基础问题。
+
 
 ## 网站是如何运行的？
 

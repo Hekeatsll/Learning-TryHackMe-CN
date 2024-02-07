@@ -1,12 +1,16 @@
+---
+description: 本文相关内容：介绍活动目录的基本概念和功能。
+---
+
 # Active Directory Basics(活动目录基础·新版)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/winadbasics
+TryHackMe实验房间链接：https://tryhackme.com/room/winadbasics
 
-本文相关内容：介绍活动目录的基本概念和功能。
+可参考章节：
 
-可参考博客：[【THM】Active Directory Basics(活动目录基础·旧版)-红队](https://www.cnblogs.com/Hekeats-L/p/17406960.html)
-
-![image-20230514112135960](https://img2023.cnblogs.com/blog/2857591/202305/2857591-20230516213819905-1931468377.png)
+{% content-ref url="active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md" %}
+[active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md](active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md)
+{% endcontent-ref %}
 
 ## 简介
 

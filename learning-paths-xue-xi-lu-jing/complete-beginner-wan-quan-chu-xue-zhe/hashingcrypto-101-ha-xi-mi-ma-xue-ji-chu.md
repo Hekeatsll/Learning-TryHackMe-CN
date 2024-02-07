@@ -1,6 +1,6 @@
 # Hashing-Crypto 101(哈希-密码学基础)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/hashingcrypto101
+TryHackMe实验房间链接：https://tryhackme.com/room/hashingcrypto101
 
 ## 基础关键词
 

@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：介绍如何使用 Burp Suite 进行 Web 应用程序渗透测试。
+---
+
 # Burp Suite：The Basics(Burp Suite基础·更新版)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/burpsuitebasics
+TryHackMe实验房间链接：https://tryhackme.com/room/burpsuitebasics
 
-本文相关内容：介绍如何使用 Burp Suite 进行 Web 应用程序渗透测试。
 
-![image-20231219185445169](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231219185445169.png)
 
 ## 简介
 
@@ -27,7 +29,7 @@
 
 Burp Suite可以在Web请求到达目标服务器之前拦截、查看和修改Web请求(requests)，甚至可以在浏览器接收到响应之前对响应消息(responses)进行操作，这种能力使得Burp Suite成为手动测试Web应用程序的宝贵工具。
 
-![image-20231219214927327](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231219214927327.png)
+
 
 Burp Suite有不同版本，在本文中我们将重点使用和介绍Burp Suite社区版，该版本可以在法律规定的范围内免费用于任何非商业用途；此外，Burp Suite还为用户提供了专业版和企业版，这两个版本都需要用户支付一定的许可费用，但与此同时它们也拥有一些强大的额外功能：
 
@@ -41,15 +43,15 @@ Burp Suite有不同版本，在本文中我们将重点使用和介绍Burp Suite
     * 可以访问Burp Suite Collaborator(协作器)，从而能有效地提供一个自托管或运行在Portswigger所拥有的服务器上的独特的请求捕获器。
 
     简而言之，Burp Suite Pro是一个非常强大的工具，这就是为什么它的一年订阅费为319英镑/ 399美元；Burp Pro通常供专业人士使用(相关的工具许可证通常可由渗透测试人员的雇主提供)，是Web渗透测试领域专业人士的首选。
-2.  Burp Suite企业版——与社区版和专业版相比，Burp Suite企业版主要用于持续扫描，它能提供一个自动扫描器，从而可以定期扫描目标web应用程序是否存在漏洞，这类似于使用Nessus等工具来执行自动基础设施扫描；其他版本的Burp Suite通常是允许用户在本地计算机上执行手动渗透测试，而企业版的Burp则不同，它驻留在服务器上，并能不断扫描目标web应用程序是否存在潜在漏洞。
+2. Burp Suite企业版——与社区版和专业版相比，Burp Suite企业版主要用于持续扫描，它能提供一个自动扫描器，从而可以定期扫描目标web应用程序是否存在漏洞，这类似于使用Nessus等工具来执行自动基础设施扫描；其他版本的Burp Suite通常是允许用户在本地计算机上执行手动渗透测试，而企业版的Burp则不同，它驻留在服务器上，并能不断扫描目标web应用程序是否存在潜在漏洞。
 
-    ![image-20231219221205712](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231219221205712.png)
+
 
 ### **答题**
 
 请阅读本小节内容并回答以下问题：
 
-![image-20230407083518499](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230407083518499.png)
+
 
 ## Burp Suite社区版的功能
 
@@ -71,7 +73,7 @@ Burp Suite有不同版本，在本文中我们将重点使用和介绍Burp Suite
 
 通过阅读本小节内容，可帮助我们回答以下问题。
 
-![image-20231221000858388](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221000858388.png)
+
 
 ## 安装Burp Suite社区版
 

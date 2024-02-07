@@ -1,10 +1,48 @@
+---
+description: 本文相关内容：对进攻性安全概念进行简单讲解。
+cover: ../../.gitbook/assets/intro-to-cyber.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Intro to Offensive Security(进攻性安全介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/careersincyber
+TryHackMe实验房间链接：[https://tryhackme.com/room/introtooffensivesecurity](https://tryhackme.com/room/introtooffensivesecurity)
 
-本文介绍：对进攻性安全概念进行简单讲解。
+### 什么是进攻性安全？
 
-## 攻击模拟示例
+<figure><img src="../../.gitbook/assets/image-20240207103428018.png" alt=""><figcaption></figcaption></figure>
+
+简而言之，进攻性安全就是尝试闯入目标计算机系统、利用软件本身的错误并找到应用程序中的漏洞以获得对目标的未授权访问的过程。
+
+要打败黑客，你就需要像黑客一样行事，作为合法的网络安全人员，你需要在网络犯罪分子发动攻击之前发现目标系统的漏洞并推荐安装漏洞补丁。
+
+<figure><img src="../../.gitbook/assets/image-20240207103443523.png" alt=""><figcaption></figcaption></figure>
+
+另一方面，还有防御性安全，即通过分析和巩固任何潜在的数字威胁来保护企业、组织的网络和计算机系统的过程。
+
+在防御性网络角色中，你可以调查受感染的计算机或设备，以了解它是如何被黑客攻击的，还可以跟踪网络犯罪分子的网络行为或者监控可能发生恶意活动的网络基础设施。
+
+#### 答题
+
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20240207103527010.png" alt=""><figcaption></figcaption></figure>
+
+### 攻击模拟示例
 
 在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，我们需要完成的操作是：攻击一个名为 FakeBank 的web应用程序（一个虚拟的银行web应用程序）。
 
@@ -20,7 +58,7 @@
 
 我们将在终端中键入以下命令，以使用 GoBuster（命令行安全工具）查找 FakeBank 网站上可能隐藏的页面。
 
-```bash
+```
 gobuster -u http://fakebank.com -w wordlist.txt dir
 ```
 
@@ -28,7 +66,7 @@ gobuster -u http://fakebank.com -w wordlist.txt dir
 
 GoBuster 会使用字典中的每条记录来扫描目标网站，从而查找目标网站上可能存在的隐藏页面；最终我们在GoBuster的输出结果中 可以看到目标网站上确实存在的隐藏目录（Status: 200表示相关页面确实存在）。
 
-
+<figure><img src="../../.gitbook/assets/image-20230318222340492.png" alt=""><figcaption></figcaption></figure>
 
 **步骤3）攻击目标应用程序**
 
@@ -42,33 +80,31 @@ _尝试在虚拟实验环境中对目标进行攻击，从银行账户号2276向
 
 在终端界面输入以下命令：
 
-```bash
+```
 gobuster -u http://fakebank.com -w wordlist.txt dir
 ```
 
-
+<figure><img src="../../.gitbook/assets/image-20230318224310889.png" alt=""><figcaption></figcaption></figure>
 
 访问找到的隐藏目录：
 
-
+<figure><img src="../../.gitbook/assets/image-20230318224411171.png" alt=""><figcaption></figcaption></figure>
 
 进行转账操作：
 
+<figure><img src="../../.gitbook/assets/image-20230318224527032.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image-20230318224604085.png" alt=""><figcaption></figcaption></figure>
 
 返回初始的银行账户页面--查看最终答案：
 
-
+<figure><img src="../../.gitbook/assets/image-20230318224830196.png" alt=""><figcaption></figcaption></figure>
 
 > 最终显示的答案为：BANK-HACKED
 
+<figure><img src="../../.gitbook/assets/image-20230318224849820.png" alt=""><figcaption></figcaption></figure>
 
-
-## 什么是进攻性安全？
-
-简而言之，进攻性安全就是尝试闯入目标计算机系统、利用软件本身的错误并找到应用程序中的漏洞以获得对目标的未授权访问的过程。
-
-要打败黑客，你就需要像黑客一样行事，作为合法的网络安全人员，你需要在网络犯罪分子发动攻击之前发现目标系统的漏洞并推荐漏洞补丁。
+### 进攻性安全职业
 
 以下是关于进攻性安全职业角色的简短描述：
 

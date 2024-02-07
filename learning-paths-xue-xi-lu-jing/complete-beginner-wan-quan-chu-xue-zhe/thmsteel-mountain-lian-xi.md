@@ -1,6 +1,6 @@
-# THM-Steel Mountain-练习
+# Steel Mountain-练习
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/steelmountain
+TryHackMe实验房间链接：https://tryhackme.com/room/steelmountain
 
 ## 简介
 
@@ -8,13 +8,11 @@
 
 启动目标机器，直接使用目标ip地址访问目标站点，查看网页源码，获取第一小题答案：
 
-![image-20221013164338875](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013164338875.png)
 
-![image-20221013164417205](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013164417205.png)
 
 **答题卡**
 
-![image-20221013164454703](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013164454703.png)
+
 
 ## 获取目标机的初始访问权限
 
@@ -24,21 +22,17 @@
 nmap -Pn -sV -sC 10.10.42.153 
 ```
 
-![image-20221013165357682](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013165357682.png)
+
 
 除了默认的80端口之外，目标站点还开放了8080端口提供http服务，查看8080端口的webserver页面：
 
-![image-20221013171732269](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013171732269.png)
 
-![image-20221013171332357](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013171332357.png)
 
 使用搜索引擎，找到相关漏洞信息，查看CVE编号：
 
 > 通过漏洞库查询cve编号：https://www.exploit-db.com/
 
-![image-20221013170945115](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013170945115.png)
 
-![image-20221013172037737](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221013172037737.png)
 
 接下来，我们使用 Metasploit 利用和以上cve编号相对应的漏洞，获得一个初始 shell 并查看user.txt内容:
 

@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：了解DNS协议是如何工作的，以及DNS如何帮助我们访问互联网服务。
+---
+
 # DNS in detail(DNS基础详解)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/dnsindetail
+TryHackMe实验房间链接：https://tryhackme.com/room/dnsindetail
 
-本文相关内容：了解DNS协议是如何工作的，以及DNS如何帮助我们访问互联网服务。
 
-![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/62c435d1f4d84a005f5df811/room-content/f54f3b9acec93f9cdbf2f1811dff1e70.png)
 
 ## 什么是DNS？
 
@@ -14,17 +16,17 @@ DNS 指 Domain Name System，即域名系统，DNS能为我们提供一种简单
 
 IP地址的格式如下：104.26.10.229，主要由4组0 \~ 255的二进制数字组成，中间用英文句点号隔开。当你想用浏览器来访问一个网站时，选择记住和目标网站相对应的那组复杂的IP地址 可能并不太方便，这就是DNS可以帮助我们的地方。在使用了DNS协议之后，我们就不需要记住类似于 104.26.10.229 的IP地址，而是可以选择记住和IP地址对应的域名如：tryhackme.com 。
 
-![image-20230327231452919](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327231452919.png)
+
 
 **答题**
 
-![image-20230327231521741](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327231521741.png)
+
 
 ## 域层次结构
 
 **Domain Hierarchy示意图**
 
-![image-20230327233305530](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327233305530.png)
+
 
 **Top-Level Domain(TLD-顶级域)**
 
@@ -52,7 +54,7 @@ _tips：gTLD - Generic Top Level、ccTLD - Country Code Top Level Domain 。_
 
 **答题**
 
-![image-20230328001000917](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230328001000917.png)
+
 
 ## DNS记录类型
 
@@ -80,7 +82,7 @@ TXT记录是自由文本字段，任何基于文本的数据都可以存储在�
 
 **答题**
 
-![image-20230328003618226](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230328003618226.png)
+
 
 ## 发出DNS请求
 
@@ -92,13 +94,13 @@ TXT记录是自由文本字段，任何基于文本的数据都可以存储在�
 4. TLD服务器会保存“在哪里能找到响应DNS请求的权威服务器”的记录。权威服务器通常也被称为域的名称服务器，例如www.tryhackme.com 的名称服务器是`kip.ns.cloudflare.com`和`uma.ns.cloudflare.com`，一个域名可能会有多个域名服务器，这是为了形成备份以防宕机。（简而言之：当 TLD 服务器收到我们的域名请求时，TLD服务器会将域名请求信息传递给适当的权威名称服务器，而权威名称服务器主要用于直接存储域的 DNS 记录）
 5. 权威DNS服务器是负责存储特定域名的DNS记录的服务器，并且能对所存储的DNS记录进行及时更新。基于DNS记录的不同类型会有多条DNS记录内容，而这些与你的域名请求相关的DNS记录都存储在权威DNS服务器中，当域名请求到达权威DNS服务器之后，权威DNS服务器会将这些与你的域名请求相关的DNS记录 发送回递归DNS服务器，递归DNS服务器将会为这些DNS记录缓存一个本地副本 以备将来的请求所需，然后这些DNS记录将被转发回 发出域名请求的原始客户端机器。
 
-![image-20230328113758899](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230328113758899.png)
+
 
 Tips：每个DNS记录都会带有一个TTL（Time To Live-生存时间）值，这个值是一个以秒表示的数字，所有不超过TTL时间的DNS记录都会持续存储在计算机的本地缓存中，如果本地缓存中的DNS记录过期，那么在下次请求域名时，你可能需要再次获取相关的DNS记录（这将重复上述过程）。通过使用计算机本地缓存中的DNS记录——可以节省每次与目标服务器进行通信时 所消耗的DNS请求响应时间。
 
 **答题**
 
-![image-20230328003958971](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230328003958971.png)
+
 
 ## 简单示例
 
@@ -108,26 +110,25 @@ _tips：在模拟界面构建请求以进行DNS查询并查看结果。_
 
 查询 shop.website.thm 的CNAME记录：`nslookup --type=CNAME shop.website.thm`
 
-![image-20230327232336558](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327232336558.png)
+
 
 > shop.website.thm 的CNAME记录是：shops.myshopify.com 。
 
 查询 website.thm 的TXT记录：`nslookup --type=TXT website.thm`
 
-![image-20230327232618617](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327232618617.png)
+
 
 > website.thm 的TXT记录是：THM{7012BBA60997F35A9516C2E16D2944FF} 。
 
 查看 website.thm 的MX记录的数字优先级值：`nslookup --type=MX website.thm`
 
-![image-20230327232832550](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327232832550.png)
+
 
 > website.thm 的MX记录的数字优先级值为：30 。
 
 查看 website.thm 的A记录的IP地址：`nslookup --type=A website.thm`
 
-![image-20230327233114182](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327233114182.png)
+
 
 > website.thm 的A记录的IP地址为：10.10.10.10 。
 
-![image-20230327233202973](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327233202973.png)

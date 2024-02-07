@@ -1,8 +1,12 @@
+---
+description: 本文相关内容：了解如何使用 HTTP 协议向 Web 服务器请求内容。
+---
+
 # HTTP in detail(HTTP协议介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/httpindetail
+THM实验房间链接：https://tryhackme.com/room/httpindetail
 
-通过学习相关知识点：了解如何使用 HTTP 协议向 Web 服务器请求内容。
+
 
 ## 什么是 HTTP(S)?
 

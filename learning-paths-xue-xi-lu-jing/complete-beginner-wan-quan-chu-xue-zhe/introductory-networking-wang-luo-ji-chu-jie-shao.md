@@ -1,8 +1,12 @@
+---
+description: 本文相关内容：主要涉及网络基础理论、与网络相关的基本命令行工具的使用。
+---
+
 # Introductory Networking(网络基础介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/introtonetworking
+TryHackMe实验房间链接：https://tryhackme.com/room/introtonetworking
 
-本文介绍：主要涉及网络基础理论、与网络相关的基本命令行工具的使用。
+
 
 ## 简介
 

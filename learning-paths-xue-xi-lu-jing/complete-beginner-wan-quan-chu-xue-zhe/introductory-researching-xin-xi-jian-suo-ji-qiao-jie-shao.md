@@ -1,8 +1,12 @@
+---
+description: 本文相关内容：主要涉及渗透测试中的一些信息检索技巧。
+---
+
 # Introductory Researching(信息检索技巧介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/introtoresearch
+TryHackMe实验房间链接：https://tryhackme.com/room/introtoresearch
 
-本文介绍：主要涉及渗透测试中的一些信息检索技巧。
+
 
 ## 简介
 

@@ -1,8 +1,12 @@
+---
+description: 本文相关内容：了解、枚举各种网络服务以及利用这些网络服务相关的错误配置。
+---
+
 # Network Services(网络服务)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/networkservices
+TryHackMe实验房间链接：https://tryhackme.com/room/networkservices
 
-本文介绍：了解、枚举各种网络服务以及利用这些网络服务相关的错误配置。
+
 
 ## SMB服务简介
 

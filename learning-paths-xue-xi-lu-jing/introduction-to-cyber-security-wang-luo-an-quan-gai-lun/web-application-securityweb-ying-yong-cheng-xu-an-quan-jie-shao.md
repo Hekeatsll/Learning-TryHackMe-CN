@@ -1,8 +1,26 @@
+---
+description: 本文相关内容：了解 Web 应用程序并探索它们的一些常见安全问题
+cover: ../../.gitbook/assets/intro-to-offensive-security.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Web Application Security(Web应用程序安全介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/introwebapplicationsecurity
-
-本文相关内容：了解 Web 应用程序并探索它们的一些常见安全问题
+TryHackMe实验房间链接：[https://tryhackme.com/room/introwebapplicationsecurity](https://tryhackme.com/room/introwebapplicationsecurity)
 
 ## Web应用程序简介
 

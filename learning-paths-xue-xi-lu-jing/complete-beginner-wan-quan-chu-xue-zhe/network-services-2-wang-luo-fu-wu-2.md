@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：枚举、利用更常见的网络服务和错误配置。
+---
+
 # Network Services 2(网络服务2)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/networkservices2
+TryHackMe实验房间链接：https://tryhackme.com/room/networkservices2
 
-本文介绍：枚举、利用更常见的网络服务和错误配置。
 
-![img](https://assets.tryhackme.com/room-banners/networkservices2.png)
 
 ## NFS服务简介
 

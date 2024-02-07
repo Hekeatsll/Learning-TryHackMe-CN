@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：了解怎样使用功能强大的网络扫描工具 Nmap 进行扫描操作。
+---
+
 # Nmap(Nmap工具使用简介)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/furthernmap
+TryHackMe实验房间链接：https://tryhackme.com/room/furthernmap
 
-本文相关内容：了解怎样使用功能强大的网络扫描工具 Nmap 进行扫描操作。
 
-![img](https://assets.tryhackme.com/room-banners/nmap.png)
 
 ## 简介
 

@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：了解Web服务的所有单独组件如何协同工作，这种协同工作能让我们可以访问自己喜欢的网站。
+---
+
 # Putting it all together(网站组件协同工作介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/puttingitalltogether
+THM实验房间链接：https://tryhackme.com/room/puttingitalltogether
 
-本文相关内容：了解Web服务的所有单独组件如何协同工作，这种协同工作能让我们可以访问自己喜欢的网站。
 
-![img](https://assets.tryhackme.com/room-banners/puttingitalltogether.png)
 
 ## 简介
 

@@ -1,10 +1,12 @@
+---
+description: 本文相关内容：本文所涉及的内容是Windows 基础模块的第 2 部分，了解有关系统配置、UAC 设置、资源监控、Windows 注册表等更多信息。
+---
+
 # Windows Fundamentals 2(Windows基础知识2)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/windowsfundamentals2x0x
+TryHackMe实验房间链接：https://tryhackme.com/room/windowsfundamentals2x0x
 
-本文介绍：本文所涉及的内容是Windows 基础模块的第 2 部分，了解有关系统配置、UAC 设置、资源监控、Windows 注册表等更多信息。
 
-![img](https://assets.tryhackme.com/room-banners/windows.png)
 
 ## 简介
 

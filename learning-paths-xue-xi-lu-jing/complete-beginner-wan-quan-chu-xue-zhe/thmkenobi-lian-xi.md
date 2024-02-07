@@ -1,6 +1,6 @@
-# THM-Kenobi-练习
+# Kenobi-练习
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/kenobi
+TryHackMe实验房间链接：https://tryhackme.com/room/kenobi
 
 ## 端口扫描
 

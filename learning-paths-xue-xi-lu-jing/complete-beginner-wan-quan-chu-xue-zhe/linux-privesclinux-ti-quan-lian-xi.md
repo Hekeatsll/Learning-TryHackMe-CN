@@ -1,8 +1,14 @@
+---
+description: >-
+  本文相关内容：在一个配置错误的Debian虚拟机上练习Linux提权，使用多种方法获得root，目标机支持使用SSH协议访问，ssh凭证 --
+  user:password321 。
+---
+
 # Linux Privesc(Linux提权)-练习
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/linuxprivesc&#x20;
+TryHackMe实验房间链接：https://tryhackme.com/room/linuxprivesc&#x20;
 
-本文相关内容：在一个配置错误的Debian虚拟机上练习Linux提权，使用多种方法获得root，目标机支持使用SSH协议访问，ssh凭证 -- user:password321 。
+
 
 ## 准备阶段
 

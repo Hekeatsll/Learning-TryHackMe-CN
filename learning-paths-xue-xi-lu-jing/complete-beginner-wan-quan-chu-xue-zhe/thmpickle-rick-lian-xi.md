@@ -1,8 +1,6 @@
-# THM-Pickle Rick-练习
+# Pickle Rick-练习
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/picklerick
-
-![img](https://i.imgur.com/BkKtAkO.png)
+TryHackMe实验房间链接：https://tryhackme.com/room/picklerick
 
 ## 任务目标
 

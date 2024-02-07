@@ -35,3 +35,36 @@ layout:
 
 开始这条路径不需要任何先决条件!仅需要拥有学习热情!
 
+本路径相关章节：
+
+{% content-ref url="intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md" %}
+[intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md](intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
+{% endcontent-ref %}
+
+{% content-ref url="intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md" %}
+[intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md](intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md)
+{% endcontent-ref %}
+
+{% content-ref url="careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md" %}
+[careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md](careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md)
+{% endcontent-ref %}
+
+{% content-ref url="web-application-securityweb-ying-yong-cheng-xu-an-quan-jie-shao.md" %}
+[web-application-securityweb-ying-yong-cheng-xu-an-quan-jie-shao.md](web-application-securityweb-ying-yong-cheng-xu-an-quan-jie-shao.md)
+{% endcontent-ref %}
+
+{% content-ref url="operating-system-security-cao-zuo-xi-tong-an-quan-jie-shao.md" %}
+[operating-system-security-cao-zuo-xi-tong-an-quan-jie-shao.md](operating-system-security-cao-zuo-xi-tong-an-quan-jie-shao.md)
+{% endcontent-ref %}
+
+{% content-ref url="network-security-wang-luo-an-quan-jie-shao.md" %}
+[network-security-wang-luo-an-quan-jie-shao.md](network-security-wang-luo-an-quan-jie-shao.md)
+{% endcontent-ref %}
+
+{% content-ref url="intro-to-digital-forensics-shu-zi-qu-zheng-jie-shao.md" %}
+[intro-to-digital-forensics-shu-zi-qu-zheng-jie-shao.md](intro-to-digital-forensics-shu-zi-qu-zheng-jie-shao.md)
+{% endcontent-ref %}
+
+{% content-ref url="security-operations-an-quan-yun-ying-jie-shao.md" %}
+[security-operations-an-quan-yun-ying-jie-shao.md](security-operations-an-quan-yun-ying-jie-shao.md)
+{% endcontent-ref %}

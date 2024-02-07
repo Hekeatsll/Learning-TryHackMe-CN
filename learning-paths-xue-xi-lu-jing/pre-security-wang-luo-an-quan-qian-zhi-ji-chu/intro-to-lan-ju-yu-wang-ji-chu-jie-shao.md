@@ -1,8 +1,10 @@
+---
+description: 本文相关内容：了解一些支持专用网络的技术和设计。
+---
+
 # Intro to LAN(局域网基础介绍)
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/introtolan
-
-本文相关内容：了解一些支持专用网络的技术和设计。
+THM实验房间链接：https://tryhackme.com/room/introtolan
 
 ## 局域网(LAN-Local Area Network)拓扑简介
 

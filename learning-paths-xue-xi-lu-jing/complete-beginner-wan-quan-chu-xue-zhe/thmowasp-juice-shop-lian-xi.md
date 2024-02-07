@@ -1,10 +1,12 @@
-# THM-OWASP Juice Shop-练习
+---
+description: 本文相关内容：基于易受攻击的 Web 应用程序 Juice Shop，学习如何识别和利用常见的 Web 应用程序漏洞。
+---
 
-本文相关的TryHackMe实验房间链接：https://tryhackme.com/room/owaspjuiceshop
+# OWASP Juice Shop-练习
 
-通过学习相关知识点：基于易受攻击的 Web 应用程序 Juice Shop，学习如何识别和利用常见的 Web 应用程序漏洞。
+TryHackMe实验房间链接：https://tryhackme.com/room/owaspjuiceshop
 
-![img](https://i.imgur.com/JaX5W2u.png)
+
 
 ## Task 1 部署实验环境&前期准备
 

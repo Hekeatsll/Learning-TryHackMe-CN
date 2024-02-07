@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Operating System Security(操作系统安全介绍)
+# ☑ Operating System Security(操作系统安全介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/operatingsystemsecurity](https://tryhackme.com/room/operatingsystemsecurity)
 
@@ -26,13 +26,17 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/operatingsystemsecurit
 
 每天当你使用智能手机或者笔记本电脑以及其他任何类型的计算机时，你都会直接或间接地与操作系统进行交互；常用的操作系统包括 MS Windows、macOS、iOS、Android、Chrome OS 和 Linux。
 
-![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/41f5388e5280b8a769158537e4372eae.png)
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/41f5388e5280b8a769158537e4372eae.png)
 
 什么是操作系统？ 要定义操作系统，我们首先需要知道一个计算机术语：硬件。
 
 计算机硬件是指所有可以用手触摸到的计算机部件和外围设备。硬件包括屏幕、键盘、打印机、U盘和主板；其中主板包含了许多组件，特别是中央处理器（CPU）和内存芯片（RAM），主板通常会连接存储设备（HDD-机械硬盘 或 SSD-固态硬盘）。
 
+<figure><img src="../../.gitbook/assets/image-20240207195930008.png" alt=""><figcaption></figcaption></figure>
+
 主板是计算机的关键部分，从键盘和鼠标到屏幕和打印机的所有其他硬件都将连接到计算机主板；但是，如果你想在计算机中运行自己喜欢的程序或者应用程序，硬件组件本身是没办法直接被使用的，所以我们需要一个操作系统来控制和“驱动”这些硬件组件。
+
+<figure><img src="../../.gitbook/assets/image-20230322013136875.png" alt=""><figcaption></figcaption></figure>
 
 操作系统 (OS) 是位于硬件与你正在运行的应用程序或者程序之间的层。
 
@@ -41,6 +45,8 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/operatingsystemsecurit
 某些操作系统专为在笔记本电脑和个人台式机上运行而设计，例如 MS Windows 11 和 macOS；还有某些操作系统专为智能手机而设计，例如 Android 和 iOS；另外还有用于服务器的操作系统，例如 [MS Windows Server 2022](https://www.microsoft.com/en-us/windows-server/)、[IBM AIX](https://www.ibm.com/products/aix) 和 [Oracle Solaris](https://www.oracle.com/solaris)；最后，还有一些在个人计算机上以及在服务器上都能被使用的操作系统，比如Linux。
 
 下图是2022 年 1 月期间收集的数据，这些数据显示了当时 用于浏览互联网的不同操作系统的流行程度。
+
+<figure><img src="../../.gitbook/assets/image-20230322014002536.png" alt=""><figcaption></figcaption></figure>
 
 你的智能手机可能运行在 Android 或 iOS操作系统上，并且其中可能拥有关于你的大量私人数据，包括：
 
@@ -70,7 +76,11 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/operatingsystemsecurit
 
 tips：Confidentiality、Integrity、Availability——即CIA三合一模型。
 
+<figure><img src="../../.gitbook/assets/image-20230322015625614.png" alt=""><figcaption></figcaption></figure>
+
 **答题**
+
+<figure><img src="../../.gitbook/assets/image-20230320213504737.png" alt=""><figcaption></figcaption></figure>
 
 ## 关于操作系统安全的常见示例
 
@@ -124,7 +134,7 @@ Rank	          Password
 
 阅读以上Top20密码列表：我们可以看到 123、1234、12345、...、123456789 和 1234567890 都在列表中，password、iloveyou、monkey、dragon等也是常用的英文，而在英文字典中没有的无含义词包括 qwerty、qwertyuiop 和 1q2w3e4r5t，这些看似复杂的(无含义词)密码 其实也非常容易预测，因为它们是遵循键盘布局进行输入的。
 
-![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/1510e4bd81418a2937060f9c55dad593.gif)
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/1510e4bd81418a2937060f9c55dad593.gif)
 
 简而言之，如果攻击者可以猜出你的任何在线帐户（例如你的电子邮件或社交媒体帐户）的密码，他们将能够直接访问你的私人数据。 因此，选择复杂的密码，并且在不同的账户下使用不同的密码是至关重要的。
 
@@ -138,13 +148,15 @@ Rank	          Password
 
 我们要举的最后一个例子是恶意程序，根据恶意程序的类型，它们可以针对机密性、完整性和可用性进行攻击。
 
-![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/f0a69acdee2506b2898e34fc231fe94b.png)
+<figure><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/f0a69acdee2506b2898e34fc231fe94b.png" alt="" width="563"><figcaption></figcaption></figure>
 
 某些类型的恶意程序（例如特洛伊木马）允许攻击者访问你的系统，因此，攻击者将能够读取你的文件甚至修改你的文件。
 
 某些类型的恶意程序会针对可用性进行攻击，例如勒索软件(ransomware)。勒索软件是一种能够加密用户文件的恶意程序，加密能够使文件在不知道加密密码的情况下变得不可读，换句话说，文件在没有进行解密（逆向加密）的情况下会变成乱码。在勒索软件事件中，攻击者往往会为用户提供恢复文件可用性的方法，攻击者会让用户重新获得对其原始文件的访问权限：当用户愿意支付“赎金-ransom”时，攻击者则会向用户提供加密密码以进行解密。
 
 **答题**
+
+<figure><img src="../../.gitbook/assets/image-20230320213351214.png" alt=""><figcaption></figcaption></figure>
 
 ## 关于操作系统安全的简单实例
 
@@ -164,9 +176,11 @@ Rank	          Password
 
 **模拟场景**：
 
-我们受雇检查某家公司的安全性，当我们查看客户的办公室环境时，我们注意到其中一个桌子上有留有一张便条，上面有两个词：sammie 和 dragon，让我们猜测一下 dragon 是不是 Sammie用户 在目标机器 (MACHINE\_IP)上所使用的密码？在 AttackBox 的终端中，我们将尝试通过执行`ssh sammie@MACHINE_IP`命令来登录到 Sammie 的ssh帐户，远程目标系统会要求你提供 sammie 的密码——我们输入 dragon 进行尝试。
+我们受雇检查某家公司的安全性，当我们查看客户的办公室环境时，我们注意到其中一张桌子上有留有便条，上面有两个词：sammie和dragon，让我们猜测一下dragon是不是Sammie用户在目标机器上所使用的密码。在AttackBox终端中，我们将尝试通过执行`ssh sammie@MACHINE_IP`命令来登录到Sammie的ssh帐户，远程目标系统会要求提供sammie的密码——我们输入dragon进行尝试。
 
-AttackBox 终端上的登录交互如下所示：
+<figure><img src="../../.gitbook/assets/image-20230322173552863.png" alt=""><figcaption></figcaption></figure>
+
+AttackBox终端上的登录交互如下所示：
 
 ```shell
 user@AttackBox# ssh sammie@MACHINE_IP
@@ -249,12 +263,20 @@ ssh johnny@10.10.210.242
 #经过登录尝试发现可用密码：abc123
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230322181721434.png" alt=""><figcaption></figcaption></figure>
+
 > 用户 johnny 的密码是：abc123
 
 成功完成ssh登录后，输入`history`命令：发现root用户的密码。
+
+<figure><img src="../../.gitbook/assets/image-20230322181911146.png" alt=""><figcaption></figcaption></figure>
 
 > root用户的密码为：happyHack!NG 。
 
 切换用户身份到root（使用我们刚才找到的密码完成身份验证），以root用户身份查找flag.txt文件 并获取其文本内容：
 
+<figure><img src="../../.gitbook/assets/image-20230322182319042.png" alt=""><figcaption></figcaption></figure>
+
 > flag.txt的内容是：THM{YouGotRoot} 。
+
+<figure><img src="../../.gitbook/assets/image-20230320214350583.png" alt=""><figcaption></figcaption></figure>

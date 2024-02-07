@@ -18,13 +18,15 @@ layout:
     visible: true
 ---
 
-# Web Application Security(Web应用程序安全介绍)
+# ☑ Web Application Security(Web应用程序安全介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introwebapplicationsecurity](https://tryhackme.com/room/introwebapplicationsecurity)
 
 ## Web应用程序简介
 
 我们每个人都会在我们的计算机上使用不同的程序。 一般来说，当程序在计算机上运行时，就将使用计算机的处理能力和存储功能，而且，要使用一个程序，我们还需要先安装它。如果我们想不经过安装操作就直接使用程序应该怎么办？
+
+<figure><img src="../../.gitbook/assets/image-20230421124001893.png" alt=""><figcaption></figcaption></figure>
 
 Web 应用程序类似于普通的“程序”，并且只要我们的计算机上有一个现代的、标准的 Web 浏览器，例如 Firefox、Safari 或 Chrome等，我们就可以不经安装而直接使用Web应用程序——当我们想运行Web应用程序时，我们无需安装 运行时所需的每个程序，只需直接访问相关浏览器页面即可。
 
@@ -35,6 +37,8 @@ Web 应用程序类似于普通的“程序”，并且只要我们的计算机�
 * 在线购物网站，例如 Amazon.com、AliExpress 和 Etsy
 
 其他示例还包括网上银行、汇款、天气预报和网络社交媒体等，成千上万的Web应用程序提供了数不胜数的在线服务。
+
+<figure><img src="../../.gitbook/assets/image-20230421124018938.png" alt=""><figcaption></figcaption></figure>
 
 Web 应用程序的概念是一个在远程服务器上运行的程序，而服务器是指连续运行以“服务”用户客户端的计算机系统，在这种情况下，服务器将运行特定类型的程序，并且这些程序可以通过Web浏览器被访问。
 
@@ -55,17 +59,23 @@ Web 应用程序的概念是一个在远程服务器上运行的程序，而服�
 3. 产品数据库将与用户提供的关键字相匹配的搜索结果返回给 Web 应用程序。
 4. Web 应用程序将结果格式化为友好可读的网页页面并将它们返回给用户以供浏览。
 
+<figure><img src="../../.gitbook/assets/image-20230319224615610.png" alt=""><figcaption></figcaption></figure>
+
 从用户的角度来看，他们只会访问到一个隐藏所有技术基础设施的在线商店页面。
 
-
+<figure><img src="../../.gitbook/assets/image-20230319224808863.png" alt=""><figcaption></figcaption></figure>
 
 **答题**
 
 > Browser - 浏览器
 
+<figure><img src="../../.gitbook/assets/image-20230319213257215.png" alt=""><figcaption></figcaption></figure>
+
 ## Web 应用程序常见安全风险
 
 假设你想从网上商店购买商品，你就会希望能够在相关 Web 应用程序上执行某些功能，用户完成一个在线商品订单可能分为以下几个步骤：
+
+<figure><img src="../../.gitbook/assets/image-20230319225857754.png" alt=""><figcaption></figcaption></figure>
 
 针对 Web 应用程序的常见攻击有很多，下面简单介绍一些攻击方式：
 
@@ -84,6 +94,8 @@ tips：本小节只介绍一些针对Web应用程序的攻击方式 而并非全
 * 目标网站允许攻击者使用暴力枚举；攻击者能够尝试多次输入不同密码以进行登录操作——通常攻击者会使用自动化工具来暴力枚举，从而找到有效的登录凭据。
 * 目标网站允许正常用户使用弱密码；弱密码通常很容易被攻击者猜到。
 * 目标网站以明文形式存储用户密码；如果此时攻击者能够设法读取包含密码的文件，那么他们就能够获知存储的密码内容。
+
+<figure><img src="../../.gitbook/assets/image-20230319234328832.png" alt=""><figcaption></figcaption></figure>
 
 ### 损坏的访问控制机制
 
@@ -111,11 +123,15 @@ tips：本小节只介绍一些针对Web应用程序的攻击方式 而并非全
 * 目标网站依赖弱密码算法进行加密（很容易被破解）；有一种古老的密码算法是将每个字母移位一个，例如，将“TRY HACK ME”变成“USZ IBDL NF”，如果使用这种加密算法就很容易被攻击者破解密文。
 * 目标网站使用默认或弱密钥进行加密；破解使用 1234 作为密钥的加密并不困难，所以如果使用弱密钥加密就很容易被攻击者破解。
 
+<figure><img src="../../.gitbook/assets/image-20230421124046841.png" alt=""><figcaption></figcaption></figure>
+
 **答题**
 
 > Identification and Authentication Failure 身份识别和身份验证错误
 >
 > Cryptographic Failures 未成功加密（加密失败）
+
+<figure><img src="../../.gitbook/assets/image-20230319214337998.png" alt=""><figcaption></figcaption></figure>
 
 ## Web 应用程序安全实例
 
@@ -135,6 +151,12 @@ IDOR漏洞也适用于访问一些按顺序命名并存储的文件；例如，�
 
 _在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完成本小节对应的实例。_
 
-![image-20230319215632445](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230319215632445.png) ![image-20230319220131634](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230319220131634.png) ![image-20230319220240818](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230319220240818.png)
+<figure><img src="../../.gitbook/assets/image-20230319215632445.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230319220131634.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230319220240818.png" alt=""><figcaption></figcaption></figure>
 
 > 最后得到的flag内容为：THM{IDOR\_EXPLORED} 。
+
+<figure><img src="../../.gitbook/assets/image-20230319215450568.png" alt=""><figcaption></figcaption></figure>

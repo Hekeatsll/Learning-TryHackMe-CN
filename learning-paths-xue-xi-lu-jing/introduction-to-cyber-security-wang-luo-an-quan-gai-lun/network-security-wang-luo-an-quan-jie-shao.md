@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Network Security(网络安全介绍)
+# ☑ Network Security(网络安全介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](https://tryhackme.com/room/intronetworksecurity)
 
@@ -28,6 +28,8 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](
 
 网络安全由不同的硬件和软件解决方案组成，以实现既定的安全目标。网络安全的硬件解决方案是指 你在网络中设置的用于保护网络安全的设备，这些设备是硬件，所以你可以在现实中接触到它们。硬件设备可能类似于下图：
 
+<figure><img src="../../.gitbook/assets/image-20230322195255546.png" alt=""><figcaption></figcaption></figure>
+
 网络安全硬件设备的示例包括：
 
 * 防火墙设备：防火墙将根据一组预定义的规则来允许和阻止连接，它将限制什么可以进入网络 和 什么可以离开网络。
@@ -35,10 +37,14 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](
 * 入侵防御系统 (IPS) 设备：IPS 可阻止检测到的入侵行为和入侵企图，它旨在防止攻击者闯入你的网络。
 * 虚拟专用网络 (VPN) 集线器设备：VPN 可确保网络流量无法被第三方读取或更改，它保护发送的数据的机密性（secrecy）和完整性。
 
+<figure><img src="../../.gitbook/assets/image-20230322200053263.png" alt=""><figcaption></figcaption></figure>
+
 另一方面，网络安全也有软件解决方案，常见的例子有：
 
 * 防病毒软件：你可以在计算机或者智能手机上安装防病毒软件以检测恶意文件并阻止它们的执行。
 * 主机防火墙：与防火墙设备（硬件设备）不同，主机防火墙是作为操作系统的一部分而被提供的程序，或者是安装在操作系统上的程序。例如，MS Windows 操作系统中就包含了 Windows Defender 防火墙程序，Apple macOS 中也包含了应用防火墙(application firewal)，以上两者都是主机防火墙。
+
+<figure><img src="../../.gitbook/assets/image-20230322200919536.png" alt=""><figcaption></figcaption></figure>
 
 根据 IBM Security 发布的[《2021 年数据泄露成本报告》](https://newsroom.ibm.com/2021-07-28-IBM-Report-Cost-of-a-Data-Breach-Hits-Record-High-During-Pandemic)，2021 年数据泄露平均每起事件给公司造成 424 万美元的损失，而 2020 年为 386 万美元，平均成本因行业和国家/地区而异。 例如，医疗行业数据泄露的平均总成本为 923 万美元，而教育行业则为 379 万美元。
 
@@ -46,9 +52,13 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](
 
 > Windows Defender 防火墙是什么类型的防火墙：Host Firewall
 
+<figure><img src="../../.gitbook/assets/image-20230320215249669.png" alt=""><figcaption></figcaption></figure>
+
 ## 网络攻击步骤介绍
 
 每个“操作”的执行 都需要拥有某种形式的计划才能最终取得成功。假如你对野生动物摄影感兴趣，除非你完全不在乎结果，否则你不能只是拿起相机就直接前往丛林进行摄影，为了安全、成功地进行野生动物摄影之旅，你往往需要更多地去了解你想要用相机拍摄的动物(这包括动物的习性和你要避免的危险)；以上例子同样适用于针对目标网络进行攻击的网络安全行动。
+
+<figure><img src="../../.gitbook/assets/image-20230322201637351.png" alt=""><figcaption></figcaption></figure>
 
 闯入目标网络通常包括多个步骤，根据[洛克希德·马丁公司](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)的说法，网络杀伤链有七个步骤：
 
@@ -58,15 +68,19 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](
 4. Exploitation(利用)：当用户打开（攻击者所投递的）恶意文件时，用户所使用的系统就会执行恶意组件。
 5. Installation(安装)：经过上一步的恶意组件执行之后，目标系统就会被安装上恶意软件。
 6. Command & Control(命令与控制-C2)：恶意软件的成功安装会为攻击者提供对目标系统的命令和控制能力。
-7. Actions on Objectives(针对目标的行动)：在获得对一个目标系统的控制权后，攻击者就能够达到他们的行动目标，关于行动目标的示例：数据泄露（一旦成功窃取到了目标系统的数据，即代表攻击者达到行动目标）。
+7. Actions on Objectives(针对目标的行动)：在获得对一个目标系统的控制权后，攻击者就能够达到他们的行动目标，关于行动目标的示例：数据泄露（一旦成功窃取到了目标系统的数据，即代表攻击者达到了行动目标）。
 
-
+<figure><img src="../../.gitbook/assets/image-20230322204848872.png" alt=""><figcaption></figcaption></figure>
 
 关于网络攻击步骤的另一个类比是：对目标房屋感兴趣的小偷。小偷在开始行动之前，往往会花一些时间了解目标房屋，谁住在那里，他们什么时候离开以及什么时候回家，小偷还会确定目标房屋是否有安装安全摄像头以及警报系统，一旦收集到足够的信息，小偷就会制定最佳的进入策略。关于物理盗窃的计划和执行在某种程度上也类似于旨在闯入网络并窃取数据的恶意攻击行为。
+
+<figure><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/a8e61f1f9a2ea3612d3bf84f9a11f41c.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 > 攻击者在网络杀伤链的哪一步收集有关目标的信息：Recon (侦察)
+
+<figure><img src="../../.gitbook/assets/image-20230320215635939.png" alt=""><figcaption></figcaption></figure>
 
 ## 网络安全实例
 
@@ -212,7 +226,7 @@ root@AttackBox# cat flag.txt
 [redacted]
 ```
 
-![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/a708c20aa1243c8e2be30bb9e74bd663.png)
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/a708c20aa1243c8e2be30bb9e74bd663.png)
 
 让我们总结一下我们在本小节中的工作，我们的目标是获取 IP 地址为MACHINE\_IP的目标系统的root访问权限：
 
@@ -240,6 +254,8 @@ _**操作**_
 nmap -sV -sC -T4 10.10.98.42
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230322221312517.png" alt=""><figcaption></figcaption></figure>
+
 > 目标机器上存在FTP服务且允许进行匿名登录
 
 针对目标机的ftp服务进行匿名登录尝试：
@@ -252,6 +268,8 @@ get secret.txt
 exit
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230322221546534.png" alt=""><figcaption></figcaption></figure>
+
 下载完敏感文件后，在攻击机终端查看到该文件内容为root用户的密码明文，所以我们基于已知密码 直接尝试以root用户身份进行ssh登录：
 
 ```shell
@@ -259,6 +277,10 @@ cat secret.txt #password: ABC789xyz123
 
 ssh root@10.10.98.42
 ```
+
+<figure><img src="../../.gitbook/assets/image-20230322221617429.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230322221757084.png" alt=""><figcaption></figcaption></figure>
 
 > secret.txt文件内容中的密码是：ABC789xyz123 。
 
@@ -276,6 +298,10 @@ ls
 cat flag.txt
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230322222032954.png" alt=""><figcaption></figcaption></figure>
+
 > /root目录中的flag.txt文件内容是：THM{FTP\_SERVER\_OWNED} 。
 >
 > /home/librarian目录中的flag.txt文件内容是：THM{LIBRARIAN\_ACCOUNT\_COMPROMISED} 。
+
+<figure><img src="../../.gitbook/assets/image-20230320215901969.png" alt=""><figcaption></figcaption></figure>

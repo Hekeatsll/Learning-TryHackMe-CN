@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Intro to Digital Forensics(数字取证介绍)
+# ☑ Intro to Digital Forensics(数字取证介绍)
 
 THM实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https://tryhackme.com/room/introdigitalforensics)
 
@@ -26,11 +26,15 @@ THM实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https
 
 取证是指应用科学技术来调查犯罪情况和确定事实。随着计算机和智能手机等数字系统的使用和普及，为了调查和数字系统相关的犯罪情况，一个新的取证学分支得以诞生：计算机取证——后来逐渐演变为数字取证。
 
+<figure><img src="../../.gitbook/assets/image-20230322232751118.png" alt=""><figcaption></figcaption></figure>
+
 考虑以下场景——执法人员到达了犯罪现场，然而，这个犯罪现场的一部分包括了数字设备和数字媒体；数字设备包括台式电脑、笔记本电脑、数码相机、音乐播放器和智能手机等，而数字媒体则包括 CD、DVD、USB 闪存驱动器和外部存储设备。这就引出了以下几个问题：
 
 * 警方应如何收集智能手机和笔记本电脑等设备中的数字证据？ 如果计算机和智能手机正在运行，应遵循哪些工作程序进行处理？
 * 如何传输数字证据？例如，在移动计算机时是否有某些最佳实践方案可以遵循？
 * 如何分析收集到的数字证据？个人设备的数据存储量可能在数十 GB 到数 TB 之间，应该如何进行分析？
+
+<figure><img src="../../.gitbook/assets/image-20230322232730081.png" alt=""><figcaption></figcaption></figure>
 
 假设嫌疑人拥有如上图所示的可疑数字设备和可疑数字媒体，我们可以进行快速查看并调查一些可能存有关键证据的数字设备、媒体；除了台式电脑之外，我们还注意到嫌疑人桌面上有平板电脑、智能手机、数码相机和 USB 闪存驱动器，这些设备及媒体中的任何一个都可能包含有助于案件调查的大量信息，执法者为了将这些设备作为证据进行处理 就需要用到数字取证技术。
 
@@ -43,7 +47,15 @@ THM实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https
 
 **答题**
 
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230322232853397.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230320220915406.png" alt=""><figcaption></figcaption></figure>
+
 ## 数字取证流程
+
+<figure><img src="../../.gitbook/assets/image-20230322234317128.png" alt=""><figcaption></figcaption></figure>
 
 假如你是一名数字取证调查员，你可能会看到与上图所示场景相类似的现场情况，为了扮演好数字取证调查员的角色，你接下来应该做什么？在获得适当的合法授权后，进行数字取证的基本计划如下：
 
@@ -71,6 +83,10 @@ THM实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https
 * 报告：数字取证调查以一份报告结束，该报告将显示与所发现案件相关的证据。
 
 **答题**
+
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230322235500854.png" alt=""><figcaption></figcaption></figure>
 
 ## 数字取证的简单实例
 
@@ -129,7 +145,11 @@ ls
 pdfinfo ransom-letter.pdf
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230323180941729.png" alt=""><figcaption></figcaption></figure>
+
 > 目标pdf文件作者是：Ann Gree Shepherd
+
+<figure><img src="../../.gitbook/assets/image-20230323172932309.png" alt=""><figcaption></figcaption></figure>
 
 **照片 EXIF 数据**
 
@@ -162,9 +182,15 @@ _问题：使用 exiftool 或任何类似工具，尝试找到 和本实验房�
 exiftool letter-image.jpg | grep GPS
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230323181841107.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230323180223367.png" alt=""><figcaption></figcaption></figure>
+
 > 从 exiftool 获得的 GPS 坐标是 51 deg 30' 51.90" N，0 deg 5' 38.73" W （在使用地图检索时，请用 ° 替换 deg 并在搜索前 删除数字和 ° 符号之间的空格）。
 >
 > 最终我们将使用在线地图搜索以下坐标：51°30'51.9"N 0°05'38.7"W
+
+<figure><img src="../../.gitbook/assets/image-20230323175531086.png" alt=""><figcaption></figcaption></figure>
 
 _问题：继续分析以上图像附件，拍摄目标照片所用的相机型号名称是什么？(我们使用和本文相关的 TryHackMe实验房间页面 所提供的 AttackBox 进行分析)_
 
@@ -173,4 +199,8 @@ _问题：继续分析以上图像附件，拍摄目标照片所用的相机型�
 exiftool letter-image.jpg | grep Camera
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230323182006160.png" alt=""><figcaption></figcaption></figure>
+
 > 拍摄目标照片所用的相机型号名称为：Canon EOS R6
+
+<figure><img src="../../.gitbook/assets/image-20230323175540323.png" alt=""><figcaption></figcaption></figure>

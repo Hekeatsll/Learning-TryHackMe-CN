@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Security Operations(安全运营介绍)
+# ☑ Security Operations(安全运营介绍)
 
 THM实验房间链接：[https://tryhackme.com/room/securityoperations](https://tryhackme.com/room/securityoperations)
 
@@ -40,6 +40,8 @@ THM实验房间链接：[https://tryhackme.com/room/securityoperations](https://
 >
 > SOC每天监控网络多少小时：24
 
+<figure><img src="../../.gitbook/assets/image-20230320222314909.png" alt=""><figcaption></figcaption></figure>
+
 ## 安全运营的要素
 
 在本小节中，我们将讨论：
@@ -59,7 +61,7 @@ SOC 将通过多种数据源来监控网络环境中是否存在入侵迹象并�
 
 以上只是一些最常见的数据源，另外还有许多其他资源可用于帮助完善网络安全监控 以及 有利于 SOC 完成其他工作任务；SOC 可能还会使用 安全信息和事件管理系统 (SIEM-Security Information and Event Management) 来开展工作， SIEM 会聚合来自于不同来源的数据信息，以便于 SOC 可以有效地关联数据并响应攻击事件。
 
-![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/ff0d15f07e9889f26931fa5665a4c871.png)
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/ff0d15f07e9889f26931fa5665a4c871.png)
 
 **SOC服务（SOC Services）**
 
@@ -98,6 +100,8 @@ SOC 分析师可能的应对流程如下：
 
 > NSM代表：Network security monitoring（网络安全监控）
 
+<figure><img src="../../.gitbook/assets/image-20230322231522117.png" alt=""><figcaption></figcaption></figure>
+
 ## 关于SOC的实例
 
 ![img](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/4d68ffe73a45b4974a36d0947d4b27d8.png)
@@ -127,10 +131,20 @@ _在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完
 
 我们将模拟在防火墙级别拦截恶意IP地址所发出的数据包，这需要我们快速添加一些防火墙规则：
 
+<figure><img src="../../.gitbook/assets/image-20230323230516322.png" alt=""><figcaption></figcaption></figure>
+
 发现恶意ip及其数据包：
+
+<figure><img src="../../.gitbook/assets/image-20230323230712062.png" alt=""><figcaption></figcaption></figure>
 
 快速添加防火墙规则：
 
+<figure><img src="../../.gitbook/assets/image-20230323230832936.png" alt=""><figcaption></figcaption></figure>
+
 成功拦截并得到一个flag：
 
+<figure><img src="../../.gitbook/assets/image-20230323230915180.png" alt=""><figcaption></figcaption></figure>
+
 > 最后得到的flag内容为：THM{ATTACK\_BLOCKED} 。
+
+<figure><img src="../../.gitbook/assets/image-20230320222055186.png" alt=""><figcaption></figcaption></figure>

@@ -1,5 +1,5 @@
 ---
-description: 基于TryHackMe在线学习平台内容的中文学习文档。
+description: 基于TryHackMe在线学习平台内容的中文学习文档(Learning paths更新中......)。
 cover: .gitbook/assets/default_tryhackme.png
 coverY: 0
 layout:

@@ -18,5 +18,5 @@ layout:
     visible: true
 ---
 
-# 🧐 Jr Penetration Tester(初级渗透测试员)
+# 🐒 Jr Penetration Tester(初级渗透测试员)
 

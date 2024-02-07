@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Intro to Defensive Security(防御性安全介绍)
+# ☑ Intro to Defensive Security(防御性安全介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/defensivesecurity](https://tryhackme.com/room/defensivesecurity)
 
@@ -33,7 +33,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/defensivesecurity](htt
 
 蓝队是防御性安全领域的一部分。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20230416232248643-1808428703.png" alt=""><figcaption></figcaption></figure>
 
 一些与防御性安全相关的任务：
 
@@ -53,6 +53,8 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/defensivesecurity](htt
 * 恶意软件分析
 
 **答题**
+
+<figure><img src="../../.gitbook/assets/image-20230319104624034.png" alt=""><figcaption></figcaption></figure>
 
 ## 防御性安全相关领域介绍
 
@@ -74,6 +76,8 @@ SOC 的一些主要兴趣领域是：
 
 SOC的安全操作涵盖了各种任务以保护公司网络及系统，其中也包含了威胁情报处理。
 
+<figure><img src="../../.gitbook/assets/2857591-20230416232324077-921784249.png" alt=""><figcaption></figcaption></figure>
+
 #### 威胁情报(Threat Intelligence)
 
 在网络安全中：情报指的是你收集到的关于实际和潜在敌人的信息，威胁指的是任何可能破坏系统或对系统产生不利影响的行为。
@@ -81,6 +85,8 @@ SOC的安全操作涵盖了各种任务以保护公司网络及系统，其中�
 威胁情报旨在收集信息，以帮助公司更好地应对潜在的攻击者，了解威胁情报的目的是实现威胁知情防御；不同的公司会吸引不同类型的网络攻击者，一些攻击者可能会试图从移动运营商处窃取客户数据，另外一些攻击者可能会有兴趣破坏炼油厂的网络以使其停止生产。
 
 典型的网络攻击者包括出于政治原因工作的国家网络军队以及出于财务目的行事的勒索软件组织，基于公司（目标）的性质，我们就可以知道预期的攻击者类型。
+
+<figure><img src="../../.gitbook/assets/2857591-20230416232336558-1363855465.png" alt=""><figcaption></figcaption></figure>
 
 情报需要数据，我们必须收集、处理和分析数据：我们首先需要进行数据收集，具体的数据收集来源分为本地来源（例如网络日志）和公共来源（例如网络论坛）；得到数据之后，我们还需要对数据进行处理，数据处理旨在将数据排列成适合分析的格式；最后是数据分析阶段，此阶段旨在找到有关攻击者及其动机的更多信息，另外，数据分析还旨在创建建议列表和可操作步骤列表。
 
@@ -120,6 +126,10 @@ SOC的安全操作涵盖了各种任务以保护公司网络及系统，其中�
 * 遏制、根除和恢复阶段：一旦检测到事件发生，最重要的是要阻止事件影响其他系统、消除恶意事件并恢复受影响的系统。例如，当我们发现一个系统感染了计算机病毒，我们要及时阻止（遏制）病毒传播到其他系统，清除（根除）病毒程序，并使系统恢复正常工作状态。
 * 事后活动阶段：成功恢复系统工作后，要生成一份相关的报告，分享以及吸取教训，以防止未来发生类似事件。
 
+<figure><img src="../../.gitbook/assets/2857591-20230416232401249-375105017.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230421125545564.png" alt=""><figcaption></figcaption></figure>
+
 #### 恶意软件分析(Malware Analysis)
 
 Malware 代表恶意软件，软件是指可以保存在磁盘上或通过网络发送的程序、文档和文件。
@@ -130,12 +140,16 @@ Malware 代表恶意软件，软件是指可以保存在磁盘上或通过网络
 * 特洛伊木马(Trojan Horse)是一种程序，它会显示自己具有一个理想的正常功能，但实际上程序中还隐藏了一些恶意功能；例如，受害者可能会从可疑网站下载视频播放器，而这个视频播放器可能实际上是一个木马程序，从而攻击者可以完全控制受害者的系统。
 * 勒索软件(Ransomware)是一种加密用户文件的恶意程序，加密会使文件在不知道加密密码的情况下变为不可读状态；用户只有选择支付“赎金”，攻击者才可能会向用户提供加密密码来对用户文件进行解密。
 
+<figure><img src="../../.gitbook/assets/2857591-20230416232423140-422842004.png" alt=""><figcaption></figcaption></figure>
+
 恶意软件分析旨在使用各种方式了解恶意程序，从而保护网络和系统的安全环境：
 
 * 静态分析：在不运行恶意程序的前提下对恶意程序进行检查。通常，这需要扎实的汇编语言知识（处理器的指令集，即计算机的基本指令）。
-* 动态分析：受控环境中运行恶意软件并监控其活动 以进行分析，动态分析可以让你观察恶意软件在运行时的具体行为。
+* 动态分析：在受控环境中运行恶意软件并监控其活动以进行分析，动态分析可以让你观察恶意软件在运行时的具体行为。
 
 **答题**
+
+<figure><img src="../../.gitbook/assets/image-20230319125337268.png" alt=""><figcaption></figcaption></figure>
 
 ## 关于防御性安全的简单实例
 
@@ -149,32 +163,38 @@ Malware 代表恶意软件，软件是指可以保存在磁盘上或通过网络
 
 在对可疑事件的进一步检查中，我们需要尝试了解有关可疑活动或事件的更多信息，可疑事件警告可能是由某个具体事件触发的，这可能会关联到本地用户、本地计算机或远程 IP 地址。在现实世界中，如果要发送和接收邮件，你需要知道一个实际地址；同样，在网络环境中，你需要一个 IP 地址才能通过 Internet 发送和接收数据，IP 地址是允许你通过 Internet 进行通信的逻辑地址。我们需要检查事件警告触发的原因以确认相关的事件是否确实是恶意的，如果确定是恶意事件，我们就需要采取相应的措施，比如向 SOC 中的其他成员进行报告并屏蔽恶意事件相关的 IP 地址。
 
+<figure><img src="../../.gitbook/assets/2857591-20230416232447698-1553382882.png" alt=""><figcaption></figcaption></figure>
+
 **答题**
 
 _在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完成本小节对应的实例_
 
 part1：检查 SIEM 仪表面板中的警报消息，从警报中找到可疑 IP 地址(143.110.250.149)，记下它，然后单击警报消息继续。
 
-
+<figure><img src="../../.gitbook/assets/image-20230319133244202.png" alt=""><figcaption></figcaption></figure>
 
 part2：Internet 上有一些网站允许你检查某个 IP 地址的信誉以查看它是否是恶意的或可疑的；让我们对在part1中发现的可疑 IP 地址进行检查。
 
 _tips：有许多开源数据库，例如_ [_AbuseIPDB_](https://www.abuseipdb.com/) _和_ [_Cisco Talos Intelligence_](https://talosintelligence.com/)_，你可以在其中对 IP 地址执行信誉和位置检查，大多数安全分析师使用这些工具来帮助他们进行警报调查；你还可以通过报告恶意 IP（例如，在 AbuseIPDB 上）来使 Internet 更安全。_
 
-
+<figure><img src="../../.gitbook/assets/image-20230319133328927.png" alt=""><figcaption></figcaption></figure>
 
 part3：查看检查结果，现在我们知道 IP 地址143.110.250.149是恶意的，我们需要将其上报给相关的工作人员。
 
-
+<figure><img src="../../.gitbook/assets/image-20230319131240191.png" alt=""><figcaption></figcaption></figure>
 
 part4：如果这只是失败的身份验证尝试，我们不必太担心，但是我们还注意到此恶意 IP 地址有成功的登录尝试记录，所以我们有必要将这一事件上报；我们要将此事件上报给负责相关工作的公司人员。（我们将事件上报给 SOC Team Lead——安全运营中心团队负责人）
 
-
+<figure><img src="../../.gitbook/assets/image-20230319132739037.png" alt=""><figcaption></figcaption></figure>
 
 part5：经过事件上报后，我们已获得阻止恶意 IP 地址(143.110.250.149)访问目标公司的权限，我们可以执行阻止规则，通过防火墙阻止恶意 IP 地址访问目标公司。
 
-
+<figure><img src="../../.gitbook/assets/image-20230319133554203.png" alt=""><figcaption></figcaption></figure>
 
 part6：我们成功完成了这个简单实例，最后我们获取到以下flag内容。
 
+<figure><img src="../../.gitbook/assets/image-20230319133708037.png" alt=""><figcaption></figcaption></figure>
+
 > 最后获取到的flag内容是：THM{THREAT-BLOCKED} 。
+
+<figure><img src="../../.gitbook/assets/image-20230318231923119.png" alt=""><figcaption></figcaption></figure>

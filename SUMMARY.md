@@ -14,7 +14,7 @@
   * [☑ Intro to Digital Forensics(数字取证介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-digital-forensics-shu-zi-qu-zheng-jie-shao.md)
   * [☑ Security Operations(安全运营介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/security-operations-an-quan-yun-ying-jie-shao.md)
 * [😎 Pre Security(网络安全前置基础)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/README.md)
-  * [What is Networking？(什么是网络？)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/what-is-networking-shi-mo-shi-wang-luo.md)
+  * [☑ What is Networking？(什么是网络？)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/what-is-networking-shi-mo-shi-wang-luo.md)
   * [Intro to LAN(局域网基础介绍)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/intro-to-lan-ju-yu-wang-ji-chu-jie-shao.md)
   * [OSI Model(OSI模型介绍)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/osi-modelosi-mo-xing-jie-shao.md)
   * [Packets & Frames(了解数据包和帧)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/packets-frames-le-jie-shu-ju-bao-he-zhen.md)

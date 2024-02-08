@@ -50,6 +50,8 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](
 
 ### **答题**
 
+阅读本小节内容，并回答以下问题。
+
 > Windows Defender 防火墙是什么类型的防火墙：Host Firewall
 
 <figure><img src="../../.gitbook/assets/image-20230320215249669.png" alt=""><figcaption></figcaption></figure>
@@ -77,6 +79,8 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](
 <figure><img src="../../.gitbook/assets/a8e61f1f9a2ea3612d3bf84f9a11f41c.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 > 攻击者在网络杀伤链的哪一步收集有关目标的信息：Recon (侦察)
 
@@ -238,7 +242,7 @@ root@AttackBox# cat flag.txt
 
 ### **答题**
 
-_在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完成本小节对应的实例。_
+_在本文相关的Tryhackme实验房间页面中部署虚拟实验环境，并完成本小节对应的实例。_
 
 **问题**
 

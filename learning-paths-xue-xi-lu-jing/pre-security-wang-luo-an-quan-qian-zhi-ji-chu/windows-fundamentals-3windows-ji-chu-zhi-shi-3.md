@@ -24,8 +24,6 @@ layout:
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/windowsfundamentals3xzx](https://tryhackme.com/room/windowsfundamentals3xzx)
 
-
-
 ## 简介
 
 在Windows Fundamentals 1中，我们介绍了Windows的桌面、文件系统、用户帐户控制、控制面板、设置和任务管理器。
@@ -40,7 +38,11 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/windowsfundamentals3xz
 * User: `administrator`
 * Password: `letmein123!`
 
-![image-20230331104939724](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230331104939724.png)
+
+
+
+
+
 
 当上述界面弹出提示时，点击接受证书，然后你现在应该可以登录到远程系统。
 
@@ -56,11 +58,11 @@ Windows更新服务可通过“设置-Settings”面板找到并访问，更多�
 
 tips：另一种访问Windows更新服务的方法是使用Run对话框或者使用CMD界面，然后运行以下命令`control /name Microsoft.WindowsUpdate`。
 
-![image-20230402112207713](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402112207713.png)
+
 
 Windows更新设置是“受监管的”(通常情况下，家庭用户不会看到这种类型的消息)，如果计算机没有连接到Internet，则无法与Microsoft通信以获取最新的更新信息。
 
-![image-20230402112622623](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402112622623.png)
+
 
 多年以来，Windows用户已经习惯于将Windows更新推迟到较晚的日期或者根本不安装更新，导致此类操作的原因有很多，其中一个原因是：Windows在更新之后通常需要重新启动。
 
@@ -68,11 +70,11 @@ Windows更新设置是“受监管的”(通常情况下，家庭用户不会看
 
 如下图所示，在Windows更新界面中可看到此时计算机需要重启，此更新界面还提供了关于安排重启的几个可用选项。
 
-![image-20230402113525741](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402113525741.png)
+
 
 更多信息请参考[Windows更新常见问题解答](https://support.microsoft.com/en-us/windows/windows-update-faq-8a903416-6f45-0718-f5c7-375e92dddeb2)。
 
-**答题**
+### **答题**
 
 _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后回答以下问题。_
 
@@ -80,11 +82,17 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 通过“设置”面板访问Windows更新服务，在Windows更新界面点击“查看更新历史”：
 
-![image-20230402132839575](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402132839575.png) ![image-20230402132937163](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402132937163.png)
+
 
 > 自定义更新的安装日期是：5/3/2021
 
-![image-20230402113919880](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402113919880.png)
+
+
+
+
+
+
+
 
 ## Windows安全（Windows Security）
 
@@ -92,7 +100,7 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 和Windows更新服务一样，Windows安全服务也可以通过“设置-Settings”面板进行访问。
 
-![image-20230402132307179](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402132307179.png) ![image-20230402114542296](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402114542296.png)
+
 
 请查看上图，并将注意力集中在_**Protection areas**_（保护区域），其中包括：
 
@@ -111,17 +119,17 @@ tips：在下面几个小节中我们会简要地介绍以上四部分内容（�
 
 我们点击“设置-Settings”界面中的“Windows Security”下的`Open Windows Security`，将看到如下界面（一个红色图标，三个绿色图标）：
 
-![image-20230402115417123](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402115417123.png)
+
 
 注意：由于本文所附的实验机是Windows Server 2019，因此相关页面看起来会与Windows 10家庭版或专业版不同。
 
 下图是来自于Windows 10设备的Windows Security相关页面（点击`Open Windows Security`即可看到具体界面）：
 
-![image-20230402115601501](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402115601501.png)
+
 
 在下一小节，我们将继续查看Windows安全服务中的“病毒和威胁防护”部分。
 
-**答题**
+### **答题**
 
 _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后回答以下问题。_
 
@@ -129,9 +137,13 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 查看“Windows安全”界面，我们可以发现Virus & threat protection（病毒和威胁防护）对应的图标是红色的——红色图标表示警告，所以需要我们立即关注。
 
-![image-20230402135755579](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402135755579.png)
 
-![image-20230402120607299](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402120607299.png)
+
+
+
+
+
+
 
 ## 病毒和威胁防护（Virus & threat protection）
 
@@ -142,13 +154,15 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 * 病毒和威胁防护更新——Virus & threat protection updates
 * 勒索软件防护——Ransomware protection
 
-![image-20230402135055783](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402135055783.png)
+
 
 **Current threats(当前威胁)**
 
 下图是“当前威胁”部分界面：
 
-![image-20230402122307444](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402122307444.png)
+
+
+
 
 我们可以通过Current threats界面点击并选择“扫描选项”（Scan options），相关的内容如下：
 
@@ -168,7 +182,9 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 下图是“病毒和威胁防护设置”部分界面：
 
-![image-20230402134413535](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402134413535.png)
+
+
+
 
 在上图中的Virus & threat protection settings界面点击并查看“管理设置”（Manage settings），相关的内容如下：
 
@@ -185,33 +201,41 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 下图是“病毒和威胁防护更新”部分界面：
 
-![image-20230402134527557](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402134527557.png)
+
+
+
+
+
 
 查看上图中的“病毒和威胁防护更新”（Virus & threat protection updates）下的“Check for updates”：
 
 * Check for updates（检查更新）： 手动检查更新以更新 Windows Defender防病毒软件的反病毒规则。
 
-![image-20230402134647659](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402134647659.png)
+
 
 **Ransomware protection(勒索软件防护)**
 
 下图是“勒索软件防护”部分界面：
 
-![image-20230402134558602](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402134558602.png)
+
+
+
+
+
 
 查看上图中的“勒索软件防护”（Ransomware protection）下的“Manage ransomware protection”：
 
 * Controlled folder access（控制文件夹访问权限）：勒索软件防护需要启用此功能，但是为了启用此功能你需要首先启用实时保护功能。
 
-![image-20230402133423850](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402133423850.png)
+
 
 _tips：你可以对任何文件/文件夹执行按需安全扫描，只需右键单击项目并选择“使用Microsoft Defender扫描”即可。_
 
 下图是来自于另一个Windows设备，以展示按需扫描功能：
 
-![image-20230402123519987](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402123519987.png)
 
-**答题**
+
+### **答题**
 
 _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后回答以下问题。_
 
@@ -219,9 +243,11 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 基于上一小节的答题任务可知，我们需要关注的内容是“病毒和威胁防护”，因此我们可以查看“病毒和威胁防护”面板以找到更多详细信息：
 
-![image-20230402135608336](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402135608336.png) ![image-20230402140016742](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402140016742.png)
 
-![image-20230402123705311](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402123705311.png)
+
+
+
+
 
 ## 防火墙和网络保护（Firewall & network protection）
 
@@ -231,7 +257,7 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 我们可以导航到“防火墙和网络保护”界面：
 
-![image-20230402143136894](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402143136894.png) ![image-20230402140909388](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402140909388.png)
+
 
 注意：上图中的每个选项可能会有不同的状态图标。
 
@@ -245,33 +271,35 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 如果你单击任何一种防火墙配置，则将出现对应的相关配置页面，其中会包含两个选项：打开/关闭防火墙、阻止所有传入连接。
 
-![image-20230402141951302](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402141951302.png)
+
 
 警告：除非你对你正在做的事情有100%的信心，否则建议你开启Windows Defender 防火墙。
 
 接下来我们关注“防火墙和网络保护”界面的“Allow an app through firewall”和“Advanced Settings”：
 
-![image-20230402142228875](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402142228875.png)
+
 
 **Allow an app through firewall**
 
-![image-20230402142409767](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402142409767.png)
+
 
 你可以查看任何防火墙配置的当前设置，在上图中，我们可以看到有一些应用程序可以访问私有或者公共防火墙配置，如果你点击“详细信息-Details”按钮，则能获取到对应应用程序所提供的一些额外信息。
 
 **Advanced Settings**
 
-![image-20230402142440552](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402142440552.png)
+
 
 配置Windows Defender防火墙的操作适用于Windows高级用户，你可以参考[相关的Microsoft 官方文档](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/best-practices-configuring)。
 
 tips：打开Windows Defender防火墙的命令为`WF.msc`。
 
-**答题**
+### **答题**
 
 tips：通过阅读本小节相关内容，可回答以下问题。
 
-![image-20230402143709102](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402143709102.png)
+
+
+
 
 ## 应用程序和浏览器控制（App & browser control）
 
@@ -281,19 +309,21 @@ tips：通过阅读本小节相关内容，可回答以下问题。
 
 有关 Microsoft Defender SmartScreen 的更多信息，请参阅[相关的Microsoft官方文档](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)。
 
-![image-20230402184152523](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402184152523.png) ![image-20230402144528956](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402144528956.png)
+
 
 **Check apps and files**
 
 Windows Defender SmartScreen 通过检查来自网络的 无法识别的应用程序和文件来帮助保护你的设备。
 
-![image-20230402144656769](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402144656769.png)
+
+
+
 
 **Exploit protection**
 
 Exploit protection 内置在Windows 10操作系统(本文相关的实验机为Windows Server 2019)中，能够帮助保护你的设备免受恶意攻击。
 
-![image-20230402144921155](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402144921155.png)
+
 
 警告：除非你对所做的事情有100%的信心，否则建议你保持上图中的默认设置。
 
@@ -301,33 +331,37 @@ Exploit protection 内置在Windows 10操作系统(本文相关的实验机为Wi
 
 尽管你可能永远不会更改以下设置，但我们还是会简要介绍一下。
 
-![image-20230402184241911](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402184241911.png) ![image-20230402150319201](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402150319201.png)
+
 
 **Core isolation（核心隔离）**
 
 * Memory Integrity（内存完整性）：防止攻击者将恶意代码插入高安全性进程。
 
-![image-20230402145704103](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402145704103.png)
+
 
 警告：除非你对所做的事情有100%的信心，否则建议你保持默认设置。
 
 下面的图片来自于另一台机器，展示了个人Windows 10设备应该具备的另一个安全功能——Security processor。
 
-![image-20230402145809858](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402145809858.png)
+
+
+
 
 下面是Security processor（安全处理器）的详细信息。
 
-![image-20230402150039454](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402150039454.png)
+
 
 上图所提及的可信平台模块(TPM-Trusted Platform Module)是什么？
 
 根据微软的说法，“可信平台模块(TPM)技术旨在提供基于硬件的安全相关功能。TPM芯片是一种安全的加密处理器，被设计用于执行加密操作，该芯片包括多种物理安全机制，使其具有抗篡改性，恶意软件无法篡改TPM的安全功能”。
 
-**答题**
+### **答题**
 
 tips：阅读本小节内容，可回答以下问题。
 
-![image-20230402150412883](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402150412883.png)
+
+
+
 
 ## BitLocker
 
@@ -343,17 +377,17 @@ tips：阅读本小节内容，可回答以下问题。
 
 注意：本文相关的实验房间所附加的虚拟机中不包含 BitLocker 功能。
 
-**答题**
+### **答题**
 
 tips：请参阅有关 BitLocker 的 Microsoft 文档，然后回答以下问题。
 
-![image-20230402183226395](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402183226395.png)
+
 
 翻译页面：
 
-![image-20230402183931261](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402183931261.png)
 
-![image-20230402183012938](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402183012938.png)
+
+
 
 ## 卷影复制服务（Volume Shadow Copy Service）
 
@@ -372,19 +406,21 @@ tips：请参阅有关 BitLocker 的 Microsoft 文档，然后回答以下问题
 
 如果你希望配置影子副本，请参考以下图片：
 
-![image-20230402191730722](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402191730722.png) ![image-20230402192812926](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402192812926.png)
+
 
 注意：选中系统卷（如c:\）并点击上图中的“Enable”，即可成功创建一个卷影副本。
 
-![image-20230402192739427](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402192739427.png)
 
-![image-20230402193151086](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230402193151086.png)
 
-**答题**
+
+
+### **答题**
 
 tips：阅读本小节内容，可回答以下问题。
 
-![image-20230402191908942](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230402191908942.png)
+
+
+
 
 ## 小结
 

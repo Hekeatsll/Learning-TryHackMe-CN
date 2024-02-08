@@ -18,11 +18,9 @@ layout:
     visible: true
 ---
 
-# Packets & Frames(了解数据包和帧)
+# ☑ Packets & Frames(了解数据包和帧)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/packetsframes](https://tryhackme.com/room/packetsframes)
-
-
 
 ## 什么是数据包和帧？
 
@@ -34,7 +32,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/packetsframes](https:/
 
 当你从网站加载图像时，该图像不会作为一个整体发送到你的计算机，而是在你的计算机上由小块图像开始重建进而得到一个完整图像；下面的图片说明了以上过程，来自于网站的图像将被分成三个数据包，当数据包到达计算机时，图像就会开始重建，最终形成完整的图像。
 
-![image-20230326193818536](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326193818536.png)
+<figure><img src="../../.gitbook/assets/image-20240208195611063.png" alt=""><figcaption></figcaption></figure>
 
 数据包有不同的结构，这些结构取决于正在发送的数据包的类型，网络上充满了各种标准和协议，这些标准和协议充当了设备上如何处理数据包的一组规则。
 
@@ -49,7 +47,9 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/packetsframes](https:/
 
 ### **答题**
 
-![image-20230326201110685](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326201110685.png)
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230326201110685.png" alt=""><figcaption></figcaption></figure>
 
 ## TCP/IP（三次握手）介绍
 
@@ -91,16 +91,16 @@ TCP数据包还将包含 在封装过程中所添加的被称为标头的信息�
 
 TCP/IP三次握手会使用一些特殊的信息进行交流，下面是一些主要的信息：
 
-* 1-SYN：SYN消息是客户端在握手过程中发送的初始数据包。这个包用于发起连接并同步两个设备。
-* 2-SYN/ACK：此数据包将由接收设备(服务器)发送，以确认来自客户端的同步尝试。
-* 3-ACK：客户端或服务器都可以使用确认数据包来确认已经成功接收了一系列消息/数据包。
-* 4-DATA：一旦两个设备建立了连接，数据(例如文件的字节)就会通过“DATA”消息发送。
-* 5-FIN：此数据包可用于在TCP连接完成后 干净地(正确地)关闭TCP连接。
+* Step1-SYN：SYN消息是客户端在握手过程中发送的初始数据包。这个包用于发起连接并同步两个设备。
+* Step2-SYN/ACK：此数据包将由接收设备(服务器)发送，以确认来自客户端的同步尝试。
+* Step3-ACK：客户端或服务器都可以使用确认数据包来确认已经成功接收了一系列消息/数据包。
+* Step4-DATA：一旦两个设备建立了连接，数据(例如文件的字节)就会通过“DATA”消息发送。
+* Step5-FIN：此数据包可用于在TCP连接完成后 干净地(正确地)关闭TCP连接。
 * RST：RST数据包能够立刻终止所有的TCP通信，如果使用了RST数据包则表明在TCP握手过程中存在一些问题——比如发生了服务或应用程序异常以及系统资源不足等故障。
 
 下图显示了Alice和Bob之间正常的TCP三次握手过程，在现实生活中，这将发生在两个设备之间：
 
-![image-20230326214033986](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326214033986.png)
+<figure><img src="../../.gitbook/assets/image-20240208200311473.png" alt=""><figcaption></figcaption></figure>
 
 在TCP三次握手过程中，客户端所发送的数据将被赋予一个随机数序列，这个数字序列接下来将进行重构并递增1；两台计算机设备必须就相同的数字序列达成一致，才能以正确的顺序发送数据，这个顺序是在三个步骤中商定的（下面步骤中的序列号是随机值）：
 
@@ -108,9 +108,11 @@ TCP/IP三次握手会使用一些特殊的信息进行交流，下面是一些�
 * SYN/ACK-Server：服务器端将设置SYN标志位和ACK标志位并生成一个随机初始序列号(5000)，并对客户端的初始序列号(0)进行确认（ACK=0+1）。
 * ACK-Client： 客户端设置ACK标志位，并对服务器端的初始序列号(5000)进行确认（ACK=5000+1）。
 
-tips：SYNchronise-SYN(同步)，ACKnowledge-ACK(确认)，Initial Sequence Number-ISN(初始序列号)；以上步骤的结果——客户端ISN+1，服务器端ISN+1。
+tips：SYNchronise-SYN(同步)，ACKnowledge-ACK(确认)，Initial Sequence Number-ISN(初始序列号)。
 
-![image-20230326221426557](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326221426557.png)
+<figure><img src="../../.gitbook/assets/image-20240208200746227.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230326221426557.png" alt=""><figcaption></figcaption></figure>
 
 **TCP连接的关闭**
 
@@ -122,17 +124,19 @@ tips：SYNchronise-SYN(同步)，ACKnowledge-ACK(确认)，Initial Sequence Numb
 
 让我们像前文一样使用Alice和Bob来展示这个过程：
 
-![image-20230326223520503](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326223520503.png)
+<figure><img src="../../.gitbook/assets/image-20240208200412255.png" alt=""><figcaption></figcaption></figure>
 
 在上图中，我们可以看到Alice首先向Bob发送一个“FIN”包，当Bob收到这个消息之后，Bob会让Alice知道他已经收到消息(ACK)，并且Bob将表示他也想要关闭连接(FIN)，而Alice在收到来自于Bob的消息(ACK+FIN)之后，将进行最终的确认(ACK)——结果是TCP连接被成功关闭。
 
 ### **答题**
 
-![image-20230326224720813](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326224720813.png)
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230326224720813.png" alt=""><figcaption></figcaption></figure>
 
 ## 关于三次握手的模拟练习
 
-在和本文相关的TryHackMe实验房间中部署实验环境并回答问题。
+在和本文相关的TryHackMe实验房间中使用实验环境并回答问题。
 
 _tips：以正确的顺序重新组装TCP握手过程，以帮助 Alice 和 Bob 进行通信，在 Alice 与 Bob 的对话结束后会给出一个flag值。_
 
@@ -140,43 +144,43 @@ _tips：以正确的顺序重新组装TCP握手过程，以帮助 Alice 和 Bob 
 
 _**Part1：**_
 
-![image-20230326225206394](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225206394.png)
+<figure><img src="../../.gitbook/assets/image-20230326225206394.png" alt=""><figcaption></figcaption></figure>
 
 _**Part2：**_
 
-![image-20230326225315154](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225315154.png)
+<figure><img src="../../.gitbook/assets/image-20230326225315154.png" alt=""><figcaption></figcaption></figure>
 
 _**Part3：**_
 
-![image-20230326225411070](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225411070.png)
+<figure><img src="../../.gitbook/assets/image-20230326225411070.png" alt=""><figcaption></figcaption></figure>
 
 _**Part4：**_
 
-![image-20230326225512847](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225512847.png)
+<figure><img src="../../.gitbook/assets/image-20230326225512847.png" alt=""><figcaption></figcaption></figure>
 
 _**Part5：**_
 
-![image-20230326225632300](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225632300.png)
+<figure><img src="../../.gitbook/assets/image-20230326225632300.png" alt=""><figcaption></figcaption></figure>
 
 _**Part6：**_
 
-![image-20230326225759731](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225759731.png)
+<figure><img src="../../.gitbook/assets/image-20230326225759731.png" alt=""><figcaption></figcaption></figure>
 
 _**Part7：**_
 
-![image-20230326225838033](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225838033.png)
+<figure><img src="../../.gitbook/assets/image-20230326225838033.png" alt=""><figcaption></figcaption></figure>
 
 _**Part8：**_
 
-![image-20230326225910031](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230326225910031.png)
+<figure><img src="../../.gitbook/assets/image-20230326225910031.png" alt=""><figcaption></figcaption></figure>
 
 对话结束，得到一个flag：
 
-![image-20230326225933032](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326225933032.png)
+<figure><img src="../../.gitbook/assets/image-20230326225933032.png" alt=""><figcaption></figcaption></figure>
 
 > 最后得到的flag值为：THM{TCP\_CHATTER} 。
 
-![image-20230326225109100](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326225109100.png)
+<figure><img src="../../.gitbook/assets/image-20230326225109100.png" alt=""><figcaption></figcaption></figure>
 
 ## UDP/IP介绍
 
@@ -204,11 +208,13 @@ UDP数据包比TCP数据包简单得多，并且有更少的标头，然而，�
 
 下图显示了Alice和Bob之间的正常UDP通信，在现实生活中，UDP通信过程将发生在两个设备之间。
 
-![image-20230326234005977](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326234005977.png)
+<figure><img src="../../.gitbook/assets/image-20240208200823040.png" alt=""><figcaption></figcaption></figure>
 
-**答题**
+### **答题**
 
-![image-20230326234125159](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230326234125159.png)
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230326234125159.png" alt=""><figcaption></figcaption></figure>
 
 ## 端口基础介绍&相关实例练习
 
@@ -243,14 +249,14 @@ _tips：任何在 0 到 1024 之间的端口都被称为普通端口。_
 
 **实例练习**
 
-在和本文相关的TryHackMe实验房间中部署实验环境并回答问题。
+在和本文相关的TryHackMe实验房间中使用实验环境并回答相关问题。
 
-**答题**
+### **答题**
 
 _tips：通过端口“1234”连接到目标IP地址“8.8.8.8”，最后将收到一个flag。_
 
-![image-20230327011252012](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230327011252012.png)
+<figure><img src="../../.gitbook/assets/image-20230327011252012.png" alt=""><figcaption></figcaption></figure>
 
 > 最后得到的flag是：THM{YOU\_CONNECTED\_TO\_A\_PORT} 。
 
-![image-20230327011307845](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230327011307845.png)
+<figure><img src="../../.gitbook/assets/image-20230327011307845.png" alt=""><figcaption></figcaption></figure>

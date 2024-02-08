@@ -18,11 +18,9 @@ layout:
     visible: true
 ---
 
-# Extending Your Network(网络扩展基础介绍)
+# ☑ Extending Your Network(网络扩展基础介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/extendingyournetwork](https://tryhackme.com/room/extendingyournetwork)
-
-
 
 ## 端口转发介绍
 
@@ -30,11 +28,11 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/extendingyournetwork](
 
 以下面的网络为例：在以下网络中，IP地址为“192.168.1.10”的服务器在端口80上运行着web服务，但该网络上只有另外两台计算机能够访问此web服务。(这种网络被称为内部网络)
 
-
+<figure><img src="../../.gitbook/assets/image-20240208202216687.png" alt=""><figcaption></figcaption></figure>
 
 如果网络管理员想让公众(通过互联网)访问上图中的网站，管理员就必须实现端口转发，如下图所示：
 
-
+<figure><img src="../../.gitbook/assets/image-20240208202247921.png" alt=""><figcaption></figcaption></figure>
 
 通过上图这种设计，网络2现在可以使用网络1的公共IP地址(82.62.51.70)并通过80端口访问运行在网络1上的web服务器。
 
@@ -42,13 +40,15 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/extendingyournetwork](
 
 _tips：端口转发是在网络中的路由器上配置的。_
 
-**答题**
+### **答题**
 
+阅读本小节内容并回答以下问题。
 
+<figure><img src="../../.gitbook/assets/image-20230327165324795.png" alt=""><figcaption></figcaption></figure>
 
 ## 防火墙简介
 
-![img](https://assets.tryhackme.com/additional/networking-fundamentals/extending-your-network/roomicon.png)
+<figure><img src="../../.gitbook/assets/image-20240208202308762.png" alt=""><figcaption></figcaption></figure>
 
 防火墙是网络中的一种设备，它负责确定允许哪些流量进入网络和退出网络，防火墙可以被视为网络的边界安全。网络管理员可以根据多种因素将防火墙配置为允许或拒绝某些流量进入或退出网络，例如：
 
@@ -66,29 +66,31 @@ _**tips：防火墙将通过执行数据包检查来确定以上这些问题的�
 * Stateful（有状态）：这种类型的防火墙将使用来自连接的全部信息，这种防火墙不是基于单个数据包检查，而是_**基于整个连接来确定设备的行为**_；与无状态防火墙相比，有状态防火墙会消耗很多资源，因为相关的流量决策是动态的，例如，有状态防火墙可以让TCP三次握手过程中的第一部分执行失败；如果来自主机的连接不正常，这将阻塞整个设备。
 * Stateless（无状态）：这种类型的防火墙将使用一组静态规则来_**确定单个数据包是否可接受**_，例如，某设备发送了一个坏数据包并不意味着此设备随后都将会被阻塞；虽然无状态防火墙比其他防火墙使用更少的资源，但无状态防火墙的表现也更笨，例如，无状态防火墙只有在定义了规则时才有效，如果规则没有完全匹配，那么此规则实际上将是无用的；当从一组主机接收大量流量时(例如发生了分布式拒绝服务攻击-DDoS攻击)，无状态防火墙将变得非常有用。
 
-**答题**
+### **答题**
 
+阅读本小节内容并回答以下问题。
 
+<figure><img src="../../.gitbook/assets/image-20230327173045469.png" alt=""><figcaption></figcaption></figure>
 
 ## 防火墙模拟示例
 
 在和本文相关的TryHackMe实验房间中部署实验环境并回答问题。
 
-**答题**
+### **答题**
 
 _tips：正确配置防火墙规则以防止设备超载——示例中的203.0.110.1网站正在遭到攻击，请快速添加一些防火墙规则来阻止服务器崩溃（红色的数据包来自于攻击者的机器）。_
 
 添加规则：
 
-![image-20230327180344996](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230327180344996.png)
+<figure><img src="../../.gitbook/assets/image-20230327180344996.png" alt=""><figcaption></figcaption></figure>
 
 得到flag：
 
-
+<figure><img src="../../.gitbook/assets/image-20230327180155107.png" alt=""><figcaption></figcaption></figure>
 
 > 最后得到的flag是：THM{FIREWALLS\_RULE} 。
 
-
+<figure><img src="../../.gitbook/assets/image-20230327175546858.png" alt=""><figcaption></figcaption></figure>
 
 ## VPN基础
 
@@ -100,7 +102,7 @@ _tips：正确配置防火墙规则以防止设备超载——示例中的203.0.
 2. Network #2 (Office #2)
 3. Network #3 (两个设备通过VPN连接)
 
-
+<figure><img src="../../.gitbook/assets/image-20240208202333887.png" alt=""><figcaption></figcaption></figure>
 
 连接在Network#3上的设备仍然是Network#1和Network#2的一部分，但这些设备同时也形成了一个私有网络(Network#3)，只有通过相关的VPN连接的设备才能在这个专用网络(Network#3)上进行通信。
 
@@ -122,9 +124,11 @@ _tips：正确配置防火墙规则以防止设备超载——示例中的203.0.
 * PPTP：点对点隧道协议(PPTP-**P**oint-to-**P**oint **T**unneling **P**rotocol)是一种“允许PPP数据在网络中传输并离开网络”的技术，PPTP协议非常容易设置，大多数设备都支持它，然而，与其他VPN方案相比，PPTP是弱加密的。
 * IPSec：IPsec (Internet Protocol Security)将使用现有的IP (Internet Protocol)框架对数据进行加密，与其他VPN方案相比，IPSec更难建立，但只要建立完成，IPSec就能使用强大的加密功能，并且IPSec技术在许多设备上都能得到支持。
 
-**答题**
+### **答题**
 
+阅读本小节内容并回答以下问题。
 
+<figure><img src="../../.gitbook/assets/image-20230327202321786.png" alt=""><figcaption></figcaption></figure>
 
 ## 局域网(LAN)网络设备
 
@@ -136,7 +140,7 @@ _tips：正确配置防火墙规则以防止设备超载——示例中的203.0.
 
 当设备由多条路径连接时，如下面的示例图所示，路由就能发挥作用以采用最优路径：
 
-
+<figure><img src="../../.gitbook/assets/image-20240208202408224.png" alt=""><figcaption></figcaption></figure>
 
 _tips：路由器是专用设备，它的功能与交换机不同。_
 
@@ -156,7 +160,7 @@ _tips：路由器是专用设备，它的功能与交换机不同。_
 
 以下图中的第二层交换机为例，交换机将通过MAC地址把帧(此处不是数据包，因为IP协议已被剥离)转发到它所连接的设备上。
 
-
+<figure><img src="../../.gitbook/assets/image-20240208202424813.png" alt=""><figcaption></figcaption></figure>
 
 _**tips：上图中的交换机是第二层交换机，OSI模型的第二层是数据链路层，所以上图中的交换机只负责将帧(数据帧)发送到正确的设备上。**_
 
@@ -171,13 +175,15 @@ _**tips：上图中的交换机是第二层交换机，OSI模型的第二层是�
 
 _tips：下图中的交换机是第三层交换机，下图示例将使用交换机划分VLAN，然后给VLAN分配IP。_
 
-
+<figure><img src="../../.gitbook/assets/image-20240208202529098.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示：“销售部门”和“会计部门”都能够访问Internet(互联网公网)，但这两个部门网络之间并不能实现相互通信(尽管这两个部门都连接到同一个交换机)。
 
-**答题**
+### **答题**
 
+阅读本小节内容并回答以下问题。
 
+<figure><img src="../../.gitbook/assets/image-20230327214314866.png" alt=""><figcaption></figcaption></figure>
 
 ## 网络模拟器示例
 
@@ -185,15 +191,15 @@ _tips：下图中的交换机是第三层交换机，下图示例将使用交换
 
 注意：请使用Chrome或Firefox浏览器完成此练习。
 
-**答题**
+### **答题**
 
 从 computer1 发送TCP包到 computer3 ：
 
-
+<figure><img src="../../.gitbook/assets/image-20230327012723958.png" alt=""><figcaption></figcaption></figure>
 
 得到的flag结果：
 
-
+<figure><img src="../../.gitbook/assets/image-20230327012919841.png" alt=""><figcaption></figcaption></figure>
 
 > 得到的flag为：THM{YOU'VE\_GOT\_DATA} 。
 
@@ -216,3 +222,4 @@ TCP: computer3 received TCP Packet from computer1, sending ACK Packet to compute
 
 > 网络日志中共有 5 个HANDSHAKE条目。
 
+<figure><img src="../../.gitbook/assets/image-20230327013125313.png" alt=""><figcaption></figcaption></figure>

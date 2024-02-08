@@ -78,7 +78,9 @@ tips：Confidentiality、Integrity、Availability——即CIA三合一模型。
 
 <figure><img src="../../.gitbook/assets/image-20230322015625614.png" alt=""><figcaption></figcaption></figure>
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 <figure><img src="../../.gitbook/assets/image-20230320213504737.png" alt=""><figcaption></figcaption></figure>
 
@@ -154,7 +156,9 @@ Rank	          Password
 
 某些类型的恶意程序会针对可用性进行攻击，例如勒索软件(ransomware)。勒索软件是一种能够加密用户文件的恶意程序，加密能够使文件在不知道加密密码的情况下变得不可读，换句话说，文件在没有进行解密（逆向加密）的情况下会变成乱码。在勒索软件事件中，攻击者往往会为用户提供恢复文件可用性的方法，攻击者会让用户重新获得对其原始文件的访问权限：当用户愿意支付“赎金-ransom”时，攻击者则会向用户提供加密密码以进行解密。
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 <figure><img src="../../.gitbook/assets/image-20230320213351214.png" alt=""><figcaption></figcaption></figure>
 
@@ -244,9 +248,9 @@ sammie@beginner-os-security:~$
 * 如果你未以 sammie用户 或任何其他用户身份完成ssh登录操作，你可以直接使用 `ssh johnny@MACHINE_IP`命令并手动尝试输入多个密码进行猜测，以查看哪个密码对 johnny用户 有效。
 * 如果你已经以 sammie用户 或任何其他用户身份完成了ssh登录操作，你可以使用 `su - johnny`命令 来切换用户身份，并手动尝试输入一个又一个密码，以查看哪个密码对 johnny用户 有效。
 
-**答题**
+### **答题**
 
-_在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完成本小节对应的实例。_
+_在本文相关的Tryhackme实验房间页面中部署虚拟实验环境，并完成本小节对应的实例。_
 
 _**问题：**_
 

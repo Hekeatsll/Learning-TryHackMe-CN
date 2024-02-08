@@ -65,11 +65,11 @@ Web 应用程序的概念是一个在远程服务器上运行的程序，而服�
 
 <figure><img src="../../.gitbook/assets/image-20230319224808863.png" alt=""><figcaption></figcaption></figure>
 
-**答题**
-
-> Browser - 浏览器
+### **答题**
 
 <figure><img src="../../.gitbook/assets/image-20230319213257215.png" alt=""><figcaption></figcaption></figure>
+
+> Browser - 浏览器
 
 ## Web 应用程序常见安全风险
 
@@ -83,7 +83,7 @@ Web 应用程序的概念是一个在远程服务器上运行的程序，而服�
 * 在搜索产品时：攻击者可以通过在搜索字段中添加特定字符和代码来尝试破坏目标系统；攻击者的目的是让目标系统返回它不应该返回的数据或者执行它不应该执行的程序。(注入类攻击)
 * 在提供付款细节时：攻击者会检查 和付款细节相关的数据 是以明文形式发送还是使用了弱加密；加密是指 让数据在不知道密钥或密码的情况下变得不可读。(明文、弱加密)
 
-tips：本小节只介绍一些针对Web应用程序的攻击方式 而并非全部。
+tips：本小节只是介绍一些针对Web应用程序的攻击方式，而并非全部。
 
 ### 身份识别和验证错误
 
@@ -125,13 +125,13 @@ tips：本小节只介绍一些针对Web应用程序的攻击方式 而并非全
 
 <figure><img src="../../.gitbook/assets/image-20230421124046841.png" alt=""><figcaption></figcaption></figure>
 
-**答题**
+### **答题**
+
+<figure><img src="../../.gitbook/assets/image-20230319214337998.png" alt=""><figcaption></figcaption></figure>
 
 > Identification and Authentication Failure 身份识别和身份验证错误
 >
 > Cryptographic Failures 未成功加密（加密失败）
-
-<figure><img src="../../.gitbook/assets/image-20230319214337998.png" alt=""><figcaption></figcaption></figure>
 
 ## Web 应用程序安全实例
 
@@ -147,7 +147,7 @@ Web 服务器能够接收用户提供的输入以检索对象（文件、数据�
 
 IDOR漏洞也适用于访问一些按顺序命名并存储的文件；例如，攻击者在URL中看到007.txt，那么可以尝试使用其他文件名称，如001.txt、006.txt等。(此例基于目标系统存在IDOR漏洞的前提条件下)
 
-**答题**
+### **答题**
 
 _在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完成本小节对应的实例。_
 

@@ -18,11 +18,9 @@ layout:
     visible: true
 ---
 
-# HTTP in detail(HTTP协议介绍)
+# ☑ HTTP in detail(HTTP协议介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/httpindetail](https://tryhackme.com/room/httpindetail)
-
-
 
 ## 什么是 HTTP(S)?
 
@@ -34,11 +32,13 @@ HTTP 是你浏览网站时使用的，由 Tim Berners-Lee 和他的团队在 198
 
 HTTPS 是 HTTP 的安全版本。 HTTPS 数据经过了加密处理，因此它不仅可以阻止第三方看到你正在接收和发送的数据内容，而且还可以确保你正在与正确的 Web 服务器进行通信（而不是其他冒充你所访问的目标web服务器的东西）。
 
-**答题**
+### **答题**
 
-![image-20221118214001544](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221118214001544.png)
+阅读本小节内容并回答以下问题。
 
-![image-20221118215932057](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221118215932057.png)
+<figure><img src="../../.gitbook/assets/image-20221118214001544.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20221118215932057.png" alt=""><figcaption></figcaption></figure>
 
 ## 请求和响应
 
@@ -48,7 +48,7 @@ HTTPS 是 HTTP 的安全版本。 HTTPS 数据经过了加密处理，因此它�
 
 如果你使用过互联网，那么你就使用过 URL，URL 主要用于指示如何访问互联网上的资源。下面的图片显示了一个 URL 的所有特性(它可能不会在每个请求中使用所有特性)。
 
-![image-20221119090841555](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119090841555.png)
+<figure><img src="../../.gitbook/assets/image-20221119090841555.png" alt=""><figcaption></figcaption></figure>
 
 * Scheme：这说明了使用什么协议来访问资源，如HTTP、HTTPS、FTP(文件传输协议)。
 * User：有些服务需要认证以完成登录，你可以在URL中输入用户名和密码进行登录。
@@ -62,7 +62,7 @@ HTTPS 是 HTTP 的安全版本。 HTTPS 数据经过了加密处理，因此它�
 
 只需要一行"GET / HTTP/1.1"就可以向web服务器发出请求。
 
-![image-20221119092848618](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119092848618.png)
+<figure><img src="../../.gitbook/assets/image-20221119092848618.png" alt=""><figcaption></figcaption></figure>
 
 但为了获得更丰富的网络体验，你还需要通过请求消息发送其他数据，这些数据将通过请求报头进行发送，在请求报头中也会包含一些额外的信息，以提供给与你进行通信的web服务器。
 
@@ -113,9 +113,11 @@ Content-Length: 98
 * 第6行：HTTP响应包含一个空行，用于确认HTTP响应的结束。
 * 第7-14行：被请求的信息，在本例中是关于目标主页的html代码。
 
-**答题**
+### **答题**
 
-![image-20221119100339290](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119100339290.png)
+阅读本小节内容并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20221119100339290.png" alt=""><figcaption></figcaption></figure>
 
 ## HTTP方法
 
@@ -129,9 +131,11 @@ PUT 请求：用于向 Web 服务器提交数据以更新信息。
 
 DELETE 请求：用于从Web服务器中删除信息/记录。
 
-**答题**
+### **答题**
 
-![image-20221119101025366](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119101025366.png)
+阅读本小节内容并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20221119101025366.png" alt=""><figcaption></figcaption></figure>
 
 ## HTTP状态代码
 
@@ -139,17 +143,19 @@ DELETE 请求：用于从Web服务器中删除信息/记录。
 
 在前面的叙述中，你能了解到当 HTTP 服务器发出响应时，第一行总是会包含一个状态代码，该状态码用于通知客户端所发出请求对应的结果以及针对请求的可能处理方式。 这些状态码可以分为 5 个不同的范围：
 
-![image-20221119110901244](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119110901244.png)
+<figure><img src="../../.gitbook/assets/image-20221119110901244.png" alt=""><figcaption></figcaption></figure>
 
 **常见的HTTP状态码**
 
 有很多不同的 HTTP 状态码，这还不包括应用程序自己定义的状态码，我们将介绍一些你可能遇到的最常见的 HTTP 响应状态码：
 
-![image-20221119111632793](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119111632793.png)
+<figure><img src="../../.gitbook/assets/image-20221119111632793.png" alt=""><figcaption></figcaption></figure>
 
-**答题**
+### **答题**
 
-![image-20221119111654255](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119111654255.png)
+阅读本小节内容并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20221119111654255.png" alt=""><figcaption></figcaption></figure>
 
 ## 请求标头和响应标头
 
@@ -183,9 +189,11 @@ Content-Type：这将告诉客户端 从web服务器端所返回的数据类型�
 
 Content-Encoding：在通过 Internet 发送数据时，web服务器将使用什么方法压缩数据以使其更小。
 
-**答题**
+### **答题**
 
-![image-20221119173812275](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119173812275.png)
+阅读本小节内容并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20221119173812275.png" alt=""><figcaption></figcaption></figure>
 
 ## Cookies
 
@@ -193,7 +201,7 @@ Cookie是存储在你的计算机上的一小段数据。 当你从web服务器�
 
 让我们看一下下面这个 HTTP 请求示例：
 
-![image-20221119181012864](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20221119181012864.png)
+<figure><img src="../../.gitbook/assets/image-20221119181012864.png" alt=""><figcaption></figcaption></figure>
 
 Cookie 可用于多种用途，但最常用于网站身份验证。 cookie 值通常不会是一个可以让你直接看到密码的明文字符串，而会是一个令牌-token（具有不容易被猜到的唯一密码）。
 
@@ -203,46 +211,52 @@ Cookie 可用于多种用途，但最常用于网站身份验证。 cookie 值�
 
 打开开发人员工具后，单击“网络”选项卡。 此选项卡将向你显示你的浏览器已请求的所有资源的列表，你可以单击每一个子项以查看请求和响应的详细分类信息。 如果你的浏览器发送了 cookie，你将在请求消息的“Cookie”选项卡上看到具体的cookie内容。
 
-**答题**
+### **答题**
 
-![image-20221119223656762](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119223656762.png)
+阅读本小节内容并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20221119223656762.png" alt=""><figcaption></figcaption></figure>
 
 ## 发出请求
 
-**答题**
+使用由实验房间所提供的在线模拟网站进行HTTP请求演示，然后回答本小节相关问题。
 
-![image-20221119230941300](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119230941300.png)
+### **答题**
 
-![image-20221119231104215](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231104215.png)
+<figure><img src="../../.gitbook/assets/image-20221119230941300.png" alt=""><figcaption></figcaption></figure>
 
-问题一：
+模拟器示意图：
 
-![image-20221119231159570](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231159570.png)
+<figure><img src="../../.gitbook/assets/image-20221119231104215.png" alt=""><figcaption></figcaption></figure>
 
-问题二：
+问题一相关操作：
 
-![image-20221119231302404](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231302404.png)
+<figure><img src="../../.gitbook/assets/image-20221119231159570.png" alt=""><figcaption></figcaption></figure>
 
-![image-20221119231321822](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231321822.png)
+问题二相关操作：
 
-![image-20221119231429010](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231429010.png)
+<figure><img src="../../.gitbook/assets/image-20221119231302404.png" alt=""><figcaption></figcaption></figure>
 
-问题三：
+<figure><img src="../../.gitbook/assets/image-20221119231321822.png" alt=""><figcaption></figcaption></figure>
 
-![image-20221119231552049](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231552049.png)
+<figure><img src="../../.gitbook/assets/image-20221119231429010.png" alt=""><figcaption></figcaption></figure>
 
-问题四：
+问题三相关操作：
 
-![image-20221119231713945](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231713945.png)
+<figure><img src="../../.gitbook/assets/image-20221119231552049.png" alt=""><figcaption></figcaption></figure>
 
-![image-20221119231851305](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231851305.png)
+问题四相关操作：
 
-![image-20221119231940989](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119231940989.png)
+<figure><img src="../../.gitbook/assets/image-20221119231713945.png" alt=""><figcaption></figcaption></figure>
 
-问题五：
+<figure><img src="../../.gitbook/assets/image-20221119231851305.png" alt=""><figcaption></figcaption></figure>
 
-![image-20221119232113263](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119232113263.png)
+<figure><img src="../../.gitbook/assets/image-20221119231940989.png" alt=""><figcaption></figcaption></figure>
 
-![image-20221119232238841](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119232238841.png)
+问题五相关操作：
 
-![image-20221119232319559](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221119232319559.png)
+<figure><img src="../../.gitbook/assets/image-20221119232113263.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20221119232238841.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20221119232319559.png" alt=""><figcaption></figcaption></figure>

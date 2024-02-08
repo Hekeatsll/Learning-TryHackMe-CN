@@ -52,7 +52,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/defensivesecurity](htt
 * 数字取证和事件响应 (DFIR)
 * 恶意软件分析
 
-**答题**
+### **答题**
 
 <figure><img src="../../.gitbook/assets/image-20230319104624034.png" alt=""><figcaption></figcaption></figure>
 
@@ -147,7 +147,7 @@ Malware 代表恶意软件，软件是指可以保存在磁盘上或通过网络
 * 静态分析：在不运行恶意程序的前提下对恶意程序进行检查。通常，这需要扎实的汇编语言知识（处理器的指令集，即计算机的基本指令）。
 * 动态分析：在受控环境中运行恶意软件并监控其活动以进行分析，动态分析可以让你观察恶意软件在运行时的具体行为。
 
-**答题**
+### **答题**
 
 <figure><img src="../../.gitbook/assets/image-20230319125337268.png" alt=""><figcaption></figcaption></figure>
 
@@ -165,7 +165,7 @@ Malware 代表恶意软件，软件是指可以保存在磁盘上或通过网络
 
 <figure><img src="../../.gitbook/assets/2857591-20230416232447698-1553382882.png" alt=""><figcaption></figcaption></figure>
 
-**答题**
+### **答题**
 
 _在本文相关的Tryhackme实验房间页面 部署虚拟实验环境，并完成本小节对应的实例_
 

@@ -1,6 +1,6 @@
 ---
 description: 本文相关内容：了解Web服务的所有单独组件如何协同工作，这种协同工作能让我们可以访问自己喜欢的网站。
-cover: ../../.gitbook/assets/184dc7fb5b1d816f4005d59f36a0e484.svg
+cover: ../../.gitbook/assets/ceca040c9acf2ae83ff001433f57fd7b (1).svg
 coverY: 0
 layout:
   cover:
@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Putting it all together(网站组件协同工作介绍)
+# ☑ Putting it all together(网站组件协同工作介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/puttingitalltogether](https://tryhackme.com/room/puttingitalltogether)
 
@@ -26,9 +26,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/puttingitalltogether](
 
 当我们在浏览器中请求网页信息时，幕后还发生了很多事情。在请求一个网站时，我们的计算机需要知道它需要与之通信的Web服务器的 IP 地址，为此，本地计算机需要使用DNS，然后，我们的计算机将使用一组被称为 HTTP 协议的特殊命令与 Web 服务器进行通信， Web 服务器随后将返回 HTML 、JavaScript 、CSS、图像文件等资源，最后，我们本地计算机的浏览器将使用这些资源 并通过正确格式化来向我们呈现网站的相关网页内容。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230328122449214.png" alt=""><figcaption></figcaption></figure>
 
 此外，还有一些其他组件可以帮助web服务更有效地运行，并提供额外的功能。
 
@@ -42,9 +40,9 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/puttingitalltogether](
 
 当你请求一个使用了负载均衡器的网站时，负载均衡器将首先接收到你的请求，然后它会将请求转发到它后面的多个服务器之一；在此过程中，负载均衡器会使用不同的算法来帮助决定哪台服务器最适合处理请求消息，这些算法的两个例子是：轮询(round-robin)和加权(weighted)——前者会依次将请求发送到每个服务器，后者会检查服务器当前正在处理多少请求，再将请求发送到最不繁忙的服务器。
 
-负载均衡器还会对每个服务器执行定期检查，以确保它们能够正常运行，这被称为健康检查（**health check**）；如果服务器没有正确响应或无响应，负载均衡器将停止向服务器发送流量，直到服务器再次正确响应为止。
+负载均衡器还会对每个服务器执行定期检查，以确保它们能够正常运行，这被称为health check；如果服务器没有正确响应或无响应，负载均衡器将停止向服务器发送流量，直到服务器再次正确响应为止。
 
-
+<figure><img src="../../.gitbook/assets/image-20230329194420901.png" alt=""><figcaption></figcaption></figure>
 
 **CDN (Content Delivery Networks)**
 
@@ -64,15 +62,13 @@ WAF能够分析带有常见攻击技术的恶意web请求，无论这些恶意�
 
 如果一个请求被认为是潜在的攻击载荷，那么此请求将被WAF拦截以及丢弃，这意味着此请求将永远不会被发送到web服务器。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230329194500670.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 阅读本小节内容，并回答以下问题。
 
-
+<figure><img src="../../.gitbook/assets/image-20230329194637044.png" alt=""><figcaption></figcaption></figure>
 
 ## Web服务器如何工作
 
@@ -129,7 +125,7 @@ Web服务器可以托管多个具有不同域名的网站，为了实现这一�
 
 阅读本小节内容，并回答以下问题。
 
-
+<figure><img src="../../.gitbook/assets/image-20230329194949800.png" alt=""><figcaption></figcaption></figure>
 
 ## 示例练习
 
@@ -139,17 +135,14 @@ Web服务器可以托管多个具有不同域名的网站，为了实现这一�
 
 正确的网站请求顺序如下所示：
 
+<figure><img src="../../.gitbook/assets/image-20230329200155133.png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/image-20230329201018085.png" alt=""><figcaption></figcaption></figure>
 
 得到flag：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230329200657201.png" alt=""><figcaption></figcaption></figure>
 
 > 得到的flag内容为：THM{YOU\_GOT\_THE\_ORDER} 。
 
-
-
+<figure><img src="../../.gitbook/assets/image-20230329200737830.png" alt=""><figcaption></figcaption></figure>

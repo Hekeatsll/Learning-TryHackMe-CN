@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Intro to LAN(局域网基础介绍)
+# ☑ Intro to LAN(局域网基础介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introtolan](https://tryhackme.com/room/introtolan)
 
@@ -36,7 +36,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtolan](https://tr
 
 但不幸的是，随着网络规模越来越大，在星星拓扑中保持网络功能所需的维护成本就越高，而这种对维护的依赖增加也会使得故障排除变得更加困难。此外，星形拓扑仍然可能失效(尽管这种拓扑结构减少了失效的可能性)，例如，如果连接各个设备的集中式硬件出现故障，那么这些设备将不再能够继续发送或接收数据，值得庆幸的是，这些集中式硬件设备通常都很健壮。
 
-
+<figure><img src="../../.gitbook/assets/image-20230325211744823.png" alt=""><figcaption></figcaption></figure>
 
 ### **Bus Topology（总线拓扑）**
 
@@ -50,7 +50,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtolan](https://tr
 
 总线拓扑的另一个缺点是在发生故障时几乎没有冗余，这个缺点的存在是因为：如果在主干电缆上有一个单点故障，即电缆线突然断了，那么设备就不能再沿着总线接收或传输数据。
 
-
+<figure><img src="../../.gitbook/assets/image-20230325211804758.png" alt=""><figcaption></figcaption></figure>
 
 ### **Ring Topology（环型拓扑）**
 
@@ -62,7 +62,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtolan](https://tr
 
 环形拓扑不太容易出现数据传输瓶颈，因为在总线拓扑结构中，大量流量不会在任何时候同时通过网络传输。然而，这种拓扑结构的设计也意味着：如果剪断电缆或损坏设备则将导致整个网络中断。
 
-
+<figure><img src="../../.gitbook/assets/image-20230325211833122.png" alt=""><figcaption></figcaption></figure>
 
 ### **什么是交换机（Switch）？**
 
@@ -70,7 +70,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtolan](https://tr
 
 交换机比它们的次要对应物(集线器/中继器)更有效，交换机会跟踪哪些设备连接到哪个端口，因此，当交换机接收到一个数据包时，就不会像集线器那样将该数据包重复发送到每个端口，而是直接将数据包通过已知端口发送给预定的目标即可，从而减少了网络流量的消耗。
 
-
+<figure><img src="../../.gitbook/assets/image-20230325122204859.png" alt=""><figcaption></figcaption></figure>
 
 交换机和路由器都可以相互连接，这样做可通过为数据添加多条路径来增加网络的冗余(可靠性)——如果一条路走不通，就可以用另一条路。虽然这可能会降低网络的整体性能，因为数据包要花费更长的时间来传输，但这尽量保证了网络没有停机时间——考虑到其他替代方案，降低网络的整体性能只是一个很小的代价。
 
@@ -82,6 +82,8 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtolan](https://tr
 
 当设备由多条路径连接时，如下面的示例图所示，路由就能发挥作用。
 
+<figure><img src="../../.gitbook/assets/image-20230325121757937.png" alt=""><figcaption></figcaption></figure>
+
 ### **答题**
 
 在和本文相关的TryHackMe实验房间中部署实验环境并回答问题。
@@ -90,31 +92,35 @@ _tips：该实验环境将带我们了解不同网络拓扑结构中的缺陷。
 
 在环形拓扑结构中，所有设备都连接到其他两个设备，形成一个完整的圆圈，数据包从一个设备传输到下一个设备，直到到达目的地：
 
-
+<figure><img src="../../.gitbook/assets/image-20230325214051829.png" alt=""><figcaption></figcaption></figure>
 
 环形拓扑的主要缺陷之一是，如果设备故障或电缆损坏，则数据将不再传递，网络中的设备也无法再相互通信：
 
-
+<figure><img src="../../.gitbook/assets/image-20230325214218366.png" alt=""><figcaption></figcaption></figure>
 
 在总线拓扑中，所有设备都连接到一根电缆上，这根电缆通常被称为主干电缆，数据将顺着主干电缆沿左右两个方向发送，直到到达数据包的目的地：
 
-
+<figure><img src="../../.gitbook/assets/image-20230325214458459.png" alt=""><figcaption></figcaption></figure>
 
 总线拓扑的一个主要缺陷是它不能处理大量数据，如果同时发送的数据包过多，就会导致网络关闭：
 
-
+<figure><img src="../../.gitbook/assets/image-20230325214722436.png" alt=""><figcaption></figcaption></figure>
 
 在星型拓扑中，所有设备都通过自己的电缆连接到中央交换机/集线器，每个数据包都将通过中央交换机发送：
 
-
+<figure><img src="../../.gitbook/assets/image-20230325214952528.png" alt=""><figcaption></figcaption></figure>
 
 如果交换机发生故障，则网络将不再工作：
 
-
+<figure><img src="../../.gitbook/assets/image-20230325215037202.png" alt=""><figcaption></figcaption></figure>
 
 完成上述步骤，最后得到一个flag：
 
+<figure><img src="../../.gitbook/assets/image-20230325215123783.png" alt=""><figcaption></figcaption></figure>
+
 > 最后得到的flag为：THM{TOPOLOGY\_FLAWS} 。
+
+<figure><img src="../../.gitbook/assets/image-20230325213845669.png" alt=""><figcaption></figcaption></figure>
 
 ## 子网划分入门
 
@@ -126,11 +132,13 @@ _tips：该实验环境将带我们了解不同网络拓扑结构中的缺陷。
 * 金融（Finance）
 * 人力资源（Human Resources）
 
-
+<figure><img src="../../.gitbook/assets/image-20230325220009334.png" alt=""><figcaption></figcaption></figure>
 
 在现实生活中，你知道要把信息发送到正确的企业部门，在网络中也同样需要知道这一点；网络管理员将使用子网划分来分类网络和分配网络的特定部分。
 
 子网划分将通过划分网络中可以容纳的主机数量来实现，这将用一组被称为子网掩码的数字表示，让我们查看下图:
+
+<figure><img src="../../.gitbook/assets/image-20230325220503766.png" alt=""><figcaption></figcaption></figure>
 
 我们知道，一个IP地址由四个“八位二进制数”组成，共四个字节，而子网掩码也是如此，子网掩码同样是被表示为四个字节(1个字节占8个二进制位，共32位)的一组数字，每个字节的范围是从0到255(0-255)。
 
@@ -141,6 +149,8 @@ _tips：该实验环境将带我们了解不同网络拓扑结构中的缺陷。
 * 标识默认网关（default gateway）
 
 让我们了解一下以上三种方式的目的，如下所示:
+
+<figure><img src="../../.gitbook/assets/image-20230325221335603.png" alt=""><figcaption></figcaption></figure>
 
 tips：默认网关是网络中的一个特殊设备，它能够向另一个网络上的设备发送信息。
 
@@ -161,6 +171,10 @@ tips：默认网关是网络中的一个特殊设备，它能够向另一个网�
 
 ### **答题**
 
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230325225950872.png" alt=""><figcaption></figcaption></figure>
+
 ## ARP协议介绍
 
 回顾我们上文所述，网络中的设备可以有两个标识符： MAC 地址和 IP 地址；而通过ARP协议可以允许设备在网络中识别自己，ARP协议即地址解析协议（**A**ddress **R**esolution **P**rotocol ）。
@@ -180,16 +194,24 @@ tips：默认网关是网络中的一个特殊设备，它能够向另一个网�
 
 这个过程如下图所示：
 
-
+<figure><img src="../../.gitbook/assets/image-20230325233634467.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
+
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230325234520603.png" alt=""><figcaption></figcaption></figure>
 
 ## DHCP协议介绍
 
-IP 地址可以手动分配，方法是将 IP 手动绑定到设备，IP 地址也可以自动分配，最常见的是使用动态主机配置协议（DHCP）服务器。当设备连接到网络时，如果尚未手动为其分配 IP 地址，它则会发出一个请求消息（DHCP Discover）以查看网络上是否有任何 DHCP 服务器，然后 DHCP 服务器将回复一个包含原设备可用的 IP 地址信息的消息（DHCP Offer）给原设备，紧接着原设备将再发送一个请求消息（DHCP Request）以确认它需要这个被提供的 IP 地址，最后，DHCP服务器将会发送一个应答消息（DHCP ACK）以确认IP分配操作已经完成，此后原设备就可以开始使用由DHCP服务器所提供的 IP 地址。
+IP地址可以手动分配，方法是将IP手动绑定到设备，IP地址也可以自动分配，最常见的是使用动态主机配置协议(DHCP)服务器。当设备连接到网络时，如果用户尚未手动为其分配IP地址，设备就会发出一个请求消息(DHCP Discover)以查看网络上是否有任何DHCP服务器，然后DHCP服务器将回复一个包含原设备可用的IP地址信息的消息(DHCP Offer)给原设备，紧接着原设备将再发送一个请求消息(DHCP Request)以确认它需要这个被提供的IP地址，最后，DHCP服务器将会发送一个应答消息(DHCP ACK)以确认IP分配操作已经完成，此后原设备就可以开始使用由DHCP服务器所提供的IP地址。
 
-tips：DHCP-**D**ynamic **H**ost **C**onfiguration **P**rotocol（动态主机配置协议）
+tips：DHCP-**D**ynamic **H**ost **C**onfiguration **P**rotocol(动态主机配置协议)
 
-![image-20230325235958781](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230325235958781.png)
+<figure><img src="../../.gitbook/assets/image-20230325235958781.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
+
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230326000851046.png" alt=""><figcaption></figcaption></figure>

@@ -18,11 +18,9 @@ layout:
     visible: true
 ---
 
-# Introductory Researching(信息检索技巧介绍)
+# ☑ Introductory Researching(信息检索技巧介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introtoresearch](https://tryhackme.com/room/introtoresearch)
-
-
 
 ## 简介
 
@@ -42,41 +40,41 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtoresearch](https
 
 我们可以先在 Google搜索引擎 中搜索“hiding things inside images”：
 
-![image-20230310082413916](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230310082413916.png)
+<figure><img src="../../.gitbook/assets/image-20230310082413916.png" alt=""><figcaption></figcaption></figure>
 
 上图查询结果中的第二个链接为我们提供了一项技术的名称：“隐写术”(Steganography)；我们可以单击该链接并阅读相关文档，它将教我们如何将数据隐藏在图像或者音频中。
 
 我们已经大概了解了“隐写术”(Steganography)的概念，接下来让我们继续尝试寻找一种 能够从使用了隐写术的图像文件中提取嵌入数据的方法。
 
-![image-20230310082858403](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230310082858403.png)
+<figure><img src="../../.gitbook/assets/image-20230310082858403.png" alt=""><figcaption></figcaption></figure>
 
 我们得到上图中的搜索结果，实际上在结果中的每个链接都能指向一些有用的东西：比如上图中的第一个链接包含了一系列关于隐写术的有用工具，而第二个链接是关于如何执行隐写术的更多说明......
 
-让我们看一下上图查询结果中的第一个链接：https://0xrick.github.io/lists/stego/
+让我们看一下上图查询结果中的第一个链接：[https://0xrick.github.io/lists/stego/](https://0xrick.github.io/lists/stego/)
 
-![image-20230310083235567](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310083235567.png)
+<figure><img src="../../.gitbook/assets/image-20230310083235567.png" alt=""><figcaption></figcaption></figure>
 
 我们可以从上图中看到一个有用的工具-steghide-它可用于从JPEG等图像文件中提取嵌入数据；另外，以上页面还告诉我们可以使用“apt”命令来安装steghide 。
 
 让我们继续搜索关于“apt”命令的信息：
 
-![image-20230310083536787](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310083536787.png)
+<figure><img src="../../.gitbook/assets/image-20230310083536787.png" alt=""><figcaption></figcaption></figure>
 
 由上图的查询结果可知：apt 是一个包管理器，它可以让我们在Ubuntu（或 Kali）等Linux发行版操作系统上安装工具。
 
 那么我们应该如何使用 apt 来安装软件包？让我们继续进行信息检索：
 
-![image-20230310083707008](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310083707008.png)
+<figure><img src="../../.gitbook/assets/image-20230310083707008.png" alt=""><figcaption></figcaption></figure>
 
 由上图中的查询结果可知：我们可以使用 `sudo apt-get install <package name>`来安装工具。
 
 我们之前已经知道要安装的包名为 steghide，现在让我们使用apt命令来安装steghide工具（在Linux系统中）：
 
-![image-20230310083943789](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310083943789.png)
+<figure><img src="../../.gitbook/assets/image-20230310083943789.png" alt=""><figcaption></figcaption></figure>
 
 回到我们之前看到隐写术工具steghide的相关页面- https://0xrick.github.io/lists/stego/ ；我们可以看到一些关于如何使用steghide工具的说明。
 
-![image-20230310084239621](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310084239621.png)
+<figure><img src="../../.gitbook/assets/image-20230310084239621.png" alt=""><figcaption></figcaption></figure>
 
 很好，现在整个信息检索流程已经结束了--我们已经知道如何从图像文件中提取嵌入数据。
 
@@ -90,45 +88,45 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtoresearch](https
 
 利用谷歌搜索引擎搜索 "manually send request burp suite"：
 
-![image-20230310090250171](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310090250171.png)
+<figure><img src="../../.gitbook/assets/image-20230310090250171.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310090005285](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310090005285.png)
+<figure><img src="../../.gitbook/assets/image-20230310090005285.png" alt=""><figcaption></figcaption></figure>
 
 问题：现代 Windows 登录密码存储在什么哈希格式中？
 
 利用谷歌搜索引擎搜索"hashing algorithm for windows"（下图结果用了翻译）：
 
-![image-20230310090443317](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310090443317.png)
+<figure><img src="../../.gitbook/assets/image-20230310090443317.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310090328818](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310090328818.png)
+<figure><img src="../../.gitbook/assets/image-20230310090328818.png" alt=""><figcaption></figcaption></figure>
 
 问题：Linux 中的自动化任务被称为什么？
 
 利用谷歌搜索引擎搜索"automated tasks called in Linux"：
 
-![image-20230310090906114](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310090906114.png)
+<figure><img src="../../.gitbook/assets/image-20230310090906114.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310090536390](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310090536390.png)
+<figure><img src="../../.gitbook/assets/image-20230310090536390.png" alt=""><figcaption></figcaption></figure>
 
 问题：你可以使用什么基数作为基数 2（二进制）的简写？
 
 利用谷歌搜索引擎搜索" a shorthand for base 2 "：
 
-![image-20230310080258892](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310080258892.png)
+<figure><img src="../../.gitbook/assets/image-20230310080258892.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310080453670](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310080453670.png)
+<figure><img src="../../.gitbook/assets/image-20230310080453670.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310090950466](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310090950466.png)
+<figure><img src="../../.gitbook/assets/image-20230310090950466.png" alt=""><figcaption></figcaption></figure>
 
 问题：如果密码哈希以 $6$ 开头，它是什么格式（Unix 变体）？
 
 利用谷歌搜索引擎搜索" hash starts with $6$ "：
 
-![image-20230310091439175](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310091439175.png)
+<figure><img src="../../.gitbook/assets/image-20230310091439175.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310091607976](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310091607976.png)
+<figure><img src="../../.gitbook/assets/image-20230310091607976.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310091114634](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310091114634.png)
+<figure><img src="../../.gitbook/assets/image-20230310091114634.png" alt=""><figcaption></figcaption></figure>
 
 ## 漏洞搜索工具介绍(检索漏洞信息)
 
@@ -150,7 +148,7 @@ ExploitDB（漏洞利用数据库）往往也非常有用，因为它实际上�
 
 让我们举个例子，假设我们正在进行CTF练习，我们遇到了一个网站有如下页面：
 
-![image-20230310094104246](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310094104246.png)
+<figure><img src="../../.gitbook/assets/image-20230310094104246.png" alt=""><figcaption></figcaption></figure>
 
 这个网站显然使用了FuelCMS（注意：通常情况下目标不会这么明显地让我们知道网站所使用的是哪种CMS）。
 
@@ -160,17 +158,17 @@ _注意：我们可以在 Kali 中使用 CLI 工具-searchsploit，因为从工�
 
 在kali机的终端中输入`searchsploit fuel cms`命令 以搜索漏洞信息：
 
-![image-20230310094726512](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310094726512.png)
+<figure><img src="../../.gitbook/assets/image-20230310094726512.png" alt=""><figcaption></figcaption></figure>
 
 或者通过ExploitDB在线网站搜索fuelCMS的漏洞信息：
 
-![image-20230310094655516](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310094655516.png)
+<figure><img src="../../.gitbook/assets/image-20230310094655516.png" alt=""><figcaption></figcaption></figure>
 
 很好，我们已经得到了一个可以用来攻击目标网站的漏洞exp。
 
 点击上图中的fuelCMS漏洞exp标题，我们会得到更多关于该漏洞exp的解释：
 
-![image-20230310095009889](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310095009889.png)
+<figure><img src="../../.gitbook/assets/image-20230310095009889.png" alt=""><figcaption></figcaption></figure>
 
 我们能够得知该漏洞exp对应的CVE编号：CVE-2018-16763 （注意格式-CVE-YEAR-NUMBER）
 
@@ -178,39 +176,39 @@ _tips： CVE 编号是在发现漏洞时分配的，而不是在公开漏洞时�
 
 ### 答题
 
-_tips:在线漏洞exp数据库-ExploitDB：https://www.exploit-db.com/_
+_tips:在线漏洞exp数据库-ExploitDB：_[_https://www.exploit-db.com/_](https://www.exploit-db.com/)
 
 **问题：在WPForms 中发现的 2020 跨站点脚本 (XSS) 漏洞的CVE是什么？**
 
-![image-20230310164330539](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310164330539.png)
+<figure><img src="../../.gitbook/assets/image-20230310164330539.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310164358593](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310164358593.png)
+<figure><img src="../../.gitbook/assets/image-20230310164358593.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310164423403](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310164423403.png)
+<figure><img src="../../.gitbook/assets/image-20230310164423403.png" alt=""><figcaption></figcaption></figure>
 
 **问题：早在 2016 年，在Debian版本的Apache Tomcat中就发现了本地提权漏洞，此漏洞的CVE编号是什么？**
 
-![image-20230310164719436](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310164719436.png)
+<figure><img src="../../.gitbook/assets/image-20230310164719436.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310164753469](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310164753469.png)
+<figure><img src="../../.gitbook/assets/image-20230310164753469.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310164806235](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310164806235.png)
+<figure><img src="../../.gitbook/assets/image-20230310164806235.png" alt=""><figcaption></figcaption></figure>
 
 **问题：在 VLC 媒体播放器（VLC media player）中发现的第一个CVE是什么？**
 
-![image-20230310165019483](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310165019483.png)
+<figure><img src="../../.gitbook/assets/image-20230310165019483.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310165047590](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310165047590.png)
+<figure><img src="../../.gitbook/assets/image-20230310165047590.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310165106033](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310165106033.png)
+<figure><img src="../../.gitbook/assets/image-20230310165106033.png" alt=""><figcaption></figcaption></figure>
 
 **问题：如果你想利用关于 sudo 程序的2020年公布的缓冲区溢出(Buffer Overflow)漏洞，你会使用哪个CVE ？**
 
-![image-20230310165407660](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310165407660.png)
+<figure><img src="../../.gitbook/assets/image-20230310165407660.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310165609694](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310165609694.png)
+<figure><img src="../../.gitbook/assets/image-20230310165609694.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310170001878](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310170001878.png)
+<figure><img src="../../.gitbook/assets/image-20230310170001878.png" alt=""><figcaption></figcaption></figure>
 
 ## Linux手册页介绍(检索CLI工具使用方法)
 
@@ -220,25 +218,25 @@ Linux中有一个内置的`man`命令，它可以让你直接在终端内访问�
 
 假设我们想使用SSH工具连接远程计算机，但我们不知道ssh的相关语法，那么我们就可以尝试输入`man ssh`命令 来获取SSH的使用手册页：
 
-![image-20230310100533591](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310100533591.png)
+<figure><img src="../../.gitbook/assets/image-20230310100533591.png" alt=""><figcaption></figcaption></figure>
 
 我们可以在描述中看到使用SSH的语法需要@符号：
 
-![image-20230310100623376](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310100623376.png)
+<figure><img src="../../.gitbook/assets/image-20230310100623376.png" alt=""><figcaption></figcaption></figure>
 
 我们可以通过使用`man`命令 调出手册页来查找某个CLI工具能够用于执行特定操作的参数（关于参数的作用：比如当我们使用之前提到的steghide工具时，我们可以指定使用一些参数，然后steghide就会根据我们所提供的参数 来决定是从图像中提取数据 还是嵌入数据到图像中）。
 
 如果你想显示SSH的版本号，你可以在ssh的`man` 手册中选择向下滚动页面 ，直到找到合适的参数：`-V`
 
-![image-20230310101407597](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310101407597.png)
+<figure><img src="../../.gitbook/assets/image-20230310101407597.png" alt=""><figcaption></figcaption></figure>
 
 然后我们使用上图中的参数：`ssh -V`
 
-![image-20230310101438619](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310101438619.png)
+<figure><img src="../../.gitbook/assets/image-20230310101438619.png" alt=""><figcaption></figcaption></figure>
 
 找到该参数的另一种方法是在 `man`命令中使用`grep`-这能让我们在ssh手册页面中搜索我们所需要的参数：`man ssh | grep -e "version number"`
 
-![image-20230310101633892](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310101633892.png)
+<figure><img src="../../.gitbook/assets/image-20230310101633892.png" alt=""><figcaption></figcaption></figure>
 
 ### 答题
 
@@ -246,30 +244,30 @@ Linux中有一个内置的`man`命令，它可以让你直接在终端内访问�
 
 在kali机终端界面中输入命令 `man scp | grep -e "copy"`
 
-![image-20230310172318265](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310172318265.png)
+<figure><img src="../../.gitbook/assets/image-20230310172318265.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310170416026](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310170416026.png)
+<figure><img src="../../.gitbook/assets/image-20230310170416026.png" alt=""><figcaption></figcaption></figure>
 
 问题：fdisk 是一个用于查看和更改硬盘驱动器上使用的分区方案的命令，你将使用什么参数开关来列出当前分区？
 
 在kali机终端界面中输入命令 `man fdisk | grep -e "list"`
 
-![image-20230310172638860](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310172638860.png)
+<figure><img src="../../.gitbook/assets/image-20230310172638860.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310170424471](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310170424471.png)
+<figure><img src="../../.gitbook/assets/image-20230310170424471.png" alt=""><figcaption></figcaption></figure>
 
 问题：nano 是一个易于使用的Linux文本编辑器，使用 nano 打开文件时，你会使用什么参数开关来进行备份？
 
 在kali机终端界面中输入命令 `man nano | grep -e "backup"`
 
-![image-20230310172725094](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310172725094.png)
+<figure><img src="../../.gitbook/assets/image-20230310172725094.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310170444083](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310170444083.png)
+<figure><img src="../../.gitbook/assets/image-20230310170444083.png" alt=""><figcaption></figcaption></figure>
 
 问题：netcat 是用于手动发送和接收网络请求的基本工具，你将使用什么命令以侦听模式启动 netcat，并侦听端口 12345？
 
 在kali机终端界面中输入命令 `man netcat | grep -e "listen" -e "port"`
 
-![image-20230310173217272](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310173217272.png)
+<figure><img src="../../.gitbook/assets/image-20230310173217272.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230310170455074](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230310170455074.png)
+<figure><img src="../../.gitbook/assets/image-20230310170455074.png" alt=""><figcaption></figcaption></figure>

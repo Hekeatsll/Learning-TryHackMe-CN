@@ -30,7 +30,7 @@
   * [☑ Windows Fundamentals 2(Windows基础知识2)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-2windows-ji-chu-zhi-shi-2.md)
   * [☑ Windows Fundamentals 3(Windows基础知识3)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-3windows-ji-chu-zhi-shi-3.md)
 * [🤓 Complete Beginner(完全初学者)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/README.md)
-  * [Introductory Researching(信息检索技巧介绍)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/introductory-researching-xin-xi-jian-suo-ji-qiao-jie-shao.md)
+  * [☑ Introductory Researching(信息检索技巧介绍)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/introductory-researching-xin-xi-jian-suo-ji-qiao-jie-shao.md)
   * [Introductory Networking(网络基础介绍)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/introductory-networking-wang-luo-ji-chu-jie-shao.md)
   * [Nmap(Nmap工具使用简介)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/nmapnmap-gong-ju-shi-yong-jian-jie.md)
   * [Network Services(网络服务)](learning-paths-xue-xi-lu-jing/complete-beginner-wan-quan-chu-xue-zhe/network-services-wang-luo-fu-wu.md)

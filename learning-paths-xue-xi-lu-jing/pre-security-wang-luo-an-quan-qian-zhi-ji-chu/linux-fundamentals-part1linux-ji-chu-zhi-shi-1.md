@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Linux Fundamentals Part1(Linux基础知识1)
+# ☑ Linux Fundamentals Part1(Linux基础知识1)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/linuxfundamentalspart1](https://tryhackme.com/room/linuxfundamentalspart1)
 
@@ -57,9 +57,7 @@ tips：类似于不同版本的Windows(7、8和10)，Linux也有许多不同的�
 
 阅读本小节内容，并回答以下问题。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402214844561.png" alt=""><figcaption></figcaption></figure>
 
 ## 运行简单的Linux命令
 
@@ -69,9 +67,7 @@ tips：类似于不同版本的Windows(7、8和10)，Linux也有许多不同的�
 
 “终端”是纯粹基于文本的，Linux操作系统的“终端”（Terminal）界面类似于下图：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402220603219.png" alt=""><figcaption></figcaption></figure>
 
 我们可以通过终端命令来实现一些基本的操作，如导航到文件、输出文件内容以及创建文件等，这些命令的含义有时候是不言自明的。
 
@@ -82,23 +78,17 @@ tips：类似于不同版本的Windows(7、8和10)，Linux也有许多不同的�
 
 以下是相关命令的示例：
 
+<figure><img src="../../.gitbook/assets/image-20230402221322991.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402221333903.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 使用和本文相关的实验房间所提供的Linux虚拟机进行操作：
 
+<figure><img src="../../.gitbook/assets/image-20230402221632147.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402221505119.png" alt=""><figcaption></figcaption></figure>
 
 ## 使用Linux命令与文件系统交互
 
@@ -119,9 +109,7 @@ tips：上述四个命令是不言自明的，我们可以从上面四个命令�
 
 在我们查找任何文件或文件夹的内容之前，我们需要知道Linux机器的当前目录下存在什么，我们可以使用`ls`命令(ls是listing的缩写)来列出当前目录中的文件。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402225034052.png" alt=""><figcaption></figcaption></figure>
 
 在上面的截图中，我们可以看到当前有以下目录/文件夹：
 
@@ -138,11 +126,7 @@ tips：你可以直接列出某个目录(文件夹)下的内容，而无需事�
 
 现在我们知道当前目录下存在哪些文件夹，我们可以使用`cd`命令(change directory的简称)来切换到对应目录中；例如，如果我们想打开“Pictures”目录，就可以执行`cd Pictures`命令来切换目录，然后再使用`ls`命令——即可列出“Pictures”目录下的内容。
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402230130734.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示，在Pictures目录下有四个jpg图像文件。
 
@@ -154,9 +138,7 @@ tips：你可以直接列出某个目录(文件夹)下的内容，而无需事�
 
 在下面的截图中，我们可以看到如何使用`ls`和`cat`来查看“Documents”目录下的文件具体内容：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402230319216.png" alt=""><figcaption></figcaption></figure>
 
 让我们来分析一下上图内容：
 
@@ -175,11 +157,7 @@ tips：我们也可以使用`cat /home/ubuntu/Documents/todo.txt`命令直接输
 
 我们可以使用`pwd`命令进行查看，如下图所示：
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402223817265.png" alt=""><figcaption></figcaption></figure>
 
 让我们来分析一下上图内容：
 
@@ -192,11 +170,9 @@ tips：我们也可以使用`cat /home/ubuntu/Documents/todo.txt`命令直接输
 
 使用和本文相关的实验房间所提供的Linux虚拟机进行操作：
 
+<figure><img src="../../.gitbook/assets/image-20230402224702955.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230402224506668.png" alt=""><figcaption></figcaption></figure>
 
 ## 查找文件
 
@@ -210,7 +186,7 @@ find命令既可以非常简单地使用，也可以和其他参数或命令组�
 
 假设我们可以看到如下的一个可用目录列表：
 
-
+<figure><img src="../../.gitbook/assets/image-20230403080111411.png" alt=""><figcaption></figcaption></figure>
 
 1. Desktop
 2. Documents
@@ -223,7 +199,7 @@ find命令既可以非常简单地使用，也可以和其他参数或命令组�
 
 如果我们已经知道文件名，我们就可以简单地使用`find -name password .txt`命令，这将在当前目录下的每个文件夹中查找指定的文件，如下所示：
 
-
+<figure><img src="../../.gitbook/assets/image-20230403080529617.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示，find命令已经设法找到目标文件——相关路径是folder1/passwords.txt；但是，如果我们不知道文件的具体名称或者想要搜索每个具有相同扩展名(如“.txt”)的文件，我们应该怎么做？
 
@@ -231,7 +207,7 @@ find命令既可以非常简单地使用，也可以和其他参数或命令组�
 
 假设我们希望找到当前目录中的每个.txt文件，我们就可以构造`find -name *.txt`命令，这样我们就能够找到当前目录下的每个.txt文件以及它们的具体位置：
 
-
+<figure><img src="../../.gitbook/assets/image-20230403081402271.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示，我们已经成功找到了：
 
@@ -244,13 +220,13 @@ find命令既可以非常简单地使用，也可以和其他参数或命令组�
 
 以web服务器的访问日志为例，假设某个web服务器的access.log有244条日志记录。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403082019508.png" alt=""><figcaption></figcaption></figure>
 
 在此处，使用像`cat`这样的命令并不能很好地解决内容查找问题，例如，如果我们想搜索这个日志文件，以查看某个用户/IP地址访问了哪些内容，考虑到我们想要找到一个特定的值，所以用`cat`命令直接查看这个包含244个条目的日志文件内容并不是那么有效。
 
 我们可以尝试使用`grep`来搜索一个文件的全部内容，以找到我们想要查找的特定值；以上述的访问日志文件为例，假设我们希望找到IP地址“81.143.211.90”访问过的所有内容(注意，这是虚构的)，我们可以如下操作：使用`grep "81.143.211.90" access.log`命令。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403082642585.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示，我们已经使用`grep`命令搜索了access.log文件，然后终端界面向我们显示了一些条目，这些条目都是在access.log日志文件中与目标IP相关的内容。
 
@@ -264,13 +240,9 @@ tips：“grep”的全称为Global search REgular expression and Print out the 
 grep "THM" access.log
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230403084038773.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403084117471.png" alt=""><figcaption></figcaption></figure>
 
 ## Shell操作符介绍
 
@@ -301,9 +273,7 @@ grep "THM" access.log
 
 一个很好的例子是使用">"操作符重定向`echo`命令的输出，假设我们想要创建一个名为，并且要求它的内容为“hey”，我们就可以使用以下命令：`echo hey > welcome`
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403090231983.png" alt=""><figcaption></figcaption></figure>
 
 tips：如果上图例子中的“welcome”文件本身就有内容，那么使用上述之后，“welcome”文件的原内容将被“hey”所覆盖。
 
@@ -315,17 +285,15 @@ tips：如果上图例子中的“welcome”文件本身就有内容，那么使
 
 当我们使用 ">>"操作符时，重定向的输出内容将附加到原文件内容的末尾，而不会直接替换（覆盖）原文件的内容：`echo hello >> welcome`
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403090722301.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 阅读本小节的内容，并且使用和本文相关的实验房间所提供的Linux虚拟机进行操作。
 
+<figure><img src="../../.gitbook/assets/image-20230403092012788.png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/image-20230403092433553.png" alt=""><figcaption></figcaption></figure>
 
 ## 小结
 

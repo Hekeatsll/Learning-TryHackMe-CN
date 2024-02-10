@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Linux Fundamentals Part2(Linux基础知识2)
+# ☑ Linux Fundamentals Part2(Linux基础知识2)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/linuxfundamentalspart2](https://tryhackme.com/room/linuxfundamentalspart2)
 
@@ -44,7 +44,7 @@ SSH协议是Secure Shell的简称，使用该协议是连接到远程Linux机器
 
 Secure Shell或SSH 是一种能够对计算机设备之间的通信数据进行加密的协议。使用了SSH协议之后，计算机设备之间需要通过网络传输的数据将被加密处理，一旦加密数据到达远程机器，就会开始解密过程，如下图所示：
 
-
+<figure><img src="../../.gitbook/assets/image-20230403100313265.png" alt=""><figcaption></figcaption></figure>
 
 在本文中我们只需要对SSH有一个基础了解即可：
 
@@ -62,9 +62,7 @@ SSH的语法非常简单，我们只需要提供以下内容：
 
 首先，我们需要在TryHackMe攻击机（或者你的本地Kali虚拟机）上打开一个终端；我们要在攻击机终端输入的SSH命令类似于`ssh tryhackme@MACHINE_IP`，在实际执行SSH命令时，我们需要将示例中的`MACHINE_IP`替换为Linux目标机的实际IP地址；当输入SSH命令并按下回车键之后，我们会被询问是否信任主机（输入"yes"即可），然后还要为"tryhackme"帐户提供密码（输入"tryhackme"即可）。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403102459672.png" alt=""><figcaption></figcaption></figure>
 
 现在我们应该成功通过SSH连接到远程Linux机器，我们接下来所输入的任何命令都将在远程机器上执行——而不会在我们自己的机器上执行。
 
@@ -78,11 +76,7 @@ SSH的语法非常简单，我们只需要提供以下内容：
 ssh tryhackme@10.10.241.39
 ```
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403201425288.png" alt=""><figcaption></figcaption></figure>
 
 ## Linux命令的参数标志和参数开关
 
@@ -94,19 +88,17 @@ ssh tryhackme@10.10.241.39
 
 以`ls`为例，`ls`能够告诉我们当前目录下只有一个名为“folder1”的文件夹（请注意，下面截图中的内容仅为示例）：
 
-
+<figure><img src="../../.gitbook/assets/image-20230403103507715.png" alt=""><figcaption></figcaption></figure>
 
 然而，在使用`-a`参数(`--all`的缩写)对`ls`命令进行扩展之后，我们会得到一个包含更多文件和文件夹内容的输出结果，例如下图中的"`.hiddenfolder`"。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403104338287.png" alt=""><figcaption></figcaption></figure>
 
 tips：名称中带"`.`"表示隐藏文件或者隐藏文件夹，带"`.`"的文件、文件夹无法通过简单的`ls`命令被列出。
 
 允许提供参数的命令还可以使用`--help`选项，该选项会列出此Linux命令能够使用的参数信息（并会提供相关的简要描述和示例）：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403104754236.png" alt=""><figcaption></figcaption></figure>
 
 事实上，`--help`选项也是man page (manual page的缩写)的格式化输出，man page是关于Linux系统命令和应用程序的使用文档。
 
@@ -116,17 +108,15 @@ man page(手册页)是了解Linux机器上可用的系统命令和应用程序�
 
 如果要在Linux上访问man page文档，我们可以使用`man`并将其与具体的Linux命令组合，以`ls`为例，我们可以使用`man ls`来查看`ls`命令的手册页：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403110008841.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 通过SSH会话对目标Linux虚拟机进行操作：
 
+<figure><img src="../../.gitbook/assets/image-20230403201750642.png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/image-20230403201800338.png" alt=""><figcaption></figcaption></figure>
 
 ## 可与文件系统交互的更多命令
 
@@ -153,17 +143,17 @@ tips：与使用`cat`命令类似，我们可以为以上这些命令指定一�
 
 在Linux上创建文件和文件夹是一个简单的过程。首先，我们将介绍如何创建一个文件，`touch`命令只接受一个参数——我们想要给我们创建的文件所赋予的名称；例如，我们可以使用`touch note`创建“note”文件。值得注意的是，使用`touch`只会创建一个空白文件，你还需要使用`echo`之类的命令或`nano`之类的文本编辑器来向空白文件添加内容。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403112406458.png" alt=""><figcaption></figcaption></figure>
 
 创建文件夹与创建文件的过程类似，我们只需要使用`mkdir`命令并提供我们想要赋予给目录的名称即可；例如，我们可以使用`mkdir mydirectory`创建一个目录“mydirectory”。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403112648611.png" alt=""><figcaption></figcaption></figure>
 
 **删除文件和文件夹(rm)**
 
 我们可以使用`rm`命令简单地删除文件，但是，如果我们希望删除一个文件夹（目录）的话，我们就需要使用`-R`参数开关。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403113006915.png" alt=""><figcaption></figcaption></figure>
 
 **复制和移动文件、文件夹(cp, mv)**
 
@@ -174,13 +164,13 @@ tips：与使用`cat`命令类似，我们可以为以上这些命令指定一�
 
 使用`cp`命令能够将现有文件的全部内容复制到新文件中，在下图的示例中，我们将“note”文件复制到“note2”文件。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403113305603.png" alt=""><figcaption></figcaption></figure>
 
 移动文件所使用的`mv`命令也需要两个参数，就像`cp`命令一样；然而，`mv`命令不会复制并创建一个新文件，而是合并或修改我们作为参数提供的第二个文件。
 
 我们不仅可以使用`mv`命令将文件移动到新文件夹下，还可以使用`mv`命令重命名文件或文件夹；例如，在下图的示例中，我们使用`mv`将文件“note2”重命名为“note3”，现在“note3”文件将拥有“note2”文件的全部内容（“note2”文件会消失）。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403113944078.png" alt=""><figcaption></figcaption></figure>
 
 **确定文件类型(file)**
 
@@ -188,21 +178,15 @@ tips：与使用`cat`命令类似，我们可以为以上这些命令指定一�
 
 我们可以使用`file`命令来确定一个文件的类型，例如，我们可以使用`file`来确认“note”文件是否确实是一个文本文件：`file note`
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403114529729.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 通过SSH会话对目标Linux虚拟机进行操作：
 
+<figure><img src="../../.gitbook/assets/image-20230403205420231.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403205330825.png" alt=""><figcaption></figcaption></figure>
 
 ## 访问权限介绍
 
@@ -210,9 +194,7 @@ tips：与使用`cat`命令类似，我们可以为以上这些命令指定一�
 
 在前面的知识点小节中，我们已经学习了如何通过参数标志和参数开关来扩展命令的使用；当我们使用`ls`命令结合`-lh`参数开关时，我们可以看到如下示例内容：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403115704554.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示，我们使用`ls -lh`命令列出了当前目录下的文件和文件夹的权限分配情况。
 
@@ -293,25 +275,19 @@ chgrp(修改所在组)
 
 我们可以使用简单的`su`命令切换到user2用户：`su user2`，此时我们得到的新会话会将我们放置到前一个用户的主目录中。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403181030326.png" alt=""><figcaption></figcaption></figure>
 
 我们也可以使用`su`命令结合参数开关`-l`切换到user2用户：`su -l user2`，此时我们的新会话会自动将我们放到新用户的主目录中。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403181356768.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 通过SSH会话对目标Linux虚拟机进行操作：
 
+<figure><img src="../../.gitbook/assets/image-20230403205736563.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403205844076.png" alt=""><figcaption></figcaption></figure>
 
 ## Linux中的常用目录
 
@@ -321,9 +297,7 @@ chgrp(修改所在组)
 
 例如，下图显示的etc/sudoers文件包含了 能够以root用户权限运行`sudo`命令或其他Linux命令的用户和组的列表；下图还显示了etc/passwd和etc/shadow文件，这两个文件对于Linux也是特殊的，因为它们显示了系统如何以被称为sha512的加密格式存储每个用户的密码。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403185401761.png" alt=""><figcaption></figcaption></figure>
 
 tips：etc是etcetera的缩写，etcetera的意思是——“等等；附加物”。
 
@@ -331,17 +305,13 @@ tips：etc是etcetera的缩写，etcetera的意思是——“等等；附加物
 
 接下来我们要介绍的是"/var"目录，其中"var"是" variable data"（可变数据）的缩写，此目录是Linux系统中的主要目录之一，存储着在系统中运行的服务、应用程序所频繁访问或写入的数据；例如，来自于服务和应用程序运行时的日志文件将被写入到此目录下(`/var/log`)，其他不一定与特定用户相关联的数据(如数据库等)也会被存储到"/var"目录下。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403190816800.png" alt=""><figcaption></figcaption></figure>
 
 /**root目录**
 
 与"/home"目录不同，"/root"文件夹实际上是"root"系统用户的主目录；除了理解这是"root"用户的主目录之外，这个文件夹没有其他内容。基于逻辑上的假设，用户会将其数据默认保存在"/home/root"目录中。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403191227461.png" alt=""><figcaption></figcaption></figure>
 
 **/tmp目录**
 
@@ -349,21 +319,13 @@ tips：etc是etcetera的缩写，etcetera的意思是——“等等；附加物
 
 我们要知道的是：在默认情况下，任何用户都可以写入内容到这个"/tmp"文件夹，这意味着一旦我们访问了一台机器，"/tmp"就可以作为存储脚本等内容的极佳选择。
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403192005422.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
-通过阅读本小节的内容回答以下问题：
+阅读本小节内容并回答以下问题。
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403205931526.png" alt=""><figcaption></figcaption></figure>
 
 ## 小结
 

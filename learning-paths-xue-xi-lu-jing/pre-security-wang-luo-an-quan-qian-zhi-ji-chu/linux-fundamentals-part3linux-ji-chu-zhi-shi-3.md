@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Linux Fundamentals Part3(Linux基础知识3)
+# ☑ Linux Fundamentals Part3(Linux基础知识3)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/linuxfundamentalspart3](https://tryhackme.com/room/linuxfundamentalspart3)
 
@@ -84,9 +84,9 @@ Nano编辑器有一些很容易记住的功能，包括以下内容：
 
 **VIM编辑器简介**
 
-VIM是一个更高级的文本编辑器，虽然你不需要知道VIM的所有高级特性，但是使用VIM编辑器特性 对于提高你的Linux技能有很大帮助。
+VIM是一个更高级的文本编辑器，虽然你不需要知道VIM的所有高级特性，但是使用VIM编辑器特性对于提高你的Linux技能有很大帮助。
 
-
+<figure><img src="../../.gitbook/assets/image-20230403214825176.png" alt=""><figcaption></figcaption></figure>
 
 尽管需要更长的时间来熟悉，但是VIM编辑器有很多优点，包括以下内容：
 
@@ -99,11 +99,11 @@ VIM是一个更高级的文本编辑器，虽然你不需要知道VIM的所有�
 
 通过SSH会话对目标Linux虚拟机进行操作：
 
+<figure><img src="../../.gitbook/assets/image-20230403230557870.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image-20230403230208035.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230403230317863.png" alt=""><figcaption></figcaption></figure>
 
 ## Linux常见实用程序介绍
 
@@ -180,7 +180,7 @@ tips：如果需要指定该简易web服务器所绑定的端口，则可以使�
 
 除了Python3所提供的“HTTPServer”模块之外，你还可以使用Updog来托管文件，Updog能提供一个更高级但仍属于轻量级的web服务器以便你托管本地计算机上的文件。
 
-Updog的GitHub项目链接：https://github.com/sc0tfree/updog
+Updog的GitHub项目链接：[https://github.com/sc0tfree/updog](https://github.com/sc0tfree/updog)
 
 下面是通过Python3的"HTTPServer"模块下载所托管的文件的示例（承接前面的本地文件托管示例）：
 
@@ -208,7 +208,7 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 127.0.0.1 - - [04/May/2021/14:26:09] "GET /file HTTP/1.1" 200 -
 ```
 
-tips： 关于Python3"HTTPServer"模块的文档—— https://docs.python.org/3/library/http.server.html 。
+tips： 关于Python3"HTTPServer"模块的文档—— [https://docs.python.org/3/library/http.server.html](https://docs.python.org/3/library/http.server.html) 。
 
 ### **答题**
 
@@ -220,9 +220,7 @@ tips： 关于Python3"HTTPServer"模块的文档—— https://docs.python.org/3
 python3 -m http.server
 ```
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404095742155.png" alt=""><figcaption></figcaption></figure>
 
 在本地攻击机上下载刚才启动的简易web服务器所托管的文件。
 
@@ -231,23 +229,11 @@ python3 -m http.server
 wget http://10.10.85.109:8000/.flag.txt 
 ```
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404100122129.png" alt=""><figcaption></figcaption></figure>
 
 > flag为：THM{WGET\_WEBSERVER} 。
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404100230199.png" alt=""><figcaption></figcaption></figure>
 
 ## Linux进程基础
 
@@ -259,23 +245,21 @@ Linux `ps`（英文全拼：process status）命令用于显示当前进程的�
 
 我们可以使用`ps`命令来列出正在运行的进程的一个列表，该列表将提供一些附加信息，如进程的PID、进程的状态码、进程相关的CPU占用情况、正在执行的实际程序或命令的名称等。
 
-
+<figure><img src="../../.gitbook/assets/image-20230404110917497.png" alt=""><figcaption></figcaption></figure>
 
 从上图中我们可以看到：我们第一次执行`ps`命令时，`ps`本身的进程PID是204，然后当我们再次执行`ps`命令时，`ps`本身的进程PID增加到了205（这说明PID确实会根据进程启动的顺序而递增）。
 
 如果我们要查看由其他用户运行的进程和那些不在会话中运行的进程(即系统进程)，我们需要为`ps`命令提供`aux`参数：`ps aux`
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404112406775.png" alt=""><figcaption></figcaption></figure>
 
 从上图中我们可以看到现在总共有5个进程，相关的用户名称为“root”和“cmnatic”。
 
 另一个非常有用的命令是`top`命令，此命令能为你提供有关系统上正在运行的进程的实时统计信息，而不仅是一次性视图；`top`命令所提供的统计信息将每几秒钟刷新一次，但是每当你使用方向键浏览各行信息时也会进行刷新。
 
+<figure><img src="../../.gitbook/assets/image-20230404120541306.png" alt=""><figcaption></figcaption></figure>
 
-
-关于ps命令的使用参考：https://www.runoob.com/linux/linux-comm-ps.html
+关于ps命令的使用参考：[https://www.runoob.com/linux/linux-comm-ps.html](https://www.runoob.com/linux/linux-comm-ps.html)
 
 **终止进程(Managing Processes)**
 
@@ -301,7 +285,7 @@ Linux `ps`（英文全拼：process status）命令用于显示当前进程的�
 
 一旦系统启动并初始化，`systemd`就会成为首先自动运行的进程之一，而我们想要运行的任何程序或软件都将作为`systemd`进程的子进程启动；虽然这些子进程由`systemd`控制，但仍将作为单独的进程运行(尽管会共享来自`systemd`的资源)，这能使我们更容易识别各个进程。
 
-
+<figure><img src="../../.gitbook/assets/image-20230404183329221.png" alt=""><figcaption></figcaption></figure>
 
 **在系统启动时启动进程/服务**
 
@@ -324,7 +308,7 @@ Linux `ps`（英文全拼：process status）命令用于显示当前进程的�
 
 你在Linux终端中运行的命令，如“echo”将在终端的前台运行，`echo`命令是一个很好的例子，因为`echo`命令的输出将在前台返回，并且无法在后台返回：
 
-
+<figure><img src="../../.gitbook/assets/image-20230404190321839.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示：当我们运行`echo "Hi THM"`命令时，我们能在终端前台看到命令的输出；但当我们在`echo "Hi THM"`之后添加`&`操作符之后，我们只能在终端前台看到`echo`进程的ID（而不是命令的输出）——因为此时`echo`命令正在后台运行。
 
@@ -332,7 +316,7 @@ Linux `ps`（英文全拼：process status）命令用于显示当前进程的�
 
 当我们在执行脚本之类的程序文件时，我们也可以让这个进程后台化，此处不依赖于`&`操作符，而是需要我们在键盘上使用`Ctrl + Z`来设置进程的后台化，这也是一种“暂停”脚本运行或命令执行的有效方法，如下图所示：
 
-
+<figure><img src="../../.gitbook/assets/image-20230404192831824.png" alt=""><figcaption></figcaption></figure>
 
 由上图可知：示例脚本会持续输出内容 "This will keep on looping until I stop!"，直到我们停止或者挂起与该脚本对应的进程，我们可以通过在键盘上使用Ctrl + Z(在终端界面由T^Z表示)来停止示例脚本的运行。
 
@@ -340,15 +324,15 @@ Linux `ps`（英文全拼：process status）命令用于显示当前进程的�
 
 假设现在有一个进程（"background.sh"脚本）在后台运行，我们可以通过使用`ps aux`命令来确认这一点：
 
-
+<figure><img src="../../.gitbook/assets/image-20230404194127042.png" alt=""><figcaption></figcaption></figure>
 
 我们已经知道，在键盘上使用`Ctrl + Z`或者在命令中添加`&`操作符能够使进程后台化；同样，我们还可以通过使用`fg`命令将后台进程重新前台化。
 
 如下所示：在我们使用`fg`命令之后，"background.sh"脚本所对应的进程能够重新回到终端前台（此时的"background.sh"脚本仍将处于运行状态）。
 
+<figure><img src="../../.gitbook/assets/image-20230404195229427.png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/image-20230404195245222.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
@@ -360,27 +344,17 @@ _tips：阅读本小节的内容以帮助回答以下问题_
 ps aux 
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230404202323290.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image-20230404202348522.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404202407739.png" alt=""><figcaption></figcaption></figure>
 
 > 隐藏的flag为：THM{PROCESSES} 。
 
+<figure><img src="../../.gitbook/assets/image-20230404202510832.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404202510832.png" alt=""><figcaption></figcaption></figure>
 
 ## Linux定时任务
 
@@ -388,9 +362,7 @@ ps aux
 
 为了对操作或任务的执行进行定时设置，我们接下来将讨论`cron`进程，更具体地说：我们将学习如何通过`crontab`与`cron`进程进行交互，`crontab`是在系统引导期间所启动的进程之一，它负责促进和管理cron jobs（定时任务）。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404214102711.png" alt=""><figcaption></figcaption></figure>
 
 crontab是一个特殊的文件，其格式可被`cron`进程识别以逐步执行crontab的每一行，crontab需要具有以下 6 个特定字段值：
 
@@ -413,9 +385,7 @@ crontab的一个有趣特性是支持通配符(`*`)，如果我们不希望为�
 
 我们可以通过使用`crontab -e`命令并且选择一个编辑器(比如Nano)来编辑crontab文件的内容：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404220822701.png" alt=""><figcaption></figcaption></figure>
 
 tips：我们通过`crontab`命令可以添加、删除、编辑自动化任务（定时任务）。
 
@@ -427,15 +397,11 @@ tips：我们通过`crontab`命令可以添加、删除、编辑自动化任务�
 crontab -e
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230404230933785.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image-20230404230914685.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230404231038141.png" alt=""><figcaption></figcaption></figure>
 
 ## Linux软件包管理
 
@@ -447,7 +413,7 @@ Linux最可取的两个特性在这里脱颖而出：具有用户可访问性、
 
 当我们在 Ubuntu 20.04 Linux 机器上的/etc/apt目录中使用 `ls` 命令时，能够看到以下文件，这些文件可用作网关/注册表。
 
-
+<figure><img src="../../.gitbook/assets/image-20230404232002556.png" alt=""><figcaption></figcaption></figure>
 
 虽然操作系统供应商将维护他们自己的存储库，但你也可以选择将一些社区存储库添加到你的源列表中，这将允许你扩展Linux操作系统的功能。
 
@@ -473,11 +439,11 @@ Linux最可取的两个特性在这里脱颖而出：具有用户可访问性、
 
 2.1让我们在 /etc/apt/sources.list.d目录中创建一个名为sublime-text.list的文件：
 
-
+<figure><img src="../../.gitbook/assets/image-20230405000525903.png" alt=""><figcaption></figcaption></figure>
 
 2.2使用Nano或其他文本编辑器，添加并保存Sublime text 3存储库到刚才新创建的文件中：
 
-
+<figure><img src="../../.gitbook/assets/image-20230405000715814.png" alt=""><figcaption></figcaption></figure>
 
 2.3在我们添加了以上条目之后，我们需要更新apt包以识别这个新条目——这是通过使用`apt update`命令完成的。
 
@@ -501,7 +467,7 @@ tips：在删除软件包时，我们要将上述示例命令中的`PPA_Name`替
 * fail2ban服务（此服务的日志信息可用于监视攻击者所尝试的暴力操作）；
 * UFW服务，用作防火墙；
 
-
+<figure><img src="../../.gitbook/assets/image-20230404204023732.png" alt=""><figcaption></figcaption></figure>
 
 通过查看这些服务日志，能够很好地监视系统运行状况以及保护系统的安全；而且，像web server这样的服务所对应的日志文件，还包含了关于每个请求的信息——这将允许网站开发人员或网站管理员诊断web服务的性能，并且有助于调查网络入侵者的活动。
 
@@ -510,7 +476,7 @@ tips：在删除软件包时，我们要将上述示例命令中的`PPA_Name`替
 * access log
 * error log
 
-
+<figure><img src="../../.gitbook/assets/image-20230404204753923.png" alt=""><figcaption></figcaption></figure>
 
 tips：日志文件会存储关于操作系统如何运行的信息，还会存储用户所执行的操作，例如身份验证尝试。
 
@@ -518,9 +484,9 @@ tips：日志文件会存储关于操作系统如何运行的信息，还会存�
 
 通过SSH会话对目标Linux虚拟机进行操作：
 
+<figure><img src="../../.gitbook/assets/image-20230404210233373.png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/image-20230404210347221.png" alt=""><figcaption></figcaption></figure>
 
 ## 小结
 
@@ -535,11 +501,11 @@ tips：日志文件会存储关于操作系统如何运行的信息，还会存�
 
 可参考的Linux中文学习资源：
 
-* Linux中文教程：https://www.runoob.com/linux/linux-tutorial.html
-* Linux 命令大全：https://www.runoob.com/linux/linux-command-manual.html
-* Linux 常用命令英文全拼：https://www.runoob.com/w3cnote/linux-command-full-fight.html
+* Linux中文教程：[https://www.runoob.com/linux/linux-tutorial.html](https://www.runoob.com/linux/linux-tutorial.html)
+* Linux 命令大全：[https://www.runoob.com/linux/linux-command-manual.html](https://www.runoob.com/linux/linux-command-manual.html)
+* Linux 常用命令英文全拼：[https://www.runoob.com/w3cnote/linux-command-full-fight.html](https://www.runoob.com/w3cnote/linux-command-full-fight.html)
 
 你可以通过以下TryHackMe实验房间继续扩展你的Linux基础学习：
 
-* Bash Scripting（Bash脚本基础） - https://tryhackme.com/room/bashscripting
-* Regular Expressions（正则表达式基础） - https://tryhackme.com/room/catregex
+* Bash Scripting（Bash脚本基础） - [https://tryhackme.com/room/bashscripting](https://tryhackme.com/room/bashscripting)
+* Regular Expressions（正则表达式基础） - [https://tryhackme.com/room/catregex](https://tryhackme.com/room/catregex)

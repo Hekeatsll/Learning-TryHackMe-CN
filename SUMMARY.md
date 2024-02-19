@@ -2,7 +2,7 @@
 
 * [👾 Welcome(欢迎)](README.md)
 
-## 📙 Learning Paths(学习路径)
+## 📚 Learning Paths(学习路径)
 
 * [🥳 Introduction to Cyber Security(网络安全概论)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/README.md)
   * [☑ Intro to Offensive Security(进攻性安全介绍)](learning-paths-xue-xi-lu-jing/introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
@@ -67,3 +67,25 @@
 * [🔉 SOC Level 1(安全运营-Lv1)](learning-paths-xue-xi-lu-jing/soc-level-1-an-quan-yun-ying-lv1.md)
 * [🔊 SOC Level 2(安全运营-Lv2)](learning-paths-xue-xi-lu-jing/soc-level-2-an-quan-yun-ying-lv2.md)
 * [🧑🔧 Security Engineer(安全工程师)](learning-paths-xue-xi-lu-jing/security-engineer-an-quan-gong-cheng-shi.md)
+
+## 🏷 Learning Modules(学习模块)
+
+* [🔱 Metasploit(MSF漏洞利用框架)](learning-modules-xue-xi-mo-kuai/metasploitmsf-lou-dong-li-yong-kuang-jia.md)
+* [🎣 Phishing(网络钓鱼)](learning-modules-xue-xi-mo-kuai/phishing-wang-luo-diao-yu.md)
+* [📈 Burp Suite(Burp工具使用)](learning-modules-xue-xi-mo-kuai/burp-suiteburp-gong-ju-shi-yong.md)
+* [🔰 Network Security(网络安全-基础)](learning-modules-xue-xi-mo-kuai/network-security-wang-luo-an-quan-ji-chu.md)
+* [🚀 Introduction to Web Hacking(Web Hacking介绍)](learning-modules-xue-xi-mo-kuai/introduction-to-web-hackingweb-hacking-jie-shao.md)
+* [🔍 Nmap(Nmap工具使用)](learning-modules-xue-xi-mo-kuai/nmapnmap-gong-ju-shi-yong.md)
+* [⛳ Initial Access(获取初始访问权限)](learning-modules-xue-xi-mo-kuai/initial-access-huo-qu-chu-shi-fang-wen-quan-xian.md)
+* [⛑ Red Team Fundamentals(红队基础知识)](learning-modules-xue-xi-mo-kuai/red-team-fundamentals-hong-dui-ji-chu-zhi-shi.md)
+* [⚔ Introduction to Offensive Security(进攻性安全概述)](learning-modules-xue-xi-mo-kuai/introduction-to-offensive-security-jin-gong-xing-an-quan-gai-shu.md)
+* [🙏 Introduction to Defensive Security(防御性安全概述)](learning-modules-xue-xi-mo-kuai/introduction-to-defensive-security-fang-yu-xing-an-quan-gai-shu.md)
+* [🐎 Recent Threats(近期的安全威胁)](learning-modules-xue-xi-mo-kuai/recent-threats-jin-qi-de-an-quan-wei-xie.md)
+* [🤺 Compromising Active Directory(危害AD域环境)](learning-modules-xue-xi-mo-kuai/compromising-active-directory-wei-hai-ad-yu-huan-jing.md)
+* [↪ Host Evasions(主机规避)](learning-modules-xue-xi-mo-kuai/host-evasions-zhu-ji-gui-bi.md)
+* [🗡 Introduction to Pentesting(渗透测试概述)](learning-modules-xue-xi-mo-kuai/introduction-to-pentesting-shen-tou-ce-shi-gai-shu.md)
+* [🙌 How The Web Works(Web运作基础)](learning-modules-xue-xi-mo-kuai/how-the-web-worksweb-yun-zuo-ji-chu.md)
+
+## 🌐 Networks Labs(网络实验室)
+
+* [📋 Intro(介绍)](networks-labs-wang-luo-shi-yan-shi/intro-jie-shao.md)

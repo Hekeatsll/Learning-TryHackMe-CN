@@ -22,8 +22,6 @@ layout:
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introtonetworking](https://tryhackme.com/room/introtonetworking)
 
-
-
 ## 简介
 
 本文将向初学者介绍关于网络的基本原理，网络是一个庞大的话题，所以此处只做一些简短的概述，仅提供一些有关Networking的基础知识介绍。
@@ -32,7 +30,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/introtonetworking](htt
 
 * OSI模型
 * TCP/IP 模型
-* 关于OSI模型、TCP/IP模型的实际表现形式（ 此部分可参考以下WriteUp的第五小节--用Wireshark分析捕获的数据包：https://gitlab.com/dhiksec/tryhackme/-/tree/master/Introductory%20Networking ）
+* 关于OSI模型、TCP/IP模型的实际表现形式(此部分可参考以下WP的第五小节-用Wireshark分析捕获的数据包：[https://gitlab.com/dhiksec/tryhackme/-/tree/master/Introductory%20Networking](https://gitlab.com/dhiksec/tryhackme/-/tree/master/Introductory%20Networking))
 * 介绍一些基本的网络工具
 
 ## OSI模型：概述
@@ -43,7 +41,7 @@ OSI模型在现实网络中是一种比TCP/IP 模型更紧凑的分层体系结�
 
 OSI 模型由七层组成：
 
-![image-20230315112127759](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315112127759.png)
+<figure><img src="../../.gitbook/assets/image-20230315112127759.png" alt=""><figcaption></figcaption></figure>
 
 让我们简单了解一下OSI模型的每一层：
 
@@ -87,11 +85,11 @@ OSI 模型的应用层本质上是为计算机上运行的程序提供网络选�
 
 物理层的工作是将传输过程中的二进制数据转换为电信号并通过网络进行传输，以及接收传入的电信号并将其转换回二进制数据。
 
-**答题**
+### **答题**
 
 _tips：对于下面问题中涉及OSI层级的部分，请使用层数 (1-7) 回答。_
 
-![image-20230315114011784](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315114011784.png)
+<figure><img src="../../.gitbook/assets/image-20230315114011784.png" alt=""><figcaption></figcaption></figure>
 
 ## 数据封装
 
@@ -103,7 +101,7 @@ _tips：对于下面问题中涉及OSI层级的部分，请使用层数 (1-7) �
 
 以上整个过程被称为封装，在这个过程中：数据可以从一台计算机发送到另一台计算机。
 
-![image-20230315173535229](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315173535229.png)
+<figure><img src="../../.gitbook/assets/image-20230315173535229.png" alt=""><figcaption></figcaption></figure>
 
 请注意，封装的数据在以上流程的不同步骤中被赋予了不同的名称：在第 7,6 和 5 层中，数据被简称为data，在传输层中，封装的数据被称为数据段或数据报（取决于选择TCP 还是 UDP 作为传输协议），在网络层，数据被称为数据包，接着当数据包向下传递到数据链路层时，它就变成了一个数据帧，而当它通过网络传输时，数据帧会被分解成比特（bites）。
 
@@ -111,9 +109,11 @@ _tips：对于下面问题中涉及OSI层级的部分，请使用层数 (1-7) �
 
 数据的封装和解封装过程非常重要——这不仅因为它们的实际用途，还因为它们为我们提供了一种发送数据的标准化方法。所有数据传输将始终遵循相同的方法，允许任何启用网络的设备向任何其他可访问网络的设备 发送请求并确保请求会被理解——无论这些设备是否来自于同一制造商、是否使用相同的操作系统......
 
-**答题**
+### **答题**
 
-![image-20230315175541726](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315175541726.png)
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230315175541726.png" alt=""><figcaption></figcaption></figure>
 
 ## TCP/IP模型
 
@@ -121,15 +121,15 @@ TCP/IP 模型在许多方面与 OSI 模型非常相似，是现实世界网络�
 
 TCP/IP 模型由四层组成——应用层(Application)、传输层(Transport)、网际层(Internet )和网络接口层(Network Interface)，它们涵盖了与 OSI 七层模型相同的功能范围。
 
-![image-20230315183951455](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315183951455.png)
+<figure><img src="../../.gitbook/assets/image-20230315183951455.png" alt=""><figcaption></figcaption></figure>
 
-\*\*注意：\*\*一些资料会将 TCP/IP 模型分为五层——将上图中的网络接口层再分为数据链路层和物理层（与 OSI 模型中的数据链路层和物理层一样）；TCP/IP五层模型也是公认的、众所周知的，但是，它没有被正式定义（与 RFC1122 中定义的原始四层模型不同）；TCP/IP模型具体有几层，主要取决于你选择使用哪个版本——无论是四层TCP/IP模型 还是 五层TCP/IP模型，通常都被认为是有效的。
+**注意**：一些资料会将 TCP/IP 模型分为五层——将上图中的网络接口层再分为数据链路层和物理层（与 OSI 模型中的数据链路层和物理层一样）；TCP/IP五层模型也是公认的、众所周知的，但是，它没有被正式定义（与 RFC1122 中定义的原始四层模型不同）；TCP/IP模型具体有几层，主要取决于你选择使用哪个版本——无论是四层TCP/IP模型 还是 五层TCP/IP模型，通常都被认为是有效的。
 
 如果 OSI 模型实际上并未用于现实世界中的任何事物，那么你就有理由问我们为什么要费心使用 OSI 模型？这个问题的答案很简单：OSI 模型（由于比 TCP/IP 模型更精简和更严格）往往更容易让学习者学习网络的初始理论。
 
 OSI模型与TCP/IP模型的匹配情况如下：
 
-![image-20230315185133352](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315185133352.png)
+<figure><img src="../../.gitbook/assets/image-20230315185133352.png" alt=""><figcaption></figcaption></figure>
 
 数据的封装和解封装过程在 TCP/IP 模型中的工作方式与在 OSI 模型中的工作方式完全相同，在 TCP/IP 模型的每一层，都会有一个报头在封装期间被添加，并在解封装期间被移除。
 
@@ -141,15 +141,17 @@ OSI模型与TCP/IP模型的匹配情况如下：
 
 当你尝试建立连接时，你的计算机会首先向远程服务器发送一个特殊请求，表明它想要初始化一个连接，此请求包含了被称为 SYN位（SYN是“synchronise”的缩写，含义是：同步）的东西，这实际上是在开始建立连接过程时 所进行的第一次接触；然后服务器将响应一个包含 SYN 位的数据包，同时还包含了一个称为 ACK 的“acknowledgement(确认)”位；最后，你的计算机将继续发送一个包含 ACK 位的数据包，以确认连接已成功建立。随着TCP三次握手的成功完成，两台计算机之间就可以可靠地传输数据了，而且任何在传输过程中丢失或损坏的数据都会被重新发送，从而导致TCP连接看起来是无损的。
 
-![image-20230315191857172](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315191857172.png)
+<figure><img src="../../.gitbook/assets/image-20230315191857172.png" alt=""><figcaption></figcaption></figure>
 
-\*\*\*注意：\*\*\*本文不打算逐步深入探讨TCP是如何工作的，在本文中——我们知道在使用 TCP 建立连接之前必须执行三次握手就足够了。
+**注意**：本文不打算逐步深入探讨TCP是如何工作的，在本文中——我们知道在使用 TCP 建立连接之前必须执行三次握手就足够了。
 
-\*\*\*关于两种分层模型的历史：\*\*\*准确理解最初创建 TCP/IP 模型 和 OSI 模型的原因很重要。一开始计算机界没有标准化模型——不同的制造商都遵循他们自己的方法来规划网络，因此不同制造商制造的系统在网络方面完全不兼容；为了解决网络不兼容的问题，美国国防部于 1982 年引入了TCP/IP 模型，以提供一个统一标准——供所有不同制造商共同遵循的标准；后来国际标准化组织（ISO）引入了OSI模型，但是，OSI模型主要用作一个更全面的学习指南，因此 TCP/IP 模型仍然是现代网络理论所基于的标准。
+**关于两种分层模型的历史**：准确理解最初创建 TCP/IP 模型 和 OSI 模型的原因很重要。一开始计算机界没有标准化模型——不同的制造商都遵循他们自己的方法来规划网络，因此不同制造商制造的系统在网络方面完全不兼容；为了解决网络不兼容的问题，美国国防部于 1982 年引入了TCP/IP 模型，以提供一个统一标准——供所有不同制造商共同遵循的标准；后来国际标准化组织（ISO）引入了OSI模型，但是，OSI模型主要用作一个更全面的学习指南，因此 TCP/IP 模型仍然是现代网络理论所基于的标准。
 
-**答题**
+### **答题**
 
-![image-20230315193009525](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315193009525.png)
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230315193009525.png" alt=""><figcaption></figcaption></figure>
 
 ## 网络工具-Ping
 
@@ -163,23 +165,23 @@ OSI模型与TCP/IP模型的匹配情况如下：
 
 `ping` 的基本语法是 `ping <target>`，在以下示例中，我们使用 `ping` 来测试是否可以连接到Google网站：
 
-![image-20230315193835438](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315193835438.png)
+<figure><img src="../../.gitbook/assets/image-20230315193835438.png" alt=""><figcaption></figcaption></figure>
 
 请注意，`ping`命令实际上返回了它所连接的 Google 服务器的 IP 地址，而不是所请求的 URL；`ping`命令是一个方便的辅助应用程序，因为它可以用于确定托管网站的服务器的 IP 地址，`ping`的另一优势是它对于任何支持网络的设备来说几乎都有效，所有操作系统开箱即用地支持它，甚至大多数嵌入式设备也可以使用 `ping` 。
 
-**答题**
+### **答题**
 
 _tips：任何关于语法的问题都可以使用 `ping` 的手册页来回答（在Linux 上输入 `man ping`）。_
 
-![image-20230315194630418](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315194630418.png)
+<figure><img src="../../.gitbook/assets/image-20230315194630418.png" alt=""><figcaption></figcaption></figure>
 
 相关操作截图（在Linux 上输入 `man ping`）：
 
-![image-20230315220730194](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315220730194.png)
+<figure><img src="../../.gitbook/assets/image-20230315220730194.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230315221114427](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315221114427.png)
+<figure><img src="../../.gitbook/assets/image-20230315221114427.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230315221045857](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315221045857.png)
+<figure><img src="../../.gitbook/assets/image-20230315221045857.png" alt=""><figcaption></figcaption></figure>
 
 ## 网络工具-Traceroute
 
@@ -191,19 +193,19 @@ Linux 上 **traceroute** 的基本语法是：`traceroute <destination>`
 
 在默认情况下，Windows系统上的 **traceroute** 实用程序 (在cmd中使用`tracert`) 与 `ping`命令都基于ICMP协议运行，而Unix系统上的**traceroute**等效程序则通过UDP协议运行；在两种情况下都可以使用参数开关修饰**traceroute**。(Linux是类Unix系统，在终端中使用 `traceroute`)
 
-![image-20230315200209078](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315200209078.png)
+<figure><img src="../../.gitbook/assets/image-20230315200209078.png" alt=""><figcaption></figcaption></figure>
 
 由上图可以看到：从本地的路由器 (\_gateway) 到达位于 216.58.205.46 的 Google 服务器需要 13 跳(hops)。
 
-**答题**
+### **答题**
 
 _tips：所有关于参数开关的问题都可以在 traceroute 的手册页中找到答案（在Linux 上输入`man traceroute`）_
 
-![image-20230315200545152](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315200545152.png)
+<figure><img src="../../.gitbook/assets/image-20230315200545152.png" alt=""><figcaption></figcaption></figure>
 
 相关操作截图（在Linux 上输入`man traceroute`）：
 
-![image-20230315220545344](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315220545344.png)
+<figure><img src="../../.gitbook/assets/image-20230315220545344.png" alt=""><figcaption></figcaption></figure>
 
 ## 网络工具-WHOIS
 
@@ -213,31 +215,41 @@ _tips：所有关于参数开关的问题都可以在 traceroute 的手册页中
 
 我们可以使用whois 查询域名由谁注册，你可能会从whois查询中获得大量信息（由于个人信息可能会被隐藏处理，因此whois查询也可能会提供很少有效信息）。
 
-如果你不喜欢使用命令行工具(`whois`)，也可以选择使用在线whois工具：https://www.whois.com/whois/
+如果你不喜欢使用命令行工具(`whois`)，也可以选择使用在线whois工具：[https://www.whois.com/whois/](https://www.whois.com/whois/)
 
-\*\*注意：\*\*在使用whois前 你可能需要先进行工具安装，在基于 Debian 的系统上，这可以通过 `sudo apt update && sudo apt-get install whois` 完成。
+**注意**：在使用whois前，我们可能需要先进行工具安装操作，在基于Debian的系统上，这可以通过 `sudo apt update && sudo apt-get install whois` 命令来完成。
 
 Whois 查询非常容易执行，只需使用命令`whois <domain>`即可获取有关域名注册的可用信息列表：
 
-![image-20230315202723273](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315202723273.png)
+<figure><img src="../../.gitbook/assets/image-20230315202723273.png" alt=""><figcaption></figcaption></figure>
 
 观察上图：这是经常可以找到的相对非常少量的信息，我们已经获得了目标的域名、注册该域名的公司、上次续订时间、下一次到期时间，以及有关名称服务器的一些信息。
 
-**答题**
+### **答题**
 
-![image-20230315203135438](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315203135438.png)
+阅读本小节内容，并回答以下问题。
 
-操作截图（使用在线查询：https://www.whois.com/whois/ ）
+<figure><img src="../../.gitbook/assets/image-20230315203135438.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230315214533379](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230315214533379.png) ![image-20230315214604322](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230315214604322.png) ![image-20230315214759261](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230315214759261.png) ![image-20230315215636813](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230315215636813.png) ![image-20230315214847397](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230315214847397.png)
+操作截图（使用在线查询：[https://www.whois.com/whois/ ](https://www.whois.com/whois/)）
+
+<figure><img src="../../.gitbook/assets/image-20230315214533379.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230315214604322.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230315214759261.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230315215636813.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230315214847397.png" alt=""><figcaption></figcaption></figure>
 
 ## 网络工具-Dig
 
 我们在上一小节中谈到了域——现在让我们谈谈它们是如何工作的。
 
-有没有想过如何将 URL 转换为你的计算机可以理解的 IP 地址？ 答案是使用被称为 DNS（域名系统-Domain Name System）的 TCP/IP 协议。
+有没有想过如何将 URL 转换为你的计算机可以理解的 IP 地址？ 答案是使用被称为 DNS（域名系统-Domain Name System）的TCP/IP协议。
 
-简单地说，DNS 允许我们请求一个特殊的服务器 以此为我们提供 我们试图访问的网站的 IP 地址。例如，如果我们向 www.google.com 发出请求，我们的计算机会首先向一个特殊的 DNS 服务器发送请求（你的计算机知道如何找到它），然后DNS服务器会寻找到 Google 的 IP 地址并将其发回给我们，然后我们的计算机就可以将请求发送到 Google 服务器的 IP。
+简言之，DNS允许我们请求一个特殊的服务器，以此为我们提供 我们试图访问的网站的IP地址。例如，如果我们向 [www.google.com](https://www.google.com) 发出请求，我们的计算机会首先向一个特殊的DNS服务器发送请求(你的计算机知道如何找到它)，然后DNS服务器会寻找到Google的IP地址并将其发回给我们，然后我们的计算机就可以将请求发送到Google服务器的IP。
 
 让我们对以上过程进行分解。
 
@@ -257,7 +269,7 @@ Whois 查询非常容易执行，只需使用命令`whois <domain>`即可获取�
 
 这是一个非常有用的网络故障排除工具。
 
-![image-20230315213008193](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315213008193.png)
+<figure><img src="../../.gitbook/assets/image-20230315213008193.png" alt=""><figcaption></figcaption></figure>
 
 执行dig命令之后，我们得到了很多信息，我们发送了一个查询并成功（即无错误）收到了一个完整的答复——正如预期的那样，返回结果中会包含我们所查询的域名所对应的 IP 地址。
 
@@ -265,14 +277,16 @@ dig 能够提供给我们的另一个有趣信息是 查询到的 DNS 记录的 
 
 TTL 可以在dig返回结果中的“ANSWER section” 的第二列找到：
 
-![image-20230315213836601](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315213836601.png)
+<figure><img src="../../.gitbook/assets/image-20230315213836601.png" alt=""><figcaption></figcaption></figure>
 
-\*\*tips：\*\*重要的是要记住 TTL（在 DNS 缓存的上下文中）以秒为单位，因此上图示例中的DNS记录将在 2 分 37 秒后过期。
+tips：重要的是要记住 TTL（在 DNS 缓存的上下文中）以秒为单位，因此上图示例中的DNS记录将在 2 分 37 秒后过期。
 
-**答案**
+### **答题**
 
-![image-20230315204256062](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315204256062.png)
+阅读本小节内容，并回答以下问题。
 
-操作截图：
+<figure><img src="../../.gitbook/assets/image-20230315204256062.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230315214123224](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315214123224.png)
+相关操作截图：
+
+<figure><img src="../../.gitbook/assets/image-20230315214123224.png" alt=""><figcaption></figcaption></figure>

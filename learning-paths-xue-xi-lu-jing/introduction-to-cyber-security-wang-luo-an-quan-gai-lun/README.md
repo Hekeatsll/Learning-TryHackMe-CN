@@ -37,16 +37,16 @@ layout:
 
 本路径相关章节：
 
-{% content-ref url="intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md" %}
-[intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md](intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
+{% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md" %}
+[intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
 {% endcontent-ref %}
 
-{% content-ref url="intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md" %}
-[intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md](intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md)
+{% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md" %}
+[intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md)
 {% endcontent-ref %}
 
-{% content-ref url="careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md" %}
-[careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md](careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md)
+{% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md" %}
+[careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md)
 {% endcontent-ref %}
 
 {% content-ref url="web-application-securityweb-ying-yong-cheng-xu-an-quan-jie-shao.md" %}

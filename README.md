@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# 👾 Welcome(欢迎)
+# 💎 Welcome(欢迎)
 
 <figure><img src=".gitbook/assets/Snipaste_2024-02-07_17-17-56-modified.png" alt="" width="323"><figcaption></figcaption></figure>
 

@@ -30,16 +30,16 @@ Pre-Security学习路径是一个初学者友好且有趣的基础知识学习�
 
 本路径相关章节：
 
-{% content-ref url="../introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md" %}
-[intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md](../introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
+{% content-ref url="intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md" %}
+[intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md](intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
 {% endcontent-ref %}
 
-{% content-ref url="../introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md" %}
-[intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md](../introduction-to-cyber-security-wang-luo-an-quan-gai-lun/intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md)
+{% content-ref url="intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md" %}
+[intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md](intro-to-defensive-security-fang-yu-xing-an-quan-jie-shao.md)
 {% endcontent-ref %}
 
-{% content-ref url="../introduction-to-cyber-security-wang-luo-an-quan-gai-lun/careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md" %}
-[careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md](../introduction-to-cyber-security-wang-luo-an-quan-gai-lun/careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md)
+{% content-ref url="careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md" %}
+[careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md](careers-in-cyber-wang-luo-an-quan-zhi-ye-jie-shao.md)
 {% endcontent-ref %}
 
 {% content-ref url="what-is-networking-shi-mo-shi-wang-luo.md" %}

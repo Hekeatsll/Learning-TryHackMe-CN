@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# ☑ Nmap(Nmap工具使用简介)
+# ☑️ Nmap(Nmap工具使用简介)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/furthernmap](https://tryhackme.com/room/furthernmap)
 
@@ -116,7 +116,7 @@ _“如果连接不存在（CLOSED），那么任何到达的数据段（除了r
 
 有很多防火墙可能会被配置为简单地丢弃传入数据包，如果Nmap发送一个TCP SYN请求，但没有收到任何回复消息，这表示目标端口正在受到防火墙的保护，因此该端口会被Nmap认为是过滤的（`filtered`）。
 
-配置防火墙以一个设置了RST标志的TCP数据包作为响应是非常容易的，例如，在Linux的_**IPtables**_中，我们可以使用如下命令配置防火墙（此配置会让Nmap难以探测目标端口的实际状态）：
+配置防火墙以一个设置了RST标志的TCP数据包作为响应是非常容易的，例如，在Linux&#x7684;_**IPtables**_&#x4E2D;，我们可以使用如下命令配置防火墙（此配置会让Nmap难以探测目标端口的实际状态）：
 
 `iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset`
 

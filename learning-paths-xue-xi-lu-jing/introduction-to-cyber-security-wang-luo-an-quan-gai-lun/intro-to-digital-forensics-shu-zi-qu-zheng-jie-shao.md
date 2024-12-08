@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# ☑ Intro to Digital Forensics(数字取证介绍)
+# ☑️ Intro to Digital Forensics(数字取证介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https://tryhackme.com/room/introdigitalforensics)
 
@@ -108,7 +108,7 @@ letter-image.jpg  ransom-letter.doc  ransom-letter.pdf  ransom-lettter-2.zip
 
 当你创建简单的文本文件 TXT 时，操作系统会自动保存一些元数据，例如文件创建日期和上次修改日期；而当你使用更高级的编辑器（例如 MS Word）进行文件创建时，会有更多的信息被保留在文件的元数据中。 有多种读取文件元数据的方法，你可以使用一些官方查看器/编辑器打开文件读取元数据 或者 选择使用合适的取证工具对文件进行元数据读取，请注意，如果你将原始文件导出为其他格式如 PDF 格式，则将保留原始文档的大部分元数据，这具体取决于你所使用的 PDF 编辑器。
 
-如果我们要从PDF 文件中获取信息，我们可以尝试使用 _**pdfinfo**_工具 来读取pdf文件的元数据。使用 _**pdfinfo**_ 会显示与 PDF 文件相关的各种元数据，例如标题、主题、作者、创建者和创建日期。 （如果你使用的是 Kali Linux 并且没有安装 _**pdfinfo**_，则可用 `sudo apt install poppler-utils` 命令来进行安装）
+如果我们要从PDF 文件中获取信息，我们可以尝试使用 _**pdfinfo**_&#x5DE5;具 来读取pdf文件的元数据。使用 _**pdfinfo**_ 会显示与 PDF 文件相关的各种元数据，例如标题、主题、作者、创建者和创建日期。 （如果你使用的是 Kali Linux 并且没有安装 _**pdfinfo**_，则可用 `sudo apt install poppler-utils` 命令来进行安装）
 
 以下为使用`pdfinfo DOCUMENT.pdf`命令的示例。
 

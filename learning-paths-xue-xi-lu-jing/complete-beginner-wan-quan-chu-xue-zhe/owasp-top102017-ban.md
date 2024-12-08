@@ -555,7 +555,7 @@ tips：上图为BurpSuite使用界面。
 * 能够查看目标站点的一些敏感信息。
 * 能够访问目标站点上 未经授权的功能。
 
-OWASP 列出了一些[展示访问控制漏洞的攻击场景](https://owasp.org/www-project-top-ten/2017/A5\_2017-Broken\_Access\_Control.html)：
+OWASP 列出了一些[展示访问控制漏洞的攻击场景](https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html)：
 
 _**场景#1**_-在通过web应用程序访问帐户信息的 SQL 调用中注入未经验证的数据：
 
@@ -575,7 +575,7 @@ _**场景#2**_-攻击者强制浏览目标 URL（访问管理页面通常是需�
 
 如果未经身份验证的用户可以访问目标站点的任何一个页面，则说明目标网站存在访问控制缺陷；如果非管理员用户可以访问管理页面，也说明目标网站存在访问控制缺陷。
 
-简而言之，损坏的访问控制将_**允许攻击者绕过授权**_（即：发生越权操作），这可以让他们像特权用户(此处不单指admin用户，而是指相对于普通用户权限更高的用户)一样查看敏感数据或者执行其他操作。
+简而言之，损坏的访问控制&#x5C06;_**允许攻击者绕过授权**_（即：发生越权操作），这可以让他们像特权用户(此处不单指admin用户，而是指相对于普通用户权限更高的用户)一样查看敏感数据或者执行其他操作。
 
 ## \[严重程度TOP5] 损坏的访问控制（IDOR 练习）
 
@@ -662,7 +662,7 @@ tips：使用FUZZ工具（如wfuzz）进行测试--`?note=FUZZ`范围设置为0�
 8. 使用dirbuster/gobuster进行网站目录爆破 
 ```
 
-最后，我们可以在GitHub中找到目标站点相关的项目（搜索关键词_**Pensive Notes**_）：
+最后，我们可以在GitHub中找到目标站点相关的项目（搜索关键&#x8BCD;_**Pensive Notes**_）：
 
 ![image-20221205211241697](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221205211241697.png)
 
@@ -688,7 +688,7 @@ tips：使用FUZZ工具（如wfuzz）进行测试--`?note=FUZZ`范围设置为0�
 
 如果 Web 应用程序使用未经过滤的“用户输入”，则该应用程序很容易受到 XSS 攻击。 XSS在 Javascript、VBScript、Flash 和 CSS 中都是可能发生的，跨站点脚本主要分为三种类型：
 
-1. 存储型 XSS - 最危险的 XSS 类型，往往是网站数据库中的恶意字符串的来源；如果网站允许“用户输入”在插入到数据库时未经过_**清理**_（删除用户输入的“恶意部分”），则通常会发生这种类型的XSS。
+1. 存储型 XSS - 最危险的 XSS 类型，往往是网站数据库中的恶意字符串的来源；如果网站允许“用户输入”在插入到数据库时未经&#x8FC7;_**清理**_（删除用户输入的“恶意部分”），则通常会发生这种类型的XSS。
 2. 反射型 XSS - 如果XSS Payload是受害者对网站请求的一部分，那么该网站则会包含此payload然后响应用户的请求；总而言之，攻击者需要诱骗受害者点击一个 URL链接来执行攻击者所构造的XSS Payload。
 3. 基于 DOM 的 XSS - DOM 指文档对象模型，它是 HTML 和 XML 文档的编程接口，它能代表网站页面，以便程序对文档结构、样式和内容进行更改。你可以将网页理解为一个文档，这个文档可以显示在浏览器窗口中或者作为 HTML 源文件显示。
 
@@ -1009,7 +1009,7 @@ Cookie 不是一个像数据库那样的永久存储解决方案，一些 cookie
 
 ![image-20221207161146842](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221207161146842.png)
 
-回到个人资料页面 http://MACHINE\_IP/myprofile ，点击_Exchange your vim_链接（此处的vim指：Vertical Improved Mail--垂直改进邮件）
+回到个人资料页面 http://MACHINE\_IP/myprofile ，点&#x51FB;_&#x45;xchange your vi&#x6D;_&#x94FE;接（此处的vim指：Vertical Improved Mail--垂直改进邮件）
 
 ![image-20221207161312676](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221207161312676.png)
 

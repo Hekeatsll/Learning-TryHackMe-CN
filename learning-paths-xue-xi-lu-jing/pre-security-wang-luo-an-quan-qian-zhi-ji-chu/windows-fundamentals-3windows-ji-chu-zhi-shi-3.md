@@ -20,7 +20,7 @@ layout:
     visible: true
 ---
 
-# ☑ Windows Fundamentals 3(Windows基础知识3)
+# ☑️ Windows Fundamentals 3(Windows基础知识3)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/windowsfundamentals3xzx](https://tryhackme.com/room/windowsfundamentals3xzx)
 
@@ -96,7 +96,7 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 <figure><img src="../../.gitbook/assets/image-20230402114542296.png" alt=""><figcaption></figcaption></figure>
 
-请查看上图，并将注意力集中在_**Protection areas**_（保护区域），其中包括：
+请查看上图，并将注意力集中&#x5728;_**Protection areas**_（保护区域），其中包括：
 
 * Virus & threat protection（病毒和威胁防护）
 * Firewall & network protection（防火墙和网络保护）

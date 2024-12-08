@@ -30,11 +30,11 @@ OWASP-TOP10项目介绍：https://owasp.org/www-project-top-ten/
 
 Juice Shop 是一个大型应用程序，它并不会涵盖OWASP-TOP10中的每个主题，此应用程序和OWASP相关的主题如下：
 
-* [Injection](https://owasp.org/www-project-top-ten/OWASP\_Top\_Ten\_2017/Top\_10-2017\_A1-Injection)（注入类漏洞）
-* [Broken Authentication](https://owasp.org/www-project-top-ten/OWASP\_Top\_Ten\_2017/Top\_10-2017\_A2-Broken\_Authentication)（损坏的身份验证机制-身份验证失效漏洞）
-* [Sensitive Data Exposure](https://owasp.org/www-project-top-ten/OWASP\_Top\_Ten\_2017/Top\_10-2017\_A3-Sensitive\_Data\_Exposure)（敏感信息泄露）
-* [Broken Access Control](https://owasp.org/www-project-top-ten/OWASP\_Top\_Ten\_2017/Top\_10-2017\_A5-Broken\_Access\_Control)（损坏的访问控制机制-越权漏洞）
-* [Cross-Site Scripting XSS](https://owasp.org/www-project-top-ten/OWASP\_Top\_Ten\_2017/Top\_10-2017\_A7-Cross-Site\_Scripting\_\(XSS\))（跨站点脚本漏洞-XSS）
+* [Injection](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A1-Injection)（注入类漏洞）
+* [Broken Authentication](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A2-Broken_Authentication)（损坏的身份验证机制-身份验证失效漏洞）
+* [Sensitive Data Exposure](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure)（敏感信息泄露）
+* [Broken Access Control](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A5-Broken_Access_Control)（损坏的访问控制机制-越权漏洞）
+* [Cross-Site Scripting XSS](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_\(XSS\))（跨站点脚本漏洞-XSS）
 
 注意：
 
@@ -98,7 +98,7 @@ Juice Shop 是一个大型应用程序，它并不会涵盖OWASP-TOP10中的每�
 
 ![image-20221210182829023](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221210182829023.png)
 
-吉姆对 Green Smoothie 产品进行了评论。 我们可以看到他提到了_replicator_。
+吉姆对 Green Smoothie 产品进行了评论。 我们可以看到他提到&#x4E86;_&#x72;eplicator_。
 
 我们用谷歌搜索引擎搜索“replicator”，得到的结果表明它来自一部名为《星际迷航》的电视节目。
 
@@ -116,7 +116,7 @@ Juice Shop 是一个大型应用程序，它并不会涵盖OWASP-TOP10中的每�
 * Command Injection：命令注入--指 Web 应用程序获取了“用户输入”或用户所控制的数据并将它们作为系统命令运行，攻击者可能会篡改输入数据以执行他们自己想要的系统命令，例如，某个目标应用程序能够执行配置错误的ping命令。
 * Email Injection：电子邮件注入--是一种安全漏洞，允许恶意用户在未经电子邮件服务器事先授权的情况下向受害者发送垃圾电子邮件，攻击者可以通过向邮件头字段添加额外数据来完成攻击行为；这种攻击的主要原因是不适当的用户输入验证或者目标应用程序根本没有验证、过滤机制。
 
-在接下来的例子中，我们将关注于_**SQL 注入漏洞**_。
+在接下来的例子中，我们将关注&#x4E8E;_**SQL 注入漏洞**_。
 
 **答题**
 
@@ -273,7 +273,7 @@ Web 应用程序应该安全可靠地存储和传输敏感数据，但在某些�
 
 ![image-20221210214807968](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221210214807968.png)
 
-我们尝试在/ftp/页面中 下载包含敏感信息的 _**acquisitions.md**_文件。
+我们尝试在/ftp/页面中 下载包含敏感信息的 _**acquisitions.md**_&#x6587;件。
 
 ![image-20221210215200468](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221210215200468.png)
 
@@ -335,8 +335,8 @@ http://10.10.102.75/ftp/package.json.bak%2500.md
 
 当发现损坏的访问控制漏洞或错误时，它将被归类为以下两种类型之一：
 
-* 水平（横向）越权：当用户可以执行 操作或访问具有_**相同权限级别**_的另一个用户的数据时发生。
-* 垂直（纵向）越权：当用户可以执行 操作或访问具有_**更高权限级别**_的另一个用户的数据时发生。
+* 水平（横向）越权：当用户可以执行 操作或访问具&#x6709;_**相同权限级别**_&#x7684;另一个用户的数据时发生。
+* 垂直（纵向）越权：当用户可以执行 操作或访问具&#x6709;_**更高权限级别**_&#x7684;另一个用户的数据时发生。
 
 ![image-20221210224427073](https://c/Users/Vimalano2ise/AppData/Roaming/Typora/typora-user-images/image-20221210224427073.png)
 

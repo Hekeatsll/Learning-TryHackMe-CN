@@ -1,8 +1,8 @@
 # Table of contents
 
-* [💎 Welcome(欢迎)](README.md)
+* [Welcome(欢迎)](README.md)
 
-## 📚 Learning Paths(学习路径)
+## Learning Paths(学习路径)
 
 * [😎 Pre Security(网络安全前置基础)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/README.md)
   * [☑️ Intro to Offensive Security(进攻性安全介绍)](learning-paths-xue-xi-lu-jing/pre-security-wang-luo-an-quan-qian-zhi-ji-chu/intro-to-offensive-security-jin-gong-xing-an-quan-jie-shao.md)
@@ -71,7 +71,7 @@
 * [👨‍🔧 Security Engineer(安全工程师)](learning-paths-xue-xi-lu-jing/security-engineer-an-quan-gong-cheng-shi.md)
 * [🗃️ DevSecOps(开发、安全和运营一体化)](learning-paths-xue-xi-lu-jing/devsecops-kai-fa-an-quan-he-yun-ying-yi-ti-hua.md)
 
-## 🏷️ Learning Modules(学习模块)
+## 💠 Learning Modules(学习模块)
 
 * [🪟 Windows Exploitation Basics(Windows漏洞利用基础)](learning-modules-xue-xi-mo-kuai/windows-exploitation-basicswindows-lou-dong-li-yong-ji-chu.md)
 * [🔱 Metasploit(MSF漏洞利用框架)](learning-modules-xue-xi-mo-kuai/metasploitmsf-lou-dong-li-yong-kuang-jia.md)
@@ -83,9 +83,9 @@
 * [🙌 How The Web Works(Web运作基础)](learning-modules-xue-xi-mo-kuai/how-the-web-worksweb-yun-zuo-ji-chu.md)
 * [🐴 Malware Analysis(恶意软件分析-基础)](learning-modules-xue-xi-mo-kuai/malware-analysiseyi-ruan-jian-fen-xi-ji-chu.md)
 * [🧩 Network Fundamentals(网络基础)](learning-modules-xue-xi-mo-kuai/network-fundamentals-wang-luo-ji-chu.md)
-* [🏄‍♂️ Basic Computer Exploitation(计算机漏洞利用-基础)](learning-modules-xue-xi-mo-kuai/basic-computer-exploitation-ji-suan-ji-lou-dong-li-yong-ji-chu.md)
+* [🏀 Basic Computer Exploitation(计算机漏洞利用-基础)](learning-modules-xue-xi-mo-kuai/basic-computer-exploitation-ji-suan-ji-lou-dong-li-yong-ji-chu.md)
 * [🎣 Phishing(网络钓鱼)](learning-modules-xue-xi-mo-kuai/phishing-wang-luo-diao-yu.md)
-* [🧑‍⚕️ Incident Response and Forensics(事件响应和取证-基础)](learning-modules-xue-xi-mo-kuai/incident-response-and-forensics-shi-jian-xiang-ying-he-qu-zheng-ji-chu.md)
+* [📢 Incident Response and Forensics(事件响应和取证-基础)](learning-modules-xue-xi-mo-kuai/incident-response-and-forensics-shi-jian-xiang-ying-he-qu-zheng-ji-chu.md)
 * [🪟 Windows Fundamentals(Windows基础)](learning-modules-xue-xi-mo-kuai/windows-fundamentalswindows-ji-chu.md)
 * [🪄 Burp Suite(Burp Suite工具使用)](learning-modules-xue-xi-mo-kuai/burp-suiteburp-suite-gong-ju-shi-yong.md)
 * [🐧 Linux Fundamentals(Linux基础)](learning-modules-xue-xi-mo-kuai/linux-fundamentalslinux-ji-chu.md)
@@ -117,7 +117,7 @@
 * [🐽 Snort(Snort开源入侵检测与防御系统)](learning-modules-xue-xi-mo-kuai/snortsnort-kai-yuan-ru-qin-jian-ce-yu-fang-yu-xi-tong.md)
 * [🤹 Security Information and Event Management(安全信息和事件管理)](learning-modules-xue-xi-mo-kuai/security-information-and-event-management-an-quan-xin-xi-he-shi-jian-guan-li.md)
 * [🚨 Endpoint Security Monitoring(端点安全监控)](learning-modules-xue-xi-mo-kuai/endpoint-security-monitoring-duan-dian-an-quan-jian-kong.md)
-* [🕵️‍♂️ Detection Engineering(网络安全检测工程)](learning-modules-xue-xi-mo-kuai/detection-engineering-wang-luo-an-quan-jian-ce-gong-cheng.md)
+* [🚒 Detection Engineering(网络安全检测工程)](learning-modules-xue-xi-mo-kuai/detection-engineering-wang-luo-an-quan-jian-ce-gong-cheng.md)
 * [🦉 Software Security(软件安全)](learning-modules-xue-xi-mo-kuai/software-security-ruan-jian-an-quan.md)
 * [🛠️ Tools and Code Analysis(渗透测试工具与脚本代码-基础)](learning-modules-xue-xi-mo-kuai/tools-and-code-analysis-shen-tou-ce-shi-gong-ju-yu-jiao-ben-dai-ma-ji-chu.md)
 * [✍️ Planning and Scoping(渗透测试规划与范围界定)](learning-modules-xue-xi-mo-kuai/planning-and-scoping-shen-tou-ce-shi-gui-hua-yu-fan-wei-jie-ding.md)
@@ -156,13 +156,13 @@
 * [👮 Build Your Cyber Security Career(构建你的网络安全职业生涯)](learning-modules-xue-xi-mo-kuai/build-your-cyber-security-career-gou-jian-ni-de-wang-luo-an-quan-zhi-ye-sheng-ya.md)
 * [Command Line(命令行使用基础)](learning-modules-xue-xi-mo-kuai/command-line-ming-ling-xing-shi-yong-ji-chu.md)
 * [Networking(信息安全中的网络知识)](learning-modules-xue-xi-mo-kuai/networking-xin-xi-an-quan-zhong-de-wang-luo-zhi-shi.md)
-* [🔮 Cryptography(密码学)](learning-modules-xue-xi-mo-kuai/cryptography-mi-ma-xue.md)
+* [🔏 Cryptography(密码学)](learning-modules-xue-xi-mo-kuai/cryptography-mi-ma-xue.md)
 * [Defensive Security(防御性安全知识)](learning-modules-xue-xi-mo-kuai/defensive-security-fang-yu-xing-an-quan-zhi-shi.md)
 * [🛡️ Defensive Security Tooling(防御性安全工具)](learning-modules-xue-xi-mo-kuai/defensive-security-tooling-fang-yu-xing-an-quan-gong-ju.md)
 * [Linux Endpoint Investigation(Linux 端点调查)](learning-modules-xue-xi-mo-kuai/linux-endpoint-investigationlinux-duan-dian-diao-cha.md)
 * [Windows and AD Fundamentals(Windows和AD基础知识)](learning-modules-xue-xi-mo-kuai/windows-and-ad-fundamentalswindows-he-ad-ji-chu-zhi-shi.md)
 
-## 🌐 Networks Labs(网络实验室)
+## 🌎 Networks Labs(网络实验室)
 
 * [📋 Intro(介绍)](networks-labs-wang-luo-shi-yan-shi/intro-jie-shao.md)
 * [Holo](networks-labs-wang-luo-shi-yan-shi/holo.md)

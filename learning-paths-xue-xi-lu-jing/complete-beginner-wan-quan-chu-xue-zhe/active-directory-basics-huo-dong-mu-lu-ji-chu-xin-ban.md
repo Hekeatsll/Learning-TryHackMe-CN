@@ -38,8 +38,8 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/winadbasics](https://t
 
 
 
-{% content-ref url="../../learning-modules-xue-xi-mo-kuai/windows-fundamentalswindows-ji-chu.md" %}
-[windows-fundamentalswindows-ji-chu.md](../../learning-modules-xue-xi-mo-kuai/windows-fundamentalswindows-ji-chu.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-1windows-ji-chu-zhi-shi-1.md" %}

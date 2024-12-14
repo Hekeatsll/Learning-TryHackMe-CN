@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：枚举、利用更常见的网络服务和错误配置。
+icon: square-check
 cover: ../../.gitbook/assets/networkservices2.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑️ Network Services 2(网络服务2)
+# Network Services 2(网络服务2)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/networkservices2](https://tryhackme.com/room/networkservices2)
 
@@ -103,9 +104,9 @@ NFS工作过程：
 
 * sudo 以root权限执行命令
 * mount 执行挂载命令
-* \-t nfs 要挂载的设备类型，指定为NFS
+* -t nfs 要挂载的设备类型，指定为NFS
 * IP:share NFS 服务器的 IP 地址，以及我们希望挂载的共享名称
-* \-nolock 不使用 NLM 锁定
+* -nolock 不使用 NLM 锁定
 
 ### **答题**
 
@@ -566,10 +567,10 @@ Hydra工具在使用时有广泛的可定制性，它允许针对许多不同服
 让我们分解一下以上命令：
 
 * hydra 启动hydra工具
-* \-t 16 设置每个目标的并行连接数为16
-* \-l \[user] 指定用户名
-* \-P \[path to dictionary] 指定用于暴力破解的密码字典文件的路径
-* \-vV 将verose模式设置为非常详细，这将显示每次尝试的 login + pass 组合（verose模式--详细输出模式）
+* -t 16 设置每个目标的并行连接数为16
+* -l \[user] 指定用户名
+* -P \[path to dictionary] 指定用于暴力破解的密码字典文件的路径
+* -vV 将verose模式设置为非常详细，这将显示每次尝试的 login + pass 组合（verose模式--详细输出模式）
 * \[machine IP] 目标机器的IP地址
 * ssh / protocol 设置要进行暴力破解的相关协议
 
@@ -647,9 +648,9 @@ MySQL可以运行在各种平台上，无论是Linux还是windows，它通常可
 
 以下学习资源更详细地解释了 MySQL 的技术实现和工作：
 
-[https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE\_SQL\_EXECUTION.html](https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE\_SQL\_EXECUTION.html)
+[https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE\_SQL\_EXECUTION.html](https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE_SQL_EXECUTION.html)
 
-[https://www.w3schools.com/php/php\_mysql\_intro.asp](https://www.w3schools.com/php/php\_mysql\_intro.asp)
+[https://www.w3schools.com/php/php\_mysql\_intro.asp](https://www.w3schools.com/php/php_mysql_intro.asp)
 
 ### **答题**
 

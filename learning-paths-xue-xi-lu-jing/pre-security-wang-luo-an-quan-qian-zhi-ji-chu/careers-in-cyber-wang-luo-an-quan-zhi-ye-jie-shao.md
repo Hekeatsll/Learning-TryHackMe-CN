@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：了解网络安全领域的不同职业。
+icon: square-check
 cover: ../../.gitbook/assets/intro-to-cyber.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑️ Careers in Cyber(网络安全职业介绍)
+# Careers in Cyber(网络安全职业介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/careersincyber](https://tryhackme.com/room/careersincyber)
 

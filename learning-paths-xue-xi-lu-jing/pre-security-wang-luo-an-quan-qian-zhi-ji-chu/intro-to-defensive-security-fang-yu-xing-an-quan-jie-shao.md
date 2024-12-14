@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：介绍防御性安全和相关主题，例如威胁情报、SOC、DFIR 和 SIEM。
+icon: square-check
 cover: ../../.gitbook/assets/intro-to-defensive-security.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑ Intro to Defensive Security(防御性安全介绍)
+# Intro to Defensive Security(防御性安全介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/defensivesecurity](https://tryhackme.com/room/defensivesecurity)
 

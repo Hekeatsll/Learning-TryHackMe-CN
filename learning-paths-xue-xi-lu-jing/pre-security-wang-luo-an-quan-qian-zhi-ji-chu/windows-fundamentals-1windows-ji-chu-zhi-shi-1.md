@@ -2,6 +2,7 @@
 description: >-
   本文相关内容：本文所涉及的内容是Windows 基础模块的第 1 部分，我们将了解 Windows 桌面、NTFS
   文件系统、UAC、控制面板等Windows基础组件。
+icon: square-check
 cover: ../../.gitbook/assets/4094ed0a54f8dc274b9b4f602c57b152.svg
 coverY: 0
 layout:
@@ -20,7 +21,7 @@ layout:
     visible: true
 ---
 
-# ☑ Windows Fundamentals 1(Windows基础知识1)
+# Windows Fundamentals 1(Windows基础知识1)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/windowsfundamentals1xbx](https://tryhackme.com/room/windowsfundamentals1xbx)
 
@@ -58,7 +59,7 @@ tips：尽管我们没有谈论服务器，但也有可用于服务器的Windows
 
 注：本文所探索的Windows虚拟机的操作系统版本为“Windows Server 2019 Standard”，详见此Windows虚拟机中的“系统信息”界面。
 
-截至2021年6月，微软宣布了[Windows 10的退休日期](https://docs.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro?ranMID=24542\&ranEAID=kXQk6\*ivFEQ\&ranSiteID=kXQk6.ivFEQ-M28j3qbUhtM2JFCT2wmhOA\&epi=kXQk6.ivFEQ-M28j3qbUhtM2JFCT2wmhOA\&irgwc=1\&OCID=AID2000142\_aff\_7593\_1243925\&tduid=%28ir\_\_uszrgcddyskfqz3fkk0sohz3wv2xuurc01kgzkod00%29%287593%29%281243925%29%28kXQk6.ivFEQ-M28j3qbUhtM2JFCT2wmhOA%29%28%29\&irclickid=\_uszrgcddyskfqz3fkk0sohz3wv2xuurc01kgzkod00\&ranMID=24542\&ranEAID=kXQk6\*ivFEQ\&ranSiteID=kXQk6.ivFEQ-4cKUPfbv9lM\_IR2EX7K\_hw\&epi=kXQk6.ivFEQ-4cKUPfbv9lM\_IR2EX7K\_hw\&irgwc=1\&OCID=AID2000142\_aff\_7593\_1243925\&tduid=%28ir\_\_feexvhocigkfqna9kk0sohznb32xutanagupypus00%29%287593%29%281243925%29%28kXQk6.ivFEQ-4cKUPfbv9lM\_IR2EX7K\_hw%29%28%29\&irclickid=\_feexvhocigkfqna9kk0sohznb32xutanagupypus00)：“微软将继续支持至少一个Windows 10版本，直到2025年10月14日。”
+截至2021年6月，微软宣布了[Windows 10的退休日期](https://docs.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro?ranMID=24542\&ranEAID=kXQk6*ivFEQ\&ranSiteID=kXQk6.ivFEQ-M28j3qbUhtM2JFCT2wmhOA\&epi=kXQk6.ivFEQ-M28j3qbUhtM2JFCT2wmhOA\&irgwc=1\&OCID=AID2000142_aff_7593_1243925\&tduid=%28ir__uszrgcddyskfqz3fkk0sohz3wv2xuurc01kgzkod00%29%287593%29%281243925%29%28kXQk6.ivFEQ-M28j3qbUhtM2JFCT2wmhOA%29%28%29\&irclickid=_uszrgcddyskfqz3fkk0sohz3wv2xuurc01kgzkod00\&ranMID=24542\&ranEAID=kXQk6*ivFEQ\&ranSiteID=kXQk6.ivFEQ-4cKUPfbv9lM_IR2EX7K_hw\&epi=kXQk6.ivFEQ-4cKUPfbv9lM_IR2EX7K_hw\&irgwc=1\&OCID=AID2000142_aff_7593_1243925\&tduid=%28ir__feexvhocigkfqna9kk0sohznb32xutanagupypus00%29%287593%29%281243925%29%28kXQk6.ivFEQ-4cKUPfbv9lM_IR2EX7K_hw%29%28%29\&irclickid=_feexvhocigkfqna9kk0sohznb32xutanagupypus00)：“微软将继续支持至少一个Windows 10版本，直到2025年10月14日。”
 
 截至2021年10月5日，Windows 11已经成为终端用户可用的Windows操作系统。
 
@@ -183,7 +184,7 @@ _注意：上图中的白色字母与已安装程序的字母标题相匹配。_
 下面是微软官方关于用户桌面GUI中的“开始菜单”和“通知区域”的简要文档。
 
 * [https://support.microsoft.com/en-us/windows/see-what-s-on-the-start-menu-a8ccb400-ad49-962b-d2b1-93f453785a13](https://support.microsoft.com/en-us/windows/see-what-s-on-the-start-menu-a8ccb400-ad49-962b-d2b1-93f453785a13)
-* [https://support.microsoft.com/en-us/windows/customize-the-taskbar-notification-area-e159e8d2-9ac5-b2bd-61c5-bb63c1d437c3#WindowsVersion=Windows\_10](https://support.microsoft.com/en-us/windows/customize-the-taskbar-notification-area-e159e8d2-9ac5-b2bd-61c5-bb63c1d437c3#WindowsVersion=Windows\_10)
+* [https://support.microsoft.com/en-us/windows/customize-the-taskbar-notification-area-e159e8d2-9ac5-b2bd-61c5-bb63c1d437c3#WindowsVersion=Windows\_10](https://support.microsoft.com/en-us/windows/customize-the-taskbar-notification-area-e159e8d2-9ac5-b2bd-61c5-bb63c1d437c3#WindowsVersion=Windows_10)
 
 tips：你可以右键单击任何文件夹、文件、应用程序/程序的图标来查看更多信息或者对所单击的项目执行相关操作。
 
@@ -290,7 +291,7 @@ Windows文件夹(`C:\Windows`)通常被称为包含Windows操作系统的文件�
 
 这个文件夹不一定要位于C盘，它可以驻留在任何其他磁盘驱动器中，在技术上还可以实现驻留在不同的文件夹中；这就是环境变量，更具体地说是系统环境变量能够发挥作用的地方，Windows文件夹(目录)的系统环境变量是`%windir%`。
 
-根据[微软相关文档](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about\_environment\_variables?view=powershell-7.1)：“环境变量存储着有关操作系统环境的信息，这些信息包括操作系统路径、操作系统使用的处理器数量以及临时文件夹的位置等详细信息。”
+根据[微软相关文档](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.1)：“环境变量存储着有关操作系统环境的信息，这些信息包括操作系统路径、操作系统使用的处理器数量以及临时文件夹的位置等详细信息。”
 
 在“Windows”文件夹中有很多文件夹：
 
@@ -425,7 +426,7 @@ _tips：阅读本小节内容并且访问Windows虚拟机进行探索，然后�
 
 计算机用户在执行某些操作时，其实并不需要系统为这些操作分配一个很高的权限，例如网上冲浪、处理 Word 文档等；这种提升的权限增加了系统被攻破的风险，也使得恶意软件更容易感染系统（因为这可能会使恶意软件在一个较高的权限下得到运行）。
 
-为了保护本地用户的权限分配安全，Microsoft 引入了用户帐户控制机制(UAC-User Account Control)，这个概念最初是在[Windows Vista](https://en.wikipedia.org/wiki/Windows\_Vista)系统中引入的，并且在随后的 Windows 版本中也得到继续使用。
+为了保护本地用户的权限分配安全，Microsoft 引入了用户帐户控制机制(UAC-User Account Control)，这个概念最初是在[Windows Vista](https://en.wikipedia.org/wiki/Windows_Vista)系统中引入的，并且在随后的 Windows 版本中也得到继续使用。
 
 注意：UAC在默认情况下不适用于内置的本地管理员帐户。
 

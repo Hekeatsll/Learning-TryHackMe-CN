@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：了解数字取证及其相关流程，并完成相关的简单实例。
+icon: square-check
 cover: ../../.gitbook/assets/intro-to-defensive-security.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑️ Intro to Digital Forensics(数字取证介绍)
+# Intro to Digital Forensics(数字取证介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introdigitalforensics](https://tryhackme.com/room/introdigitalforensics)
 

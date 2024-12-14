@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：了解、枚举各种网络服务以及利用这些网络服务相关的错误配置。
+icon: square-check
 cover: ../../.gitbook/assets/2857591-20230614165851794-1028455946.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑️ Network Services(网络服务)
+# Network Services(网络服务)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/networkservices](https://tryhackme.com/room/networkservices)
 

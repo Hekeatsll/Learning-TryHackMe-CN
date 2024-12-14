@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：了解一些支持专用网络的技术和设计。
+icon: square-check
 cover: ../../.gitbook/assets/fb870f148ec59025ce152964b8260af3.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑ Intro to LAN(局域网基础介绍)
+# Intro to LAN(局域网基础介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introtolan](https://tryhackme.com/room/introtolan)
 

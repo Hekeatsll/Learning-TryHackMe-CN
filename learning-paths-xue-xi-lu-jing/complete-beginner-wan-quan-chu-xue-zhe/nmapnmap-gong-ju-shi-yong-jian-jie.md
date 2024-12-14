@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：了解怎样使用功能强大的网络扫描工具 Nmap 进行扫描操作。
+icon: square-check
 cover: ../../.gitbook/assets/nmap.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑️ Nmap(Nmap工具使用简介)
+# Nmap(Nmap工具使用简介)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/furthernmap](https://tryhackme.com/room/furthernmap)
 

@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：简单介绍网络安全概念，了解基本的网络攻击步骤，并尝试完成一个侵入目标服务器的实例。
+icon: square-check
 cover: ../../.gitbook/assets/intro-to-offensive-security.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑ Network Security(网络安全介绍)
+# Network Security(网络安全介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/intronetworksecurity](https://tryhackme.com/room/intronetworksecurity)
 

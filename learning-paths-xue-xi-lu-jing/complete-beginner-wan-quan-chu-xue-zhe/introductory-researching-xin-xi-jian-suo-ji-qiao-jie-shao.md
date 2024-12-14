@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：主要涉及渗透测试中的一些信息检索技巧。
+icon: square-check
 cover: ../../.gitbook/assets/default_tryhackme.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑ Introductory Researching(信息检索技巧介绍)
+# Introductory Researching(信息检索技巧介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/introtoresearch](https://tryhackme.com/room/introtoresearch)
 

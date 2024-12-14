@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：简单介绍操作系统安全，并演示 Linux系统 上的 SSH 身份验证实例。
+icon: square-check
 cover: ../../.gitbook/assets/intro-to-offensive-security.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑ Operating System Security(操作系统安全介绍)
+# Operating System Security(操作系统安全介绍)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/operatingsystemsecurity](https://tryhackme.com/room/operatingsystemsecurity)
 

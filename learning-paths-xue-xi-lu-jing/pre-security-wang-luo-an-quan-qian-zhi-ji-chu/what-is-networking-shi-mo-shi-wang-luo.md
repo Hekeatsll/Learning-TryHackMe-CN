@@ -1,5 +1,6 @@
 ---
 description: 本文相关内容：学习一些关于计算机网络的基础知识。
+icon: square-check
 cover: ../../.gitbook/assets/fb870f148ec59025ce152964b8260af3.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# ☑ What is Networking？(什么是网络？)
+# What is Networking？(什么是网络？)
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/whatisnetworking](https://tryhackme.com/room/whatisnetworking)
 
@@ -116,7 +117,7 @@ IP地址遵循一组被称为协议的标准，这些协议是网络的主干，
 
 <figure><img src="../../.gitbook/assets/image-20230325185615792.png" alt=""><figcaption></figcaption></figure>
 
-随着越来越多的设备联网，想要获得一个未被使用的公共地址也变得越来越难。根据网络行业巨头思科公司的估计，到2021年底，将有大约500亿台设备连接到互联网([思科, 2021](https://www.cisco.com/c/dam/en\_us/about/ac79/docs/innov/IoT\_IBSG\_0411FINAL.pdf))。但是IP地址不止一个版本，到目前为止，我们只讨论了一个版本的互联网协议寻址方案，即 IPv4 ，它使用的是一个具有2^32(42.9亿)个IP地址的编号系统。
+随着越来越多的设备联网，想要获得一个未被使用的公共地址也变得越来越难。根据网络行业巨头思科公司的估计，到2021年底，将有大约500亿台设备连接到互联网([思科, 2021](https://www.cisco.com/c/dam/en_us/about/ac79/docs/innov/IoT_IBSG_0411FINAL.pdf))。但是IP地址不止一个版本，到目前为止，我们只讨论了一个版本的互联网协议寻址方案，即 IPv4 ，它使用的是一个具有2^32(42.9亿)个IP地址的编号系统。
 
 IPv6是互联网协议寻址方案的新迭代版本，能够帮助解决IP地址短缺的问题，IPv6有一些好处：
 

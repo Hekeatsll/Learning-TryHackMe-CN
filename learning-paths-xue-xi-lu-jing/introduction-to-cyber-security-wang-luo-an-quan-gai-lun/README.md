@@ -1,5 +1,6 @@
 ---
 description: Introduction to Cyber Security 学习路径(此路径的部分笔记可能放置在其他学习路径下)
+icon: map
 cover: ../../.gitbook/assets/introtocybersecurity-square.svg
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# 🥳 Introduction to Cyber Security(网络安全概论)
+# Introduction to Cyber Security(网络安全概论)
 
 网络安全是一个庞大的话题，可能很难知道从哪里开始。
 

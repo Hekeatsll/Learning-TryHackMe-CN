@@ -1,5 +1,5 @@
 ---
-icon: wreath-laurel
+icon: arrows-up-down-left-right
 ---
 
 # Holo

@@ -1,5 +1,6 @@
 ---
 description: DevSecOps 学习路径
+icon: infinity
 cover: ../.gitbook/assets/devsecops-square.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# 🗃️ DevSecOps(开发、安全和运营一体化)
+# DevSecOps(开发、安全和运营一体化)
 
 这条路径将着眼于以下领域:
 

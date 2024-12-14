@@ -1,5 +1,6 @@
 ---
 description: Complete Beginner 学习路径(此路径的部分笔记可能放置在其他学习路径下)
+icon: arrow-down-a-z
 cover: ../../.gitbook/assets/completebeginner-square.svg
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# 🤓 Complete Beginner(完全初学者)
+# Complete Beginner(完全初学者)
 
 完全初学者路径旨在对计算机安全的不同领域进行广泛的介绍，这条路径将着眼于以下领域:
 

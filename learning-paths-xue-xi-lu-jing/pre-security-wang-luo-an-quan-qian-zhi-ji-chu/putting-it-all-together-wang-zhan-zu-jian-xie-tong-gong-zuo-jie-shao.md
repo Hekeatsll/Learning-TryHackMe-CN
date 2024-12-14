@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解Web服务的所有单独组件如何协同工作，这种协同工作能让我们可以访问自己喜欢的网站。
-icon: square-check
 cover: ../../.gitbook/assets/ceca040c9acf2ae83ff001433f57fd7b (1).svg
 coverY: 0
 layout:

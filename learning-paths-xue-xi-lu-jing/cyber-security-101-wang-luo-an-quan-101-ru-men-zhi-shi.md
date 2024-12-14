@@ -1,5 +1,6 @@
 ---
 description: Cyber Security 101 学习路径(此路径的部分笔记可能放置在其他学习路径下)
+icon: person-to-door
 cover: ../.gitbook/assets/微信截图_20241023173433.png
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# 🤫 Cyber Security 101(网络安全101-入门知识)
+# Cyber Security 101(网络安全101-入门知识)
 
 这个适合初学者的路径旨在对计算机安全的不同领域进行扎实的介绍，该路径涵盖以下基本概念和应用：
 

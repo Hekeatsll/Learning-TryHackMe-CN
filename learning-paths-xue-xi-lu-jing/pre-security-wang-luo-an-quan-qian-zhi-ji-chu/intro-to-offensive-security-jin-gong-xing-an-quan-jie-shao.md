@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：对进攻性安全概念进行简单讲解。
-icon: square-check
 cover: ../../.gitbook/assets/intro-to-cyber.png
 coverY: 0
 layout:

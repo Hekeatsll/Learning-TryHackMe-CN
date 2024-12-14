@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：踏上学习 Linux 基础知识的旅程，学习在交互式终端上运行一些最基本的Linux命令。
-icon: square-check
 cover: ../../.gitbook/assets/184dc7fb5b1d816f4005d59f36a0e484.svg
 coverY: 0
 layout:

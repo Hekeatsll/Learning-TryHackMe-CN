@@ -1,8 +1,9 @@
 ---
 description: 针对虚拟网络环境的网络安全攻击实验练习
+icon: book-open-reader
 ---
 
-# 📋 Intro(介绍)
+# Intro(介绍)
 
 Holo
 

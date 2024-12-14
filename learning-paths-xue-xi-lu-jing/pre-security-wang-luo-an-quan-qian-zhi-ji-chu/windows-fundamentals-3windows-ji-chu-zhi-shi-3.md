@@ -1,8 +1,8 @@
 ---
+icon: check
 description: >-
   本文相关内容：本文所涉及的内容是 Windows 基础模块的第 3 部分，了解有助于保护设备安全的内置 Microsoft 工具，例如 Windows
   更新、Windows 安全、BitLocker等...
-icon: square-check
 cover: ../../.gitbook/assets/4094ed0a54f8dc274b9b4f602c57b152.svg
 coverY: 0
 layout:

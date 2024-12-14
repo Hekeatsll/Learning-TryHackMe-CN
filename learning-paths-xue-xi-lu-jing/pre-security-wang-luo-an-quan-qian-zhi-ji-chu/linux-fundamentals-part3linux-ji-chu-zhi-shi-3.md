@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：进一步提升你的Linux使用技能，了解一些Linux系统常见的实用程序。
-icon: square-check
 cover: ../../.gitbook/assets/184dc7fb5b1d816f4005d59f36a0e484.svg
 coverY: 0
 layout:

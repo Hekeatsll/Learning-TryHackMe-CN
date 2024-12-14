@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解数据如何被分成更小的部分并通过网络传输到另一台设备。
-icon: square-check
 cover: ../../.gitbook/assets/fb870f148ec59025ce152964b8260af3.png
 coverY: 0
 layout:

@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：要对网站进行漏洞利用，你首先需要知道网站是如何被创建的，本文将涉及HTML&JS以及一些Web安全基础问题。
-icon: square-check
 cover: ../../.gitbook/assets/ceca040c9acf2ae83ff001433f57fd7b.svg
 coverY: 0
 layout:

@@ -1,8 +1,8 @@
 ---
+icon: check
 description: >-
   本文相关内容：本文所涉及的内容是Windows 基础模块的第 1 部分，我们将了解 Windows 桌面、NTFS
   文件系统、UAC、控制面板等Windows基础组件。
-icon: square-check
 cover: ../../.gitbook/assets/4094ed0a54f8dc274b9b4f602c57b152.svg
 coverY: 0
 layout:

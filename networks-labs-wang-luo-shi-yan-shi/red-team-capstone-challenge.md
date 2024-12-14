@@ -1,2 +1,6 @@
-# 💯 Red Team Capstone Challenge
+---
+icon: helmet-battle
+---
+
+# Red Team Capstone Challenge
 

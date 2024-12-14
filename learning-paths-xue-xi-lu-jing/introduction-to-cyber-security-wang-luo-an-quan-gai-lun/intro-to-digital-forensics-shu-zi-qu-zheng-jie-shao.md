@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解数字取证及其相关流程，并完成相关的简单实例。
-icon: square-check
 cover: ../../.gitbook/assets/intro-to-defensive-security.png
 coverY: 0
 layout:

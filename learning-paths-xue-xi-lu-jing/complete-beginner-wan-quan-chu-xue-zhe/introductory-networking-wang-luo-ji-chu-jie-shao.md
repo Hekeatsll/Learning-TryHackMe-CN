@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：主要涉及网络基础理论、与网络相关的基本命令行工具的使用。
-icon: square-check
 cover: ../../.gitbook/assets/2857591-20230614170101305-2145401327.png
 coverY: 0
 layout:

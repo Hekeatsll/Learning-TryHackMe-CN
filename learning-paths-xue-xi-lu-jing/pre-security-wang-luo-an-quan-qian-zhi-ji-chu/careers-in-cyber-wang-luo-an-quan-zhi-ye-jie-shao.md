@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解网络安全领域的不同职业。
-icon: square-check
 cover: ../../.gitbook/assets/intro-to-cyber.png
 coverY: 0
 layout:

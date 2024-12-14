@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解怎样使用功能强大的网络扫描工具 Nmap 进行扫描操作。
-icon: square-check
 cover: ../../.gitbook/assets/nmap.png
 coverY: 0
 layout:

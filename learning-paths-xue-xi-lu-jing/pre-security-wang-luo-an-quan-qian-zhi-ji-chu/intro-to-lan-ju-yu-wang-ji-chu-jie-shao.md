@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解一些支持专用网络的技术和设计。
-icon: square-check
 cover: ../../.gitbook/assets/fb870f148ec59025ce152964b8260af3.png
 coverY: 0
 layout:

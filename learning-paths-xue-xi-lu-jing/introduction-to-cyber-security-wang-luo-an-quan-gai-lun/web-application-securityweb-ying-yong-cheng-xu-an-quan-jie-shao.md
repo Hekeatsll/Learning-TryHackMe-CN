@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解 Web 应用程序并探索它们的一些常见安全问题
-icon: square-check
 cover: ../../.gitbook/assets/intro-to-offensive-security.png
 coverY: 0
 layout:

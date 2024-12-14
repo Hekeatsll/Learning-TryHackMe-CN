@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解安全运营中心(SOC)的相关职责、服务和数据来源。
-icon: square-check
 cover: ../../.gitbook/assets/intro-to-defensive-security.png
 coverY: 0
 layout:

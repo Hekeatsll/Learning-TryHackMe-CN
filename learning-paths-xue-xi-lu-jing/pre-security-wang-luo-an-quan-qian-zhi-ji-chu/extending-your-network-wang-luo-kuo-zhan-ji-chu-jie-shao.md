@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：了解一些用于将网络扩展到 Internet(互联网公网) 的技术以及这样做的动机。
-icon: square-check
 cover: ../../.gitbook/assets/fb870f148ec59025ce152964b8260af3.png
 coverY: 0
 layout:

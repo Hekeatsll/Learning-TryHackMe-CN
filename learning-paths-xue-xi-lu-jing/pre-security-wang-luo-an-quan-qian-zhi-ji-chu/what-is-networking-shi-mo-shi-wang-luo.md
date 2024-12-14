@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：学习一些关于计算机网络的基础知识。
-icon: square-check
 cover: ../../.gitbook/assets/fb870f148ec59025ce152964b8260af3.png
 coverY: 0
 layout:

@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：简单介绍网络安全概念，了解基本的网络攻击步骤，并尝试完成一个侵入目标服务器的实例。
-icon: square-check
 cover: ../../.gitbook/assets/intro-to-offensive-security.png
 coverY: 0
 layout:

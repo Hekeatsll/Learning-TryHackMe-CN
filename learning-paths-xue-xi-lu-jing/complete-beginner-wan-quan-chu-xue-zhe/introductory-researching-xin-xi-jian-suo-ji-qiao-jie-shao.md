@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：主要涉及渗透测试中的一些信息检索技巧。
-icon: square-check
 cover: ../../.gitbook/assets/default_tryhackme.png
 coverY: 0
 layout:

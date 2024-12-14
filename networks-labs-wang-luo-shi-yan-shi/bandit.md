@@ -1,2 +1,6 @@
-# 💸 Bandit
+---
+icon: hand-holding-dollar
+---
+
+# Bandit
 

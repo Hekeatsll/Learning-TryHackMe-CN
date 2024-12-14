@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：枚举、利用更常见的网络服务和错误配置。
-icon: square-check
 cover: ../../.gitbook/assets/networkservices2.png
 coverY: 0
 layout:

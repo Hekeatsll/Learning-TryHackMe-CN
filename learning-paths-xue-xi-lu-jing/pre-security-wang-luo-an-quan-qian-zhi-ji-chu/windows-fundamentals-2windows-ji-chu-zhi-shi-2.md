@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：本文所涉及的内容是Windows 基础模块的第 2 部分，了解有关系统配置、UAC 设置、资源监控、Windows 注册表等更多信息。
-icon: square-check
 cover: ../../.gitbook/assets/4094ed0a54f8dc274b9b4f602c57b152.svg
 coverY: 0
 layout:

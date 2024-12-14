@@ -1,6 +1,6 @@
 ---
+icon: check
 description: 本文相关内容：介绍防御性安全和相关主题，例如威胁情报、SOC、DFIR 和 SIEM。
-icon: square-check
 cover: ../../.gitbook/assets/intro-to-defensive-security.png
 coverY: 0
 layout:

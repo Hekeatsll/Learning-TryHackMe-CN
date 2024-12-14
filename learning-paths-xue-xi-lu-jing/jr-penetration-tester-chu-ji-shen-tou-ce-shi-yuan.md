@@ -1,5 +1,6 @@
 ---
 description: Jr Penetration Tester 学习路径(此路径的部分笔记可能放置在其他学习路径下)
+icon: monkey
 cover: ../.gitbook/assets/jrpenetrationtester-square.svg
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# 🐒 Jr Penetration Tester(初级渗透测试员)
+# Jr Penetration Tester(初级渗透测试员)
 
 这条路径将着眼于以下领域:
 

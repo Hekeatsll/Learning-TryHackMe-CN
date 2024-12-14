@@ -22,12 +22,6 @@ layout:
 
 TryHackMe实验房间链接：[https://tryhackme.com/room/winadbasics](https://tryhackme.com/room/winadbasics)
 
-可参考章节：
-
-{% content-ref url="active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md" %}
-[active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md](active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md)
-{% endcontent-ref %}
-
 ## 简介
 
 微软的Active Directory(活动目录)是企业网络的支柱，它简化了企业网络环境中的设备和用户管理。在本文中，我们将对Active Directory基本组件做一个简单基础的介绍。
@@ -40,11 +34,25 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/winadbasics](https://t
 4. 森林(Forests)和域信任介绍。
 5. 其他......
 
-在学习本文内容之前，建议先了解关于Windows系统的基础知识，相关内容可参考以下历史博客：
+在学习本文内容之前，建议先了解关于Windows系统的基础知识：
 
-* [【THM】Windows Fundamentals 1(Windows基础知识1)-学习](https://www.cnblogs.com/Hekeats-L/p/17278137.html)
-* [【THM】Windows Fundamentals 2(Windows基础知识2)-学习](https://www.cnblogs.com/Hekeats-L/p/17280008.html)
-* [【THM】Windows Fundamentals 3(Windows基础知识3)-学习](https://www.cnblogs.com/Hekeats-L/p/17281093.html)
+
+
+{% content-ref url="../../learning-modules-xue-xi-mo-kuai/windows-fundamentalswindows-ji-chu.md" %}
+[windows-fundamentalswindows-ji-chu.md](../../learning-modules-xue-xi-mo-kuai/windows-fundamentalswindows-ji-chu.md)
+{% endcontent-ref %}
+
+{% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-1windows-ji-chu-zhi-shi-1.md" %}
+[windows-fundamentals-1windows-ji-chu-zhi-shi-1.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-1windows-ji-chu-zhi-shi-1.md)
+{% endcontent-ref %}
+
+{% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-2windows-ji-chu-zhi-shi-2.md" %}
+[windows-fundamentals-2windows-ji-chu-zhi-shi-2.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-2windows-ji-chu-zhi-shi-2.md)
+{% endcontent-ref %}
+
+{% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-3windows-ji-chu-zhi-shi-3.md" %}
+[windows-fundamentals-3windows-ji-chu-zhi-shi-3.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-3windows-ji-chu-zhi-shi-3.md)
+{% endcontent-ref %}
 
 ## Windows域
 

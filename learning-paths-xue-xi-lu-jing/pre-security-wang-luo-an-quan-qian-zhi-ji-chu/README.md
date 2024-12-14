@@ -1,5 +1,5 @@
 ---
-description: Pre Security 学习路径(此路径的部分笔记可能放置在其他学习路径下)
+description: Pre Security 学习路径
 cover: ../../.gitbook/assets/presecurity-square.svg
 coverY: 0
 layout:
@@ -26,7 +26,7 @@ Pre-Security学习路径是一个初学者友好且有趣的基础知识学习�
 
 先决条件：
 
-开始这条道路不需要任何先决条件!仅需要拥有学习热情!
+开始这条学习路径并不需要任何先决条件!仅需要你持续拥有学习热情!
 
 本路径相关章节：
 

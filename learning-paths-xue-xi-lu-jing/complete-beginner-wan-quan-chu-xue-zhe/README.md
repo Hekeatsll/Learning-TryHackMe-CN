@@ -20,13 +20,13 @@ layout:
 
 # 🤓 Complete Beginner(完全初学者)
 
-初学者路径旨在对计算机安全的不同领域进行广泛的介绍，这条路径将着眼于以下领域:
+完全初学者路径旨在对计算机安全的不同领域进行广泛的介绍，这条路径将着眼于以下领域:
 
 * Linux基础——熟悉Linux命令行。
-* Web应用程序安全-通过OWASP Top10学习Web应用程序安全概念
+* Web应用程序安全-通过OWASP Top10学习Web应用程序安全概念。
 * 网络安全——使用像NMAP这样的基本工具来枚举网络基础设施。
 * 脚本挑战-使用Python和Bash执行不同的任务。
-* 权限提升
+* 权限提升。
 
 一旦你完成了初学者路径，你将了解了网络安全每个特定领域的基础知识，并且能够在后期学习中使用这些基础核心概念来构建你对该领域更复杂的主题的理解。
 
@@ -80,10 +80,6 @@ layout:
 [burp-suitethe-basicsburp-suite-ji-chu-geng-xin-ban.md](burp-suitethe-basicsburp-suite-ji-chu-geng-xin-ban.md)
 {% endcontent-ref %}
 
-{% content-ref url="owasp-top102017-ban.md" %}
-[owasp-top102017-ban.md](owasp-top102017-ban.md)
-{% endcontent-ref %}
-
 {% content-ref url="owasp-top-102021-ban.md" %}
 [owasp-top-102021-ban.md](owasp-top-102021-ban.md)
 {% endcontent-ref %}
@@ -118,10 +114,6 @@ layout:
 
 {% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-2windows-ji-chu-zhi-shi-2.md" %}
 [windows-fundamentals-2windows-ji-chu-zhi-shi-2.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-2windows-ji-chu-zhi-shi-2.md)
-{% endcontent-ref %}
-
-{% content-ref url="active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md" %}
-[active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md](active-directory-basics-huo-dong-mu-lu-ji-chu-jiu-ban.md)
 {% endcontent-ref %}
 
 {% content-ref url="active-directory-basics-huo-dong-mu-lu-ji-chu-xin-ban.md" %}
@@ -175,4 +167,3 @@ layout:
 {% content-ref url="thmsteel-mountain-lian-xi.md" %}
 [thmsteel-mountain-lian-xi.md](thmsteel-mountain-lian-xi.md)
 {% endcontent-ref %}
-

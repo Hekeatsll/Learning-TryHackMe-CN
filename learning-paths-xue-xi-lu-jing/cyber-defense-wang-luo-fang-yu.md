@@ -1,5 +1,6 @@
 ---
 description: Cyber Defense 学习路径(此路径的部分笔记可能放置在其他学习路径下)
+icon: shield-quartered
 cover: ../.gitbook/assets/cyberdefense-square.svg
 coverY: 0
 layout:
@@ -18,7 +19,7 @@ layout:
     visible: true
 ---
 
-# 🛡️ Cyber Defense(网络防御)
+# Cyber Defense(网络防御)
 
 这条路径将着眼于以下领域:
 

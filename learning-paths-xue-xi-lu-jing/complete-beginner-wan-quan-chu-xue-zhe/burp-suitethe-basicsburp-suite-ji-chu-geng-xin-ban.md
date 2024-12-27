@@ -43,7 +43,7 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/burpsuitebasics](https
 
 Burp Suite可以在Web请求到达目标服务器之前拦截、查看和修改Web请求(requests)，甚至可以在浏览器接收到响应之前对响应消息(responses)进行操作，这种能力使得Burp Suite成为手动测试Web应用程序的宝贵工具。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114909670-1092403290.png" alt=""><figcaption></figcaption></figure>
 
 Burp Suite有不同版本，在本文中我们将重点使用和介绍Burp Suite社区版，该版本可以在法律规定的范围内免费用于任何非商业用途；此外，Burp Suite还为用户提供了专业版和企业版，这两个版本都需要用户支付一定的许可费用，但与此同时它们也拥有一些强大的额外功能：
 
@@ -59,13 +59,13 @@ Burp Suite有不同版本，在本文中我们将重点使用和介绍Burp Suite
     简而言之，Burp Suite Pro是一个非常强大的工具，这就是为什么它的一年订阅费为319英镑/ 399美元；Burp Pro通常供专业人士使用(相关的工具许可证通常可由渗透测试人员的雇主提供)，是Web渗透测试领域专业人士的首选。
 2. Burp Suite企业版——与社区版和专业版相比，Burp Suite企业版主要用于持续扫描，它能提供一个自动扫描器，从而可以定期扫描目标web应用程序是否存在漏洞，这类似于使用Nessus等工具来执行自动基础设施扫描；其他版本的Burp Suite通常是允许用户在本地计算机上执行手动渗透测试，而企业版的Burp则不同，它驻留在服务器上，并能不断扫描目标web应用程序是否存在潜在漏洞。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114909330-859870922.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
 请阅读本小节内容并回答以下问题：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114908971-372249033.png" alt=""><figcaption></figcaption></figure>
 
 ## Burp Suite社区版的功能
 
@@ -87,7 +87,7 @@ Burp Suite有不同版本，在本文中我们将重点使用和介绍Burp Suite
 
 通过阅读本小节内容，可帮助我们回答以下问题。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114908632-650445305.png" alt=""><figcaption></figcaption></figure>
 
 ## 安装Burp Suite社区版
 
@@ -103,7 +103,7 @@ macOS和Windows操作系统：对于其他操作系统，Burp Suite的开发商[
 
 tips：[PortSwigger](https://portswigger.net/)官网能为多种操作系统提供专用的Burp Suite安装程序，因为Burp Suite是一个Java应用程序，所以它还可以作为JAR归档文件被下载，并且能够在任何支持Java运行时环境的计算机上有效运行。
 
-![image-20231220105934069](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220105934069.png)
+<figure><img src="../../.gitbook/assets/2857591-20231224114908292-1105940511.png" alt=""><figcaption></figcaption></figure>
 
 **安装**
 
@@ -121,21 +121,23 @@ Burp Suite的安装向导非常直观，无论你所使用的操作系统是什�
 
 当我们打开Burp Suite并接受相应的默认条款时，我们会看到一个项目选择窗口：在Burp Pro中，此窗口将允许我们将新项目保存到磁盘，或者选择加载先前已保存的项目；然而，在Burp Suite社区版中，我们在这里所能做的就是点击"下一步"按钮。
 
-![image-20231220212308871](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220212308871.png)
+
 
 接下来的窗口将允许我们为Burp Suite选择配置，在大多数情况下，保持默认配置值即可。
 
-![image-20231220212342541](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220212342541.png)
+
 
 接着我们点击上图中的"Start Burp"，等待一段时间后将自动打开Burp Suite的主界面，第一次打开Burp Suite时，我们可能会看到一个带有教学性质的Learn页面，后继打开Burp Suite时，默认出现的会是Burp Suite Dashboard(仪表面板)界面：
 
-![image-20231220212644636](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220212644636.png)
 
-![image-20231220212851065](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220212851065.png)
+
+
 
 简而言之，Dashboard界面分为四个象限区域：
 
-![image-20230407134132092](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230407134132092.png)
+
+
+
 
 1. **Tasks**(任务)：左上角的Tasks菜单允许我们定义后台任务，这样当我们使用Burp Suite时会在后台执行既定任务；在Burp Suite社区版本中，我们可以使用默认的"Live passive crawl-动态被动爬取"任务来自动记录我们访问过的web页面，而Pro版本还允许我们在Task菜单中创建按需扫描任务。
 2. **Event log**(事件日志)：左下角的Event log会告诉我们关于Burp Suite已执行的操作的信息，例如启动代理，以及有关通过Burp建立的连接的详细信息。
@@ -144,15 +146,15 @@ Burp Suite的安装向导非常直观，无论你所使用的操作系统是什�
 
 我们可以点击Issue Activity部分中的一个示例漏洞，然后Advisory部分就会出现一些和示例漏洞相关的信息：
 
-![image-20230407144742713](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230407144742713.png)
+
 
 在Burp Suite的各个选项卡和窗口中，你会发现有一个帮助图标：内含一个问号的圆圈标志。
 
-![image-20230407141157666](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230407141157666.png)
+
 
 点击帮助图标将打开一个包含对应部分帮助信息的新窗口，例如：
 
-![image-20230407155054946](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230407155054946.png)
+
 
 如果你不知道Burp Suite中某个功能是干什么的，查看相关的帮助信息可能会非常有用。
 
@@ -160,13 +162,13 @@ Burp Suite的安装向导非常直观，无论你所使用的操作系统是什�
 
 请阅读本小节内容并回答以下问题：
 
-![image-20231220112609240](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220112609240.png)
+
 
 ## Burp Suite界面导航
 
 在默认情况下，Burp Suite的界面导航主要可以通过顶部菜单栏来完成，它允许我们在不同模块之间进行切换，并能让我们访问每个模块内的各种子选项卡，子选项卡会出现在模块主菜单栏正下方的小菜单栏中：
 
-![image-20231220213216645](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220213216645.png)
+
 
 Burp Suite界面导航包括：
 
@@ -174,21 +176,21 @@ Burp Suite界面导航包括：
 
 2.子选项卡选择：如果我们所选定的功能模块有多个子选项卡，那么我们可以通过模块主菜单栏正下方出现的小菜单栏来访问它们；这些子选项卡通常包含一些特定于功能模块的设置和选项，例如我们可以在Burp Proxy模块中选择Proxy Intercept子选项卡。
 
-![image-20231220214233620](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220214233620.png)
+
 
 3.隐藏或分离选项卡：在较新版本的Burp Suite中，如果我们希望单独查看某一选项卡，那么我们可以用鼠标右键单击指定的模块选项卡，然后选择将该选项卡分离到单独的窗口中；如果我们想隐藏某一选项卡，也可以用鼠标右键单击指定的模块选项卡，然后选择将该选项卡隐藏起来。
 
-![image-20231220220200150](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220220200150.png)
+
 
 除了顶部的模块选择菜单栏之外，在Burp Suite中还可以使用快捷键来快速导航到一些关键的模块选项卡中：
 
-![image-20230407143515687](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230407143515687.png)
+
 
 ### 答题
 
 请阅读本小节内容并回答以下问题：
 
-![image-20231220214315696](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220214315696.png)
+
 
 ## Burp Suite设置选项
 
@@ -203,11 +205,11 @@ _tips：在较新版本的Burp Suite中，User选项和Project选项都在顶部
 
 要访问Burp Suite的设置界面，我们需要单击顶部导航栏中的**Settings**按钮，这将为我们打开一个单独的设置窗口：
 
-![image-20231220220938499](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220220938499.png)
+
 
 下图显示了单独的设置窗口。
 
-![image-20231220221028867](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220221028867.png)
+
 
 在设置窗口中，我们可以在页面左侧找到一个菜单，此菜单允许我们在不同类型的设置之间切换，包括：
 
@@ -216,12 +218,11 @@ _tips：在较新版本的Burp Suite中，User选项和Project选项都在顶部
    * User：显示影响整个Burp Suite应用程序的设置，即用户设置。
    * Project：显示特定于当前项目的设置，即项目设置。
 3. Categories(类别)：允许我们按类别选择设置。
-
-![image-20231220232135471](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220232135471.png)
+4.
 
 值得注意的是，Burp Suite 中的许多功能模块都提供了有关特定类别设置的快捷方式，例如，Proxy模块的子选项卡包括了一个Proxy settings按钮，点击该按钮可以直接打开关于Proxy部分的设置窗口。
 
-![image-20231220232748507](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220232748507.png)
+
 
 虽然User选项中的用户设置适用于全局(即这些设置能作用于整个Burp Suite——而不仅仅是某个Burp项目)，但是许多用户设置都可以被Project选项中的对应设置所覆盖。
 
@@ -230,18 +231,18 @@ User选项中的常用设置(在较新版本的Burp Suite中不止这些)：
 * Connections：这个设置的内容允许我们控制Burp Suite如何连接到目标，例如，我们可以为Burp Suite设置一个代理来连接目标。
 * TLS：这个设置允许我们启用和禁用各种TLS(传输层安全)选项，并且能够给我们提供一个可以上传客户端证书的地方(如果某个web应用程序需要我们使用证书来建立连接)。
 * Hotkeys：键盘绑定列表(热键)，此设置可以允许我们查看和更改Burp Suite所使用的键盘快捷键，使用键盘绑定可以大大加快我们的工作流程。
-*   Display：这个设置允许我们改变Burp Suite的外观，包括更改字体大小、为Burp设置主题(如黑暗模式)、是否选择隐藏Learn选项卡以及控制Burp在高分辨率显示器上的外观。
+* Display：这个设置允许我们改变Burp Suite的外观，包括更改字体大小、为Burp设置主题(如黑暗模式)、是否选择隐藏Learn选项卡以及控制Burp在高分辨率显示器上的外观。
 
-    ![image-20231220235531972](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220235531972.png)
+
 
 Project 选项中的常用设置(在较新版本的Burp Suite中不止这些)：
 
 * Sessions：此处的设置内容可为我们提供处理会话的选项，它允许我们定义Burp Suite如何获取、保存和使用它从目标站点接收到的会话cookie，它还允许我们定义宏(Macros)，我们可以用这些宏(Macros)来自动化一些事情(比如登录到web应用程序)。
 * Connections：该设置的作用和User选项中的对应设置类似，并且此部分设置可以覆盖User选项中的对应设置，例如你可以仅为当前项目设置一个代理，这能够覆盖你在User选项中的任何代理设置；此外，此部分内容中还有一些额外选项，例如它包含了"Hostname Resolution-主机名解析"选项(允许你在Burp Suite中将域名映射为IP地址)。
 * TLS：此部分中的设置内容能够覆盖Burp应用程序范围内的TLS设置，并且可以展示用于我们访问过的站点的一个公共服务器证书列表。
-*   HTTP：此处的设置内容定义了Burp Suite将如何处理HTTP协议的各个方面，例如，是否会跟随重定向或者如何处理不寻常的响应代码。
+* HTTP：此处的设置内容定义了Burp Suite将如何处理HTTP协议的各个方面，例如，是否会跟随重定向或者如何处理不寻常的响应代码。
 
-    ![image-20231220235713841](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231220235713841.png)
+
 
 ### **答题**
 
@@ -249,23 +250,23 @@ Project 选项中的常用设置(在较新版本的Burp Suite中不止这些)：
 
 _**问题1：你可以在哪个类别的设置中找到对"Cookie jar"的引用？**_
 
-![image-20231221000553113](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221000553113.png)
+
 
 > Sessions
 
 _**问题2：你可以在哪个基本类别的设置中找到控制Burp Suite更新行为的“Updates”子类别？**_
 
-![image-20231221000649076](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221000649076.png)
+
 
 > Suite
 
 _**问题3：允许你更改Burp Suite中快捷键的键盘绑定的子设置类别的名称是什么？**_
 
-![image-20231221000748648](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221000748648.png)
+
 
 > Hotkeys
 
-![image-20231221000426081](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221000426081.png)
+
 
 ## Burp Proxy(代理)介绍
 
@@ -275,27 +276,29 @@ Burp Proxy(代理)是BurpSuite中最基本也是最重要的功能模块，它�
 
 **了解Burp Proxy的要点：**
 
-*   拦截请求：在开启拦截功能之后，当Web请求经过Burp Proxy发出时，它们将会被拦截并会被阻止到达目标服务器，然后被拦截的请求会出现在Proxy选项卡的界面中，从而允许我们针对其做进一步操作，例如转发、删除、编辑或者将它们发送到其他Burp模块中或者将请求的内容复制为cURL命令并保存为文件；如果你想要禁用拦截功能并允许Web请求能够不间断地通过Proxy，则可以尝试将拦截功能关闭，我们用鼠标左键单击 `Intercept is on` 按钮即可关闭Proxy的拦截功能。
+* 拦截请求：在开启拦截功能之后，当Web请求经过Burp Proxy发出时，它们将会被拦截并会被阻止到达目标服务器，然后被拦截的请求会出现在Proxy选项卡的界面中，从而允许我们针对其做进一步操作，例如转发、删除、编辑或者将它们发送到其他Burp模块中或者将请求的内容复制为cURL命令并保存为文件；如果你想要禁用拦截功能并允许Web请求能够不间断地通过Proxy，则可以尝试将拦截功能关闭，我们用鼠标左键单击 `Intercept is on` 按钮即可关闭Proxy的拦截功能。
 
-    ![image-20231221162928614](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221162928614.png)
 
-    tips：在Proxy(代理)激活并开启拦截功能之后，我们接着使用浏览器向TryHackMe网站发出一个请求，此时，发出请求的浏览器将会挂起，该请求消息则会出现在Proxy选项卡的界面中，我们可以看到如上图所示的画面。
+
+tips：在Proxy(代理)激活并开启拦截功能之后，我们接着使用浏览器向TryHackMe网站发出一个请求，此时，发出请求的浏览器将会挂起，该请求消息则会出现在Proxy选项卡的界面中，我们可以看到如上图所示的画面。
+
 * 控制流量：Burp Proxy这种拦截请求的能力使得渗透测试人员能够完全控制与目标服务器相关的网络流量，这对于测试web应用程序来说是非常宝贵的。
 * 捕获和记录：在默认情况下，Burp Suite会捕获并记录通过Proxy发出的请求，即使在关闭拦截状态下也是如此；这种日志记录功能可以帮助我们以后进行内容分析以及审查先前的请求消息。
 * 支持处理WebSocket：Burp Suite还能捕获并记录WebSocket通信，这在我们分析Web应用程序时能够提供额外的帮助。
-*   日志和历史记录：已经捕获的请求消息可以在HTTP history和WebSockets history子选项卡的界面中查看，这能允许我们进行回顾性分析，以便根据需要将已捕获的请求发送到其他Burp功能模块中。
+* 日志和历史记录：已经捕获的请求消息可以在HTTP history和WebSockets history子选项卡的界面中查看，这能允许我们进行回顾性分析，以便根据需要将已捕获的请求发送到其他Burp功能模块中。
 
-    ![image-20231221164222623](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221164222623.png)
+
 
 我们还可以通过单击Proxy settings按钮(该按钮可以在Proxy选项卡正下方的子选项卡一栏中找到)来访问特定于Proxy功能模块的设置选项，这些选项能够为我们提供对Proxy的行为和功能的广泛控制，熟悉这些设置选项可以帮助我们优化Burp Proxy的使用。
 
 **在Proxy Settings中，一些值得注意的功能：**
 
-*   响应拦截：在默认情况下，Proxy不会主动拦截来自于目标服务器的响应消息，除非我们在每个Web请求的基础上进行明确要求；我们可以使用Proxy设置界面中的"Intercept responses based on the following rules-基于以下规则拦截响应"复选框以及一些已定义的规则来更加灵活地设置响应拦截功能。
+* 响应拦截：在默认情况下，Proxy不会主动拦截来自于目标服务器的响应消息，除非我们在每个Web请求的基础上进行明确要求；我们可以使用Proxy设置界面中的"Intercept responses based on the following rules-基于以下规则拦截响应"复选框以及一些已定义的规则来更加灵活地设置响应拦截功能。
 
-    ![image-20231221165316158](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221165316158.png)
 
-    tips：我们可以勾选"基于以下规则截取响应"复选框并选择其中的一个或多个规则来覆盖默认设置，例如配置"`Or` `Request` `Was interrupted`"规则，此规则可用于捕获被Proxy拦截的所有请求的相关响应，除了上图的规则配置外，我们也可以制定自己的规则来控制Proxy的操作方式。
+
+tips：我们可以勾选"基于以下规则截取响应"复选框并选择其中的一个或多个规则来覆盖默认设置，例如配置"`Or` `Request` `Was interrupted`"规则，此规则可用于捕获被Proxy拦截的所有请求的相关响应，除了上图的规则配置外，我们也可以制定自己的规则来控制Proxy的操作方式。
+
 * 匹配和替换：Proxy设置界面中的“匹配和替换”部分允许我们使用正则表达式(regex)来修改传入和传出的Web请求，该功能允许我们进行一些动态更改，修改用户代理或操作cookie等；例如，我们可以自动更改用户代理以便在传出请求中模拟不同的web浏览器，或者删除传入请求中设置的所有cookie，同样，你也可以在这部分设置中使用自定义规则。
 
 ## 配置常规流量代理(FoxyProxy)
@@ -328,10 +331,10 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 1. 安装 FoxyProxy：下载并安装[FoxyProxy Basic 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/foxyproxy-basic/)。
 2.  访问FoxyProxy插件中的选项：在Firefox浏览器中完成插件安装之后，浏览器的界面右上角会出现一个插件图标按钮，这将允许我们访问代理配置(要点击右上角的按钮，才能看到如下界面)：
 
-    ![image-20230408054258418](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408054258418.png)
+
 3.  在FoxyProxy插件中创建 Burp 代理配置：FoxyProxy中没有默认配置(没有可供选择的初始配置)，我们可以点击上图中的"Options-选项"按钮来创建我们的代理配置，这将打开一个新的浏览器选项卡：
 
-    ![image-20230408054445834](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408054445834.png)
+
 4.  添加代理配置的详细信息：接着我们点击上图中的"Add-添加"按钮，并在"Add Proxy"页面填写以下值：
 
     Title：`Burp`（或者填写其他你想设置的名称）
@@ -342,17 +345,16 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
     Port：`8080`
 
-    ![image-20230408055342297](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408055342297.png)
+
 5. 保存配置：单击上图中的“Save保存”按钮以保存我们的 Burp 代理配置(这里的Burp是我们的配置名称，见上图)。
 6.  激活插件中的代理配置：现在点击Firefox浏览器顶部的FoxyProxy插件图标，就会看到有一个可用于Burp的配置，如果我们单击勾选下图中的"Burp"配置，那么本地浏览器就可以开始通过`127.0.0.1:8080`重定向常规流量(注意，当我们激活插件中的"Burp"配置时，Burp Suite必须正在运行状态)。
 
-    ![image-20231221194435130](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221194435130.png)
 
-    tips：如果Burp Suite并未启动运行，那么本地浏览器将无法在插件中的"Burp"代理配置激活时发出任何web请求，即FoxyProxy插件中的代理配置选项需要和Burp Suite应用程序中的Proxy模块配合使用。
-7.  在 Burp Suite 中启用代理(Proxy)拦截：成功激活浏览器插件中的Burp代理配置选项之后，让我们切换到Burp Suite应用程序中，此时我们要确保Proxy模块中的拦截选项是打开的。
+7. tips：如果Burp Suite并未启动运行，那么本地浏览器将无法在插件中的"Burp"代理配置激活时发出任何web请求，即FoxyProxy插件中的代理配置选项需要和Burp Suite应用程序中的Proxy模块配合使用。
+8.  在 Burp Suite 中启用代理(Proxy)拦截：成功激活浏览器插件中的Burp代理配置选项之后，让我们切换到Burp Suite应用程序中，此时我们要确保Proxy模块中的拦截选项是打开的。
 
-    ![image-20231221194408340](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221194408340.png)
-8. 测试代理(Proxy)：现在，当我们尝试在本地Firefox浏览器中访问 http://MACHINE\_IP/ 目标主页时(这会向目标站点发出一个请求)，我们的本地浏览器会被自动挂起，同时我们的代理将填充相关的HTTP请求，最终我们在本地浏览器中发出的Web请求将会被Burp Suite所拦截。
+
+9. 测试代理(Proxy)：现在，当我们尝试在本地Firefox浏览器中访问 http://MACHINE\_IP/ 目标主页时(这会向目标站点发出一个请求)，我们的本地浏览器会被自动挂起，同时我们的代理将填充相关的HTTP请求，最终我们在本地浏览器中发出的Web请求将会被Burp Suite所拦截。
 
 请记住以下几点：
 
@@ -366,9 +368,9 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
 在本地Kali机上查看BurpSuite界面：
 
-![image-20231221195429776](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221195429776.png)
 
-![image-20230408061453610](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408061453610.png)
+
+
 
 ## 配置HTTPS流量代理
 
@@ -376,7 +378,7 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
 在我们使用Burp Suite拦截HTTP流量时，如果我们导航到启用了TLS(也就是使用了HTTPS协议)的站点会发生什么？例如 https://google.com/ ：
 
-![image-20230408062352280](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408062352280.png)
+
 
 如上图所示，我们会得到一个错误提示，具体而言，Firefox会告诉我们Portswigger证书颁发机构(CA)没有被授权保护此连接。
 
@@ -384,26 +386,26 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
 1.  下载CA证书：首先，在Burp代理配置激活(未开启拦截功能)的时候访问 http://burp/cert ，这将下载一个名为`cacert.der`的文件，我们将此文件保存到计算机上的某个位置。
 
-    ![image-20230408063455946](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408063455946.png)
+
 2.  访问 Firefox 证书设置：在 Firefox URL 栏中输入`about:preferences`并按下Enter键，这将把我们带到FireFox的设置页面，然后我们再在设置页面中搜索"certificates-证书"，然后单击"View certificates-查看证书"按钮。
 
-    ![image-20230408063727051](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408063727051.png)
 
-    ![image-20230408063750188](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408063750188.png)
+
+
 3.  导入CA证书：在"Certificate Manager-证书管理器"窗口，单击“Import-导入”按钮，然后选择我们在前述步骤中所下载的`cacert.der`文件。
 
-    ![image-20230408064739349](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408064739349.png)
 
-    ![image-20230408064716405](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408064716405.png)
+
+
 4.  设置信任CA证书：在随后出现的窗口中，选中"Trust this CA to identify websites-信任此CA以识别网站"框，然后点击"OK"按钮。
 
-    ![image-20231224114412746](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231224114412746.png)
+
 
 通过完成上述步骤，我们已经将PortSwigger CA证书添加到了受信任的证书颁发机构列表中；现在，我们应该能够访问任何启用TLS的站点，而不会遇到证书错误。
 
 如下图所示，我们现在可以在激活了Burp代理配置(未开启拦截功能)的情况下，自由地访问任何启用了TLS(也就是使用了HTTPS协议)的网站。
 
-![image-20230408065356294](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408065356294.png)
+
 
 ## Burp Suite内置浏览器
 
@@ -411,24 +413,24 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
 我们可以通过Burp Proxy(代理)模块的"Intercept"子选项卡中的"Open Browser-打开浏览器"按钮来启动Burp Suite内置浏览器：
 
-![image-20231221205704324](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221205704324.png)
+
 
 点击"Open Browser-打开浏览器"按钮之后，将会自动弹出一个Chromium窗口，我们在这个浏览器中发出的任何请求都将自动通过Burp Proxy(代理)。
 
-![image-20231221205823389](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221205823389.png)
+
 
 注意：在项目选项和用户选项的设置中有许多与Burp Suite内置浏览器相关的设置，请根据需要探索和定制它们。
 
 如果我们在Linux上以root用户运行Burp Suite，则可能会遇到由于无法创建沙箱环境而导致Burp Suite内置浏览器无法启动的错误。
 
-![image-20230408070918316](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408070918316.png)
+
 
 对此有两个简单的解决方案：
 
 * 明智的选择：我们可以在Linux上创建一个新用户，并在低权限帐户下运行Burp Suite，这将允许Burp Browser运行而不会出现问题。
-*   简单的选择：我们可以进入"Settings"->" Tools"->"Burp's browser"，并勾选"Allow Burp's browser to run without a sandbox-允许Burp's浏览器在没有沙箱环境的情况下运行"，启用此选项将允许Burp Browser在root用户权限下启动，但请注意，出于安全原因，默认情况下该选项是被禁用的。
+* 简单的选择：我们可以进入"Settings"->" Tools"->"Burp's browser"，并勾选"Allow Burp's browser to run without a sandbox-允许Burp's浏览器在没有沙箱环境的情况下运行"，启用此选项将允许Burp Browser在root用户权限下启动，但请注意，出于安全原因，默认情况下该选项是被禁用的。
 
-    ![image-20231221210956217](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231221210956217.png)
+
 
 ## Target和Scoping
 
@@ -440,19 +442,19 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
 通过在Burp Suite的项目(Project)设置中修改范围(Scope)，我们可以定义在Burp Suite中代理(Proxy)和记录的内容，从而限制Burp Suite仅针对我们想要测试的特定Web应用程序；相关步骤如下：我们先切换到`Target`选项卡，右键单击Site map左侧列表中的目标站点，并且选择`Add To Scope`，然后Burp将提示我们是否要停止记录范围(scope)之外的任何内容——我们选择`yes`即可。
 
-![image-20231222182632284](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231222182632284.png)
 
-![image-20231222182739191](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231222182739191.png)
+
+
 
 现在我们切换到Target选项卡下的"Scope settings"子选项卡中，然后就可以检查流量记录范围(可以看到我们刚才添加的站点)：
 
-![image-20231222182843961](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231222182843961.png)
+
 
 如上图所示：Scope settings子选项卡允许我们通过包含或者排除“域名/ip地址”来控制Burp Proxy(代理)所记录的流量范围。
 
 我们刚才只是选择禁用范围外流量的日志记录，但是当我们启用Burp代理的拦截功能时，仍然会拦截浏览器中的所有流量；如果要关闭拦截全部流量的功能，我们需要转到Proxy settings子选项卡，然后在"Intercept Client Requests-拦截客户端请求"部分中配置"`And` `URL` `Is in target scope`"规则，这样Burp仅会拦截目标范围内的流量。
 
-![image-20231222183331689](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231222183331689.png)
+
 
 按照上图选项成功配置流量拦截规则之后，Burp代理将完全忽略在已定义的范围之外的任何流量内容(既不记录范围外的流量日志，也不拦截范围外的浏览器请求)，从而能在Burp Suite中为我们提供更清晰的流量视图。
 
@@ -472,19 +474,21 @@ tips：我们可以将`http://MACHINE_IP/`(目标站点)添加到我们的Burp S
 
 启动目标机器，在攻击机上激活Burp代理插件并且不启用拦截功能，使用本地浏览器访问目标站点( http://10.10.53.186/ )的每个页面，然后检查Burp中Target选项卡下的Site map界面(我们想找到一个可疑端点，并想查看其响应消息)：
 
-![image-20230408095919709](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408095919709.png)
 
-![image-20230408100013480](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408100013480.png)
+
+
 
 > 找到的flag为：THM{NmNlZTliNGE1MWU1ZTQzMzgzNmFiNWVk} 。
 
 查看Burp Suite中的Issue Definitions列表(它是Target选项卡下的子选项卡)，找到易受攻击的JavaScript依赖项(Vulnerable JavaScript dependency) 所对应的漏洞严重性：
 
-![image-20230408100801502](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408100801502.png)
+
 
 > 严重性为：Low
 
-![image-20230408101245071](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408101245071.png)
+
+
+
 
 ## 实例练习
 
@@ -498,9 +502,9 @@ XSS漏洞有很多种——我们在本小节实例中所测试的XSS类型被�
 
 查看目标站点的support页面： http://10.10.53.186/ticket/
 
-![image-20230408101452114](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408101452114.png)
 
-![image-20230408101512232](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408101512232.png)
+
+
 
 在上图中的"Contact Email"输入框中，输入以下内容：
 
@@ -516,15 +520,15 @@ XSS漏洞有很多种——我们在本小节实例中所测试的XSS类型被�
 
 我们打开Burp Suite并启动Burp代理插件，然后开启Burp Proxy中的拦截功能，然后再在浏览器中通过目标站点的Support页面发送请求：
 
-![image-20230408103110742](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408103110742.png)
+
 
 成功捕获到请求后，修改email字段为 `<script>alert("Succ3ssful XSS")</script>`，然后使用Ctrl + U快捷键对修改之后的内容进行一次URL编码，以使其稍后可以安全地被发送：
 
-![image-20230408103801145](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408103801145.png)
+
 
 我们点击上图中的"Forward"按钮，这将使得浏览器继续向目标站点发送修改之后的请求，如果我们在浏览器页面中得到一个js弹框(代表我们插入的js脚本成功被执行)，那么就说明目标站点确实存在“反射型”XSS漏洞：
 
-![image-20230408104254596](C:%5CUsers%5CVimalano2ise%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230408104254596.png)
+
 
 ## 小结\&Pro版下载链接
 

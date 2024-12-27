@@ -36,12 +36,6 @@ TryHackMe实验房间链接：[https://tryhackme.com/room/winadbasics](https://t
 
 在学习本文内容之前，建议先了解关于Windows系统的基础知识：
 
-
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 {% content-ref url="../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-1windows-ji-chu-zhi-shi-1.md" %}
 [windows-fundamentals-1windows-ji-chu-zhi-shi-1.md](../pre-security-wang-luo-an-quan-qian-zhi-ji-chu/windows-fundamentals-1windows-ji-chu-zhi-shi-1.md)
 {% endcontent-ref %}

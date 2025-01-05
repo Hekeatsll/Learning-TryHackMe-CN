@@ -121,23 +121,21 @@ Burp Suite的安装向导非常直观，无论你所使用的操作系统是什�
 
 当我们打开Burp Suite并接受相应的默认条款时，我们会看到一个项目选择窗口：在Burp Pro中，此窗口将允许我们将新项目保存到磁盘，或者选择加载先前已保存的项目；然而，在Burp Suite社区版中，我们在这里所能做的就是点击"下一步"按钮。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114907853-1096709288.png" alt=""><figcaption></figcaption></figure>
 
 接下来的窗口将允许我们为Burp Suite选择配置，在大多数情况下，保持默认配置值即可。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114907519-835834464.png" alt=""><figcaption></figcaption></figure>
 
 接着我们点击上图中的"Start Burp"，等待一段时间后将自动打开Burp Suite的主界面，第一次打开Burp Suite时，我们可能会看到一个带有教学性质的Learn页面，后继打开Burp Suite时，默认出现的会是Burp Suite Dashboard(仪表面板)界面：
 
+<figure><img src="../../.gitbook/assets/2857591-20231224114907153-1449284271.png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114906628-1982857308.png" alt=""><figcaption></figcaption></figure>
 
 简而言之，Dashboard界面分为四个象限区域：
 
-
-
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114906198-1419065707.png" alt=""><figcaption></figcaption></figure>
 
 1. **Tasks**(任务)：左上角的Tasks菜单允许我们定义后台任务，这样当我们使用Burp Suite时会在后台执行既定任务；在Burp Suite社区版本中，我们可以使用默认的"Live passive crawl-动态被动爬取"任务来自动记录我们访问过的web页面，而Pro版本还允许我们在Task菜单中创建按需扫描任务。
 2. **Event log**(事件日志)：左下角的Event log会告诉我们关于Burp Suite已执行的操作的信息，例如启动代理，以及有关通过Burp建立的连接的详细信息。
@@ -146,15 +144,15 @@ Burp Suite的安装向导非常直观，无论你所使用的操作系统是什�
 
 我们可以点击Issue Activity部分中的一个示例漏洞，然后Advisory部分就会出现一些和示例漏洞相关的信息：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114901652-1928185236.png" alt=""><figcaption></figcaption></figure>
 
 在Burp Suite的各个选项卡和窗口中，你会发现有一个帮助图标：内含一个问号的圆圈标志。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114901249-1863155590.png" alt=""><figcaption></figcaption></figure>
 
 点击帮助图标将打开一个包含对应部分帮助信息的新窗口，例如：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114900759-300409765.png" alt=""><figcaption></figcaption></figure>
 
 如果你不知道Burp Suite中某个功能是干什么的，查看相关的帮助信息可能会非常有用。
 
@@ -162,13 +160,13 @@ Burp Suite的安装向导非常直观，无论你所使用的操作系统是什�
 
 请阅读本小节内容并回答以下问题：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114900259-409388593.png" alt=""><figcaption></figcaption></figure>
 
 ## Burp Suite界面导航
 
 在默认情况下，Burp Suite的界面导航主要可以通过顶部菜单栏来完成，它允许我们在不同模块之间进行切换，并能让我们访问每个模块内的各种子选项卡，子选项卡会出现在模块主菜单栏正下方的小菜单栏中：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114859952-1784081182.png" alt=""><figcaption></figcaption></figure>
 
 Burp Suite界面导航包括：
 
@@ -176,21 +174,21 @@ Burp Suite界面导航包括：
 
 2.子选项卡选择：如果我们所选定的功能模块有多个子选项卡，那么我们可以通过模块主菜单栏正下方出现的小菜单栏来访问它们；这些子选项卡通常包含一些特定于功能模块的设置和选项，例如我们可以在Burp Proxy模块中选择Proxy Intercept子选项卡。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114859626-1534606629.png" alt=""><figcaption></figcaption></figure>
 
 3.隐藏或分离选项卡：在较新版本的Burp Suite中，如果我们希望单独查看某一选项卡，那么我们可以用鼠标右键单击指定的模块选项卡，然后选择将该选项卡分离到单独的窗口中；如果我们想隐藏某一选项卡，也可以用鼠标右键单击指定的模块选项卡，然后选择将该选项卡隐藏起来。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114859260-1245719123.png" alt=""><figcaption></figcaption></figure>
 
 除了顶部的模块选择菜单栏之外，在Burp Suite中还可以使用快捷键来快速导航到一些关键的模块选项卡中：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114858924-796692657.png" alt=""><figcaption></figcaption></figure>
 
 ### 答题
 
 请阅读本小节内容并回答以下问题：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114858604-198486870.png" alt=""><figcaption></figcaption></figure>
 
 ## Burp Suite设置选项
 
@@ -205,11 +203,11 @@ _tips：在较新版本的Burp Suite中，User选项和Project选项都在顶部
 
 要访问Burp Suite的设置界面，我们需要单击顶部导航栏中的**Settings**按钮，这将为我们打开一个单独的设置窗口：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114858295-1339844190.png" alt=""><figcaption></figcaption></figure>
 
 下图显示了单独的设置窗口。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114857770-284337357.png" alt=""><figcaption></figcaption></figure>
 
 在设置窗口中，我们可以在页面左侧找到一个菜单，此菜单允许我们在不同类型的设置之间切换，包括：
 
@@ -218,11 +216,12 @@ _tips：在较新版本的Burp Suite中，User选项和Project选项都在顶部
    * User：显示影响整个Burp Suite应用程序的设置，即用户设置。
    * Project：显示特定于当前项目的设置，即项目设置。
 3. Categories(类别)：允许我们按类别选择设置。
-4.
+
+<figure><img src="../../.gitbook/assets/2857591-20231224114857353-625633482.png" alt=""><figcaption></figcaption></figure>
 
 值得注意的是，Burp Suite 中的许多功能模块都提供了有关特定类别设置的快捷方式，例如，Proxy模块的子选项卡包括了一个Proxy settings按钮，点击该按钮可以直接打开关于Proxy部分的设置窗口。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114857048-1738584000.png" alt=""><figcaption></figcaption></figure>
 
 虽然User选项中的用户设置适用于全局(即这些设置能作用于整个Burp Suite——而不仅仅是某个Burp项目)，但是许多用户设置都可以被Project选项中的对应设置所覆盖。
 
@@ -233,7 +232,7 @@ User选项中的常用设置(在较新版本的Burp Suite中不止这些)：
 * Hotkeys：键盘绑定列表(热键)，此设置可以允许我们查看和更改Burp Suite所使用的键盘快捷键，使用键盘绑定可以大大加快我们的工作流程。
 * Display：这个设置允许我们改变Burp Suite的外观，包括更改字体大小、为Burp设置主题(如黑暗模式)、是否选择隐藏Learn选项卡以及控制Burp在高分辨率显示器上的外观。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114856727-30807549.png" alt=""><figcaption></figcaption></figure>
 
 Project 选项中的常用设置(在较新版本的Burp Suite中不止这些)：
 
@@ -242,7 +241,7 @@ Project 选项中的常用设置(在较新版本的Burp Suite中不止这些)：
 * TLS：此部分中的设置内容能够覆盖Burp应用程序范围内的TLS设置，并且可以展示用于我们访问过的站点的一个公共服务器证书列表。
 * HTTP：此处的设置内容定义了Burp Suite将如何处理HTTP协议的各个方面，例如，是否会跟随重定向或者如何处理不寻常的响应代码。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114856337-1511300468.png" alt=""><figcaption></figcaption></figure>
 
 ### **答题**
 
@@ -250,23 +249,23 @@ Project 选项中的常用设置(在较新版本的Burp Suite中不止这些)：
 
 _**问题1：你可以在哪个类别的设置中找到对"Cookie jar"的引用？**_
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114855972-1930495010.png" alt=""><figcaption></figcaption></figure>
 
 > Sessions
 
 _**问题2：你可以在哪个基本类别的设置中找到控制Burp Suite更新行为的“Updates”子类别？**_
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114855569-1628092760.png" alt=""><figcaption></figcaption></figure>
 
 > Suite
 
 _**问题3：允许你更改Burp Suite中快捷键的键盘绑定的子设置类别的名称是什么？**_
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114855248-1714529541.png" alt=""><figcaption></figcaption></figure>
 
 > Hotkeys
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114854918-713679980.png" alt=""><figcaption></figcaption></figure>
 
 ## Burp Proxy(代理)介绍
 
@@ -278,7 +277,7 @@ Burp Proxy(代理)是BurpSuite中最基本也是最重要的功能模块，它�
 
 * 拦截请求：在开启拦截功能之后，当Web请求经过Burp Proxy发出时，它们将会被拦截并会被阻止到达目标服务器，然后被拦截的请求会出现在Proxy选项卡的界面中，从而允许我们针对其做进一步操作，例如转发、删除、编辑或者将它们发送到其他Burp模块中或者将请求的内容复制为cURL命令并保存为文件；如果你想要禁用拦截功能并允许Web请求能够不间断地通过Proxy，则可以尝试将拦截功能关闭，我们用鼠标左键单击 `Intercept is on` 按钮即可关闭Proxy的拦截功能。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114854551-1824659849.png" alt=""><figcaption></figcaption></figure>
 
 tips：在Proxy(代理)激活并开启拦截功能之后，我们接着使用浏览器向TryHackMe网站发出一个请求，此时，发出请求的浏览器将会挂起，该请求消息则会出现在Proxy选项卡的界面中，我们可以看到如上图所示的画面。
 
@@ -287,7 +286,7 @@ tips：在Proxy(代理)激活并开启拦截功能之后，我们接着使用浏
 * 支持处理WebSocket：Burp Suite还能捕获并记录WebSocket通信，这在我们分析Web应用程序时能够提供额外的帮助。
 * 日志和历史记录：已经捕获的请求消息可以在HTTP history和WebSockets history子选项卡的界面中查看，这能允许我们进行回顾性分析，以便根据需要将已捕获的请求发送到其他Burp功能模块中。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114854203-315485579.png" alt=""><figcaption></figcaption></figure>
 
 我们还可以通过单击Proxy settings按钮(该按钮可以在Proxy选项卡正下方的子选项卡一栏中找到)来访问特定于Proxy功能模块的设置选项，这些选项能够为我们提供对Proxy的行为和功能的广泛控制，熟悉这些设置选项可以帮助我们优化Burp Proxy的使用。
 
@@ -295,7 +294,7 @@ tips：在Proxy(代理)激活并开启拦截功能之后，我们接着使用浏
 
 * 响应拦截：在默认情况下，Proxy不会主动拦截来自于目标服务器的响应消息，除非我们在每个Web请求的基础上进行明确要求；我们可以使用Proxy设置界面中的"Intercept responses based on the following rules-基于以下规则拦截响应"复选框以及一些已定义的规则来更加灵活地设置响应拦截功能。
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114853841-1906291923.png" alt=""><figcaption></figcaption></figure>
 
 tips：我们可以勾选"基于以下规则截取响应"复选框并选择其中的一个或多个规则来覆盖默认设置，例如配置"`Or` `Request` `Was interrupted`"规则，此规则可用于捕获被Proxy拦截的所有请求的相关响应，除了上图的规则配置外，我们也可以制定自己的规则来控制Proxy的操作方式。
 
@@ -328,33 +327,41 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
 以下是在Firefox浏览器中使用 FoxyProxy 配置 Burp Suite 代理(Proxy)的步骤：
 
-1. 安装 FoxyProxy：下载并安装[FoxyProxy Basic 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/foxyproxy-basic/)。
-2.  访问FoxyProxy插件中的选项：在Firefox浏览器中完成插件安装之后，浏览器的界面右上角会出现一个插件图标按钮，这将允许我们访问代理配置(要点击右上角的按钮，才能看到如下界面)：
+1.安装 FoxyProxy：下载并安装[FoxyProxy Basic 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/foxyproxy-basic/)。
 
+2.访问FoxyProxy插件中的选项：在Firefox浏览器中完成插件安装之后，浏览器的界面右上角会出现一个插件图标按钮，这将允许我们访问代理配置(要点击右上角的按钮，才能看到如下界面)：
 
-3.  在FoxyProxy插件中创建 Burp 代理配置：FoxyProxy中没有默认配置(没有可供选择的初始配置)，我们可以点击上图中的"Options-选项"按钮来创建我们的代理配置，这将打开一个新的浏览器选项卡：
+<figure><img src="../../.gitbook/assets/2857591-20231224114853529-1464613256.png" alt=""><figcaption></figcaption></figure>
 
+3.在FoxyProxy插件中创建 Burp 代理配置：FoxyProxy中没有默认配置(没有可供选择的初始配置)，我们可以点击上图中的"Options-选项"按钮来创建我们的代理配置，这将打开一个新的浏览器选项卡：
 
-4.  添加代理配置的详细信息：接着我们点击上图中的"Add-添加"按钮，并在"Add Proxy"页面填写以下值：
+<figure><img src="../../.gitbook/assets/2857591-20231224114853105-1066895309.png" alt=""><figcaption></figcaption></figure>
 
-    Title：`Burp`（或者填写其他你想设置的名称）
+4.添加代理配置的详细信息：接着我们点击上图中的"Add-添加"按钮，并在"Add Proxy"页面填写以下值：
 
-    Proxy Type：`HTTP`
+Title：`Burp`（或者填写其他你想设置的名称）
 
-    Proxy IP：`127.0.0.1`
+Proxy Type：`HTTP`
 
-    Port：`8080`
+Proxy IP：`127.0.0.1`
 
+Port：`8080`
 
-5. 保存配置：单击上图中的“Save保存”按钮以保存我们的 Burp 代理配置(这里的Burp是我们的配置名称，见上图)。
-6.  激活插件中的代理配置：现在点击Firefox浏览器顶部的FoxyProxy插件图标，就会看到有一个可用于Burp的配置，如果我们单击勾选下图中的"Burp"配置，那么本地浏览器就可以开始通过`127.0.0.1:8080`重定向常规流量(注意，当我们激活插件中的"Burp"配置时，Burp Suite必须正在运行状态)。
+<figure><img src="../../.gitbook/assets/2857591-20231224114852740-838207487.png" alt=""><figcaption></figcaption></figure>
 
+5.保存配置：单击上图中的“Save保存”按钮以保存我们的 Burp 代理配置(这里的Burp是我们的配置名称，见上图)。
 
-7. tips：如果Burp Suite并未启动运行，那么本地浏览器将无法在插件中的"Burp"代理配置激活时发出任何web请求，即FoxyProxy插件中的代理配置选项需要和Burp Suite应用程序中的Proxy模块配合使用。
-8.  在 Burp Suite 中启用代理(Proxy)拦截：成功激活浏览器插件中的Burp代理配置选项之后，让我们切换到Burp Suite应用程序中，此时我们要确保Proxy模块中的拦截选项是打开的。
+6.激活插件中的代理配置：现在点击Firefox浏览器顶部的FoxyProxy插件图标，就会看到有一个可用于Burp的配置，如果我们单击勾选下图中的"Burp"配置，那么本地浏览器就可以开始通过`127.0.0.1:8080`重定向常规流量(注意，当我们激活插件中的"Burp"配置时，Burp Suite必须正在运行状态)。
 
+<figure><img src="../../.gitbook/assets/2857591-20231224114852368-1602086716.png" alt=""><figcaption></figcaption></figure>
 
-9. 测试代理(Proxy)：现在，当我们尝试在本地Firefox浏览器中访问 http://MACHINE\_IP/ 目标主页时(这会向目标站点发出一个请求)，我们的本地浏览器会被自动挂起，同时我们的代理将填充相关的HTTP请求，最终我们在本地浏览器中发出的Web请求将会被Burp Suite所拦截。
+tips：如果Burp Suite并未启动运行，那么本地浏览器将无法在插件中的"Burp"代理配置激活时发出任何web请求，即FoxyProxy插件中的代理配置选项需要和Burp Suite应用程序中的Proxy模块配合使用。
+
+7.在 Burp Suite 中启用代理(Proxy)拦截：成功激活浏览器插件中的Burp代理配置选项之后，让我们切换到Burp Suite应用程序中，此时我们要确保Proxy模块中的拦截选项是打开的。
+
+<figure><img src="../../.gitbook/assets/2857591-20231224114851935-2007079314.png" alt=""><figcaption></figcaption></figure>
+
+8.测试代理(Proxy)：现在，当我们尝试在本地Firefox浏览器中访问 http://MACHINE\_IP/ 目标主页时(这会向目标站点发出一个请求)，我们的本地浏览器会被自动挂起，同时我们的代理将填充相关的HTTP请求，最终我们在本地浏览器中发出的Web请求将会被Burp Suite所拦截。
 
 请记住以下几点：
 
@@ -368,17 +375,17 @@ FoxyProxy插件有两个版本：基础版和标准版。这两个版本都允�
 
 在本地Kali机上查看BurpSuite界面：
 
+<figure><img src="../../.gitbook/assets/2857591-20231224114851531-1147737143.png" alt=""><figcaption></figcaption></figure>
 
-
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114851070-778895876.png" alt=""><figcaption></figcaption></figure>
 
 ## 配置HTTPS流量代理
 
 通过上一小节中的配置，我们已经可以拦截HTTP流量——接下来，我们需要尝试拦截HTTPS流量。
 
-在我们使用Burp Suite拦截HTTP流量时，如果我们导航到启用了TLS(也就是使用了HTTPS协议)的站点会发生什么？例如 https://google.com/ ：
+在我们使用Burp Suite拦截HTTP流量时，如果我们导航到启用了TLS(也就是使用了HTTPS协议)的站点会发生什么？例如  `https://google.com/` ：
 
-
+<figure><img src="../../.gitbook/assets/2857591-20231224114850734-1600776143.png" alt=""><figcaption></figcaption></figure>
 
 如上图所示，我们会得到一个错误提示，具体而言，Firefox会告诉我们Portswigger证书颁发机构(CA)没有被授权保护此连接。
 

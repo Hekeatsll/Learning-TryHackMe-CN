@@ -1,6 +1,6 @@
 ---
-description: 基于TryHackMe网络安全在线学习平台的中文知识库(主要内容为THM的Learning paths教学部分)。
 icon: user-secret
+description: 基于TryHackMe网络安全在线学习平台的中文知识库(主要内容为THM的Learning paths教学部分)。
 cover: .gitbook/assets/default_tryhackme (1).png
 coverY: 0
 layout:
@@ -21,11 +21,11 @@ layout:
 
 # Welcome(欢迎)
 
-<figure><img src=".gitbook/assets/Snipaste_2024-02-07_17-17-56-modified.png" alt="" width="323"><figcaption></figcaption></figure>
+<figure><picture><source srcset=".gitbook/assets/Snipaste_2025-01-05_22-29-34-modified.png" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/Snipaste_2025-01-05_22-29-54-modified.png" alt=""></picture><figcaption></figcaption></figure>
 
 本项目GitHub链接：[https://github.com/Hekeatsll/Learning-TryHackMe-CN](https://github.com/Hekeatsll/Learning-TryHackMe-CN)
 
-<figure><img src=".gitbook/assets/tryhackme-modified.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/tryhackme-modified.png" alt="" width="563"><figcaption></figcaption></figure>
 
 TryHackMe官网链接：[https://tryhackme.com](https://tryhackme.com/room/defensivesecurity)
 

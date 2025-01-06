@@ -21,7 +21,7 @@ layout:
 
 # Intro to Offensive Security(进攻性安全介绍)
 
-TryHackMe实验房间链接：[https://tryhackme.com/room/introtooffensivesecurity](https://tryhackme.com/room/introtooffensivesecurity)
+TryHackMe实验房间链接：[https://tryhackme.com/r/room/offensivesecurityintro](https://tryhackme.com/r/room/offensivesecurityintro)
 
 ### 什么是进攻性安全？
 

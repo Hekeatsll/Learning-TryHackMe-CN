@@ -21,7 +21,7 @@ layout:
 
 # Intro to Defensive Security(防御性安全介绍)
 
-TryHackMe实验房间链接：[https://tryhackme.com/room/defensivesecurity](https://tryhackme.com/room/defensivesecurity)
+TryHackMe实验房间链接：[https://tryhackme.com/r/room/defensivesecurityintro](https://tryhackme.com/r/room/defensivesecurityintro)
 
 ## 防御性安全简介
 
